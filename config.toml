@@ -1,3 +1,14 @@
-baseURL = "http://example.org/"
-languageCode = "en-us"
-title = "My New Hugo Site"
+baseurl = "your-site-address"
+title = "your-site-name"
+languageCode = "ko-KR"
+
+theme = "programmer"
+
+paginate = 2
+
+disqusShortname = "XXXX"
+googleAnalytics = "UA-XXXXXXXX-X"
+
+[author]
+    name = "your-name"
+    email = "your-email"
