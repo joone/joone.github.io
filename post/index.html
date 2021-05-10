@@ -114,28 +114,6 @@ Here is the readme about CrOSVM:
   
   <div class="post">
   <div class="post-title">
-    <a href="/post/editing-blink/" title="Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop">
-      <img src="/images/post-title-icon.png" />
-      <div class="post-meta">
-        <time>Thursday, Jul 12, 2018 17:27</time>
-        <h1>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</h1>
-      </div>
-    </a>
-  </div>
-  
-  <div>
-    Recently, I published a blog article about making Use Of Chrome&rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using ChromeOS graphics stack for a regular Linux system. This article was also mentioned in Phoronix(link).
-Originally, my old colleague started working on this project a few years ago, but it has not been maintained since then. So I have been trying to enable ozone-gbm on a Linux system because this solution would be useful for embedded systems.
-    
-    <a href="/post/editing-blink/" class="summary-more">More</a>
-    
-  </div>
-</div>
-
-  <hr class="summary-sep" />
-  
-  <div class="post">
-  <div class="post-title">
     <a href="/post/making-use-of-chromes-ozone-gbm-intel/" title="Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
@@ -283,6 +261,28 @@ I landed a simple patch and am working on adding the ellipse API to Canvas API. 
  Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash  Here is a video to reproduce the problem.
     
     <a href="/post/enable-to-open-multiple-file-pickers-in/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/apple-style-span-class-was-fully/" title="Apple-style-span class was fully removed from Blink">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Friday, Feb 17, 2017 14:48</time>
+        <h1>Apple-style-span class was fully removed from Blink</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Finally, Apple-style-span class was fully removed from Blink(commit).
+Apple-style-span has not been produced since 2011: https://webkit.org/blog/1737/apple-style-span-is-gone, but there were still some legacy code to handle Apple-style-span class because old WebKit engines has produced it, but now the usage is quite low(&lt;=0.0001%). So, we decided to remove it from Blink at BlinkOn7. The code was executed whenever the users copy a text or run Editing APIs(document.execCommand) to keep the styles when pasting it.
+    
+    <a href="/post/apple-style-span-class-was-fully/" class="summary-more">More</a>
     
   </div>
 </div>

@@ -34,16 +34,6 @@ Here is the readme about CrOSVM:</description>
     
     <item>
       <title>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</title>
-      <link>/post/editing-blink/</link>
-      <pubDate>Thu, 12 Jul 2018 17:27:01 -0800</pubDate>
-      
-      <guid>/post/editing-blink/</guid>
-      <description>Recently, I published a blog article about making Use Of Chrome&amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using ChromeOS graphics stack for a regular Linux system. This article was also mentioned in Phoronix(link).
-Originally, my old colleague started working on this project a few years ago, but it has not been maintained since then. So I have been trying to enable ozone-gbm on a Linux system because this solution would be useful for embedded systems.</description>
-    </item>
-    
-    <item>
-      <title>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</title>
       <link>/post/making-use-of-chromes-ozone-gbm-intel/</link>
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>
       
