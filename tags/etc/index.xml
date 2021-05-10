@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>etc on posts</title>
+    <link>/tags/etc/</link>
+    <description>Recent content in etc on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 19 Oct 2016 23:35:00 +0900</lastBuildDate><atom:link href="/tags/etc/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Hello World</title>
+      <link>/post/post_sample/</link>
+      <pubDate>Wed, 19 Oct 2016 23:35:00 +0900</pubDate>
+      
+      <guid>/post/post_sample/</guid>
+      <description>Write your post.</description>
+    </item>
+    
+  </channel>
+</rss>
