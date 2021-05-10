@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>webkitgtk&#43; on posts</title>
+    <link>/categories/webkitgtk&#43;/</link>
+    <description>Recent content in webkitgtk&#43; on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 30 Nov 2011 04:29:00 -0800</lastBuildDate><atom:link href="/categories/webkitgtk+/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebKitGtk&#43; Hackfest 2011</title>
+      <link>/post/webkitgtk-hackfest-2011/</link>
+      <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
+      
+      <guid>/post/webkitgtk-hackfest-2011/</guid>
+      <description>(C) Mario Gustavo and I are attending the WebKitGtk+ hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time. This is an annual event for WebKitGtk+ maintainers to work together at the same place.
+We made a list of work items on the blackboard as usual on the first day. You can find these topics in the wiki. My major work item is to apply Accelerated Compositing implementation of the clutter port to WebKitGtk+.</description>
+    </item>
+    
+  </channel>
+</rss>

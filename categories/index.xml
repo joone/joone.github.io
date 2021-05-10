@@ -6,13 +6,76 @@
     <description>Recent content in Categories on posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Fri, 04 May 2018 22:03:00 -0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="/categories/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>chromium</title>
+      <title>chromeos</title>
+      <link>/categories/chromeos/</link>
+      <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
+      
+      <guid>/categories/chromeos/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>graphics</title>
+      <link>/categories/graphics/</link>
+      <pubDate>Thu, 24 May 2018 16:06:00 -0700</pubDate>
+      
+      <guid>/categories/graphics/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Chromium</title>
       <link>/categories/chromium/</link>
       <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
       
       <guid>/categories/chromium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>nextstep</title>
+      <link>/categories/nextstep/</link>
+      <pubDate>Wed, 20 Sep 2017 11:38:00 -0700</pubDate>
+      
+      <guid>/categories/nextstep/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>servo</title>
+      <link>/categories/servo/</link>
+      <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
+      
+      <guid>/categories/servo/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>webkitgtk&#43;</title>
+      <link>/categories/webkitgtk&#43;/</link>
+      <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
+      
+      <guid>/categories/webkitgtk&#43;/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Mozilla</title>
+      <link>/categories/mozilla/</link>
+      <pubDate>Sun, 06 Jan 2008 04:42:00 -0800</pubDate>
+      
+      <guid>/categories/mozilla/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>F/OSS</title>
+      <link>/categories/f/oss/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/f/oss/</guid>
       <description></description>
     </item>
     

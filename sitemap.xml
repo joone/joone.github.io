@@ -2,7 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/categories/</loc>
+    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
+  </url><url>
     <loc>/tags/chromeos/</loc>
+    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
+  </url><url>
+    <loc>/categories/chromeos/</loc>
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
     <loc>/post/</loc>
@@ -29,6 +35,9 @@
     <loc>/tags/graphics/</loc>
     <lastmod>2018-05-24T16:06:00-07:00</lastmod>
   </url><url>
+    <loc>/categories/graphics/</loc>
+    <lastmod>2018-05-24T16:06:00-07:00</lastmod>
+  </url><url>
     <loc>/tags/rust/</loc>
     <lastmod>2018-05-24T16:06:00-07:00</lastmod>
   </url><url>
@@ -39,9 +48,6 @@
     <lastmod>2018-05-04T22:03:00-07:00</lastmod>
   </url><url>
     <loc>/post/blinkon9/</loc>
-    <lastmod>2018-05-04T22:03:00-07:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
     <lastmod>2018-05-04T22:03:00-07:00</lastmod>
   </url><url>
     <loc>/categories/chromium/</loc>
@@ -59,10 +65,16 @@
     <loc>/tags/nextstep/</loc>
     <lastmod>2017-09-20T11:38:00-07:00</lastmod>
   </url><url>
+    <loc>/categories/nextstep/</loc>
+    <lastmod>2017-09-20T11:38:00-07:00</lastmod>
+  </url><url>
     <loc>/tags/mozilla/</loc>
     <lastmod>2017-08-24T13:47:00-07:00</lastmod>
   </url><url>
     <loc>/tags/servo/</loc>
+    <lastmod>2017-08-24T13:47:00-07:00</lastmod>
+  </url><url>
+    <loc>/categories/servo/</loc>
     <lastmod>2017-08-24T13:47:00-07:00</lastmod>
   </url><url>
     <loc>/post/working-on-servo-project/</loc>
@@ -90,6 +102,9 @@
     <lastmod>2014-04-02T13:24:00-07:00</lastmod>
   </url><url>
     <loc>/tags/ozone-wayland/</loc>
+    <lastmod>2014-04-02T13:24:00-07:00</lastmod>
+  </url><url>
+    <loc>/tags/wayland/</loc>
     <lastmod>2014-04-02T13:24:00-07:00</lastmod>
   </url><url>
     <loc>/post/what-i-learned-about-american-holidays/</loc>
@@ -129,6 +144,9 @@
     <lastmod>2011-12-05T03:25:00-08:00</lastmod>
   </url><url>
     <loc>/tags/hackfest/</loc>
+    <lastmod>2011-11-30T04:29:00-08:00</lastmod>
+  </url><url>
+    <loc>/categories/webkitgtk&#43;/</loc>
     <lastmod>2011-11-30T04:29:00-08:00</lastmod>
   </url><url>
     <loc>/post/webkitgtk-hackfest-2011/</loc>
@@ -338,6 +356,9 @@
     <loc>/post/libpng-patch-for-mozilla-firefox/</loc>
     <lastmod>2008-01-06T04:42:00-08:00</lastmod>
   </url><url>
+    <loc>/categories/mozilla/</loc>
+    <lastmod>2008-01-06T04:42:00-08:00</lastmod>
+  </url><url>
     <loc>/post/korea-mozilla-community-party/</loc>
     <lastmod>2007-12-13T19:56:00-08:00</lastmod>
   </url><url>
@@ -427,5 +448,7 @@
   </url><url>
     <loc>/post/its-my-english-blog/</loc>
     <lastmod>2004-07-09T16:27:00-07:00</lastmod>
+  </url><url>
+    <loc>/categories/f/oss/</loc>
   </url>
 </urlset>

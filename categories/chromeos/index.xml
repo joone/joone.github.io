@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>chromeos on posts</title>
+    <link>/categories/chromeos/</link>
+    <description>Recent content in chromeos on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="/categories/chromeos/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The WindowService2(?) of CrOS</title>
+      <link>/post/chromeos-window-service2/</link>
+      <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
+      
+      <guid>/post/chromeos-window-service2/</guid>
+      <description>Recently, WS was replaced with WS2:
+  1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
+  Issue 865689 Remove window-service
+  I ran mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
+What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.</description>
+    </item>
+    
+    <item>
+      <title>Ozone-Wayland</title>
+      <link>/post/ozone-wayland/</link>
+      <pubDate>Wed, 02 Apr 2014 13:24:00 -0700</pubDate>
+      
+      <guid>/post/ozone-wayland/</guid>
+      <description>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].
+I have been working on Ozone-Wayland recently. There were two releases since I was involved in the development. In the latest release, I contributed the virtual keyboard support to Ozone-Wayland. You can find how it works in the following video:
+The ozone-wayland team has been focusing on graphics accelerations such as WebGL, Canvas 2D, Accelerated Compositing on Wayland.</description>
+    </item>
+    
+  </channel>
+</rss>
