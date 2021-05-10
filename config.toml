@@ -1,6 +1,6 @@
-baseurl = "your-site-address"
-title = "your-site-name"
-languageCode = "ko-KR"
+baseurl = "/"
+title = "posts"
+languageCode = "en"
 
 theme = "programmer"
 
@@ -10,5 +10,4 @@ disqusShortname = "XXXX"
 googleAnalytics = "UA-XXXXXXXX-X"
 
 [author]
-    name = "your-name"
-    email = "your-email"
+    name = "Joone Hur"
