@@ -50,6 +50,12 @@
     <loc>/post/blinkon9/</loc>
     <lastmod>2018-05-04T22:03:00-07:00</lastmod>
   </url><url>
+    <loc>/categories/</loc>
+    <lastmod>2018-05-04T22:03:00-07:00</lastmod>
+  </url><url>
+    <loc>/categories/chromium/</loc>
+    <lastmod>2018-05-04T22:03:00-07:00</lastmod>
+  </url><url>
     <loc>/tags/openstep/</loc>
     <lastmod>2017-09-27T02:43:00-07:00</lastmod>
   </url><url>
@@ -85,9 +91,6 @@
   </url><url>
     <loc>/post/my-major-contributions-to-chromium/</loc>
     <lastmod>2016-11-14T16:14:00-08:00</lastmod>
-  </url><url>
-    <loc>/categories/</loc>
-    <lastmod>2016-10-19T23:35:00+09:00</lastmod>
   </url><url>
     <loc>/tags/etc/</loc>
     <lastmod>2016-10-19T23:35:00+09:00</lastmod>

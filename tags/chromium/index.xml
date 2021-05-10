@@ -18,6 +18,17 @@ Originally, my old colleague started working on this a long time ago, but it has
     </item>
     
     <item>
+      <title>BlinkOn9</title>
+      <link>/post/blinkon9/</link>
+      <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
+      
+      <guid>/post/blinkon9/</guid>
+      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this conference, I talked about acelerating graphics performance with ozone-gbm on Intel based Linux desktop systems: explained what kind of hardware accelerations have been applied to Intel -based Chromebook and how we can use them on a Linux desktop.
+Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo</description>
+    </item>
+    
+    <item>
       <title>My major contributions to Chromium project</title>
       <link>/post/my-major-contributions-to-chromium/</link>
       <pubDate>Mon, 14 Nov 2016 16:14:00 -0800</pubDate>
