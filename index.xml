@@ -154,15 +154,6 @@ Blink Editing
     </item>
     
     <item>
-      <title>Hello World</title>
-      <link>/post/post_sample/</link>
-      <pubDate>Wed, 19 Oct 2016 23:35:00 +0900</pubDate>
-      
-      <guid>/post/post_sample/</guid>
-      <description>Write your post.</description>
-    </item>
-    
-    <item>
       <title>OSCON 2014</title>
       <link>/post/oscon-2014/</link>
       <pubDate>Tue, 22 Jul 2014 22:21:00 -0700</pubDate>
