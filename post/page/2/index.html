@@ -65,24 +65,20 @@
   
   <div class="post">
   <div class="post-title">
-    <a href="/post/chromeos-container-for-linux/" title="Linux container for ChromeOS ">
+    <a href="/post/working-on-servo-project/" title="Working on the Servo project">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
-        <time>Wednesday, Aug 29, 2018 13:15</time>
-        <h1>Linux container for ChromeOS </h1>
+        <time>Thursday, Aug 24, 2017 13:47</time>
+        <h1>Working on the Servo project</h1>
       </div>
     </a>
   </div>
   
   <div>
-    Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&rsquo;t allowed ChromeOS to run native applications due to security reason. Finally, they found a way to support Linux application through the container technology.
-It is worth to read a discussion on CrOSVM on Hacker News because the original author joined the discussion. Here is the article about ChromeOS Linux container.
-https://www.zdnet.com/article/chrome-os-could-be-getting-containers-for-running-linux-vms/
-There is a Youtube video:
-https://www.youtube.com/watch?v=s9mrR2tqVbQ
-Here is the readme about CrOSVM.
+    I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community. During the time, I contributed to Fennec browser by fixing bugs and localization. Anyway, this blog article motivated me work on Mozilla again.
+I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.
     
-    <a href="/post/chromeos-container-for-linux/" class="summary-more">More</a>
+    <a href="/post/working-on-servo-project/" class="summary-more">More</a>
     
   </div>
 </div>
@@ -91,22 +87,201 @@ Here is the readme about CrOSVM.
   
   <div class="post">
   <div class="post-title">
-    <a href="/post/linux-container-for-chromeos/" title="Linux Container for ChromeOS">
+    <a href="/post/enable-to-open-multiple-file-pickers-in/" title="Enable to open multiple file-pickers in Chromium for Linux">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
-        <time>Thursday, Jul 12, 2018 18:25</time>
-        <h1>Linux Container for ChromeOS</h1>
+        <time>Wednesday, Mar 1, 2017 13:06</time>
+        <h1>Enable to open multiple file-pickers in Chromium for Linux</h1>
       </div>
     </a>
   </div>
   
   <div>
-    Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&rsquo;t allowed ChromeOS to run native applications due to security reason. Finally, they found a way to support Linux application through the container technology.
-It is worth to read a discussion on CrOSVM on Hacker News because the original author joined the discussion. Here is the article about ChromeOS Linux container. https://www.zdnet.com/article/chrome-os-could-be-getting-containers-for-running-linux-vms/
-There is a Youtube video: https://www.youtube.com/watch?v=s9mrR2tqVbQ
-Here is the readme about CrOSVM:
+    Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
+ Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash  Here is a video to reproduce the problem.
     
-    <a href="/post/linux-container-for-chromeos/" class="summary-more">More</a>
+    <a href="/post/enable-to-open-multiple-file-pickers-in/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/apple-style-span-class-was-fully/" title="Apple-style-span class was fully removed from Blink">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Friday, Feb 17, 2017 14:48</time>
+        <h1>Apple-style-span class was fully removed from Blink</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Finally, Apple-style-span class was fully removed from Blink(commit).
+Apple-style-span has not been produced since 2011: https://webkit.org/blog/1737/apple-style-span-is-gone, but there were still some legacy code to handle Apple-style-span class because old WebKit engines has produced it, but now the usage is quite low(&lt;=0.0001%). So, we decided to remove it from Blink at BlinkOn7. The code was executed whenever the users copy a text or run Editing APIs(document.execCommand) to keep the styles when pasting it.
+    
+    <a href="/post/apple-style-span-class-was-fully/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/make-file-picker-modal-in-chromium-for/" title="Make file-picker modal in Chromium for Linux">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Tuesday, Nov 29, 2016 13:15</time>
+        <h1>Make file-picker modal in Chromium for Linux</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.
+There was already a bug and it seemed easy to fix it, but, it took 2 years to fully fix the problem.
+    
+    <a href="/post/make-file-picker-modal-in-chromium-for/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/my-major-contributions-to-chromium/" title="My major contributions to Chromium project">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Monday, Nov 14, 2016 16:14</time>
+        <h1>My major contributions to Chromium project</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
+Blink Editing
+ [Issue 226941] Contenteditable issues related to backspace handling    https://codereview.chromium.org/2064473002
+  https://codereview.chromium.org/2117663002
+  [Issue 318925] Copy and paste sometimes removes spaces between words    https://codereview.chromium.org/2193033004
+  https://codereview.chromium.org/2280513004
+  https://codereview.chromium.org/2320533002
+  https://codereview.chromium.org/2325553002
+  https://codereview.chromium.org/2336043006
+  [Issue 310149] ContentEditable: is forced on SPACE between text nodes   https://codereview.
+    
+    <a href="/post/my-major-contributions-to-chromium/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/post_sample/" title="Hello World">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Wednesday, Oct 19, 2016 23:35</time>
+        <h1>Hello World</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Write your post.
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/oscon-2014/" title="OSCON 2014">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Tuesday, Jul 22, 2014 22:21</time>
+        <h1>OSCON 2014</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    I attended OSCON 2014 held in Portland, Oregon. I think Portland is the Mecca of Open Source because OSCON is held there every year and Intel Open Source Technology center is also in Hillsboro near Portland. In addition, Linus Torvalds is based in Portland.
+I wanted to attend some sessions this year, but I didn&rsquo;t see many topics related to my job. There are more high-level topics above system level. Anyway, it&rsquo;s great to hear voices from web developers as a web engine developer.
+    
+    <a href="/post/oscon-2014/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/ozone-wayland/" title="Ozone-Wayland">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Wednesday, Apr 2, 2014 13:24</time>
+        <h1>Ozone-Wayland</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].
+I have been working on Ozone-Wayland recently. There were two releases since I was involved in the development. In the latest release, I contributed the virtual keyboard support to Ozone-Wayland. You can find how it works in the following video:
+The ozone-wayland team has been focusing on graphics accelerations such as WebGL, Canvas 2D, Accelerated Compositing on Wayland.
+    
+    <a href="/post/ozone-wayland/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/what-i-learned-about-american-holidays/" title="What I learned about American holidays">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Monday, Dec 30, 2013 07:13</time>
+        <h1>What I learned about American holidays</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    This year, I experienced Halloween, Thanksgiving day, and Christmas with my family for the first time since I moved to the US. There were many new things I learned about these holidays, so I’d like to share them with you.
+Many Koreans know about Halloween because the young Korean people who had studied in the US started bringing Halloween customs back to South Korea and enjoying Halloween there since the 2000s and the majority of kindergartens have a Halloween costume party these days, but Halloween is still not commonly celebrated in Korea, so it’s very hard to find a person wearing a Halloween costume on the streets on Halloween.
+    
+    <a href="/post/what-i-learned-about-american-holidays/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/why-gangnam-style-became-more-popular/" title="Why Gangnam style became more popular than other typical Kpop idol songs">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Thursday, Nov 29, 2012 22:43</time>
+        <h1>Why Gangnam style became more popular than other typical Kpop idol songs</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Can you believe that a Kpop song reached no.1 on iTunes in 31 countries?, even though this Kpop song is not an English song, but a Korean song that is called “Gangnam style” by PSY. Actually, nobody expected that this song could become a great hit wordwide, but this song has been spread all over the world very quickly due to Youtube. In this article, I am going to talk about why “Gangnam style” became more popular than other typical Kpop idol songs.
+    
+    <a href="/post/why-gangnam-style-became-more-popular/" class="summary-more">More</a>
     
   </div>
 </div>
@@ -122,7 +297,7 @@ Here is the readme about CrOSVM:
   </a>
   
   <span class="page">
-    Page 2 / 44
+    Page 2 / 9
   </span>
   
   <a href="/post/page/3/" rel="next">
