@@ -6,8 +6,8 @@ theme = "programmer"
 
 paginate = 2
 
-disqusShortname = "XXXX"
-googleAnalytics = "UA-XXXXXXXX-X"
+disqusShortname = "joone"
+#googleAnalytics = "UA-XXXXXXXX-X"
 
 [author]
     name = "Joone Hur"
