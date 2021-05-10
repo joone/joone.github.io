@@ -4,7 +4,7 @@ languageCode = "en"
 
 theme = "programmer"
 
-paginate = 2
+paginate = 10
 
 disqusShortname = "joone"
 #googleAnalytics = "UA-XXXXXXXX-X"
