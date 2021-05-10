@@ -6,18 +6,7 @@
     <description>Recent content in Posts on posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Aug 2018 17:31:00 -0800</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>The WindowService2(?) of CrOS</title>
-      <link>/post/the-windowservice2-of-cros/</link>
-      <pubDate>Wed, 29 Aug 2018 17:31:00 -0800</pubDate>
-      
-      <guid>/post/the-windowservice2-of-cros/</guid>
-      <description>Recently, WS was replaced with WS2:
- window-service: removes mus_demo, test_wm, and some unnecessary deps Issue 865689 Remove window-service  I&amp;rsquo;ve run mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
-What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.</description>
-    </item>
-    
+    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="/post/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The WindowService2(?) of CrOS</title>
       <link>/post/chromeos-window-service2/</link>
