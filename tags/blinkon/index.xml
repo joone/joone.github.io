@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BlinkOn on posts</title>
+    <link>/tags/blinkon/</link>
+    <description>Recent content in BlinkOn on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Fri, 04 May 2018 22:03:00 -0700</lastBuildDate><atom:link href="/tags/blinkon/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>BlinkOn9</title>
+      <link>/post/blinkon9/</link>
+      <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
+      
+      <guid>/post/blinkon9/</guid>
+      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this conference, I talked about acelerating graphics performance with ozone-gbm on Intel based Linux desktop systems: explained what kind of hardware accelerations have been applied to Intel -based Chromebook and how we can use them on a Linux desktop.
+Here is a demo video on Youtube:</description>
+    </item>
+    
+  </channel>
+</rss>

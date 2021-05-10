@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OSX on posts</title>
+    <link>/tags/osx/</link>
+    <description>Recent content in OSX on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 07 Aug 2010 01:03:00 -0700</lastBuildDate><atom:link href="/tags/osx/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Building Chromium browser on your Mac</title>
+      <link>/post/building-chromium-browser-on-your-mac/</link>
+      <pubDate>Sat, 07 Aug 2010 01:03:00 -0700</pubDate>
+      
+      <guid>/post/building-chromium-browser-on-your-mac/</guid>
+      <description>Copyright © Chromium Project
+Building your own browser is the best way to find bugs and fix them. Now, I&amp;rsquo;d like to introduce how to build Chromium on your mac. I think that the latest code seems more stable(?) and provides more features.
+This is a starting point to build Chromium on Mac OS X.
+http://code.google.com/p/chromium/wiki/MacBuildInstructions
+Installing the depot-tools http://dev.chromium.org/developers/how-tos/install-gclient
+$ svn co http://src.chromium.org/svn/trunk/tools/depot_tools
+Add depot_tools to your PATH:</description>
+    </item>
+    
+  </channel>
+</rss>

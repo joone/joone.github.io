@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GNOME on posts</title>
+    <link>/tags/gnome/</link>
+    <description>Recent content in GNOME on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Tue, 21 Feb 2012 18:13:00 -0800</lastBuildDate><atom:link href="/tags/gnome/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Glad to become a new GNOME foundation member</title>
+      <link>/post/i-became-new-gnome-foundation-member/</link>
+      <pubDate>Tue, 21 Feb 2012 18:13:00 -0800</pubDate>
+      
+      <guid>/post/i-became-new-gnome-foundation-member/</guid>
+      <description>After I read this blog post, I applied for membership in the GNOME Foundation. Finally, my application was accepted last week. I think that my WebKitGtk+ contribution and GNOME Korea activities could count towards membership.
+The main reason why I decided to become a GNOME foundation member is to let GNOME folks know about the GNOME Korea community(http://gnome.or.kr). The GNOME Korea community started to translate for GNOME in 1998, and is mainly working on Korean translation(http://l10n.</description>
+    </item>
+    
+    <item>
+      <title>WebKitGtk&#43; Hackfest 2011</title>
+      <link>/post/webkitgtk-hackfest-2011/</link>
+      <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
+      
+      <guid>/post/webkitgtk-hackfest-2011/</guid>
+      <description>(C) Mario Gustavo and I are attending the WebKitGtk+ hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time. This is an annual event for WebKitGtk+ maintainers to work together at the same place.
+We made a list of work items on the blackboard as usual on the first day. You can find these topics in the wiki. My major work item is to apply Accelerated Compositing implementation of the clutter port to WebKitGtk+.</description>
+    </item>
+    
+    <item>
+      <title>Talking about GNOME3</title>
+      <link>/post/speech-about-gnome3-at-daum-devon/</link>
+      <pubDate>Wed, 23 Nov 2011 22:55:00 -0800</pubDate>
+      
+      <guid>/post/speech-about-gnome3-at-daum-devon/</guid>
+      <description>I gave a talk about GNOME3 at Daum DevOn conference in Korea. Daum is a popular web portal site in Korea like Yahoo. They invited many developers &amp;amp; user communities to the conference, so the GNOME Korea community had a chance to introduce GNOME3 and the community to the attendees.
+I was so glad to introduce GNOME3.2 and the infra technology like GTK+, Clutter, GStreamer, WebKitGtk+, Telepathy and GObject-Introspection. Here are the slides and some photos.</description>
+    </item>
+    
+    <item>
+      <title>Desktop Summit 2011</title>
+      <link>/post/desktop-summit-2011/</link>
+      <pubDate>Sat, 27 Aug 2011 10:35:00 -0700</pubDate>
+      
+      <guid>/post/desktop-summit-2011/</guid>
+      <description>It has been a week since I got back home from Cambridge. I had a day trip in London before leaving for Korea, which was very nice because I got the chance to look around the royal places, museums, and parks. In particular, I was so excited to find a TINTIN shop by chance. :-)
+Anyway, Desktop Summit 2011 was great: there were many great talks, workshops, BoFs, and parties as usual.</description>
+    </item>
+    
+    <item>
+      <title>WebKitGtk&#43; Hackfest 2010</title>
+      <link>/post/webkitgtk-hackfest-2010/</link>
+      <pubDate>Thu, 30 Dec 2010 07:35:00 -0800</pubDate>
+      
+      <guid>/post/webkitgtk-hackfest-2010/</guid>
+      <description>(c) 2010 Diegoe
+I attended the WebKitGtk+ Hackfest held in the Igalia Office, located in Coruña, Spain, in this month. It was a great opportunity for me to meet the WebKitGtk+maintainers directly. This hackfest was sponsored by Collabora and Igalia. The Igalia office was very nice; it can be compared to the Google office in terms of the atmosphere. There were free snacks, beverage and game consoles in the office.</description>
+    </item>
+    
+  </channel>
+</rss>

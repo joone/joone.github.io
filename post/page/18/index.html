@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Posts  | posts</title>
+  <meta name="description" content=" 'Posts'read this article.">
+  <meta property="og:title" content="Posts">
+  
+  <meta property="og:type" content="website">
+  
+  <meta property="og:description" content=" 'Posts'read this article.">
+  <meta property="og:url" content="/post/">
+  <meta property="og:site_name" content="posts">
+  
+  <meta property="og:image" content="/images/thumbnail.png">
+  
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="/post/">
+  <link rel="alternate" type="application/rss+xml" href="/post/index.xml" title="posts" />
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">posts</a></li>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/tags">tags</a></li>
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+<div class="container">
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/building-chromium-browser-on-your-mac/" title="Building Chromium browser on your Mac">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Saturday, Aug 7, 2010 01:03</time>
+        <h1>Building Chromium browser on your Mac</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Copyright © Chromium Project
+Building your own browser is the best way to find bugs and fix them. Now, I&rsquo;d like to introduce how to build Chromium on your mac. I think that the latest code seems more stable(?) and provides more features.
+This is a starting point to build Chromium on Mac OS X.
+http://code.google.com/p/chromium/wiki/MacBuildInstructions
+Installing the depot-tools http://dev.chromium.org/developers/how-tos/install-gclient
+$ svn co http://src.chromium.org/svn/trunk/tools/depot_tools
+Add depot_tools to your PATH:
+    
+    <a href="/post/building-chromium-browser-on-your-mac/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/feedbacks-from-communities-on-handling/" title="Feedbacks from the communities on the key events handling in WebKit">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Wednesday, Aug 4, 2010 06:24</time>
+        <h1>Feedbacks from the communities on the key events handling in WebKit</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&rsquo;ve got quick feedbacks from the communities on each issue as follows,
+Issue1) IME Composition events should be handled consistently in all ports of WebKit.
+=&gt; &ldquo;This can&rsquo;t be achieved as it depends on the platform IME system.
+    
+    <a href="/post/feedbacks-from-communities-on-handling/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+</div>
+<div class="paging">
+  
+  <a href="/post/page/17/" rel="prev">
+    Prev
+    <i class="fa fa-caret-left" aria-hidden="true"></i>
+  </a>
+  
+  <span class="page">
+    Page 18 / 44
+  </span>
+  
+  <a href="/post/page/19/" rel="next">
+    <i class="fa fa-caret-right" aria-hidden="true"></i>
+    
+  </a>
+  
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  (C) <a href="https://joone.github.io"> Joone Hur</a><br />
+</footer>
+</body>
+</html>
+

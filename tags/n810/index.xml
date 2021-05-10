@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>N810 on posts</title>
+    <link>/tags/n810/</link>
+    <description>Recent content in N810 on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 18 May 2008 04:22:00 -0700</lastBuildDate><atom:link href="/tags/n810/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Latest looks of Fennec (Mobile Firefox)</title>
+      <link>/post/latest-look-of-fennec-mobile-firefox/</link>
+      <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
+      
+      <guid>/post/latest-look-of-fennec-mobile-firefox/</guid>
+      <description>The plan of Mobile Firefox was announced in October last year and the Mozilla community is now very busy to develop Mobile Firefox.
+Fennec is the code name of Mobile Firefox, which is a desert fox. You may have seen a fennec in TV animation. The size of fennec is smaller than normal fox and it has big ears. So I think the name of Fennec seems to be suited well for Mobile Firefox.</description>
+    </item>
+    
+    <item>
+      <title>My N810 was delivered from the US.</title>
+      <link>/post/my-n810-approached-from-us/</link>
+      <pubDate>Thu, 24 Apr 2008 16:31:00 -0700</pubDate>
+      
+      <guid>/post/my-n810-approached-from-us/</guid>
+      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall. Anyway, I am very satisfied with N810. It may be my favorite toy.
+N810 uses the Maemo platform that is based on Linux 2.6, GTK+, Matchbox and other open source projects. Scratchbox is used for its development environment that supports a cross-platform development environment.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mobile on posts</title>
+    <link>/tags/mobile/</link>
+    <description>Recent content in mobile on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 21 May 2011 01:04:00 -0700</lastBuildDate><atom:link href="/tags/mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>WebKit Mobile Features</title>
+      <link>/post/webkit-mobile-features/</link>
+      <pubDate>Sat, 21 May 2011 01:04:00 -0700</pubDate>
+      
+      <guid>/post/webkit-mobile-features/</guid>
+      <description>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk+.
+First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone.</description>
+    </item>
+    
+    <item>
+      <title>Firefox for Mobile Devices</title>
+      <link>/post/firefox-for-mobile-devices/</link>
+      <pubDate>Fri, 26 Dec 2008 05:55:00 -0800</pubDate>
+      
+      <guid>/post/firefox-for-mobile-devices/</guid>
+      <description>I&amp;rsquo;d like to share a little bit old presentation about Mobile Firefox.
+From: mobileportland, 2 months ago
+Firefox For Mobile Devices
+view presentation (tags: browsers mozilla portland firefox)
+Dietrich Ayala&amp;rsquo;s presentation at May 2008 meeting of Mobile Portland
+SlideShare Link</description>
+    </item>
+    
+    <item>
+      <title>Camera Interface on Mobile Platform</title>
+      <link>/post/camera-interface-in-maemo-platform/</link>
+      <pubDate>Sun, 20 Apr 2008 06:36:00 -0700</pubDate>
+      
+      <guid>/post/camera-interface-in-maemo-platform/</guid>
+      <description>Mozilla platform is trying to support device APIs for mobile environment.
+Some people call them native interface
+I already posted a blog on device APIs
+The Mozilla community started to discuss what the device APIs should be supported through the news group and Mozilla wiki.
+Christopher added some information regarding the device APIs in the wiki.
+So you can find on-going issues to support the device APIs. They are not confirmed, so you can suggest your idea &amp;amp; opinion to them.</description>
+    </item>
+    
+    <item>
+      <title>How to support native interfaces on the Web</title>
+      <link>/post/how-to-support-native-interfaces-on-web/</link>
+      <pubDate>Sat, 26 Jan 2008 08:17:00 -0800</pubDate>
+      
+      <guid>/post/how-to-support-native-interfaces-on-web/</guid>
+      <description>I posted an article about supporting native interfaces in Mobile Firefox. Byt the way, I found information regarding my post from here. This paper explained the native interfaces I talked as sensors on device and introduced how to send their sensed data to servers via the Web.
+The sensor means a device that reads data from the user&amp;rsquo;s physical environment. By the way, I am interested in how to get data from the native interfaces via web browser.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Windows Mobile on posts</title>
+    <link>/tags/windows-mobile/</link>
+    <description>Recent content in Windows Mobile on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Thu, 27 Aug 2009 07:36:00 -0700</lastBuildDate><atom:link href="/tags/windows-mobile/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Fixing a hardware keyboard problem in Mobile Firefox for Windows Mobile </title>
+      <link>/post/how-to-check-hardware-keyboard-on/</link>
+      <pubDate>Thu, 27 Aug 2009 07:36:00 -0700</pubDate>
+      
+      <guid>/post/how-to-check-hardware-keyboard-on/</guid>
+      <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed. I am so happy to contribute to Mozilla. Here is the detail what the problem was fixed:
+Windows Mobile keeps the status of hardware keyboard in the registry as follows:
+&amp;quot;HKEY\_CURRENT\_USER\\SOFTWARE\\Microsoft\\Shell\\HasKeyboard&amp;quot; A software keyboard can pop-up if a device doesn&amp;rsquo;t have a hardware keyboard. However, in the case that the device has a slide-out keyboard, the value should be changed according to the status of the slide-out keyboard.</description>
+    </item>
+    
+    <item>
+      <title>SAMSUNG Windows Mobile SDK 1.0 Released!</title>
+      <link>/post/samsung-windows-mobile-sdk-10-releaed/</link>
+      <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
+      
+      <guid>/post/samsung-windows-mobile-sdk-10-releaed/</guid>
+      <description>Samsung Windows Mobile SDK 1.0 was released!
+
+You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
+It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
+The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
+    </item>
+    
+  </channel>
+</rss>

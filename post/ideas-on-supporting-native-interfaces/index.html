@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ideas on supporting native interfaces in Mobile Firefox  | posts</title>
+  <meta name="description" content=" 'Ideas on supporting native interfaces in Mobile Firefox'read this article.">
+  <meta property="og:title" content="Ideas on supporting native interfaces in Mobile Firefox">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2008-01-07">
+  
+  <meta property="og:description" content=" 'Ideas on supporting native interfaces in Mobile Firefox'read this article.">
+  <meta property="og:url" content="/post/ideas-on-supporting-native-interfaces/">
+  <meta property="og:site_name" content="posts">
+  
+  <meta property="og:image" content="/images/thumbnail.png">
+  
+  
+  <meta property="og:tags" content="Mobile Firefox">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="/post/ideas-on-supporting-native-interfaces/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">posts</a></li>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/tags">tags</a></li>
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+
+<div class="post">
+  <div class="post-title">
+    <a href="/post/ideas-on-supporting-native-interfaces/">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Monday, Jan 7, 2008 08:00</time>
+        <h1>Ideas on supporting native interfaces in Mobile Firefox</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents"></nav>
+  </div>
+  <section class="post-content">
+    <p>I&rsquo;d like to share my ideas on native interface support in Mobile Firefox.<br>
+These ideas are based on Christian&rsquo;s Mobile Goal.<br>
+<a href="http://www.christiansejersen.com/blog/2007/11/20/mobile-goals/">http://www.christiansejersen.com/blog/2007/11/20/mobile-goals/</a></p>
+<p>Goal<br>
+Provide mobile web application environment which can use native interfaces.<br>
+- It can make XUL add-ons &amp; web applications use native interfaces<br>
+through JavaScript</p>
+<p>Types of Native Interfaces<br>
+(Most of mobile platforms support APIs for easy of use for camera, GPS, contact, and etc..)</p>
+<p>There are two types of native interface:<br>
+* native interfaces from hardware<br>
+- GPS<br>
+- Camera<br>
+- Phone Call</p>
+<p>* native interfaces from application engine<br>
+- Contact<br>
+- SMS<br>
+- Calendar (HTML5)</p>
+<p>There might be more native interface.</p>
+<p>Application Examples</p>
+<p>GPS (Location)</p>
+<p>* Web based GPS Navigation using Google Map</p>
+<p>* Location based Web Service<br>
+- Search<br>
+- News<br>
+- Auction(e-bay)</p>
+<p>Search results or list of items could be found related to user&rsquo;s location.<br>
+It is possible that web services gets user&rsquo;s location through web browser.</p>
+<p>Camera</p>
+<p>* Provide a way of handling camera input from web applications.<br>
+o If so, Flickr provides a web based camera application and so user can store their photos more easily.<br>
+o The applcation can use SVG transform &amp; filter features for handling photos.<br>
+o User can draw on photos using Canvas feature.</p>
+<p>Phone Call</p>
+<p>* Safari on the iPhone already supports this feature via anchor tag.</p>
+<p>* We should support this feature like that.</p>
+<p>Contact</p>
+<p>* Provide a way of importing a new contact from a web page via micro format, address element, and contact attribute of HTML5</p>
+<p>SMS</p>
+<p>* Provide a way of sending a SMS with containing of a part of web page or URL.</p>
+<p>Calendar</p>
+<p>* Provide a way of importing event from element of HTML5</p>
+<p>Implementation</p>
+<p>* It is possible to expose device capabilities through XPCOM, XPConnect, and JavaScript.</p>
+<p>* Provide a abstract layer for supporting cross platform</p>
+<p>Security</p>
+<p>* If web services try to use native interfaces, the browser should show a dialog to users for grant.</p>
+<p>* Mobile Firefox should manage permitted web sites in local database.</p>
+<p><a href="http://technorati.com/claim/nqrrwnv28i">Technorati Profile</a></p>
+
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=%2fpost%2fideas-on-supporting-native-interfaces%2f&t=Ideas%20on%20supporting%20native%20interfaces%20in%20Mobile%20Firefox"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=%2fpost%2fideas-on-supporting-native-interfaces%2f&text=Ideas%20on%20supporting%20native%20interfaces%20in%20Mobile%20Firefox&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=%2fpost%2fideas-on-supporting-native-interfaces%2f&title=Ideas%20on%20supporting%20native%20interfaces%20in%20Mobile%20Firefox"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=%2fpost%2fideas-on-supporting-native-interfaces%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:">Joone Hur</a>
+      
+      wrotes this article at
+      <span class="highlight">Monday, Jan 7, 2008 08:00</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_tags</span>
+        
+        
+        <a href="/tags/mobile-firefox">#Mobile Firefox</a>
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XXXX" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="/post/libpng-patch-for-mozilla-firefox/" rel="prev">
+          <span>libpng patch for Mobile Firefox</span>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/post/teach-yourself-mozilla-in-5-days/" rel="next">
+          <span>Teach yourself Mozilla in 5 days</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  (C) <a href="https://joone.github.io"> Joone Hur</a><br />
+</footer>
+</body>
+</html>
+

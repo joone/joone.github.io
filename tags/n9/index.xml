@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>N9 on posts</title>
+    <link>/tags/n9/</link>
+    <description>Recent content in N9 on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 26 Mar 2012 00:22:00 -0700</lastBuildDate><atom:link href="/tags/n9/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Using Nokia N9 in Korea</title>
+      <link>/post/its-been-almost-3-months-since-i/</link>
+      <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
+      
+      <guid>/post/its-been-almost-3-months-since-i/</guid>
+      <description>It’s been almost 3 months since I started using a Nokia N9 as my secondary phone, which is a Linux based smart phone released by Nokia on October 2011. In this post, I will introduce what Nokia N9 is and how to use it in Korea, because it adopts an open source mobile platform which means that anyone can be involved with the project.
+Nokia N9
+Unfortunately, N9 is the first and last MeeGo phone, but it seems to be close to the Maemo platform, because it uses Qt as the UI framework and the Debian package system.</description>
+    </item>
+    
+  </channel>
+</rss>

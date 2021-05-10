@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>GPS on posts</title>
+    <link>/tags/gps/</link>
+    <description>Recent content in GPS on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 26 Jan 2008 08:17:00 -0800</lastBuildDate><atom:link href="/tags/gps/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to support native interfaces on the Web</title>
+      <link>/post/how-to-support-native-interfaces-on-web/</link>
+      <pubDate>Sat, 26 Jan 2008 08:17:00 -0800</pubDate>
+      
+      <guid>/post/how-to-support-native-interfaces-on-web/</guid>
+      <description>I posted an article about supporting native interfaces in Mobile Firefox. Byt the way, I found information regarding my post from here. This paper explained the native interfaces I talked as sensors on device and introduced how to send their sensed data to servers via the Web.
+The sensor means a device that reads data from the user&amp;rsquo;s physical environment. By the way, I am interested in how to get data from the native interfaces via web browser.</description>
+    </item>
+    
+  </channel>
+</rss>

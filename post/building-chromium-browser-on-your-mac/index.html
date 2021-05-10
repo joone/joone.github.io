@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Building Chromium browser on your Mac  | posts</title>
+  <meta name="description" content=" 'Building Chromium browser on your Mac'read this article.">
+  <meta property="og:title" content="Building Chromium browser on your Mac">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2010-08-07">
+  
+  <meta property="og:description" content=" 'Building Chromium browser on your Mac'read this article.">
+  <meta property="og:url" content="/post/building-chromium-browser-on-your-mac/">
+  <meta property="og:site_name" content="posts">
+  
+  <meta property="og:image" content="/images/thumbnail.png">
+  
+  
+  <meta property="og:tags" content="OSX">
+  
+  <meta property="og:tags" content="chromium">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="/post/building-chromium-browser-on-your-mac/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">posts</a></li>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/tags">tags</a></li>
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+
+<div class="post">
+  <div class="post-title">
+    <a href="/post/building-chromium-browser-on-your-mac/">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Saturday, Aug 7, 2010 01:03</time>
+        <h1>Building Chromium browser on your Mac</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+  </div>
+  <section class="post-content">
+    <p><a href="http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0anmRCrOI/AAAAAAAAAQI/BqU1d_Zqg74/s1600/200px-Chromium_Logo.png"><img src="http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0anmRCrOI/AAAAAAAAAQI/BqU1d_Zqg74/s320/200px-Chromium_Logo.png" alt=""></a></p>
+<p>Copyright © Chromium Project</p>
+<p>Building your own browser is the best way to find bugs and fix them. Now, I&rsquo;d like to introduce how to build Chromium on your mac. I think that the latest code seems more stable(?) and provides more features.</p>
+<p>This is a starting point to build Chromium on Mac OS X.<br>
+<a href="http://code.google.com/p/chromium/wiki/MacBuildInstructions">http://code.google.com/p/chromium/wiki/MacBuildInstructions</a></p>
+<h4 id="installing-the-depot-tools">Installing the depot-tools</h4>
+<p><a href="http://dev.chromium.org/developers/how-tos/install-gclient">http://dev.chromium.org/developers/how-tos/install-gclient</a></p>
+<p>$ svn co <a href="http://src.chromium.org/svn/trunk/tools/depot">http://src.chromium.org/svn/trunk/tools/depot</a>_tools</p>
+<p>Add depot_tools to your PATH:<br>
+$ export PATH=`pwd`/depot_tools:&quot;$PATH&quot;</p>
+<h4 id="getting-the-code">Getting the code</h4>
+<p>A checkout straight from the Subversion (SVN) repository can take a long time. It would be good to download a tar ball from <a href="http://build.chromium.org/buildbot/archives/chromium_tarball.html">http://build.chromium.org/buildbot/archives/chromium_tarball.html</a></p>
+<p>Then, you can update the code to the latest revision from the SVN repository.<br>
+$ gclient sync</p>
+<h4 id="building-from-the-command-line">Building from the command line</h4>
+<p>To build all targets (it takes a long time due to test case builds)<br>
+$ cd ~/chromium/src/build<br>
+$ xcodebuild -project all.xcodeproj -configuration Debug -target All</p>
+<p>To build just chrome:<br>
+$ cd ~/chromium/src/chrome<br>
+$ xcodebuild -project chrome.xcodeproj -configuration Debug -target chrome</p>
+<h4 id="running-chromium">Running Chromium</h4>
+<p>Run Chromium debug build<br>
+$ cd ~/chromium/src/xcodebuild/Debug</p>
+<p>$ open ./Chromium.app</p>
+<p>Run Chromium release build</p>
+<p>$ cd ~/chromium/src/xcodebuild/Release</p>
+<p>$ open ./Chromium.app</p>
+<p>The latest revision of Chromium looks cool.</p>
+<p><a href="http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0X1-J59mI/AAAAAAAAAQA/_0XSnj6iIOM/s1600/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7+2010-08-07+%EC%98%A4%ED%9B%84+5.15.36.png"><img src="http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0X1-J59mI/AAAAAAAAAQA/_0XSnj6iIOM/s400/%EC%8A%A4%ED%81%AC%EB%A6%B0%EC%83%B7+2010-08-07+%EC%98%A4%ED%9B%84+5.15.36.png" alt=""></a></p>
+
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=%2fpost%2fbuilding-chromium-browser-on-your-mac%2f&t=Building%20Chromium%20browser%20on%20your%20Mac"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=%2fpost%2fbuilding-chromium-browser-on-your-mac%2f&text=Building%20Chromium%20browser%20on%20your%20Mac&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=%2fpost%2fbuilding-chromium-browser-on-your-mac%2f&title=Building%20Chromium%20browser%20on%20your%20Mac"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=%2fpost%2fbuilding-chromium-browser-on-your-mac%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:">Joone Hur</a>
+      
+      wrotes this article at
+      <span class="highlight">Saturday, Aug 7, 2010 01:03</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_tags</span>
+        
+        
+        <a href="/tags/osx">#OSX</a>
+        
+        <a href="/tags/chromium">#chromium</a>
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XXXX" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="/post/feedbacks-from-communities-on-handling/" rel="prev">
+          <span>Feedbacks from the communities on the key events handling in WebKit</span>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/post/why-i-participate-in-open-source/" rel="next">
+          <span>Why I participate in open source project</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  (C) <a href="https://joone.github.io"> Joone Hur</a><br />
+</footer>
+</body>
+</html>
+

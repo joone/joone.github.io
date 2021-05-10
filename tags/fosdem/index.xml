@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>FOSDEM on posts</title>
+    <link>/tags/fosdem/</link>
+    <description>Recent content in FOSDEM on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Feb 2009 20:25:00 -0800</lastBuildDate><atom:link href="/tags/fosdem/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Mozilla@FOSDEM2009</title>
+      <link>/post/mozillafosdem2009/</link>
+      <pubDate>Mon, 09 Feb 2009 20:25:00 -0800</pubDate>
+      
+      <guid>/post/mozillafosdem2009/</guid>
+      <description>Photo: Teemu Mäntynen
+FOSDEM 2009 finished last week. Although I didn&amp;rsquo;t attend FODSEM, I got a feel for what was going through through blogs and photos on Flikr. FODSEM(Free and Open Source Software Developer’s European Meeting) is a largest occasion for free/open source developers in Europe. It is relevant to various open source projects and it can be compared with OSCON(O’Reilly Open Source Convention) held in the US.
+The following projects had their own session:</description>
+    </item>
+    
+  </channel>
+</rss>

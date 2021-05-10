@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>libpng patch for Mobile Firefox  | posts</title>
+  <meta name="description" content=" 'libpng patch for Mobile Firefox'read this article.">
+  <meta property="og:title" content="libpng patch for Mobile Firefox">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2008-01-06">
+  
+  <meta property="og:description" content=" 'libpng patch for Mobile Firefox'read this article.">
+  <meta property="og:url" content="/post/libpng-patch-for-mozilla-firefox/">
+  <meta property="og:site_name" content="posts">
+  
+  <meta property="og:image" content="/images/thumbnail.png">
+  
+  
+  <meta property="og:tags" content="patch">
+  
+  <meta property="og:tags" content="Mozilla">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="/post/libpng-patch-for-mozilla-firefox/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXX-X"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'UA-XXXXXXXX-X');
+  </script>
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">posts</a></li>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/tags">tags</a></li>
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+
+<div class="post">
+  <div class="post-title">
+    <a href="/post/libpng-patch-for-mozilla-firefox/">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Sunday, Jan 6, 2008 04:42</time>
+        <h1>libpng patch for Mobile Firefox</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents"></nav>
+  </div>
+  <section class="post-content">
+    <p>There are submitted patches for Mobile Firefox on the Mozilla wiki.<br>
+<a href="http://wiki.mozilla.org/Mobile/Patches">http://wiki.mozilla.org/Mobile/Patches</a></p>
+<p><a href="http://groups.google.com/group/mozilla.dev.platforms.mobile/browse_thread/thread/504332475973e42d">My colleague tried to apply the png patch to Mozilla and get a good result related to performance improvement.</a></p>
+<p>As you know, we can build the libpng fixed point routines like the above patch.<br>
+(Use #define PNG_NO_FLOATING_POINT_SUPPORTED in mozilla/modules/libimg/png/mozpngconf.h )</p>
+<p>In this case, he can get 8.6% performance improvement.<br>
+It&rsquo;s great. I think this patch is valuable to use on Mobile Firefox.</p>
+<p>However, there is the following problem in this patch.<br>
+Mozilla handles some floating point values to get image information from the libpng so the patch commented those parts in the info_callback() function. (mozilla/modules/libpr0n/decoders/png/nsPNGDecoder.cpp)<br>
+The problem is that color management feature should get color profile information from the libpng. The following code shows the example:</p>
+<p>void<br>
+info_callback(png_structp png_ptr, png_infop info_ptr)<br>
+{<br>
+&hellip;</p>
+<p>if (gfxPlatform::IsCMSEnabled()) {<br>
+decoder-&gt;mInProfile = PNGGetColorProfile(png_ptr, info_ptr,<br>
+color_type, &amp;inType, &amp;intent);<br>
+}<br>
+&hellip;<br>
+}</p>
+<p>We can check the value of <a href="http://kb.mozillazine.org/Gfx.color_management.enabled">gfx.color_management.enabled</a> through the gfxPlatform::IsCMSEnable() method.</p>
+<p>If the gfx.color_management.enabled is true, you can use the color profiles embedded in images to adjust the colors to match your computer&rsquo;s display. In this case, Mozilla should call the PNGGetColorProfile() method. But this method handles floating point values.</p>
+<p>Fortunately, Mozilla sets the value of gfx.color_management.enabled to false as default. The PNGGetColorProfile() method is not called. Nevertheless, the patch commented this part because a user may try to set the value to true.<br>
+Anyway, the color management feature is not used basically now.</p>
+<p>If Mobile Firefox should use the color management feature, the png patch needs more tweaks.</p>
+<p>How do you think about that?</p>
+
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=%2fpost%2flibpng-patch-for-mozilla-firefox%2f&t=libpng%20patch%20for%20Mobile%20Firefox"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=%2fpost%2flibpng-patch-for-mozilla-firefox%2f&text=libpng%20patch%20for%20Mobile%20Firefox&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=%2fpost%2flibpng-patch-for-mozilla-firefox%2f&title=libpng%20patch%20for%20Mobile%20Firefox"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=%2fpost%2flibpng-patch-for-mozilla-firefox%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:">Joone Hur</a>
+      
+      wrotes this article at
+      <span class="highlight">Sunday, Jan 6, 2008 04:42</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_tags</span>
+        
+        
+        <a href="/tags/patch">#patch</a>
+        
+        <a href="/tags/mozilla">#Mozilla</a>
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+    <div id="disqus_thread"></div>
+<script type="application/javascript">
+    var disqus_config = function () {
+    
+    
+    
+    };
+    (function() {
+        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
+            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
+            return;
+        }
+        var d = document, s = d.createElement('script'); s.async = true;
+        s.src = '//' + "XXXX" + '.disqus.com/embed.js';
+        s.setAttribute('data-timestamp', +new Date());
+        (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>    
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="/post/korea-mozilla-community-party/" rel="prev">
+          <span>Korea Mozilla Community Party</span>
+        </a>
+      </li>
+      
+      
+      <li>
+        <a href="/post/ideas-on-supporting-native-interfaces/" rel="next">
+          <span>Ideas on supporting native interfaces in Mobile Firefox</span>
+        </a>
+      </li>
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  (C) <a href="https://joone.github.io"> Joone Hur</a><br />
+</footer>
+</body>
+</html>
+

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Infraware on posts</title>
+    <link>/tags/infraware/</link>
+    <description>Recent content in Infraware on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sat, 05 Apr 2008 16:36:00 -0700</lastBuildDate><atom:link href="/tags/infraware/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Real Full Browsing in Korea</title>
+      <link>/post/real-full-browsing-in-korea/</link>
+      <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
+      
+      <guid>/post/real-full-browsing-in-korea/</guid>
+      <description>LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.
+Other telecom operators also have provided mobile full browsing service, but the rate plan is very expensive. For example, SK telecom charges about 3072Won(3$) per 1MB for data transfer.
+The full browser was provided by Infraware that is a Korean company.</description>
+    </item>
+    
+  </channel>
+</rss>

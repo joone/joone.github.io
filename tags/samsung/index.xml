@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>SAMSUNG on posts</title>
+    <link>/tags/samsung/</link>
+    <description>Recent content in SAMSUNG on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 26 Apr 2009 04:05:00 -0700</lastBuildDate><atom:link href="/tags/samsung/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>SAMSUNG Windows Mobile SDK 1.0 Released!</title>
+      <link>/post/samsung-windows-mobile-sdk-10-releaed/</link>
+      <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
+      
+      <guid>/post/samsung-windows-mobile-sdk-10-releaed/</guid>
+      <description>Samsung Windows Mobile SDK 1.0 was released!
+
+You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
+It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
+The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
+    </item>
+    
+  </channel>
+</rss>

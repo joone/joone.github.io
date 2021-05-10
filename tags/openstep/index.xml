@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>OpenStep on posts</title>
+    <link>/tags/openstep/</link>
+    <description>Recent content in OpenStep on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 27 Sep 2017 02:43:00 -0700</lastBuildDate><atom:link href="/tags/openstep/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Setting up NFS in OpenStep</title>
+      <link>/post/setting-up-nfs-in-openstep/</link>
+      <pubDate>Wed, 27 Sep 2017 02:43:00 -0700</pubDate>
+      
+      <guid>/post/setting-up-nfs-in-openstep/</guid>
+      <description>If your server or host PC supports NFS, you can set up shared directories for OpenStep. For example, if the shared folder is nfs://192.168.1.19/nfs/ftp, you can add the imported directory in NFSManager.app as follows:
+
+Run mount command in OpenStep to mount a remote directory as follows:``` $ mount -t 192.168.8.16:/mnt/openstep /coreonion
+* [https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/](https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/) * [http://nextstep.</description>
+    </item>
+    
+  </channel>
+</rss>
