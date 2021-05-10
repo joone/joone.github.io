@@ -1,0 +1,3 @@
+[submodule "themes/programmer"]
+	path = themes/programmer
+	url = git@github.com:joone/hugo-hello-programmer-theme.git
