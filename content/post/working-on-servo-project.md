@@ -1,6 +1,7 @@
 ---
 title: 'Working on the Servo project'
 date: 2017-08-24T13:47:00.000-07:00
+categories: ["servo"]
 draft: false
 aliases: [ "/2017/08/working-on-servo-project.html" ]
 tags : [Servo, Mozilla]

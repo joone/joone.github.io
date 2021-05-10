@@ -1,6 +1,7 @@
 ---
 title: 'libpng patch for Mobile Firefox'
 date: 2008-01-06T04:42:00.001-08:00
+categories: ["Mozilla"]
 draft: false
 aliases: [ "/2008/01/libpng-patch-for-mozilla-firefox.html" ]
 tags : [patch, Mozilla]

@@ -1,6 +1,7 @@
 ---
 title: 'Richard Stallman comes to Korea'
 date: 2006-11-09T15:20:00.002-08:00
+categories: ["F/OSS"]
 draft: false
 aliases: [ "/2006/11/richard-stallman-comes-to-korea.html" ]
 ---

@@ -1,9 +1,10 @@
 ---
 title: 'Ozone-Wayland'
 date: 2014-04-02T13:24:00.001-07:00
+categories: ["chromeos"]
 draft: false
 aliases: [ "/2014/04/ozone-wayland.html" ]
-tags : [ozone-wayland, chromium]
+tags : [ozone-wayland, chromium, wayland]
 ---
 
 Ozone-Wayland is an Ozone implementation of Chromium, which allows to run [Crosswalk](http://crosswalk-project.org/) and Chromium browser natively on Wayland without any X11 dependence\[1\].  

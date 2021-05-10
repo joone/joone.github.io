@@ -1,7 +1,7 @@
 ---
 title: 'BlinkOn9'
 date: 2018-05-04T22:03:00.002-07:00
-categories: ["chromium"]
+categories: ["Chromium"]
 draft: false
 aliases: [ "/2018/05/blinkon9.html" ]
 tags : [BlinkOn, chromium]

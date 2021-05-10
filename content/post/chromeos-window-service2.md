@@ -1,6 +1,7 @@
 ---
 title: 'The WindowService2(?) of CrOS'
 date: 2018-08-29T13:48:00.002-07:00
+categories: ["chromeos"]
 draft: false
 aliases: [ "/2018/08/chromeos-window-service2.html" ]
 tags : [ChromeOS]

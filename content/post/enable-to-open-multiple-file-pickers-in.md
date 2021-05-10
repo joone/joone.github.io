@@ -1,6 +1,7 @@
 ---
 title: 'Enable to open multiple file-pickers in Chromium for Linux'
 date: 2017-03-01T13:06:00.001-08:00
+categories: ["Chromium"]
 draft: false
 aliases: [ "/2017/03/enable-to-open-multiple-file-pickers-in.html" ]
 tags : [Blink]

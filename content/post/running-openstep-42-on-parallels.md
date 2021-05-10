@@ -1,6 +1,7 @@
 ---
 title: 'Installing OpenStep 4.2 on Parallels'
 date: 2017-09-20T11:38:00.002-07:00
+categories: ["nextstep"]
 draft: false
 aliases: [ "/2017/09/running-openstep-42-on-parallels.html" ]
 tags : [NextStep]

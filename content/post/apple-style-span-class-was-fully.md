@@ -1,6 +1,7 @@
 ---
 title: 'Apple-style-span class was fully removed from Blink'
 date: 2017-02-17T14:48:00.002-08:00
+categories: ["Chromium"]
 draft: false
 aliases: [ "/2017/02/apple-style-span-class-was-fully.html" ]
 tags : [Blink]

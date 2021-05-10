@@ -1,6 +1,7 @@
 ---
 title: 'Building Chromium browser on your Mac'
 date: 2010-08-07T01:03:00.013-07:00
+categories: ["Chromium"]
 draft: false
 aliases: [ "/2010/08/building-chromium-browser-on-your-mac.html" ]
 tags : [OSX, chromium]

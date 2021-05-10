@@ -1,6 +1,7 @@
 ---
 title: 'WebKitGtk+ Hackfest 2011'
 date: 2011-11-30T04:29:00.001-08:00
+categories: ["webkitgtk+"]
 draft: false
 aliases: [ "/2011/11/webkitgtk-hackfest-2011.html" ]
 tags : [webkitgtk+, Webkit, hackfest, collabora_planet, GNOME]

@@ -1,6 +1,7 @@
 ---
 title: 'OSCON 2014'
 date: 2014-07-22T22:21:00.001-07:00
+categories: ["F/OSS"]
 draft: false
 aliases: [ "/2014/07/oscon-2014.html" ]
 ---

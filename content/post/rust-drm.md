@@ -1,6 +1,7 @@
 ---
 title: 'Rust & DRM'
 date: 2018-05-24T16:06:00.003-07:00
+categories: ["graphics"]
 draft: false
 aliases: [ "/2018/05/rust-drm.html" ]
 tags : [graphics, Rust]
