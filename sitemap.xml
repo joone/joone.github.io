@@ -17,15 +17,6 @@
     <loc>/post/chromeos-window-service2/</loc>
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
-    <loc>/tags/container/</loc>
-    <lastmod>2018-08-29T13:15:00-07:00</lastmod>
-  </url><url>
-    <loc>/post/chromeos-container-for-linux/</loc>
-    <lastmod>2018-08-29T13:15:00-07:00</lastmod>
-  </url><url>
-    <loc>/tags/rust/</loc>
-    <lastmod>2018-08-29T13:15:00-07:00</lastmod>
-  </url><url>
     <loc>/post/linux-container-for-chromeos/</loc>
     <lastmod>2018-07-12T18:25:45-08:00</lastmod>
   </url><url>
@@ -39,6 +30,9 @@
     <lastmod>2018-07-12T11:21:00-07:00</lastmod>
   </url><url>
     <loc>/tags/graphics/</loc>
+    <lastmod>2018-05-24T16:06:00-07:00</lastmod>
+  </url><url>
+    <loc>/tags/rust/</loc>
     <lastmod>2018-05-24T16:06:00-07:00</lastmod>
   </url><url>
     <loc>/post/rust-drm/</loc>

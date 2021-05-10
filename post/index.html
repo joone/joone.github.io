@@ -90,32 +90,6 @@ What is the Window Service of ChromeOS? Window Service is a kind of Window Compo
   
   <div class="post">
   <div class="post-title">
-    <a href="/post/chromeos-container-for-linux/" title="Linux container for ChromeOS ">
-      <img src="/images/post-title-icon.png" />
-      <div class="post-meta">
-        <time>Wednesday, Aug 29, 2018 13:15</time>
-        <h1>Linux container for ChromeOS </h1>
-      </div>
-    </a>
-  </div>
-  
-  <div>
-    Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&rsquo;t allowed ChromeOS to run native applications due to security reason. Finally, they found a way to support Linux application through the container technology.
-It is worth to read a discussion on CrOSVM on Hacker News because the original author joined the discussion. Here is the article about ChromeOS Linux container.
-https://www.zdnet.com/article/chrome-os-could-be-getting-containers-for-running-linux-vms/
-There is a Youtube video:
-https://www.youtube.com/watch?v=s9mrR2tqVbQ
-Here is the readme about CrOSVM.
-    
-    <a href="/post/chromeos-container-for-linux/" class="summary-more">More</a>
-    
-  </div>
-</div>
-
-  <hr class="summary-sep" />
-  
-  <div class="post">
-  <div class="post-title">
     <a href="/post/linux-container-for-chromeos/" title="Linux Container for ChromeOS">
       <img src="/images/post-title-icon.png" />
       <div class="post-meta">
@@ -287,6 +261,28 @@ Every features Steve Jobs introduced in this video was possible in 1992, which i
 I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.
     
     <a href="/post/working-on-servo-project/" class="summary-more">More</a>
+    
+  </div>
+</div>
+
+  <hr class="summary-sep" />
+  
+  <div class="post">
+  <div class="post-title">
+    <a href="/post/enable-to-open-multiple-file-pickers-in/" title="Enable to open multiple file-pickers in Chromium for Linux">
+      <img src="/images/post-title-icon.png" />
+      <div class="post-meta">
+        <time>Wednesday, Mar 1, 2017 13:06</time>
+        <h1>Enable to open multiple file-pickers in Chromium for Linux</h1>
+      </div>
+    </a>
+  </div>
+  
+  <div>
+    Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
+ Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash  Here is a video to reproduce the problem.
+    
+    <a href="/post/enable-to-open-multiple-file-pickers-in/" class="summary-more">More</a>
     
   </div>
 </div>
