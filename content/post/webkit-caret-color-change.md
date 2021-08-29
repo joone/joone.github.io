@@ -141,7 +141,7 @@ RefPtr parentElement = node ? node->parentElement() : nullptr;
 [RefPtr](https://webkit.org/blog/5381/refptr-basics/) is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.
 
 
-### Steps to contribution of your code
+## Steps to contribution of your code
 Below are the steps I followed. You can find more details at https://webkit.org/contributing-code/
 
 Build WebKit
