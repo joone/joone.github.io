@@ -6,7 +6,25 @@
     <description>Recent content in Tags on posts</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 28 Aug 2021 22:12:00 -0700</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Contribution</title>
+      <link>/tags/contribution/</link>
+      <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
+      
+      <guid>/tags/contribution/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Webkit</title>
+      <link>/tags/webkit/</link>
+      <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
+      
+      <guid>/tags/webkit/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>ChromeOS</title>
       <link>/tags/chromeos/</link>
@@ -157,15 +175,6 @@
       <pubDate>Tue, 21 Feb 2012 18:13:00 -0800</pubDate>
       
       <guid>/tags/gnome/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Webkit</title>
-      <link>/tags/webkit/</link>
-      <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
-      
-      <guid>/tags/webkit/</guid>
       <description></description>
     </item>
     

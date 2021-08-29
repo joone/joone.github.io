@@ -2,6 +2,24 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/post/webkit-caret-color-change/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
+    <loc>/tags/contribution/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
+    <loc>/post/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
+    <loc>/tags/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
+    <loc>/tags/webkit/</loc>
+    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
+  </url><url>
     <loc>/categories/</loc>
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
@@ -9,15 +27,6 @@
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
     <loc>/categories/chromeos/</loc>
-    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
-  </url><url>
-    <loc>/post/</loc>
-    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
-  </url><url>
-    <loc>/</loc>
-    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
-  </url><url>
-    <loc>/tags/</loc>
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
     <loc>/post/chromeos-window-service2/</loc>
@@ -135,9 +144,6 @@
     <lastmod>2012-02-21T18:13:00-08:00</lastmod>
   </url><url>
     <loc>/post/accelerated-composting-in-webkitgtk/</loc>
-    <lastmod>2011-12-05T03:25:00-08:00</lastmod>
-  </url><url>
-    <loc>/tags/webkit/</loc>
     <lastmod>2011-12-05T03:25:00-08:00</lastmod>
   </url><url>
     <loc>/tags/webkitgtk&#43;/</loc>

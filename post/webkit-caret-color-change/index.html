@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2007 South-North Korean Summit  | posts</title>
+  <meta name="description" content=" '2007 South-North Korean Summit'read this article.">
+  <meta property="og:title" content="2007 South-North Korean Summit">
+  
+  <meta property="og:type" content="article">
+  <meta property="article:published_time" content="2021-08-28">
+  
+  <meta property="og:description" content=" '2007 South-North Korean Summit'read this article.">
+  <meta property="og:url" content="/post/webkit-caret-color-change/">
+  <meta property="og:site_name" content="posts">
+  
+  <meta property="og:image" content="/images/thumbnail.png">
+  
+  
+  <meta property="og:tags" content="WebKit">
+  
+  <meta property="og:tags" content="Contribution">
+  
+  <link rel="icon" href="/favicon.ico" type="image/x-icon">
+  <link rel="canonical" href="/post/webkit-caret-color-change/">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/agate.min.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap">
+  <link rel="stylesheet" href="/css/styles.css">
+  <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  
+  
+  
+  <script type="text/javascript">
+  function toggle_visibility(id) {
+    var e = document.getElementById(id);
+    if (e.className === 'menu')
+      e.className = 'menu hidden';
+    else
+      e.className = 'menu';
+  }
+  </script>
+</head>
+<body>
+  <div class="navbar">    
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" height="34px" />
+      </a>
+    </div>
+    <div class="burger">
+      <button onclick="toggle_visibility('menu')">
+        <i class="fa fa-bars" aria-hidden="true"></i> Menu
+      </button>
+    </div>
+    <div id="menu" class="menu hidden">
+      <ul>
+        <li><a href="/">posts</a></li>
+        <li><a href="/categories">categories</a></li>
+        <li><a href="/tags">tags</a></li>
+      </ul>
+      <input class="search" id="search-input" type="search" placeholder="Keyword" value="">
+    </div>
+  </div>
+  <div class="container">    
+
+
+<div class="post">
+  <div class="post-title">
+    <a href="/post/webkit-caret-color-change/">
+      <div class="post-meta">
+        <time>Saturday, Aug 28, 2021 22:12</time>
+        <h1>2007 South-North Korean Summit</h1>
+      </div>
+    </a>
+  </div>
+  <div class="post-toc">
+    <span class="title">TOC</span>
+    <nav id="TableOfContents"></nav>
+  </div>
+  <section class="post-content">
+    <p>I fixed a caret color issue in WebKit in 2013. I found out there was a regression, which made me work this issue again and finally fixed it. o/
+It was a bit hard for me because I had not worked on WebKit since <a href="https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos">Chromium forked from the WebKit project in 2013</a>.</p>
+<p>The source code has been changed and I almost forgot how to deal with layout test errors.
+My WebKit debugging skill is also rusty. I tried to remind how to work on a patch by reading my own documents and old ccmmits.</p>
+<p>Here is a breif overview:</p>
+<p>When I first fixed this issue, I just updated one line of code as follows:</p>
+<pre><code>+++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
+@@ -1470,5 +1470,6 @@
+     Color caretColor = Color::black;
+     ColorSpace colorSpace = ColorSpaceDeviceRGB;
+-    Element* element = node-&gt;rootEditableElement();
++    Element* element = node-&gt;isElementNode() ? toElement(node) : node-&gt;parentElement();
++
+     if (element &amp;&amp; element-&gt;renderer()) {
+         caretColor = element-&gt;renderer()-&gt;style()-&gt;visitedDependentColor(CSSPropertyColor);
+</code></pre><p>My patch allowed WebKit to get the caret color from the element containing the text, not the root editable element.</p>
+<pre><code>void CaretBase::paintCaret(Node* node, GraphicsContext* context, const LayoutPoint&amp; paintOffset, const LayoutRect&amp; clipRect) const
+{
+#if ENABLE(TEXT_CARET)
+    if (m_caretVisibility == Hidden)
+        return;
+
+
+    LayoutRect drawingRect = localCaretRectWithoutUpdate();
+    RenderObject* renderer = caretRenderer(node);
+    if (renderer &amp;&amp; renderer-&gt;isBox())
+        toRenderBox(renderer)-&gt;flipForWritingMode(drawingRect);
+    drawingRect.moveBy(roundedIntPoint(paintOffset));
+    LayoutRect caret = intersection(drawingRect, clipRect);
+    if (caret.isEmpty())
+        return;
+
+
+    Color caretColor = Color::black;
+    ColorSpace colorSpace = ColorSpaceDeviceRGB;
+    Element* element = node-&gt;isElementNode() ? toElement(node) : node-&gt;parentElement();
+
+
+    if (element &amp;&amp; element-&gt;renderer()) {
+        caretColor = element-&gt;renderer()-&gt;style()-&gt;visitedDependentColor(CSSPropertyColor);
+        colorSpace = element-&gt;renderer()-&gt;style()-&gt;colorSpace();
+    }
+
+
+    context-&gt;fillRect(caret, caretColor, colorSpace);
+#else
+    UNUSED_PARAM(node);
+    UNUSED_PARAM(context);
+    UNUSED_PARAM(paintOffset);
+    UNUSED_PARAM(clipRect);
+#endif
+}
+
+Index: trunk/Source/WebCore/editing/FrameSelection.cpp
+===================================================================
+--- a/trunk/Source/WebCore/editing/FrameSelection.cpp
+</code></pre><p>After 8 years, the mainline code has been changed as follows:</p>
+<pre><code>Color CaretBase::computeCaretColor(const RenderStyle&amp; elementStyle, const Node* node)
+{
+    // On iOS, we want to fall back to the tintColor, and only override if CSS has explicitly specified a custom color.
+#if PLATFORM(IOS_FAMILY) &amp;&amp; !PLATFORM(MACCATALYST)
+    UNUSED_PARAM(node);
+    return elementStyle.caretColor();
+#else
+    RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
+    auto* parentStyle = parentElement &amp;&amp; parentElement-&gt;renderer() ? &amp;parentElement-&gt;renderer()-&gt;style() : nullptr;
+    // CSS value &quot;auto&quot; is treated as an invalid color.
+    if (!elementStyle.caretColor().isValid() &amp;&amp; parentStyle) {
+        auto parentBackgroundColor = parentStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+        auto elementBackgroundColor = elementStyle.visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+        auto disappearsIntoBackground = blendSourceOver(parentBackgroundColor, elementBackgroundColor) == parentBackgroundColor;
+        if (disappearsIntoBackground)
+            return parentStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+    }
+    return elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+#endif
+}
+</code></pre><p>CaretBase::computeCaretColor() is separated from CaretBase::patinCaret(). C++ 11 features and smart pointer are used (<a href="https://webkit.org/blog/3172/webkit-and-cxx11/">https://webkit.org/blog/3172/webkit-and-cxx11/</a>)</p>
+<p>Here is my change:</p>
+<pre><code>Index: trunk/Source/WebCore/editing/FrameSelection.cpp
+===================================================================
+--- a/trunk/Source/WebCore/editing/FrameSelection.cpp
++++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
+@@ -1791,13 +1791,13 @@
+     return elementStyle.caretColor();
+ #else
+-    auto* rootEditableElement = node ? node-&gt;rootEditableElement() : nullptr;
+-    auto* rootEditableStyle = rootEditableElement &amp;&amp; rootEditableElement-&gt;renderer() ? &amp;rootEditableElement-&gt;renderer()-&gt;style() : nullptr;
++    RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
++    auto* parentStyle = parentElement &amp;&amp; parentElement-&gt;renderer() ? &amp;parentElement-&gt;renderer()-&gt;style() : nullptr;
+     // CSS value &quot;auto&quot; is treated as an invalid color.
+-    if (!elementStyle.caretColor().isValid() &amp;&amp; rootEditableStyle) {
+-        auto rootEditableBackgroundColor = rootEditableStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
++    if (!elementStyle.caretColor().isValid() &amp;&amp; parentStyle) {
++        auto parentBackgroundColor = parentStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+         auto elementBackgroundColor = elementStyle.visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+-        auto disappearsIntoBackground = blendSourceOver(rootEditableBackgroundColor, elementBackgroundColor) == rootEditableBackgroundColor;
++        auto disappearsIntoBackground = blendSourceOver(parentBackgroundColor, elementBackgroundColor) == parentBackgroundColor;
+         if (disappearsIntoBackground)
+-            return rootEditableStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
++            return parentStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+     }
+     return elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</code></pre><p>One of the reviewer asked me to use RefPtr(smart pointer) instead of auto so I changed this line as follows:</p>
+<pre><code>auto parentElement = node ? node-&gt;parentElement() : nullptr;
+</code></pre><p>=&gt;</p>
+<pre><code>RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
+</code></pre><p><a href="https://webkit.org/blog/5381/refptr-basics/">RefPtr</a> is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.</p>
+<p>Below are the steps I followed. You can find more details at <a href="https://webkit.org/contributing-code/">https://webkit.org/contributing-code/</a></p>
+<p>Build WebKit</p>
+<pre><code>$  Tools/Scripts/build-webkit
+</code></pre><p>You don’t need to run every test case. Instead, you can only run the relevant layout tests as follows:</p>
+<p>Layout test</p>
+<pre><code>$ Tools/Scripts/run-webkit-tests editing/caret
+</code></pre><p>If you need pixel tests, just pass -p</p>
+<p>Sometimes, we need to update ChangeLog</p>
+<pre><code>$ Tools/Scripts/prepare-ChangeLog --g HEAD
+</code></pre><p>Finally, you can upload your patch:</p>
+<pre><code>$ Tools/Scripts/webkit-patch upload 117493
+</code></pre><p>It would be good to add a message to your updated patch:</p>
+<pre><code>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
+</code></pre><p>When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).</p>
+<p><a href="https://ews-build.webkit.org/#/">https://ews-build.webkit.org/#/</a></p>
+<p>In my case, I had to add the reviewer name because I updated the patch several times after getting +r.</p>
+<p>If you change the layout code and then there would find multiple layout test failures:
+<img src="/static/caret_color_diff.png" alt="source diff">
+<img src="/static/caret_color_actual.png" alt="actual result of caret color layout test "></p>
+<p>If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.</p>
+<p>Then, add them to your patch and run webkit-patch command again. If you already have +R, just add your patch to the commit queue.</p>
+<p>The committer status has been suspended due to my inactivity so I was not able to add my patch to the commit queue.
+However, one of the reviewers helped me land this patch. The next plan is to work on <a href="https://bugs.webkit.org/show_bug.cgi?id=44862">this bug</a> again.</p>
+
+  </section>
+  <div class="share">    
+    <a
+      href="//www.facebook.com/sharer.php?src=bm&u=%2fpost%2fwebkit-caret-color-change%2f&t=2007%20South-North%20Korean%20Summit"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-facebook"></i
+    ></a>
+    <a
+      href="//twitter.com/intent/tweet?url=%2fpost%2fwebkit-caret-color-change%2f&text=2007%20South-North%20Korean%20Summit&tw_p=tweetbutton"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-twitter"></i
+    ></a>
+    <a
+      href="//getpocket.com/edit?url=%2fpost%2fwebkit-caret-color-change%2f&title=2007%20South-North%20Korean%20Summit"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-get-pocket"></i
+    ></a>
+    <a
+      href="//plus.google.com/share?url=%2fpost%2fwebkit-caret-color-change%2f"
+      onclick="window.open(this.href, 'PCwindow', 'width=550, height=350, menubar=no, toolbar=no, scrollbars=yes'); return false;"
+      ><i class="fa fa-google-plus"></i
+    ></a>
+  </div>
+  <div class="post-meta-code">
+    <div class="desc">
+      Friendly
+      
+      <a href="mailto:">Joone Hur</a>
+      
+      wrotes this article at
+      <span class="highlight">Saturday, Aug 28, 2021 22:12</span> 
+      for you.
+    </div>
+    <div class="desc">
+      
+      <div class="desc">
+        <span class="fixed-desc">_tags</span>
+        
+        
+        <a href="/tags/webkit">#WebKit</a>
+        
+        <a href="/tags/contribution">#Contribution</a>
+        
+        
+      </div>
+    </div>
+  </div>  
+  
+  <div class="post-comment">    
+        
+  </div>
+  
+  <div class="recommend-articles">
+    Recommend these articles
+    <ul>
+      
+      <li>
+        <a href="/post/chromeos-window-service2/" rel="prev">
+          <span>The WindowService2(?) of CrOS</span>
+        </a>
+      </li>
+      
+      
+    </ul>
+  </div>
+</div>
+
+<div class="go-top">
+  <a href="#" class="go-top-button">
+    <i class="fa fa-angle-double-up"></i>
+    <span>Top</span>
+  </a>
+</div>
+<footer class="footer">
+  (C) <a href="https://joone.github.io"> Joone Hur</a><br />
+</footer>
+</body>
+</html>
+
