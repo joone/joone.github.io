@@ -80,11 +80,8 @@
     <nav id="TableOfContents">
   <ul>
     <li><a href="#history">History</a></li>
-    <li><a href="#change-the-code">Change the code</a>
-      <ul>
-        <li><a href="#steps-to-contribution-of-your-code">Steps to contribution of your code</a></li>
-      </ul>
-    </li>
+    <li><a href="#change-the-code">Change the code</a></li>
+    <li><a href="#steps-to-contribution-of-your-code">Steps to contribution of your code</a></li>
   </ul>
 </nav>
   </div>
@@ -199,7 +196,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 </code></pre><p>=&gt;</p>
 <pre><code>RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
 </code></pre><p><a href="https://webkit.org/blog/5381/refptr-basics/">RefPtr</a> is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.</p>
-<h3 id="steps-to-contribution-of-your-code">Steps to contribution of your code</h3>
+<h2 id="steps-to-contribution-of-your-code">Steps to contribution of your code</h2>
 <p>Below are the steps I followed. You can find more details at <a href="https://webkit.org/contributing-code/">https://webkit.org/contributing-code/</a></p>
 <p>Build WebKit</p>
 <pre><code>$  Tools/Scripts/build-webkit
