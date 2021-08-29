@@ -5,13 +5,14 @@ draft: false
 aliases: [ "/27/08/2021-webkit-caret-color-change.html" ]
 tags : [WebKit, Contribution]
 ---
-
+## History
 I fixed a caret color issue in WebKit in 2013. I found out there was a regression, which made me work this issue again and finally fixed it. o/
 It was a bit hard for me because I had not worked on WebKit since [Chromium forked from the WebKit project in 2013](https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos).
 
 The source code has been changed and I almost forgot how to deal with layout test errors.
 My WebKit debugging skill is also rusty. I tried to remind how to work on a patch by reading my own documents and old ccmmits.
 
+## Change the code
 Here is a breif overview:
 
 When I first fixed this issue, I just updated one line of code as follows:
@@ -139,6 +140,8 @@ RefPtr parentElement = node ? node->parentElement() : nullptr;
 
 [RefPtr](https://webkit.org/blog/5381/refptr-basics/) is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.
 
+
+### Steps to contribution of your code
 Below are the steps I followed. You can find more details at https://webkit.org/contributing-code/
 
 Build WebKit
@@ -175,7 +178,7 @@ In my case, I had to add the reviewer name because I updated the patch several t
 
 If you change the layout code and then there would find multiple layout test failures: 
 ![source diff](/images/caret_color_diff.png)
-![actual result of caret color layout test ](/images/caret_color_actual.png)
+![actual result of caret color layout test ](/images/caret_color_acutal.png)
 
 
 If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.
