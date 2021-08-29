@@ -174,8 +174,8 @@ https://ews-build.webkit.org/#/
 In my case, I had to add the reviewer name because I updated the patch several times after getting +r.
 
 If you change the layout code and then there would find multiple layout test failures: 
-![source diff](/static/caret_color_diff.png)
-![actual result of caret color layout test ](/static/caret_color_actual.png)
+![source diff](/images/caret_color_diff.png)
+![actual result of caret color layout test ](/images/caret_color_actual.png)
 
 
 If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.
