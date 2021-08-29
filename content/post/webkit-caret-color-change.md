@@ -1,5 +1,5 @@
 ---
-title: '2007 South-North Korean Summit'
+title: 'Caret should respect text background color'
 date: 2021-08-28T22:12:00.001-07:00
 draft: false
 aliases: [ "/27/08/2021-webkit-caret-color-change.html" ]
