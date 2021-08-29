@@ -186,7 +186,7 @@ If you find any layout test errors, you can easily get *-actual.txt from the lay
 Then, add them to your patch and run webkit-patch command again. If you already have +R, just add your patch to the commit queue.
 
 The committer status has been suspended due to my inactivity so I was not able to add my patch to the commit queue. 
-However, one of the reviewers helped me land this patch. The next plan is to work on [this bug](https://bugs.webkit.org/show_bug.cgi?id=44862) again. 
+However, one of the reviewers helped me land this patch. The next plan is to work on [Bug 44862 - Make the caret more visible on any background](https://bugs.webkit.org/show_bug.cgi?id=44862) again. 
 
 
 
