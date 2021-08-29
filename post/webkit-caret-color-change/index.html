@@ -77,13 +77,24 @@
   </div>
   <div class="post-toc">
     <span class="title">TOC</span>
-    <nav id="TableOfContents"></nav>
+    <nav id="TableOfContents">
+  <ul>
+    <li><a href="#history">History</a></li>
+    <li><a href="#change-the-code">Change the code</a>
+      <ul>
+        <li><a href="#steps-to-contribution-of-your-code">Steps to contribution of your code</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav>
   </div>
   <section class="post-content">
-    <p>I fixed a caret color issue in WebKit in 2013. I found out there was a regression, which made me work this issue again and finally fixed it. o/
+    <h2 id="history">History</h2>
+<p>I fixed a caret color issue in WebKit in 2013. I found out there was a regression, which made me work this issue again and finally fixed it. o/
 It was a bit hard for me because I had not worked on WebKit since <a href="https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos">Chromium forked from the WebKit project in 2013</a>.</p>
 <p>The source code has been changed and I almost forgot how to deal with layout test errors.
 My WebKit debugging skill is also rusty. I tried to remind how to work on a patch by reading my own documents and old ccmmits.</p>
+<h2 id="change-the-code">Change the code</h2>
 <p>Here is a breif overview:</p>
 <p>When I first fixed this issue, I just updated one line of code as follows:</p>
 <pre><code>+++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
@@ -188,6 +199,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 </code></pre><p>=&gt;</p>
 <pre><code>RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
 </code></pre><p><a href="https://webkit.org/blog/5381/refptr-basics/">RefPtr</a> is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.</p>
+<h3 id="steps-to-contribution-of-your-code">Steps to contribution of your code</h3>
 <p>Below are the steps I followed. You can find more details at <a href="https://webkit.org/contributing-code/">https://webkit.org/contributing-code/</a></p>
 <p>Build WebKit</p>
 <pre><code>$  Tools/Scripts/build-webkit
@@ -206,7 +218,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 <p>In my case, I had to add the reviewer name because I updated the patch several times after getting +r.</p>
 <p>If you change the layout code and then there would find multiple layout test failures:
 <img src="/images/caret_color_diff.png" alt="source diff">
-<img src="/images/caret_color_actual.png" alt="actual result of caret color layout test "></p>
+<img src="/images/caret_color_acutal.png" alt="actual result of caret color layout test "></p>
 <p>If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.</p>
 <p>Then, add them to your patch and run webkit-patch command again. If you already have +R, just add your patch to the commit queue.</p>
 <p>The committer status has been suspended due to my inactivity so I was not able to add my patch to the commit queue.
