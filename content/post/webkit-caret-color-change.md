@@ -176,7 +176,7 @@ https://ews-build.webkit.org/#/
 
 In my case, I had to add the reviewer name because I updated the patch several times after getting +r.
 
-If you change the layout code and then there would find multiple layout test failures: 
+If you change the layout code and then there would be multiple layout test failures: 
 ![source diff](/images/caret_color_diff.png)
 ![actual result of caret color layout test ](/images/caret_color_acutal.png)
 
