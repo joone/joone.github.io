@@ -6,7 +6,7 @@ aliases: [ "/27/08/2021-webkit-caret-color-change.html" ]
 tags : [WebKit, Contribution]
 ---
 ## History
-[I fixed a caret color issue in WebKit in 2013](https://trac.webkit.org/changeset/152612/webkit). I found out there was a regression, which made me work this issue again and finally fixed it. o/
+[I fixed a caret color issue in WebKit in 2013](https://trac.webkit.org/changeset/152612/webkit), but I found out there was a regression, which made me work this issue again and finally fixed it. o/
 It was a bit hard for me because I had not worked on WebKit since [Chromium forked from the WebKit project in 2013](https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos).
 
 The source code has been changed and I almost forgot how to deal with layout test errors.
