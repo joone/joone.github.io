@@ -10,7 +10,7 @@ tags : [WebKit, Contribution]
 It was a bit hard for me because I had not worked on WebKit since [Chromium forked from the WebKit project in 2013](https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos).
 
 The source code has been changed and I almost forgot how to deal with layout test errors.
-My WebKit debugging skill is also rusty. I tried to remind how to work on a patch by reading my own documents and old ccmmits.
+My WebKit debugging skill is also rusty, but I tried to remind how to work on a patch by reading my own documents and old ccmmits.
 
 ## Change the code
 Here is a breif overview:
