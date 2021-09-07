@@ -100,17 +100,17 @@
 <ol>
 <li>Build WebKitGtk+ with the fast mobile scrolling option:</li>
 </ol>
-<pre><code>$WebKit/Tools/Scripts/build-webkit --gtk --fast-mobile-scrolling
+<pre tabindex="0"><code>$WebKit/Tools/Scripts/build-webkit --gtk --fast-mobile-scrolling
 </code></pre><p>Tiled Backing Store</p>
 <p>When I tried to use Safari on the iPhone, I was impressed by the fact that the scrolling web pages were very fast. This is possible because Safari caches the content of the web page as bitmaps in memory, and the cached bitmaps we&rsquo;ve seen are just painted on the screen without sending paint calls to WebCore when we scroll a web page. These bitmaps are created and deleted on-demand as the viewport moves over the web page. We call them the “tiled backing store.”</p>
 <p><a href="https://bugs.webkit.org/show_bug.cgi?id=35146">The tiled backing store was applied to QtWebKit  by Nokia engineers</a>. They applied this feature to WebCore, so it can be shared by other ports. In the case of WebKitGtk, <a href="https://bugs.webkit.org/show_bug.cgi?id=45423">Code Aurora engineers submitted an initial patch, I have updated the patch to use only Cairo API by removing GTK+ dependency.</a> This would allow the WinCairo and Efl port to use the updated patch for enabling the tiled backing store.</p>
 <p>To enable the tiled backing store:<br>
 1 ) Build WebKitGtk+ with the tiled backing store option as follows:</p>
-<pre><code>$ WebKit/Tools/Scripts/build-webkit --gtk --tiled-backing-store
+<pre tabindex="0"><code>$ WebKit/Tools/Scripts/build-webkit --gtk --tiled-backing-store
 </code></pre><ol start="2">
 <li>Set the tiled backing store setting to TRUE through WebKitWebSettings as follows:</li>
 </ol>
-<pre><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
+<pre tabindex="0"><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
 g\_object\_set(G\_OBJECT(settings), &quot;enable-tiled-backing-store&quot;, TRUE, NULL);   
 
 </code></pre><p>Viewport Meta Tags</p>
@@ -119,9 +119,9 @@ g\_object\_set(G\_OBJECT(settings), &quot;enable-tiled-backing-store&quot;, TRUE
 <p>For this, Safari on the iPhone assumes that web pages have 980px width by default. When Safari loads a web page, it scales down the web page by a factor of 0.32 (320/980) to fit to the width of  the screen in the case of iPhone 3G. But, the problem is that all pages are not displayed to fit to 980px width. For example, mobile web pages can be displayed well with 320px or 480px. the Google Search page is displayed on the iPhone like the right picture because the Google search page is required to have the less width compared to 980px.</p>
 <p>To solve this problem, Apple defined the viewport meta tags to allow web browsers to support desktop web page and mobile web page effectively. Actually, this is not a web standard, but most mobile web browsers have adopted this feature and WebKit also supports it.</p>
 <p>Let’s take a look at the viewport meta tag in more detail. The viewport meta tags can be used to set the width, height and initial scale factor of the viewport. Although most web pages don’t have viewport meta tags, mobile browsers which have 320 px screen width can apply initial values to web pages as follows:</p>
-<pre><code>&lt;meta name = &quot;viewport&quot; content = &quot;width = 980&quot; initial-scale = &quot;0.32&quot;&gt;
+<pre tabindex="0"><code>&lt;meta name = &quot;viewport&quot; content = &quot;width = 980&quot; initial-scale = &quot;0.32&quot;&gt;
 </code></pre><p>In the case of mobile pages, you need to set the viewport meta tags as follows:</p>
-<pre><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot; /&gt;
+<pre tabindex="0"><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot; /&gt;
 </code></pre><p>As you can see each property, web pages can not be scaled up/down; even user scaling is turned off. This is because the mobile web pages are actually written for the small screen.</p>
 <p>For more information on the viewport meta tags, refer to <a href="http://developer.apple.com/safari/library/documentation/appleapplications/reference/safarihtmlref/articles/metatags.html">the Safari reference library</a>.</p>
 <p>Frameset Flattening</p>
@@ -130,7 +130,7 @@ g\_object\_set(G\_OBJECT(settings), &quot;enable-tiled-backing-store&quot;, TRUE
 <p><a href="http://farm6.static.flickr.com/5262/5597236979_36bdab6dc0.jpg"><img src="http://farm6.static.flickr.com/5262/5597236979_36bdab6dc0.jpg" alt=""></a></p>
 <p>However, if you enable the frameset flattening features when building Webkit, all the frames can be one scrollable page as you can see the above figure.</p>
 <p>To enable the Fameset flattening:</p>
-<pre><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
+<pre tabindex="0"><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
 g\_object\_set(G\_OBJECT(settings), &quot;enable-frame-flattening&quot;, TRUE, NULL);  
 
 </code></pre><p>Touch events</p>

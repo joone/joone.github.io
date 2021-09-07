@@ -92,9 +92,9 @@ It was a bit hard for me because I had not worked on WebKit since <a href="https
 <p>The source code has been changed and I almost forgot how to deal with layout test errors.
 My WebKit debugging skill is also rusty, but I tried to remind how to work on a patch by reading my own documents and old ccmmits.</p>
 <h2 id="change-the-code">Change the code</h2>
-<p>Here is a breif overview:</p>
+<p>Here is an overview:</p>
 <p>When I first fixed this issue, I just updated one line of code as follows:</p>
-<pre><code>+++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
+<pre tabindex="0"><code>+++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
 @@ -1470,5 +1470,6 @@
      Color caretColor = Color::black;
      ColorSpace colorSpace = ColorSpaceDeviceRGB;
@@ -104,7 +104,7 @@ My WebKit debugging skill is also rusty, but I tried to remind how to work on a 
      if (element &amp;&amp; element-&gt;renderer()) {
          caretColor = element-&gt;renderer()-&gt;style()-&gt;visitedDependentColor(CSSPropertyColor);
 </code></pre><p>My patch allowed WebKit to get the caret color from the element containing the text, not the root editable element.</p>
-<pre><code>void CaretBase::paintCaret(Node* node, GraphicsContext* context, const LayoutPoint&amp; paintOffset, const LayoutRect&amp; clipRect) const
+<pre tabindex="0"><code>void CaretBase::paintCaret(Node* node, GraphicsContext* context, const LayoutPoint&amp; paintOffset, const LayoutRect&amp; clipRect) const
 {
 #if ENABLE(TEXT_CARET)
     if (m_caretVisibility == Hidden)
@@ -145,7 +145,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 ===================================================================
 --- a/trunk/Source/WebCore/editing/FrameSelection.cpp
 </code></pre><p>After 8 years, the mainline code has been changed as follows:</p>
-<pre><code>Color CaretBase::computeCaretColor(const RenderStyle&amp; elementStyle, const Node* node)
+<pre tabindex="0"><code>Color CaretBase::computeCaretColor(const RenderStyle&amp; elementStyle, const Node* node)
 {
     // On iOS, we want to fall back to the tintColor, and only override if CSS has explicitly specified a custom color.
 #if PLATFORM(IOS_FAMILY) &amp;&amp; !PLATFORM(MACCATALYST)
@@ -167,7 +167,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 }
 </code></pre><p>CaretBase::computeCaretColor() is separated from CaretBase::patinCaret(). C++ 11 features and smart pointer are used (<a href="https://webkit.org/blog/3172/webkit-and-cxx11/">https://webkit.org/blog/3172/webkit-and-cxx11/</a>)</p>
 <p>Here is my change:</p>
-<pre><code>Index: trunk/Source/WebCore/editing/FrameSelection.cpp
+<pre tabindex="0"><code>Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 ===================================================================
 --- a/trunk/Source/WebCore/editing/FrameSelection.cpp
 +++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
@@ -192,24 +192,24 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
      }
      return elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
 </code></pre><p>One of the reviewer asked me to use RefPtr(smart pointer) instead of auto so I changed this line as follows:</p>
-<pre><code>auto parentElement = node ? node-&gt;parentElement() : nullptr;
+<pre tabindex="0"><code>auto parentElement = node ? node-&gt;parentElement() : nullptr;
 </code></pre><p>=&gt;</p>
-<pre><code>RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
+<pre tabindex="0"><code>RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
 </code></pre><p><a href="https://webkit.org/blog/5381/refptr-basics/">RefPtr</a> is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.</p>
 <h2 id="steps-to-contribution-of-your-code">Steps to contribution of your code</h2>
 <p>Below are the steps I followed. You can find more details at <a href="https://webkit.org/contributing-code/">https://webkit.org/contributing-code/</a></p>
 <p>Build WebKit</p>
-<pre><code>$  Tools/Scripts/build-webkit
+<pre tabindex="0"><code>$  Tools/Scripts/build-webkit
 </code></pre><p>You don’t need to run every test case. Instead, you can only run the relevant layout tests as follows:</p>
 <p>Layout test</p>
-<pre><code>$ Tools/Scripts/run-webkit-tests editing/caret
+<pre tabindex="0"><code>$ Tools/Scripts/run-webkit-tests editing/caret
 </code></pre><p>If you need pixel tests, just pass -p</p>
 <p>Sometimes, we need to update ChangeLog</p>
-<pre><code>$ Tools/Scripts/prepare-ChangeLog --g HEAD
+<pre tabindex="0"><code>$ Tools/Scripts/prepare-ChangeLog --g HEAD
 </code></pre><p>Finally, you can upload your patch:</p>
-<pre><code>$ Tools/Scripts/webkit-patch upload 117493
+<pre tabindex="0"><code>$ Tools/Scripts/webkit-patch upload 117493
 </code></pre><p>It would be good to add a message to your updated patch:</p>
-<pre><code>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
+<pre tabindex="0"><code>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
 </code></pre><p>When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).</p>
 <p><a href="https://ews-build.webkit.org/#/">https://ews-build.webkit.org/#/</a></p>
 <p>In my case, I had to add the reviewer name because I updated the patch several times after getting +r.</p>
