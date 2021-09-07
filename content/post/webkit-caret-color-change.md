@@ -13,7 +13,7 @@ The source code has been changed and I almost forgot how to deal with layout tes
 My WebKit debugging skill is also rusty, but I tried to remind how to work on a patch by reading my own documents and old ccmmits.
 
 ## Change the code
-Here is a breif overview:
+Here is an overview:
 
 When I first fixed this issue, I just updated one line of code as follows:
 ```
