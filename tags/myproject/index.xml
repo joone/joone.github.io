@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>MyProject on posts</title>
+    <link>/tags/myproject/</link>
+    <description>Recent content in MyProject on posts</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en</language>
+    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="/tags/myproject/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>rust-animation project</title>
+      <link>/post/rust-animation/</link>
+      <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
+      
+      <guid>/post/rust-animation/</guid>
+      <description>I had used GNOME Clutter project much a long time ago when I worked on Accelerated Compositing in the WebKit clutter port. At that time, I implemented my own Actor by extending the existing Actor APIs. It worked well very well: I managed to run some CSS 3D animation demo in the WebKit Clutter port.
+Unfortunately, the Clutter project lost its way to grow up. Now, the project is almost deprecated although it is still used in GNOME Shell.</description>
+    </item>
+    
+  </channel>
+</rss>
