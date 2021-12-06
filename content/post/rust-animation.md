@@ -55,7 +55,7 @@ Flex UI support is amazing because someone already implemented this for Rust pro
 
 rust-animation supports EventHandler trait to support event handling in a rust-animation application. Basically, it works like callback functions so the user basically gets event signals from rust-animation. 
 
-```rust
+```
 pub struct ActorEvent {
   name: String,
 }
@@ -97,7 +97,7 @@ I’m adding more event handler methods.
 ## User defined layout
 Even though rust-animaiom supports the Flex box UI, the users may want to implement their own layout.
 So, I added the ActorLayout trait for this.
-```rust
+```
 pub struct ActorLayout {
   name: String,
   cur_x: i32,
