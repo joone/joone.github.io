@@ -14,7 +14,7 @@
       
       <guid>/post/rust-animation/</guid>
       <description>I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port. At that time, I implemented my own Actor by extending the existing Actor APIs. It worked well: I managed to run some CSS 3D animation demos in the WebKit Clutter port.
-Unfortunately, the Clutter project lost its way. Now, the project is almost deprecated although it is still used in GNOME Shell. Anyway, I had a dream of maintaining a project like Clutter so personally, I have worked on C++ implementation of scene graph engine using OpenGL so I also have a Rust implentation.</description>
+Unfortunately, the Clutter project lost its way. Now, the project is almost deprecated although it is still used in GNOME Shell. Anyway, I had a dream of maintaining a project like Clutter, so personally worked on a C++ implementation of scene graph engine using OpenGL so I also have a Rust implementation.</description>
     </item>
     
   </channel>
