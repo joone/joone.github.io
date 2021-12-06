@@ -127,72 +127,72 @@ Basically, it renders a rectangle with color or a texture image on the viewport.
 Flex UI support is amazing because someone already implemented this for Rust projects. I just added this crate to my project. It is perfectly working well. I was able to implement the above demo in 30 min. o/</p>
 <h2 id="event-handling">Event handling</h2>
 <p>rust-animation supports EventHandler trait to support event handling in a rust-animation application. Basically, it works like callback functions so the user basically gets event signals from rust-animation.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ActorEvent</span> {
+<pre tabindex="0"><code>pub struct ActorEvent {
   name: String,
 }
 
-<span style="color:#66d9ef">impl</span> ActorEvent {
- <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>() -&gt; <span style="color:#a6e22e">Self</span> {
+impl ActorEvent {
+ pub fn new() -&gt; Self {
     ActorEvent {
-      name: <span style="color:#e6db74">&#34;actor_event&#34;</span>.to_string()
+      name: &quot;actor_event&quot;.to_string()
     }
  }
 }
 
-<span style="color:#66d9ef">impl</span> EventHandler <span style="color:#66d9ef">for</span> ActorEvent {
-  <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">key_focus_in</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, actor: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">mut</span> Actor) {
-     println!(<span style="color:#e6db74">&#34;key_focus_in: {} {}&#34;</span>, self.name, actor.name);
-     actor.apply_scale_animation(<span style="color:#ae81ff">1.0</span>, <span style="color:#ae81ff">1.1</span>, <span style="color:#ae81ff">0.3</span>, EasingFunction::EaseInOut);
+impl EventHandler for ActorEvent {
+  fn key_focus_in(&amp;mut self, actor: &amp;mut Actor) {
+     println!(&quot;key_focus_in: {} {}&quot;, self.name, actor.name);
+     actor.apply_scale_animation(1.0, 1.1, 0.3, EasingFunction::EaseInOut);
   }
 
-  <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">key_focus_out</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, actor: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">mut</span> Actor) {
-    println!(<span style="color:#e6db74">&#34;key_focus_out: {} {}&#34;</span>, self.name, actor.name);
-    actor.scale_x <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>;
-    actor.scale_y <span style="color:#f92672">=</span> <span style="color:#ae81ff">1.0</span>;
+  fn key_focus_out(&amp;mut self, actor: &amp;mut Actor) {
+    println!(&quot;key_focus_out: {} {}&quot;, self.name, actor.name);
+    actor.scale_x = 1.0;
+    actor.scale_y = 1.0;
   }
 
-  <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">key_down</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, key: <span style="color:#66d9ef">usize</span>, actor: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">mut</span> Actor) {
-     println!(<span style="color:#e6db74">&#34;key_down: {}  {}  {}&#34;</span>, self.name, key, actor.name);
+  fn key_down(&amp;mut self, key: usize, actor: &amp;mut Actor) {
+     println!(&quot;key_down: {}  {}  {}&quot;, self.name, key, actor.name);
 
-    <span style="color:#66d9ef">if</span> key <span style="color:#f92672">==</span> <span style="color:#ae81ff">262</span> {  <span style="color:#75715e">// right cursor
-</span><span style="color:#75715e"></span>       actor.select_next_sub_actor();
-    } <span style="color:#66d9ef">else</span> <span style="color:#66d9ef">if</span> key <span style="color:#f92672">==</span> <span style="color:#ae81ff">263</span> { <span style="color:#75715e">// left cursor 
-</span><span style="color:#75715e"></span>       actor.select_prev_sub_actor();
+    if key == 262 {  // right cursor
+       actor.select_next_sub_actor();
+    } else if key == 263 { // left cursor 
+       actor.select_prev_sub_actor();
     }
   }
 }
-</code></pre></div><p>I’m adding more event handler methods.</p>
+</code></pre><p>I’m adding more event handler methods.</p>
 <h2 id="user-defined-layout">User defined layout</h2>
 <p>Even though rust-animaiom supports the Flex box UI, the users may want to implement their own layout.
 So, I added the ActorLayout trait for this.</p>
-<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-rust" data-lang="rust"><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ActorLayout</span> {
+<pre tabindex="0"><code>pub struct ActorLayout {
   name: String,
-  cur_x: <span style="color:#66d9ef">i32</span>,
+  cur_x: i32,
 }
 
-<span style="color:#66d9ef">impl</span> ActorLayout {
- <span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">new</span>() -&gt; <span style="color:#a6e22e">Self</span> {
+impl ActorLayout {
+ pub fn new() -&gt; Self {
     ActorLayout {
-      name: <span style="color:#e6db74">&#34;actor_layout&#34;</span>.to_string(),
-      cur_x: <span style="color:#ae81ff">0</span>
+      name: &quot;actor_layout&quot;.to_string(),
+      cur_x: 0
     }
  }
 }
 
-<span style="color:#66d9ef">impl</span> Layout <span style="color:#66d9ef">for</span> ActorLayout {
-  <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">layout_sub_actors</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, sub_actor_list: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">mut</span> Vec<span style="color:#f92672">&lt;</span>Actor<span style="color:#f92672">&gt;</span>) {
-    println!(<span style="color:#e6db74">&#34;layout_sub_layer {}&#34;</span>, self.name);
-    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> index : <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
-    <span style="color:#66d9ef">for</span> sub_actor <span style="color:#66d9ef">in</span> sub_actor_list.iter_mut() {
-      self.cur_x <span style="color:#f92672">+=</span> sub_actor.width <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>;
-      sub_actor.x <span style="color:#f92672">=</span> index <span style="color:#f92672">%</span> <span style="color:#ae81ff">5</span> <span style="color:#f92672">*</span> IMAGE_WIDTH <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>;
-      <span style="color:#66d9ef">let</span> col <span style="color:#f92672">=</span> index  <span style="color:#f92672">/</span> <span style="color:#ae81ff">5</span>;
-      sub_actor.y <span style="color:#f92672">=</span>  col <span style="color:#f92672">*</span> IMAGE_HEIGHT <span style="color:#66d9ef">as</span> <span style="color:#66d9ef">i32</span>;
-      index <span style="color:#f92672">+=</span><span style="color:#ae81ff">1</span>;
+impl Layout for ActorLayout {
+  fn layout_sub_actors(&amp;mut self, sub_actor_list: &amp;mut Vec&lt;Actor&gt;) {
+    println!(&quot;layout_sub_layer {}&quot;, self.name);
+    let mut index : i32 = 0;
+    for sub_actor in sub_actor_list.iter_mut() {
+      self.cur_x += sub_actor.width as i32;
+      sub_actor.x = index % 5 * IMAGE_WIDTH as i32;
+      let col = index  / 5;
+      sub_actor.y =  col * IMAGE_HEIGHT as i32;
+      index +=1;
     }
   }
 }
-</code></pre></div><p>Whenever, rust-animation needs to update the layout, layout_sub_actor is called from rust-animation, then the user can update child locations like this.</p>
+</code></pre><p>Whenever, rust-animation needs to update the layout, layout_sub_actor is called from rust-animation, then the user can update child locations like this.</p>
 <p>Currently, the most urgent feature is to support text rendering. There are many crates to support text rendering, but I want to use a native Rust implementation so I might use <a href="https://crates.io/crates/rusttype">rusttype</a>.</p>
 <p>Happy Hacking!</p>
 
