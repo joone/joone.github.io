@@ -11,13 +11,12 @@ I managed to run some CSS 3D animation demos in the WebKit Clutter port.
 
 Unfortunately, the Clutter project lost its way.
 Now, the project is almost deprecated although it is still used in GNOME Shell.
-Anyway, I had a dream of maintaining a project like Clutter so personally,
-I have worked on C++ implementation of scene graph engine using OpenGL so I also have a Rust implentation.
-Oneday, I just tried to search similar projects in Rust package site(crates.io) and
-found out somebody took good project names, but the owner didn't start the projects or abandon them.
+Anyway, I had a dream of maintaining a project like Clutter, so personally worked on a C++ implementation of scene graph engine using OpenGL so I also have a Rust implementation.
+One day, I just tried to search similar projects in Rust package site(crates.io) and
+found out somebody took good project name, but the owner didn't start the project.
 That's why I just created [a Rust crate](https://crates.io/crates/rust-animation) in crates.io and open [my code in github](https://github.com/joone/rust-animation).
 Of course, it took some time to make my Rust implementation more like API style, but it was much interesting than I thought
-and I really enjoyed Rust programming and publishing my project using cargo tool.
+and I really enjoyed Rust programming and publishing my project using Cargo tool.
 
 After opening the code and creating a crate in Rust crate site,
 I felt more responsibility even if no one uses my project :-), so I continued to update my project.
@@ -27,7 +26,7 @@ Here are major features of rust-animation:
 
 ## Animation with easing functions
 ![alt easing_funcitions](https://github.com/joone/rust-animation/blob/main/examples/easing_functions.gif?raw=true)
-Basically, it renders a rectangle with color and a texture image on the viewport. In addition to rendering, it supports animations with easing functions. It supports the following easing functions:
+Basically, it renders a rectangle with color or a texture image on the viewport. In addition to this, it supports animations with the following easing functions:
 ```
      EasingFunction::EaseIn,
       EasingFunction::EaseInCubic,
@@ -49,14 +48,14 @@ Basically, it renders a rectangle with color and a texture image on the viewport
 ```
 ## Flex UI
 ![alt flex_ui](https://github.com/joone/rust-animation/blob/main/examples/flex_ui.png?raw=true)
-Flex UI support is amazing because someone already implemented this for Rust projects. I just added this crate to my project. It is perfectly working well. I was able to implement the below demo in 30 min. o/
+Flex UI support is amazing because someone already implemented this for Rust projects. I just added this crate to my project. It is perfectly working well. I was able to implement the above demo in 30 min. o/
 
 
 ## Event handling
 
 rust-animation supports EventHandler trait to support event handling in a rust-animation application. Basically, it works like callback functions so the user basically gets event signals from rust-animation. 
 
-``rust
+```rust
 pub struct ActorEvent {
   name: String,
 }
@@ -97,7 +96,7 @@ I’m adding more event handler methods.
 
 ## User defined layout
 Even though rust-animaiom supports the Flex box UI, the users may want to implement their own layout.
-I added the ActorLayout trait for this.
+So, I added the ActorLayout trait for this.
 ```rust
 pub struct ActorLayout {
   name: String,
