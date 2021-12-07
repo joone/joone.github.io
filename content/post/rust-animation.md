@@ -127,7 +127,7 @@ impl Layout for ActorLayout {
 
 Whenever, rust-animation needs to update the layout, layout_sub_actor is called from rust-animation, then the user can update child locations like this.
 
-Currently, the most urgent feature is to support text rendering. There are many crates to support text rendering, but I want to use a native Rust implementation so I might use [rusttype](https://crates.io/crates/rusttype).
+Currently, the most urgent missing feature is to support text rendering. There are many crates to support text rendering, but I want to use a native Rust implementation so I might use [rusttype](https://crates.io/crates/rusttype).
 
 Happy Hacking!
 
