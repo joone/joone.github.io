@@ -20,7 +20,7 @@ and I really enjoyed Rust programming and publishing my project using Cargo tool
 
 After opening the code and creating a crate in Rust crate site,
 I felt more responsibility even if no one uses my project :-), so I continued to update my project.
-Due to this, in terms of code quality and functionality, the current code is much better than when we first pushed it.
+In terms of code quality and functionality, the current code is much better than when we first pushed it.
 Here are the major features of rust-animation:
 
 ## Animation with easing functions
