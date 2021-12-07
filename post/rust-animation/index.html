@@ -163,8 +163,7 @@ impl EventHandler for ActorEvent {
 }
 </code></pre><p>I’m adding more event handler methods.</p>
 <h2 id="user-defined-layout">User defined layout</h2>
-<p>Even though rust-animaiom supports the Flex box UI, the users may want to implement their own layout.
-So, I added the ActorLayout trait for this.</p>
+<p>In addtion to Flex UI, rust-aniation provide a way to implement user&rsquo;s own layout using the ActorLayout trait.</p>
 <pre tabindex="0"><code>pub struct ActorLayout {
   name: String,
   cur_x: i32,
