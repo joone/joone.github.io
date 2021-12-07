@@ -10,7 +10,7 @@ At that time, I implemented my own Actor by extending the existing Actor APIs. I
 I managed to run some CSS 3D animation demos in the WebKit Clutter port.
 
 Unfortunately, the Clutter project lost its way.
-Now, the project is almost deprecated although it is still used in GNOME Shell.
+Now, the project is almost deprecated even though it is still used in GNOME Shell.
 Anyway, I had a dream of maintaining a project like Clutter, so personally worked on a C++ implementation of scene graph engine using OpenGL so I also have a Rust implementation.
 One day, I just tried to search similar projects in Rust package site(crates.io) and
 found out somebody took good project name, but the owner didn't start the project.
@@ -20,9 +20,8 @@ and I really enjoyed Rust programming and publishing my project using Cargo tool
 
 After opening the code and creating a crate in Rust crate site,
 I felt more responsibility even if no one uses my project :-), so I continued to update my project.
-Due to this, the current code is much better than the initial development state in terms of code quality and features.
-
-Here are major features of rust-animation:
+Due to this, in terms of code quality and functionality, the current code is much better than when we first pushed it.
+Here are the major features of rust-animation:
 
 ## Animation with easing functions
 ![alt easing_funcitions](https://github.com/joone/rust-animation/blob/main/examples/easing_functions.gif?raw=true)
