@@ -13,19 +13,7 @@
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
       <guid>/post/hiden-related-bugzilla-issues/</guid>
-      <description>426291
---
-Add support for Hildon (Maemo) application menu
-426292
---
-Add support for Hildon (Maemo) filepicker
-426293
---
-Add support for Hildon (Maemo) banner for alerts
-426299
---
-Create a theme for Hildon (Maemo) platform [tracking bug]
-There are several bugs of Fennec about Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to strive to implement the UI features and Windows Mobile port for XULRunner.</description>
+      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform  Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
