@@ -210,6 +210,8 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 <pre tabindex="0"><code>$ Tools/Scripts/webkit-patch upload 117493
 </code></pre><p>It would be good to add a message to your updated patch:</p>
 <pre tabindex="0"><code>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
+</code></pre><p>If you don&rsquo;t need a review now, pass &ndash;no-review.</p>
+<pre tabindex="0"><code>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”  --no-review
 </code></pre><p>When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).</p>
 <p><a href="https://ews-build.webkit.org/#/">https://ews-build.webkit.org/#/</a></p>
 <p>In my case, I had to add the reviewer name because I updated the patch several times after getting +r.</p>
