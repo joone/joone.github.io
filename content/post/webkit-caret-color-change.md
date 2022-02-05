@@ -169,6 +169,11 @@ It would be good to add a message to your updated patch:
 $ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
 ```
 
+If you don't need a review now, pass --no-review.
+```
+$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”  --no-review
+```
+
 When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).
 
 https://ews-build.webkit.org/#/
