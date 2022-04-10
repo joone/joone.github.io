@@ -154,7 +154,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 #else
     RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
     auto* parentStyle = parentElement &amp;&amp; parentElement-&gt;renderer() ? &amp;parentElement-&gt;renderer()-&gt;style() : nullptr;
-    // CSS value &quot;auto&quot; is treated as an invalid color.
+    // CSS value &#34;auto&#34; is treated as an invalid color.
     if (!elementStyle.caretColor().isValid() &amp;&amp; parentStyle) {
         auto parentBackgroundColor = parentStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
         auto elementBackgroundColor = elementStyle.visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
@@ -178,7 +178,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 -    auto* rootEditableStyle = rootEditableElement &amp;&amp; rootEditableElement-&gt;renderer() ? &amp;rootEditableElement-&gt;renderer()-&gt;style() : nullptr;
 +    RefPtr parentElement = node ? node-&gt;parentElement() : nullptr;
 +    auto* parentStyle = parentElement &amp;&amp; parentElement-&gt;renderer() ? &amp;parentElement-&gt;renderer()-&gt;style() : nullptr;
-     // CSS value &quot;auto&quot; is treated as an invalid color.
+     // CSS value &#34;auto&#34; is treated as an invalid color.
 -    if (!elementStyle.caretColor().isValid() &amp;&amp; rootEditableStyle) {
 -        auto rootEditableBackgroundColor = rootEditableStyle-&gt;visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
 +    if (!elementStyle.caretColor().isValid() &amp;&amp; parentStyle) {
@@ -204,6 +204,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
 <p>Layout test</p>
 <pre tabindex="0"><code>$ Tools/Scripts/run-webkit-tests editing/caret
 </code></pre><p>If you need pixel tests, just pass -p</p>
+<p>You can find the test result in WebKitBuild/Debug/layout-test-results/results.html</p>
 <p>Sometimes, we need to update ChangeLog</p>
 <pre tabindex="0"><code>$ Tools/Scripts/prepare-ChangeLog --g HEAD
 </code></pre><p>Finally, you can upload your patch:</p>

@@ -111,17 +111,16 @@
 <li>Set the tiled backing store setting to TRUE through WebKitWebSettings as follows:</li>
 </ol>
 <pre tabindex="0"><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
-g\_object\_set(G\_OBJECT(settings), &quot;enable-tiled-backing-store&quot;, TRUE, NULL);   
-
+g\_object\_set(G\_OBJECT(settings), &#34;enable-tiled-backing-store&#34;, TRUE, NULL);   
 </code></pre><p>Viewport Meta Tags</p>
 <p><a href="http://farm6.static.flickr.com/5292/5460755418_d6d667e6e1_o.png"><img src="http://farm6.static.flickr.com/5292/5460755418_d6d667e6e1_o.png" alt=""></a> <a href="http://farm6.static.flickr.com/5252/5481285644_9a0d39c365_o.png"><img src="http://farm6.static.flickr.com/5252/5481285644_9a0d39c365_o.png" alt=""></a> </p>
 <p>Apple introduced the full browsing feature for the first time when they released the iPhone. Until then, the mobile phone was not usable to browse web pages made for desktop due to the small screen size. To overcome this limitation, Safari on the iPhone zooms web pages out automatically to fit to the screen like in the above picture(left).</p>
 <p>For this, Safari on the iPhone assumes that web pages have 980px width by default. When Safari loads a web page, it scales down the web page by a factor of 0.32 (320/980) to fit to the width of  the screen in the case of iPhone 3G. But, the problem is that all pages are not displayed to fit to 980px width. For example, mobile web pages can be displayed well with 320px or 480px. the Google Search page is displayed on the iPhone like the right picture because the Google search page is required to have the less width compared to 980px.</p>
 <p>To solve this problem, Apple defined the viewport meta tags to allow web browsers to support desktop web page and mobile web page effectively. Actually, this is not a web standard, but most mobile web browsers have adopted this feature and WebKit also supports it.</p>
 <p>Let’s take a look at the viewport meta tag in more detail. The viewport meta tags can be used to set the width, height and initial scale factor of the viewport. Although most web pages don’t have viewport meta tags, mobile browsers which have 320 px screen width can apply initial values to web pages as follows:</p>
-<pre tabindex="0"><code>&lt;meta name = &quot;viewport&quot; content = &quot;width = 980&quot; initial-scale = &quot;0.32&quot;&gt;
+<pre tabindex="0"><code>&lt;meta name = &#34;viewport&#34; content = &#34;width = 980&#34; initial-scale = &#34;0.32&#34;&gt;
 </code></pre><p>In the case of mobile pages, you need to set the viewport meta tags as follows:</p>
-<pre tabindex="0"><code>&lt;meta name=&quot;viewport&quot; content=&quot;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&quot; /&gt;
+<pre tabindex="0"><code>&lt;meta name=&#34;viewport&#34; content=&#34;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&#34; /&gt;
 </code></pre><p>As you can see each property, web pages can not be scaled up/down; even user scaling is turned off. This is because the mobile web pages are actually written for the small screen.</p>
 <p>For more information on the viewport meta tags, refer to <a href="http://developer.apple.com/safari/library/documentation/appleapplications/reference/safarihtmlref/articles/metatags.html">the Safari reference library</a>.</p>
 <p>Frameset Flattening</p>
@@ -131,8 +130,7 @@ g\_object\_set(G\_OBJECT(settings), &quot;enable-tiled-backing-store&quot;, TRUE
 <p>However, if you enable the frameset flattening features when building Webkit, all the frames can be one scrollable page as you can see the above figure.</p>
 <p>To enable the Fameset flattening:</p>
 <pre tabindex="0"><code>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
-g\_object\_set(G\_OBJECT(settings), &quot;enable-frame-flattening&quot;, TRUE, NULL);  
-
+g\_object\_set(G\_OBJECT(settings), &#34;enable-frame-flattening&#34;, TRUE, NULL);  
 </code></pre><p>Touch events</p>
 <p>Supporting multi-touch has become popular since iPhone introduced it. Now, all smart phones support multi-touch. Using multi-touch allows the users to use more than two fingers to interact with applications on their smart phone. For example, you can use a piano or guitar applications using your 5 fingers.</p>
 <p>However, using multi-touch is not only possible for native applications, but also for web pages. Since WebKit supports touch events as DOM events, web developers can deal with touch events using JavaScript. There are 4 kinds of touch events: touchstart, touchmove, touchend, and touchcancel. Unfortunately, WebKitGtk+ doesn&rsquo;t support the touch events yet. So if you want to <a href="https://bug-32434-attachments.webkit.org/attachment.cgi?id=44955">test the touch events</a> , running QtWebKit or mobile Safari would be good. For more information on how to use the touch events, refer to <a href="http://developer.apple.com/library/safari/#documentation/UserExperience/Reference/TouchEventClassReference/TouchEvent/TouchEvent.html#//apple_ref/doc/uid/TP40009358">the Safari reference library</a>.</p>

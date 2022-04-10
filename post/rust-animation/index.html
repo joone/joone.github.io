@@ -134,25 +134,25 @@ Flex UI support is amazing because someone already implemented this for Rust pro
 impl ActorEvent {
  pub fn new() -&gt; Self {
     ActorEvent {
-      name: &quot;actor_event&quot;.to_string()
+      name: &#34;actor_event&#34;.to_string()
     }
  }
 }
 
 impl EventHandler for ActorEvent {
   fn key_focus_in(&amp;mut self, actor: &amp;mut Actor) {
-     println!(&quot;key_focus_in: {} {}&quot;, self.name, actor.name);
+     println!(&#34;key_focus_in: {} {}&#34;, self.name, actor.name);
      actor.apply_scale_animation(1.0, 1.1, 0.3, EasingFunction::EaseInOut);
   }
 
   fn key_focus_out(&amp;mut self, actor: &amp;mut Actor) {
-    println!(&quot;key_focus_out: {} {}&quot;, self.name, actor.name);
+    println!(&#34;key_focus_out: {} {}&#34;, self.name, actor.name);
     actor.scale_x = 1.0;
     actor.scale_y = 1.0;
   }
 
   fn key_down(&amp;mut self, key: usize, actor: &amp;mut Actor) {
-     println!(&quot;key_down: {}  {}  {}&quot;, self.name, key, actor.name);
+     println!(&#34;key_down: {}  {}  {}&#34;, self.name, key, actor.name);
 
     if key == 262 {  // right cursor
        actor.select_next_sub_actor();
@@ -172,7 +172,7 @@ impl EventHandler for ActorEvent {
 impl ActorLayout {
  pub fn new() -&gt; Self {
     ActorLayout {
-      name: &quot;actor_layout&quot;.to_string(),
+      name: &#34;actor_layout&#34;.to_string(),
       cur_x: 0
     }
  }
@@ -180,7 +180,7 @@ impl ActorLayout {
 
 impl Layout for ActorLayout {
   fn layout_sub_actors(&amp;mut self, sub_actor_list: &amp;mut Vec&lt;Actor&gt;) {
-    println!(&quot;layout_sub_layer {}&quot;, self.name);
+    println!(&#34;layout_sub_layer {}&#34;, self.name);
     let mut index : i32 = 0;
     for sub_actor in sub_actor_list.iter_mut() {
       self.cur_x += sub_actor.width as i32;

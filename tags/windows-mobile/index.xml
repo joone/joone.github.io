@@ -15,7 +15,7 @@
       <guid>/post/how-to-check-hardware-keyboard-on/</guid>
       <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed. I am so happy to contribute to Mozilla. Here is the detail what the problem was fixed:
 Windows Mobile keeps the status of hardware keyboard in the registry as follows:
-&amp;quot;HKEY\_CURRENT\_USER\\SOFTWARE\\Microsoft\\Shell\\HasKeyboard&amp;quot; A software keyboard can pop-up if a device doesn&amp;rsquo;t have a hardware keyboard. However, in the case that the device has a slide-out keyboard, the value should be changed according to the status of the slide-out keyboard.</description>
+&amp;#34;HKEY\_CURRENT\_USER\\SOFTWARE\\Microsoft\\Shell\\HasKeyboard&amp;#34; A software keyboard can pop-up if a device doesn&amp;rsquo;t have a hardware keyboard. However, in the case that the device has a slide-out keyboard, the value should be changed according to the status of the slide-out keyboard.</description>
     </item>
     
     <item>
