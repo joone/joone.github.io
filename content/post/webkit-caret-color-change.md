@@ -156,6 +156,8 @@ $ Tools/Scripts/run-webkit-tests editing/caret
 ```
 If you need pixel tests, just pass -p
 
+You can find the test result in WebKitBuild/Debug/layout-test-results/results.html
+
 Sometimes, we need to update ChangeLog
 ```
 $ Tools/Scripts/prepare-ChangeLog --g HEAD
