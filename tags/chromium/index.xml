@@ -36,14 +36,14 @@ Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo</de
       <guid>/post/my-major-contributions-to-chromium/</guid>
       <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
 Blink Editing
- [Issue 226941] Contenteditable issues related to backspace handling    https://codereview.chromium.org/2064473002
-  https://codereview.chromium.org/2117663002
-  [Issue 318925] Copy and paste sometimes removes spaces between words    https://codereview.chromium.org/2193033004
-  https://codereview.chromium.org/2280513004
-  https://codereview.chromium.org/2320533002
-  https://codereview.chromium.org/2325553002
-  https://codereview.chromium.org/2336043006
-  [Issue 310149] ContentEditable: is forced on SPACE between text nodes   https://codereview.</description>
+[Issue 226941] Contenteditable issues related to backspace handling https://codereview.chromium.org/2064473002
+https://codereview.chromium.org/2117663002
+[Issue 318925] Copy and paste sometimes removes spaces between words https://codereview.chromium.org/2193033004
+https://codereview.chromium.org/2280513004
+https://codereview.chromium.org/2320533002
+https://codereview.chromium.org/2325553002
+https://codereview.chromium.org/2336043006
+[Issue 310149] ContentEditable: is forced on SPACE between text nodes https://codereview.chromium.org/2175163004 [Issue 335955] Unwanted spans inserted in contentEditable elements https://codereview.chromium.org/2072093002 [issue 571420] chrome hangs on when creating bullet list in contenteditable https://codereview.</description>
     </item>
     
     <item>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta name="generator" content="Hugo 0.96.0" />
+	<meta name="generator" content="Hugo 0.101.0" />
   <meta http-equiv="content-type" content="text/html; charset=utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>posts </title>
@@ -165,7 +165,7 @@ Issue1) IME Composition events should be handled consistently in all ports of We
   <div>
     I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
 According to W3C DOM Level 3 events,
- A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.
+A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.
     
     <a href="/post/composition-events-are-handled_27/" class="summary-more">More</a>
     
@@ -230,7 +230,6 @@ Windows Mobile keeps the status of hardware keyboard in the registry as follows:
   
   <div>
     Samsung Windows Mobile SDK 1.0 was released!
-
 You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&rsquo;s free.
 It consists of API Spec, programming guide, installation guide, header files &amp; library for device APIs, and sample code.
 The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.
@@ -280,8 +279,6 @@ You might install Fennec using this zip file. But, it is cumbersome. Fortunately
     I was told a very good news from Blassey blog.
 Doug Turner solved the test blocker of Fennec for Windows Mobile.
 I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
-
-
 Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
 It is working well, but very slow on i780.
     

@@ -95,7 +95,7 @@ The source code has been changed and I almost forgot how to deal with layout tes
   </div>
   
   <div>
-    During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ usingClutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
+    During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
 This is not upstreamed yet, but Imy patches are getting reviewed. Gustavo and Martin are helping me write more good patches. Thanks!
 I think that this hackfest was done well. You can check more news about the WebKitGtk+ hackfest from other blog posts:
     
@@ -225,7 +225,7 @@ Issue1) IME Composition events should be handled consistently in all ports of We
   <div>
     I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
 According to W3C DOM Level 3 events,
- A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.
+A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.
     
     <a href="/post/composition-events-are-handled_27/" class="summary-more">More</a>
     

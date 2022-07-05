@@ -34,9 +34,9 @@ The source code has been changed and I almost forgot how to deal with layout tes
       
       <guid>/post/chromeos-window-service2/</guid>
       <description>Recently, WS was replaced with WS2:
-  1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
-  Issue 865689 Remove window-service
-  I ran mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
+1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
+Issue 865689 Remove window-service
+I ran mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
 What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.</description>
     </item>
     
@@ -90,7 +90,6 @@ Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo</de
       
       <guid>/post/setting-up-nfs-in-openstep/</guid>
       <description>If your server or host PC supports NFS, you can set up shared directories for OpenStep. For example, if the shared folder is nfs://192.168.1.19/nfs/ftp, you can add the imported directory in NFSManager.app as follows:
-
 Run mount command in OpenStep to mount a remote directory as follows:``` $ mount -t 192.168.8.16:/mnt/openstep /coreonion
 * [https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/](https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/) * [http://nextstep.onionmixer.net/wordpress/?p=139](http://nextstep.onionmixer.net/wordpress/?p=139) </description>
     </item>
@@ -122,7 +121,7 @@ I landed a simple patch and am working on adding the ellipse API to Canvas API. 
       
       <guid>/post/enable-to-open-multiple-file-pickers-in/</guid>
       <description>Sometimes, we don&amp;rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
- Enable &amp;ldquo;Ask where to save&amp;rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash  Here is a video to reproduce the problem.</description>
+Enable &amp;ldquo;Ask where to save&amp;rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem.</description>
     </item>
     
     <item>
@@ -153,14 +152,14 @@ There was already a bug and it seemed easy to fix it, but, it took 2 years to f
       <guid>/post/my-major-contributions-to-chromium/</guid>
       <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
 Blink Editing
- [Issue 226941] Contenteditable issues related to backspace handling    https://codereview.chromium.org/2064473002
-  https://codereview.chromium.org/2117663002
-  [Issue 318925] Copy and paste sometimes removes spaces between words    https://codereview.chromium.org/2193033004
-  https://codereview.chromium.org/2280513004
-  https://codereview.chromium.org/2320533002
-  https://codereview.chromium.org/2325553002
-  https://codereview.chromium.org/2336043006
-  [Issue 310149] ContentEditable: is forced on SPACE between text nodes   https://codereview.</description>
+[Issue 226941] Contenteditable issues related to backspace handling https://codereview.chromium.org/2064473002
+https://codereview.chromium.org/2117663002
+[Issue 318925] Copy and paste sometimes removes spaces between words https://codereview.chromium.org/2193033004
+https://codereview.chromium.org/2280513004
+https://codereview.chromium.org/2320533002
+https://codereview.chromium.org/2325553002
+https://codereview.chromium.org/2336043006
+[Issue 310149] ContentEditable: is forced on SPACE between text nodes https://codereview.chromium.org/2175163004 [Issue 335955] Unwanted spans inserted in contentEditable elements https://codereview.chromium.org/2072093002 [issue 571420] chrome hangs on when creating bullet list in contenteditable https://codereview.</description>
     </item>
     
     <item>
@@ -230,7 +229,7 @@ The main reason why I decided to become a GNOME foundation member is to let GNOM
       <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
       
       <guid>/post/accelerated-composting-in-webkitgtk/</guid>
-      <description>During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ usingClutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
+      <description>During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
 This is not upstreamed yet, but Imy patches are getting reviewed. Gustavo and Martin are helping me write more good patches. Thanks!
 I think that this hackfest was done well. You can check more news about the WebKitGtk+ hackfest from other blog posts:</description>
     </item>
@@ -375,7 +374,7 @@ Issue1) IME Composition events should be handled consistently in all ports of We
       <guid>/post/composition-events-are-handled_27/</guid>
       <description>I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&amp;rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
 According to W3C DOM Level 3 events,
- A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.</description>
+A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.</description>
     </item>
     
     <item>
@@ -407,7 +406,6 @@ Windows Mobile keeps the status of hardware keyboard in the registry as follows:
       
       <guid>/post/samsung-windows-mobile-sdk-10-releaed/</guid>
       <description>Samsung Windows Mobile SDK 1.0 was released!
-
 You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
 It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
 The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
@@ -435,8 +433,6 @@ You might install Fennec using this zip file. But, it is cumbersome. Fortunately
       <description>I was told a very good news from Blassey blog.
 Doug Turner solved the test blocker of Fennec for Windows Mobile.
 I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
-
-
 Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
 It is working well, but very slow on i780.</description>
     </item>
@@ -470,7 +466,7 @@ The following projects had their own session:</description>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
       <guid>/post/hiden-related-bugzilla-issues/</guid>
-      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform  Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
+      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
@@ -505,7 +501,6 @@ About 400 Mozilla peoples joined the summit coming from all over the World. They
       
       <guid>/post/firefox-party-seoul/</guid>
       <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.
-
 Coincidentally, Mozilla had officially released Firefox3 in this period of time, so the Mozilla Korea Community hosted a Firefox Seoul party to celebrate the release of Firefox3. They also attended the party, so it made the event more exciting for the community.</description>
     </item>
     
@@ -575,7 +570,7 @@ Therefore, excellent SW engineers now have come to here from each state of India
       <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.
 The speaker is Gen Kanai who is working for Mozilla Corporation.
 He talked about Mozilla community &amp;amp; open source activities in Asia such as:
- Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux)  The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
+Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux) The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
     </item>
     
     <item>
@@ -595,7 +590,6 @@ The sensor means a device that reads data from the user&amp;rsquo;s physical env
       
       <guid>/post/performance-test-of-microb-patches/</guid>
       <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.)
-
 - The microB package contains more 200 patches and several patch sets.
 - It is released with Firefox3 alpha6 pre. now.
 Two kinds of test case are used.
@@ -659,8 +653,8 @@ It&amp;rsquo;s great. I think this patch is valuable to use on Mobile Firefox.</
       <description>I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by Channy.
 Channy is the leader of KoMoCo, a contributor for localization of Firefox. Actually, his company, Daum has supported many open source communities including KoMoCo. So, I always thank for Daum and his efforts.
 For more details, I&amp;rsquo;d like to share some blog articles regarding the party.
- KoMoCo Anual Pary Photos in Flickr
- Mozllia Japan Gen Kanai&amp;rsquo;s introduction about KoMoKo anual party John’s Blog</description>
+KoMoCo Anual Pary Photos in Flickr
+Mozllia Japan Gen Kanai&amp;rsquo;s introduction about KoMoKo anual party John’s Blog</description>
     </item>
     
     <item>
@@ -693,7 +687,7 @@ SVG is a standard technology to create vector graphics on the web and even can b
       <guid>/post/2007-south-north-korean-summit/</guid>
       <description>South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.
 This is the second summit between the two Koreas.
-During the summit, Two leaders had several talks about Korean peace, economic investment, reunification on North Korea.
+During the summit, Two leaders had several talks about Korean peace, economic investment, and reunification on North Korea.
 I wish that the two Koreas could archive piece and prosperity on the Korean Peninsula.</description>
     </item>
     
@@ -704,7 +698,6 @@ I wish that the two Koreas could archive piece and prosperity on the Korean Peni
       
       <guid>/post/flickr-launching-party-at-seoul/</guid>
       <description>.flickr-photo { border: solid 2px #000000; }.flickr-yourcomment { }.flickr-frame { text-align: left; padding: 3px; }.flickr-caption { font-size: 0.8em; margin-top: 0px; }
-
 Flickr Launching Party at Seoul, originally uploaded by joone4u.
 I attended Flickr Launching Party at Seoul.
 Anyone couldn&amp;rsquo;t attend the party, only invited users could attend the party.

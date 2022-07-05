@@ -25,7 +25,6 @@ Windows Mobile keeps the status of hardware keyboard in the registry as follows:
       
       <guid>/post/samsung-windows-mobile-sdk-10-releaed/</guid>
       <description>Samsung Windows Mobile SDK 1.0 was released!
-
 You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
 It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
 The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
