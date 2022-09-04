@@ -44,27 +44,9 @@ hasChildren = true
   
   [[main]]
   parent = "Pages"
-  weight = 3
-  url = "tags/photography/"
-  name = "Tag Single"
-  
-  [[main]]
-  parent = "Pages"
   weight = 4
   url = "categories/"
   name = "Category"
-  
-  [[main]]
-  parent = "Pages"
-  weight = 5
-  url = "categories/lifestyle/"
-  name = "Category Single"
-  
-  [[main]]
-  parent = "Pages"
-  weight = 6
-  url = "elements/"
-  name = "Elements"
 
 ############################# Footer Menu ########################
 [[footer]]
