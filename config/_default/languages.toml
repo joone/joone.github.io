@@ -1,0 +1,14 @@
+################ English language ##################
+[en]
+languageName = "En"
+languageCode = "en-us"
+contentDir = "content/english"
+weight = 1
+
+
+################ Korea language ##################
+[Kr]
+languageName = "kr"
+languageCode = "euc-kr"
+contentDir = "content/korean"
+weight = 2
