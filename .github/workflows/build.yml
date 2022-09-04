@@ -18,7 +18,7 @@ jobs:
         with:
           path: src
           fetch-depth: 0
-          ref: master
+          ref: main
           submodules: recursive
       # Build hugo website with klakegg/actions-hugo@1.0.0 action
       - name: Build website with hugo
