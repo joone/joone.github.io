@@ -3,7 +3,7 @@
 # main menu
 [[main]]
 weight = 1
-url = "/"
+url = "/kr"
 name = "Home"
 hasChildren = true
 
