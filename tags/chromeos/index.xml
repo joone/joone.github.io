@@ -1,23 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>ChromeOS on posts</title>
-    <link>/tags/chromeos/</link>
-    <description>Recent content in ChromeOS on posts</description>
+    <title>ChromeOS on Joone Blog</title>
+    <link>https://joone.github.io/tags/chromeos/</link>
+    <description>Recent content in ChromeOS on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="/tags/chromeos/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Aug 2018 13:48:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/chromeos/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The WindowService2(?) of CrOS</title>
-      <link>/post/chromeos-window-service2/</link>
+      <link>https://joone.github.io/blog/chromeos-window-service2/</link>
       <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
       
-      <guid>/post/chromeos-window-service2/</guid>
+      <guid>https://joone.github.io/blog/chromeos-window-service2/</guid>
       <description>Recently, WS was replaced with WS2:
-1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
-Issue 865689 Remove window-service
-I ran mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
-What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.</description>
+1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps</description>
     </item>
     
   </channel>

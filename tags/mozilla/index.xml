@@ -1,115 +1,91 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Mozilla on posts</title>
-    <link>/tags/mozilla/</link>
-    <description>Recent content in Mozilla on posts</description>
+    <title>Mozilla on Joone Blog</title>
+    <link>https://joone.github.io/tags/mozilla/</link>
+    <description>Recent content in Mozilla on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 24 Aug 2017 13:47:00 -0700</lastBuildDate><atom:link href="/tags/mozilla/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 24 Aug 2017 13:47:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/mozilla/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working on the Servo project</title>
-      <link>/post/working-on-servo-project/</link>
+      <link>https://joone.github.io/blog/working-on-servo-project/</link>
       <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
       
-      <guid>/post/working-on-servo-project/</guid>
-      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community. During the time, I contributed to Fennec browser by fixing bugs and localization. Anyway, this blog article motivated me work on Mozilla again.
-I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.</description>
+      <guid>https://joone.github.io/blog/working-on-servo-project/</guid>
+      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community.</description>
     </item>
     
     <item>
       <title>Debugging Fennec front-end</title>
-      <link>/post/debugging-fennec-front-end/</link>
+      <link>https://joone.github.io/blog/debugging-fennec-front-end/</link>
       <pubDate>Sun, 11 Oct 2009 08:17:00 -0700</pubDate>
       
-      <guid>/post/debugging-fennec-front-end/</guid>
-      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
-XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
-To modify them,</description>
+      <guid>https://joone.github.io/blog/debugging-fennec-front-end/</guid>
+      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform.</description>
     </item>
     
     <item>
       <title>Fennec is running on SAMSUNG i780</title>
-      <link>/post/fennec-is-running-on-samsung-i780/</link>
+      <link>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</link>
       <pubDate>Fri, 27 Mar 2009 07:33:00 -0700</pubDate>
       
-      <guid>/post/fennec-is-running-on-samsung-i780/</guid>
-      <description>I was told a very good news from Blassey blog.
-Doug Turner solved the test blocker of Fennec for Windows Mobile.
-I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
-Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
-It is working well, but very slow on i780.</description>
+      <guid>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</guid>
+      <description>I was told a very good news from Blassey blog.</description>
     </item>
     
     <item>
       <title>Firefox Seoul Party for celebrating the release of Firefox3</title>
-      <link>/post/firefox-party-seoul/</link>
+      <link>https://joone.github.io/blog/firefox-party-seoul/</link>
       <pubDate>Sat, 31 May 2008 23:31:00 -0700</pubDate>
       
-      <guid>/post/firefox-party-seoul/</guid>
-      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.
-Coincidentally, Mozilla had officially released Firefox3 in this period of time, so the Mozilla Korea Community hosted a Firefox Seoul party to celebrate the release of Firefox3. They also attended the party, so it made the event more exciting for the community.</description>
+      <guid>https://joone.github.io/blog/firefox-party-seoul/</guid>
+      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.</description>
     </item>
     
     <item>
       <title>Latest looks of Fennec (Mobile Firefox)</title>
-      <link>/post/latest-look-of-fennec-mobile-firefox/</link>
+      <link>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</link>
       <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
       
-      <guid>/post/latest-look-of-fennec-mobile-firefox/</guid>
-      <description>The plan of Mobile Firefox was announced in October last year and the Mozilla community is now very busy to develop Mobile Firefox.
-Fennec is the code name of Mobile Firefox, which is a desert fox. You may have seen a fennec in TV animation. The size of fennec is smaller than normal fox and it has big ears. So I think the name of Fennec seems to be suited well for Mobile Firefox.</description>
+      <guid>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</guid>
+      <description>The plan of Mobile Firefox was announced in October last</description>
     </item>
     
     <item>
       <title>Open Source in Asia</title>
-      <link>/post/open-source-in-asia/</link>
+      <link>https://joone.github.io/blog/open-source-in-asia/</link>
       <pubDate>Sun, 17 Feb 2008 20:13:00 -0800</pubDate>
       
-      <guid>/post/open-source-in-asia/</guid>
-      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.
-The speaker is Gen Kanai who is working for Mozilla Corporation.
-He talked about Mozilla community &amp;amp; open source activities in Asia such as:
-Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux) The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
+      <guid>https://joone.github.io/blog/open-source-in-asia/</guid>
+      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.</description>
     </item>
     
     <item>
       <title>libpng patch for Mobile Firefox</title>
-      <link>/post/libpng-patch-for-mozilla-firefox/</link>
+      <link>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</link>
       <pubDate>Sun, 06 Jan 2008 04:42:00 -0800</pubDate>
       
-      <guid>/post/libpng-patch-for-mozilla-firefox/</guid>
-      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.
-http://wiki.mozilla.org/Mobile/Patches
-My colleague tried to apply the png patch to Mozilla and get a good result related to performance improvement.
-As you know, we can build the libpng fixed point routines like the above patch.
-(Use #define PNG_NO_FLOATING_POINT_SUPPORTED in mozilla/modules/libimg/png/mozpngconf.h )
-In this case, he can get 8.6% performance improvement.
-It&amp;rsquo;s great. I think this patch is valuable to use on Mobile Firefox.</description>
+      <guid>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</guid>
+      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.</description>
     </item>
     
     <item>
       <title>Korea Mozilla Community Party</title>
-      <link>/post/korea-mozilla-community-party/</link>
+      <link>https://joone.github.io/blog/korea-mozilla-community-party/</link>
       <pubDate>Thu, 13 Dec 2007 19:56:00 -0800</pubDate>
       
-      <guid>/post/korea-mozilla-community-party/</guid>
-      <description>I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by Channy.
-Channy is the leader of KoMoCo, a contributor for localization of Firefox. Actually, his company, Daum has supported many open source communities including KoMoCo. So, I always thank for Daum and his efforts.
-For more details, I&amp;rsquo;d like to share some blog articles regarding the party.
-KoMoCo Anual Pary Photos in Flickr
-Mozllia Japan Gen Kanai&amp;rsquo;s introduction about KoMoKo anual party John’s Blog</description>
+      <guid>https://joone.github.io/blog/korea-mozilla-community-party/</guid>
+      <description>I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by Channy.</description>
     </item>
     
     <item>
       <title>Introduction to Mozilla based web browsers</title>
-      <link>/post/introduction-to-mozilla-based-web/</link>
+      <link>https://joone.github.io/blog/introduction-to-mozilla-based-web/</link>
       <pubDate>Fri, 06 Apr 2007 02:56:00 -0700</pubDate>
       
-      <guid>/post/introduction-to-mozilla-based-web/</guid>
-      <description>We are using Firefox browser that has been developed by Mozilla. As you may know, Firefox is based on the Mozilla application framework that provides a good way of supporting cross-platform for running applications.
-However, supporting cross-platform has some weak points. The first weak point is performance, the second is that it can not utilize the native user interface.
-Some web browsers are based on the Mozilla application framework with a native user interface.</description>
+      <guid>https://joone.github.io/blog/introduction-to-mozilla-based-web/</guid>
+      <description>We are using Firefox browser that has been developed by Mozilla.</description>
     </item>
     
   </channel>

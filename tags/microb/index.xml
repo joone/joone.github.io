@@ -1,28 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>microB on posts</title>
-    <link>/tags/microb/</link>
-    <description>Recent content in microB on posts</description>
+    <title>microB on Joone Blog</title>
+    <link>https://joone.github.io/tags/microb/</link>
+    <description>Recent content in microB on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 23 Jan 2008 04:45:00 -0800</lastBuildDate><atom:link href="/tags/microb/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 23 Jan 2008 04:45:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/microb/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Performance test of the microB patches</title>
-      <link>/post/performance-test-of-microb-patches/</link>
+      <link>https://joone.github.io/blog/performance-test-of-microb-patches/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>/post/performance-test-of-microb-patches/</guid>
-      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.)
-- The microB package contains more 200 patches and several patch sets.
-- It is released with Firefox3 alpha6 pre. now.
-Two kinds of test case are used.
-- Tinderbox DHTML Test
-- CSS Rendering
-Target Device : PAX320, RAM 256MB
-And I got the following results on TestGtkEmbed in Mozilla.
-* Tinderbox DHTML Test:
-The microB patched Mozilla is 2.</description>
+      <guid>https://joone.github.io/blog/performance-test-of-microb-patches/</guid>
+      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.</description>
     </item>
     
   </channel>

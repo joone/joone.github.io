@@ -1,988 +1,899 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>posts</title>
-    <link>/</link>
-    <description>Recent content on posts</description>
+    <title>Joone Blog</title>
+    <link>https://joone.github.io/</link>
+    <description>Recent content on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="https://joone.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rust-animation project</title>
-      <link>/post/rust-animation/</link>
+      <link>https://joone.github.io/blog/rust-animation/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
       
-      <guid>/post/rust-animation/</guid>
-      <description>I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port. At that time, I implemented my own Actor by extending the existing Actor APIs. It worked well: I managed to run some CSS 3D animation demos in the WebKit Clutter port.
-Unfortunately, the Clutter project lost its way. Now, the project is almost deprecated even though it is still used in GNOME Shell.</description>
+      <guid>https://joone.github.io/blog/rust-animation/</guid>
+      <description>I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port.</description>
     </item>
     
     <item>
       <title>Caret should respect text background color</title>
-      <link>/post/webkit-caret-color-change/</link>
+      <link>https://joone.github.io/blog/webkit-caret-color-change/</link>
       <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
       
-      <guid>/post/webkit-caret-color-change/</guid>
-      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
-The source code has been changed and I almost forgot how to deal with layout test errors.</description>
+      <guid>https://joone.github.io/blog/webkit-caret-color-change/</guid>
+      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it.</description>
+    </item>
+    
+    <item>
+      <title>Joone</title>
+      <link>https://joone.github.io/author/joone-hur/</link>
+      <pubDate>Tue, 02 Feb 2021 10:20:19 +0600</pubDate>
+      
+      <guid>https://joone.github.io/author/joone-hur/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Search Result</title>
+      <link>https://joone.github.io/search/</link>
+      <pubDate>Mon, 24 Sep 2018 11:07:10 +0600</pubDate>
+      
+      <guid>https://joone.github.io/search/</guid>
+      <description></description>
     </item>
     
     <item>
       <title>The WindowService2(?) of CrOS</title>
-      <link>/post/chromeos-window-service2/</link>
+      <link>https://joone.github.io/blog/chromeos-window-service2/</link>
       <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
       
-      <guid>/post/chromeos-window-service2/</guid>
+      <guid>https://joone.github.io/blog/chromeos-window-service2/</guid>
       <description>Recently, WS was replaced with WS2:
-1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
-Issue 865689 Remove window-service
-I ran mus_demo to test ozone-gbm, but now it&amp;rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
-What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.</description>
+1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps</description>
     </item>
     
     <item>
       <title>Linux Container for ChromeOS</title>
-      <link>/post/linux-container-for-chromeos/</link>
+      <link>https://joone.github.io/blog/linux-container-for-chromeos/</link>
       <pubDate>Thu, 12 Jul 2018 18:25:45 -0800</pubDate>
       
-      <guid>/post/linux-container-for-chromeos/</guid>
-      <description>Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&amp;rsquo;t allowed ChromeOS to run native applications due to security reasons. Finally, they found a way to support Linux applications through the container technology.
-It is worth to read a discussion on CrOSVM on Hacker News because the original author joined the discussion. Here is the article about the ChromeOS Linux container. https://www.zdnet.com/article/chrome-os-could-be-getting-containers-for-running-linux-vms/
-There is a Youtube video: https://www.youtube.com/watch?v=s9mrR2tqVbQ
-Here is the readme about CrOSVM:</description>
+      <guid>https://joone.github.io/blog/linux-container-for-chromeos/</guid>
+      <description>Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&amp;rsquo;t allowed ChromeOS to run native applications due to security reasons.</description>
     </item>
     
     <item>
       <title>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</title>
-      <link>/post/making-use-of-chromes-ozone-gbm-intel/</link>
+      <link>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</link>
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>
       
-      <guid>/post/making-use-of-chromes-ozone-gbm-intel/</guid>
-      <description>Recently, I published a blog article about making Use Of Chrome&amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using ChromeOS graphics stack for a regular Linux system. This article was also mentioned in Phoronix.
-Originally, my old colleague started working on this a long time ago, but it has been broken since then. So I have been trying to enable ozone-gbm on a Linux system because this solution would be useful for embedded systems.</description>
+      <guid>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</guid>
+      <description>Recently, I published a blog article about making Use Of Chrome&amp;amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop.</description>
     </item>
     
     <item>
       <title>Rust &amp; DRM</title>
-      <link>/post/rust-drm/</link>
+      <link>https://joone.github.io/blog/rust-drm/</link>
       <pubDate>Thu, 24 May 2018 16:06:00 -0700</pubDate>
       
-      <guid>/post/rust-drm/</guid>
-      <description>I was surprised that there are many low-level graphics projects written in Rust and I started looking into one of them: drm-rs. Then, I added an example for handling page-flip event.
-drm-rs is a subproject of Smithay that is a wayland compositor written in Rust. It allows Rust applications to access the Direct Rendering Manger(DRM), a subsystem of the Linux Kernel. So, we could directly paint something into a frame buffer and render it on the display using DRM APIs.</description>
+      <guid>https://joone.github.io/blog/rust-drm/</guid>
+      <description>I was surprised that there are many low-level graphics projects written in Rust and I started looking into one of them: drm-rs.</description>
     </item>
     
     <item>
       <title>BlinkOn9</title>
-      <link>/post/blinkon9/</link>
+      <link>https://joone.github.io/blog/blinkon9/</link>
       <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
       
-      <guid>/post/blinkon9/</guid>
-      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
-At this conference, I talked about acelerating graphics performance with ozone-gbm on Intel based Linux desktop systems: explained what kind of hardware accelerations have been applied to Intel based Chromebooks and how we can use them on a Linux desktop.
-Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo</description>
+      <guid>https://joone.github.io/blog/blinkon9/</guid>
+      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.</description>
     </item>
     
     <item>
       <title>Setting up NFS in OpenStep</title>
-      <link>/post/setting-up-nfs-in-openstep/</link>
+      <link>https://joone.github.io/blog/setting-up-nfs-in-openstep/</link>
       <pubDate>Wed, 27 Sep 2017 02:43:00 -0700</pubDate>
       
-      <guid>/post/setting-up-nfs-in-openstep/</guid>
-      <description>If your server or host PC supports NFS, you can set up shared directories for OpenStep. For example, if the shared folder is nfs://192.168.1.19/nfs/ftp, you can add the imported directory in NFSManager.app as follows:
-Run mount command in OpenStep to mount a remote directory as follows:``` $ mount -t 192.168.8.16:/mnt/openstep /coreonion
-* [https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/](https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/) * [http://nextstep.onionmixer.net/wordpress/?p=139](http://nextstep.onionmixer.net/wordpress/?p=139) </description>
+      <guid>https://joone.github.io/blog/setting-up-nfs-in-openstep/</guid>
+      <description>If your server or host PC supports NFS, you can set up shared directories for OpenStep.</description>
     </item>
     
     <item>
       <title>Installing OpenStep 4.2 on Parallels</title>
-      <link>/post/running-openstep-42-on-parallels/</link>
+      <link>https://joone.github.io/blog/running-openstep-42-on-parallels/</link>
       <pubDate>Wed, 20 Sep 2017 11:38:00 -0700</pubDate>
       
-      <guid>/post/running-openstep-42-on-parallels/</guid>
-      <description>NextStep is one of the advanced operating systems in 90s. You may understand why it is by watching this video:
-Every features Steve Jobs introduced in this video was possible in 1992, which is amazing. So I&amp;rsquo;ve dreamed of using NextStep since I was aware of it, but I&amp;rsquo;ve never seen a running demo and just saw a NexTCube. By chance, I found instructions how to install OpenStep 4.2 on Parallels.</description>
+      <guid>https://joone.github.io/blog/running-openstep-42-on-parallels/</guid>
+      <description>NextStep is one of the advanced operating systems in 90s. You may understand why it is by watching this video:</description>
     </item>
     
     <item>
       <title>Working on the Servo project</title>
-      <link>/post/working-on-servo-project/</link>
+      <link>https://joone.github.io/blog/working-on-servo-project/</link>
       <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
       
-      <guid>/post/working-on-servo-project/</guid>
-      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community. During the time, I contributed to Fennec browser by fixing bugs and localization. Anyway, this blog article motivated me work on Mozilla again.
-I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.</description>
+      <guid>https://joone.github.io/blog/working-on-servo-project/</guid>
+      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community.</description>
     </item>
     
     <item>
       <title>Enable to open multiple file-pickers in Chromium for Linux</title>
-      <link>/post/enable-to-open-multiple-file-pickers-in/</link>
+      <link>https://joone.github.io/blog/enable-to-open-multiple-file-pickers-in/</link>
       <pubDate>Wed, 01 Mar 2017 13:06:00 -0800</pubDate>
       
-      <guid>/post/enable-to-open-multiple-file-pickers-in/</guid>
-      <description>Sometimes, we don&amp;rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
-Enable &amp;ldquo;Ask where to save&amp;rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem.</description>
+      <guid>https://joone.github.io/blog/enable-to-open-multiple-file-pickers-in/</guid>
+      <description>Sometimes, we don&amp;rsquo;t know exact requirements or expect user behaviors while developing or fix something.</description>
     </item>
     
     <item>
       <title>Apple-style-span class was fully removed from Blink</title>
-      <link>/post/apple-style-span-class-was-fully/</link>
+      <link>https://joone.github.io/blog/apple-style-span-class-was-fully/</link>
       <pubDate>Fri, 17 Feb 2017 14:48:00 -0800</pubDate>
       
-      <guid>/post/apple-style-span-class-was-fully/</guid>
+      <guid>https://joone.github.io/blog/apple-style-span-class-was-fully/</guid>
       <description>Finally, Apple-style-span class was fully removed from Blink(commit).
-Apple-style-span has not been produced since 2011: https://webkit.org/blog/1737/apple-style-span-is-gone, but there were still some legacy code to handle Apple-style-span class because old WebKit engines has produced it, but now the usage is quite low(&amp;lt;=0.0001%). So, we decided to remove it from Blink at BlinkOn7. The code was executed whenever the users copy a text or run Editing APIs(document.execCommand) to keep the styles when pasting it.</description>
+Apple-style-span has not been produced since 2011: https://webkit.</description>
     </item>
     
     <item>
       <title>Make file-picker modal in Chromium for Linux</title>
-      <link>/post/make-file-picker-modal-in-chromium-for/</link>
+      <link>https://joone.github.io/blog/make-file-picker-modal-in-chromium-for/</link>
       <pubDate>Tue, 29 Nov 2016 13:15:00 -0800</pubDate>
       
-      <guid>/post/make-file-picker-modal-in-chromium-for/</guid>
-      <description>When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.
-There was already a bug and it seemed easy to fix it, but, it took 2 years to fully fix the problem.</description>
+      <guid>https://joone.github.io/blog/make-file-picker-modal-in-chromium-for/</guid>
+      <description>When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal.</description>
     </item>
     
     <item>
       <title>My major contributions to Chromium project</title>
-      <link>/post/my-major-contributions-to-chromium/</link>
+      <link>https://joone.github.io/blog/my-major-contributions-to-chromium/</link>
       <pubDate>Mon, 14 Nov 2016 16:14:00 -0800</pubDate>
       
-      <guid>/post/my-major-contributions-to-chromium/</guid>
-      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
-Blink Editing
-[Issue 226941] Contenteditable issues related to backspace handling https://codereview.chromium.org/2064473002
-https://codereview.chromium.org/2117663002
-[Issue 318925] Copy and paste sometimes removes spaces between words https://codereview.chromium.org/2193033004
-https://codereview.chromium.org/2280513004
-https://codereview.chromium.org/2320533002
-https://codereview.chromium.org/2325553002
-https://codereview.chromium.org/2336043006
-[Issue 310149] ContentEditable: is forced on SPACE between text nodes https://codereview.chromium.org/2175163004 [Issue 335955] Unwanted spans inserted in contentEditable elements https://codereview.chromium.org/2072093002 [issue 571420] chrome hangs on when creating bullet list in contenteditable https://codereview.</description>
+      <guid>https://joone.github.io/blog/my-major-contributions-to-chromium/</guid>
+      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features.</description>
     </item>
     
     <item>
       <title>OSCON 2014</title>
-      <link>/post/oscon-2014/</link>
+      <link>https://joone.github.io/blog/oscon-2014/</link>
       <pubDate>Tue, 22 Jul 2014 22:21:00 -0700</pubDate>
       
-      <guid>/post/oscon-2014/</guid>
-      <description>I attended OSCON 2014 held in Portland, Oregon. I think Portland is the Mecca of Open Source because OSCON is held there every year and Intel Open Source Technology center is also in Hillsboro near Portland. In addition, Linus Torvalds is based in Portland.
-I wanted to attend some sessions this year, but I didn&amp;rsquo;t see many topics related to my job. There are more high-level topics above system level. Anyway, it&amp;rsquo;s great to hear voices from web developers as a web engine developer.</description>
+      <guid>https://joone.github.io/blog/oscon-2014/</guid>
+      <description>I attended OSCON 2014 held in Portland, Oregon. I think Portland is the Mecca of Open Source because OSCON is held there every year and Intel Open Source Technology center is also in Hillsboro near Portland.</description>
     </item>
     
     <item>
       <title>Ozone-Wayland</title>
-      <link>/post/ozone-wayland/</link>
+      <link>https://joone.github.io/blog/ozone-wayland/</link>
       <pubDate>Wed, 02 Apr 2014 13:24:00 -0700</pubDate>
       
-      <guid>/post/ozone-wayland/</guid>
-      <description>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].
-I have been working on Ozone-Wayland recently. There were two releases since I was involved in the development. In the latest release, I contributed the virtual keyboard support to Ozone-Wayland. You can find how it works in the following video:
-The ozone-wayland team has been focusing on graphics accelerations such as WebGL, Canvas 2D, Accelerated Compositing on Wayland.</description>
+      <guid>https://joone.github.io/blog/ozone-wayland/</guid>
+      <description>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].</description>
     </item>
     
     <item>
       <title>What I learned about American holidays</title>
-      <link>/post/what-i-learned-about-american-holidays/</link>
+      <link>https://joone.github.io/blog/what-i-learned-about-american-holidays/</link>
       <pubDate>Mon, 30 Dec 2013 07:13:00 -0800</pubDate>
       
-      <guid>/post/what-i-learned-about-american-holidays/</guid>
-      <description>This year, I experienced Halloween, Thanksgiving day, and Christmas with my family for the first time since I moved to the US. There were many new things I learned about these holidays, so I’d like to share them with you.
-Many Koreans know about Halloween because the young Korean people who had studied in the US started bringing Halloween customs back to South Korea and enjoying Halloween there since the 2000s and the majority of kindergartens have a Halloween costume party these days, but Halloween is still not commonly celebrated in Korea, so it’s very hard to find a person wearing a Halloween costume on the streets on Halloween.</description>
+      <guid>https://joone.github.io/blog/what-i-learned-about-american-holidays/</guid>
+      <description>This year, I experienced Halloween, Thanksgiving day, and Christmas with my family for the first time since I moved to the US.</description>
     </item>
     
     <item>
       <title>Why Gangnam style became more popular than other typical Kpop idol songs</title>
-      <link>/post/why-gangnam-style-became-more-popular/</link>
+      <link>https://joone.github.io/blog/why-gangnam-style-became-more-popular/</link>
       <pubDate>Thu, 29 Nov 2012 22:43:00 -0800</pubDate>
       
-      <guid>/post/why-gangnam-style-became-more-popular/</guid>
-      <description>Can you believe that a Kpop song reached no.1 on iTunes in 31 countries?, even though this Kpop song is not an English song, but a Korean song that is called “Gangnam style” by PSY. Actually, nobody expected that this song could become a great hit wordwide, but this song has been spread all over the world very quickly due to Youtube. In this article, I am going to talk about why “Gangnam style” became more popular than other typical Kpop idol songs.</description>
+      <guid>https://joone.github.io/blog/why-gangnam-style-became-more-popular/</guid>
+      <description>Can you believe that a Kpop song reached no.1 on iTunes in 31 countries?</description>
     </item>
     
     <item>
       <title>Using Nokia N9 in Korea</title>
-      <link>/post/its-been-almost-3-months-since-i/</link>
+      <link>https://joone.github.io/blog/its-been-almost-3-months-since-i/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>/post/its-been-almost-3-months-since-i/</guid>
-      <description>It’s been almost 3 months since I started using a Nokia N9 as my secondary phone, which is a Linux based smart phone released by Nokia on October 2011. In this post, I will introduce what Nokia N9 is and how to use it in Korea, because it adopts an open source mobile platform which means that anyone can be involved with the project.
-Nokia N9
-Unfortunately, N9 is the first and last MeeGo phone, but it seems to be close to the Maemo platform, because it uses Qt as the UI framework and the Debian package system.</description>
+      <guid>https://joone.github.io/blog/its-been-almost-3-months-since-i/</guid>
+      <description>It’s been almost 3 months since I started using a Nokia N9 as my secondary phone, which is a Linux based smart phone released by Nokia on October 2011.</description>
     </item>
     
     <item>
       <title>Glad to become a new GNOME foundation member</title>
-      <link>/post/i-became-new-gnome-foundation-member/</link>
+      <link>https://joone.github.io/blog/i-became-new-gnome-foundation-member/</link>
       <pubDate>Tue, 21 Feb 2012 18:13:00 -0800</pubDate>
       
-      <guid>/post/i-became-new-gnome-foundation-member/</guid>
-      <description>After I read this blog post, I applied for membership in the GNOME Foundation. Finally, my application was accepted last week. I think that my WebKitGtk+ contribution and GNOME Korea activities could count towards membership.
-The main reason why I decided to become a GNOME foundation member is to let GNOME folks know about the GNOME Korea community(http://gnome.or.kr). The GNOME Korea community started to translate for GNOME in 1998, and is mainly working on Korean translation(http://l10n.</description>
+      <guid>https://joone.github.io/blog/i-became-new-gnome-foundation-member/</guid>
+      <description>After I read this blog post, I applied for membership in the GNOME Foundation.</description>
     </item>
     
     <item>
       <title>Accelerated Composting in WebKitGtk&#43;</title>
-      <link>/post/accelerated-composting-in-webkitgtk/</link>
+      <link>https://joone.github.io/blog/accelerated-composting-in-webkitgtk/</link>
       <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
       
-      <guid>/post/accelerated-composting-in-webkitgtk/</guid>
-      <description>During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
-This is not upstreamed yet, but Imy patches are getting reviewed. Gustavo and Martin are helping me write more good patches. Thanks!
-I think that this hackfest was done well. You can check more news about the WebKitGtk+ hackfest from other blog posts:</description>
+      <guid>https://joone.github.io/blog/accelerated-composting-in-webkitgtk/</guid>
+      <description>During the WebKitGkt&amp;#43; hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port.</description>
     </item>
     
     <item>
       <title>WebKitGtk&#43; Hackfest 2011</title>
-      <link>/post/webkitgtk-hackfest-2011/</link>
+      <link>https://joone.github.io/blog/webkitgtk-hackfest-2011/</link>
       <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
       
-      <guid>/post/webkitgtk-hackfest-2011/</guid>
-      <description>(C) Mario Gustavo and I are attending the WebKitGtk+ hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time. This is an annual event for WebKitGtk+ maintainers to work together at the same place.
-We made a list of work items on the blackboard as usual on the first day. You can find these topics in the wiki. My major work item is to apply Accelerated Compositing implementation of the clutter port to WebKitGtk+.</description>
+      <guid>https://joone.github.io/blog/webkitgtk-hackfest-2011/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm8.staticflickr.com/7032/6430000691_8da7528408.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+(C) Mario Gustavo and I are attending the WebKitGtk&amp;#43; hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time.</description>
     </item>
     
     <item>
       <title>Talking about GNOME3</title>
-      <link>/post/speech-about-gnome3-at-daum-devon/</link>
+      <link>https://joone.github.io/blog/speech-about-gnome3-at-daum-devon/</link>
       <pubDate>Wed, 23 Nov 2011 22:55:00 -0800</pubDate>
       
-      <guid>/post/speech-about-gnome3-at-daum-devon/</guid>
-      <description>I gave a talk about GNOME3 at Daum DevOn conference in Korea. Daum is a popular web portal site in Korea like Yahoo. They invited many developers &amp;amp; user communities to the conference, so the GNOME Korea community had a chance to introduce GNOME3 and the community to the attendees.
-I was so glad to introduce GNOME3.2 and the infra technology like GTK+, Clutter, GStreamer, WebKitGtk+, Telepathy and GObject-Introspection. Here are the slides and some photos.</description>
+      <guid>https://joone.github.io/blog/speech-about-gnome3-at-daum-devon/</guid>
+      <description>I gave a talk about GNOME3 at Daum DevOn conference</description>
     </item>
     
     <item>
       <title>My lovely baby girl</title>
-      <link>/post/my-lovely-baby-girl/</link>
+      <link>https://joone.github.io/blog/my-lovely-baby-girl/</link>
       <pubDate>Mon, 03 Oct 2011 08:48:00 -0700</pubDate>
       
-      <guid>/post/my-lovely-baby-girl/</guid>
-      <description>Last Sunday, the 2nd of October, was the most memorable day in my
-life. Because I was married on the same day 6 years ago and I became a father for the first time. Actually, the birth was scheduled for the 13th of October, but it seems that she was born 2 weeks earlier to celebrate our wedding anniversary. :-) She is a little bit smaller than other babies, but healthy and well.</description>
+      <guid>https://joone.github.io/blog/my-lovely-baby-girl/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm7.static.flickr.com/6131/6207943240_56ce436852.jpg&amp;#34; alt=&amp;#34;My baby girl&amp;#34;&amp;gt;
+Last Sunday, the 2nd of October, was the most memorable day in my</description>
     </item>
     
     <item>
       <title>Desktop Summit 2011</title>
-      <link>/post/desktop-summit-2011/</link>
+      <link>https://joone.github.io/blog/desktop-summit-2011/</link>
       <pubDate>Sat, 27 Aug 2011 10:35:00 -0700</pubDate>
       
-      <guid>/post/desktop-summit-2011/</guid>
-      <description>It has been a week since I got back home from Cambridge. I had a day trip in London before leaving for Korea, which was very nice because I got the chance to look around the royal places, museums, and parks. In particular, I was so excited to find a TINTIN shop by chance. :-)
-Anyway, Desktop Summit 2011 was great: there were many great talks, workshops, BoFs, and parties as usual.</description>
+      <guid>https://joone.github.io/blog/desktop-summit-2011/</guid>
+      <description>It has been a week since I got back home from Cambridge.</description>
     </item>
     
     <item>
       <title>WebKit Mobile Features</title>
-      <link>/post/webkit-mobile-features/</link>
+      <link>https://joone.github.io/blog/webkit-mobile-features/</link>
       <pubDate>Sat, 21 May 2011 01:04:00 -0700</pubDate>
       
-      <guid>/post/webkit-mobile-features/</guid>
-      <description>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk+.
-First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone.</description>
+      <guid>https://joone.github.io/blog/webkit-mobile-features/</guid>
+      <description>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine.</description>
     </item>
     
     <item>
       <title>WebKit Contributors Meeting 2011</title>
-      <link>/post/webkit-contributors-meeting-2011/</link>
+      <link>https://joone.github.io/blog/webkit-contributors-meeting-2011/</link>
       <pubDate>Sat, 30 Apr 2011 21:04:00 -0700</pubDate>
       
-      <guid>/post/webkit-contributors-meeting-2011/</guid>
-      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California. This is the annual meeting for WebKit reviewers and committers. They come together to discuss the current issues of WebKit and hack the code in the meeting. In this post, I am going to introduce you to what we talk about in the WebKit meeting.
-As you know, WebKit is the hottest open source project these days, because most mobile phones use the WebKit engine and additionally Chrome and Safari also are based on WebKit.</description>
+      <guid>https://joone.github.io/blog/webkit-contributors-meeting-2011/</guid>
+      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California.</description>
     </item>
     
     <item>
       <title>Firefox4 &amp; the future of the Web</title>
-      <link>/post/firefox4-future-of-web_22/</link>
+      <link>https://joone.github.io/blog/firefox4-future-of-web_22/</link>
       <pubDate>Fri, 22 Apr 2011 02:57:00 -0700</pubDate>
       
-      <guid>/post/firefox4-future-of-web_22/</guid>
-      <description>Firefox4 was released last month. It has been downloaded more than 57 million times since its release from all over the world. The release has been successful so far, but it seems not to be easy to compete the other browsers as much as before. In this post, I am going to talk about new features of Firefox4 , the reason why using Firefox is important, and the task of remaining competitive as a community supported browser.</description>
+      <guid>https://joone.github.io/blog/firefox4-future-of-web_22/</guid>
+      <description>Firefox4 was released last month. It has been downloaded more than 57 million times since its release from all over the world.</description>
     </item>
     
     <item>
       <title>The age of the web browser is coming</title>
-      <link>/post/age-of-web-browser-is-coming/</link>
+      <link>https://joone.github.io/blog/age-of-web-browser-is-coming/</link>
       <pubDate>Wed, 02 Mar 2011 00:18:00 -0800</pubDate>
       
-      <guid>/post/age-of-web-browser-is-coming/</guid>
-      <description>When did you start using a PC? In my case, I started to use computers when I was in university. At that time, it was very difficult for general users to use a computer, because we had to memorize the commands and the directory path, which an executable file is located in. Even using a mouse was optional to use PCs. However, the computing environment has changed rapidly since Windows and the Web were introduced in the 1990s.</description>
+      <guid>https://joone.github.io/blog/age-of-web-browser-is-coming/</guid>
+      <description>When did you start using a PC? In my case, I started to use computers when I was in university.</description>
     </item>
     
     <item>
       <title>WebKitGtk&#43; Hackfest 2010</title>
-      <link>/post/webkitgtk-hackfest-2010/</link>
+      <link>https://joone.github.io/blog/webkitgtk-hackfest-2010/</link>
       <pubDate>Thu, 30 Dec 2010 07:35:00 -0800</pubDate>
       
-      <guid>/post/webkitgtk-hackfest-2010/</guid>
-      <description>(c) 2010 Diegoe
-I attended the WebKitGtk+ Hackfest held in the Igalia Office, located in Coruña, Spain, in this month. It was a great opportunity for me to meet the WebKitGtk+maintainers directly. This hackfest was sponsored by Collabora and Igalia. The Igalia office was very nice; it can be compared to the Google office in terms of the atmosphere. There were free snacks, beverage and game consoles in the office.</description>
+      <guid>https://joone.github.io/blog/webkitgtk-hackfest-2010/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm6.static.flickr.com/5050/5235372842_8c4236d7b1.jpg&amp;#34; alt=&amp;#34;WebKitGTK&amp;#43; hackfest, day 0&amp;#34;&amp;gt;
+(c) 2010 Diegoe
+I attended the WebKitGtk&amp;#43; Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
     </item>
     
     <item>
       <title>My favorite hiking course in Seoul</title>
-      <link>/post/my-favorite-hiking-course-in-seoul/</link>
+      <link>https://joone.github.io/blog/my-favorite-hiking-course-in-seoul/</link>
       <pubDate>Sun, 14 Nov 2010 04:59:00 -0800</pubDate>
       
-      <guid>/post/my-favorite-hiking-course-in-seoul/</guid>
-      <description>Have you heard about Jeju Olle-gil (제주 올레길)[1] or Jirisan Dulle-gil(지리산 둘레길)? They are famous trails in Korea to hike in the rural areas to enjoy natural things. In particular, due to the success of Jeju Olle-gil, each provincial government is introducing new hiking courses to attract tourists. Actually, anyone can make their own hiking course, but many people don&amp;rsquo;t know. In my case, I have one in Seoul. Therefore, I would like to introduce my hiking course in this blog.</description>
+      <guid>https://joone.github.io/blog/my-favorite-hiking-course-in-seoul/</guid>
+      <description>Have you heard about Jeju Olle-gil (제주 올</description>
     </item>
     
     <item>
       <title>Why I participate in open source project</title>
-      <link>/post/why-i-participate-in-open-source/</link>
+      <link>https://joone.github.io/blog/why-i-participate-in-open-source/</link>
       <pubDate>Tue, 12 Oct 2010 19:00:00 -0700</pubDate>
       
-      <guid>/post/why-i-participate-in-open-source/</guid>
-      <description>It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer. Before starting my new career, I had worked for a big electronics company and worked on open source projects such as Mozilla, Gtk+, WebKit project since 2007. The job was stable and salary was also good. However, I decided to quit my job and started to get involved in the projects as a contributor.</description>
+      <guid>https://joone.github.io/blog/why-i-participate-in-open-source/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm5.static.flickr.com/4031/5080322907_35683248ca.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer.</description>
     </item>
     
     <item>
       <title>Building Chromium browser on your Mac</title>
-      <link>/post/building-chromium-browser-on-your-mac/</link>
+      <link>https://joone.github.io/blog/building-chromium-browser-on-your-mac/</link>
       <pubDate>Sat, 07 Aug 2010 01:03:00 -0700</pubDate>
       
-      <guid>/post/building-chromium-browser-on-your-mac/</guid>
-      <description>Copyright © Chromium Project
-Building your own browser is the best way to find bugs and fix them. Now, I&amp;rsquo;d like to introduce how to build Chromium on your mac. I think that the latest code seems more stable(?) and provides more features.
-This is a starting point to build Chromium on Mac OS X.
-http://code.google.com/p/chromium/wiki/MacBuildInstructions
-Installing the depot-tools http://dev.chromium.org/developers/how-tos/install-gclient
-$ svn co http://src.chromium.org/svn/trunk/tools/depot_tools
-Add depot_tools to your PATH:</description>
+      <guid>https://joone.github.io/blog/building-chromium-browser-on-your-mac/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0anmRCrOI/AAAAAAAAAQI/BqU1d_Zqg74/s320/200px-Chromium_Logo.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Copyright © Chromium Project
+Building your own browser is the best way to find bugs and fix them.</description>
     </item>
     
     <item>
       <title>Feedbacks from the communities on the key events handling in WebKit</title>
-      <link>/post/feedbacks-from-communities-on-handling/</link>
+      <link>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</link>
       <pubDate>Wed, 04 Aug 2010 06:24:00 -0700</pubDate>
       
-      <guid>/post/feedbacks-from-communities-on-handling/</guid>
-      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&amp;rsquo;ve got quick feedbacks from the communities on each issue as follows,
-Issue1) IME Composition events should be handled consistently in all ports of WebKit.
-=&amp;gt; &amp;ldquo;This can&amp;rsquo;t be achieved as it depends on the platform IME system.</description>
+      <guid>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</guid>
+      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.</description>
     </item>
     
     <item>
       <title>IME composition events are handled inconsistently in WebKit</title>
-      <link>/post/composition-events-are-handled_27/</link>
+      <link>https://joone.github.io/blog/composition-events-are-handled_27/</link>
       <pubDate>Mon, 26 Jul 2010 21:33:00 -0700</pubDate>
       
-      <guid>/post/composition-events-are-handled_27/</guid>
-      <description>I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&amp;rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
-According to W3C DOM Level 3 events,
-A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.</description>
+      <guid>https://joone.github.io/blog/composition-events-are-handled_27/</guid>
+      <description>I have been working on Korean Hangul composition issue in WebKitGtk.</description>
     </item>
     
     <item>
       <title>Debugging Fennec front-end</title>
-      <link>/post/debugging-fennec-front-end/</link>
+      <link>https://joone.github.io/blog/debugging-fennec-front-end/</link>
       <pubDate>Sun, 11 Oct 2009 08:17:00 -0700</pubDate>
       
-      <guid>/post/debugging-fennec-front-end/</guid>
-      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
-XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
-To modify them,</description>
+      <guid>https://joone.github.io/blog/debugging-fennec-front-end/</guid>
+      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform.</description>
     </item>
     
     <item>
       <title>Fixing a hardware keyboard problem in Mobile Firefox for Windows Mobile </title>
-      <link>/post/how-to-check-hardware-keyboard-on/</link>
+      <link>https://joone.github.io/blog/how-to-check-hardware-keyboard-on/</link>
       <pubDate>Thu, 27 Aug 2009 07:36:00 -0700</pubDate>
       
-      <guid>/post/how-to-check-hardware-keyboard-on/</guid>
-      <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed. I am so happy to contribute to Mozilla. Here is the detail what the problem was fixed:
-Windows Mobile keeps the status of hardware keyboard in the registry as follows:
-&amp;#34;HKEY\_CURRENT\_USER\\SOFTWARE\\Microsoft\\Shell\\HasKeyboard&amp;#34; A software keyboard can pop-up if a device doesn&amp;rsquo;t have a hardware keyboard. However, in the case that the device has a slide-out keyboard, the value should be changed according to the status of the slide-out keyboard.</description>
+      <guid>https://joone.github.io/blog/how-to-check-hardware-keyboard-on/</guid>
+      <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed.</description>
     </item>
     
     <item>
       <title>SAMSUNG Windows Mobile SDK 1.0 Released!</title>
-      <link>/post/samsung-windows-mobile-sdk-10-releaed/</link>
+      <link>https://joone.github.io/blog/samsung-windows-mobile-sdk-10-releaed/</link>
       <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
       
-      <guid>/post/samsung-windows-mobile-sdk-10-releaed/</guid>
-      <description>Samsung Windows Mobile SDK 1.0 was released!
-You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
-It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
-The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
+      <guid>https://joone.github.io/blog/samsung-windows-mobile-sdk-10-releaed/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3642/3500831169_1a68ac0aff.jpg&amp;#34; alt=&amp;#34;SAMSUNG Windows Mobile SDK&amp;#34;&amp;gt;
+Samsung Windows Mobile SDK 1.</description>
     </item>
     
     <item>
       <title>How to make a cab installer of Windows Mobile Fennec build</title>
-      <link>/post/how-to-make-cab-installer-of-windows/</link>
+      <link>https://joone.github.io/blog/how-to-make-cab-installer-of-windows/</link>
       <pubDate>Mon, 13 Apr 2009 06:41:00 -0700</pubDate>
       
-      <guid>/post/how-to-make-cab-installer-of-windows/</guid>
-      <description>When you finish building Fennec for Windows Mobile, you can ask &amp;ldquo;How can I install Fennec on my Windows Mobile handset?&amp;rdquo;
-&amp;ldquo;Where is the installer?&amp;rdquo;
-Fennec build system creates only a zip file in the path of &amp;ldquo;objdir/mobile/dist&amp;rdquo;.
-You might install Fennec using this zip file. But, it is cumbersome. Fortunately, the Fennnec team has released Fennec for Windows Mobile as a cab install.
-&amp;ldquo;How can they make a cab installer?</description>
+      <guid>https://joone.github.io/blog/how-to-make-cab-installer-of-windows/</guid>
+      <description>When you finish building Fennec for Windows Mobile, you can ask &amp;ldquo;How can I install Fennec on my Windows Mobile handset?</description>
     </item>
     
     <item>
       <title>Fennec is running on SAMSUNG i780</title>
-      <link>/post/fennec-is-running-on-samsung-i780/</link>
+      <link>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</link>
       <pubDate>Fri, 27 Mar 2009 07:33:00 -0700</pubDate>
       
-      <guid>/post/fennec-is-running-on-samsung-i780/</guid>
-      <description>I was told a very good news from Blassey blog.
-Doug Turner solved the test blocker of Fennec for Windows Mobile.
-I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
-Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
-It is working well, but very slow on i780.</description>
+      <guid>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</guid>
+      <description>I was told a very good news from Blassey blog.</description>
     </item>
     
     <item>
       <title>Supporting Hildon Menu for Fennec</title>
-      <link>/post/supporting-hildon-menu-for-fennec/</link>
+      <link>https://joone.github.io/blog/supporting-hildon-menu-for-fennec/</link>
       <pubDate>Thu, 19 Feb 2009 22:00:00 -0800</pubDate>
       
-      <guid>/post/supporting-hildon-menu-for-fennec/</guid>
+      <guid>https://joone.github.io/blog/supporting-hildon-menu-for-fennec/</guid>
       <description>I implemented the hildon menu for Fennec on Maemo.
-Actually, the hildon menu feature has not been decided to be added for 1.0 release.
-I&amp;rsquo;m not sure if this patch could be applied to the mainline.
-Mozilla platform already supports the hildon framework so it is easy to add new things for Maemo if you wish.</description>
+Actually, the hildon menu feature has not been decided to be added for 1.</description>
     </item>
     
     <item>
       <title>Mozilla@FOSDEM2009</title>
-      <link>/post/mozillafosdem2009/</link>
+      <link>https://joone.github.io/blog/mozillafosdem2009/</link>
       <pubDate>Mon, 09 Feb 2009 20:25:00 -0800</pubDate>
       
-      <guid>/post/mozillafosdem2009/</guid>
+      <guid>https://joone.github.io/blog/mozillafosdem2009/</guid>
       <description>Photo: Teemu Mäntynen
-FOSDEM 2009 finished last week. Although I didn&amp;rsquo;t attend FODSEM, I got a feel for what was going through through blogs and photos on Flikr. FODSEM(Free and Open Source Software Developer’s European Meeting) is a largest occasion for free/open source developers in Europe. It is relevant to various open source projects and it can be compared with OSCON(O’Reilly Open Source Convention) held in the US.
-The following projects had their own session:</description>
+FOSDEM 2009 finished last week. Although I didn&amp;rsquo;t attend FODSEM, I got a feel for what was going through through blogs and photos on Flikr.</description>
     </item>
     
     <item>
       <title>Hildon related bugzilla issues</title>
-      <link>/post/hiden-related-bugzilla-issues/</link>
+      <link>https://joone.github.io/blog/hiden-related-bugzilla-issues/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>/post/hiden-related-bugzilla-issues/</guid>
-      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
+      <guid>https://joone.github.io/blog/hiden-related-bugzilla-issues/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3348/3188016234_a551140d92.jpg&amp;#34; alt=&amp;#34;Fennec1.0 alpha3 preview&amp;#34;&amp;gt;
+426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
       <title>Firefox for Mobile Devices</title>
-      <link>/post/firefox-for-mobile-devices/</link>
+      <link>https://joone.github.io/blog/firefox-for-mobile-devices/</link>
       <pubDate>Fri, 26 Dec 2008 05:55:00 -0800</pubDate>
       
-      <guid>/post/firefox-for-mobile-devices/</guid>
-      <description>I&amp;rsquo;d like to share a little bit old presentation about Mobile Firefox.
-From: mobileportland, 2 months ago
-Firefox For Mobile Devices
-view presentation (tags: browsers mozilla portland firefox)
-Dietrich Ayala&amp;rsquo;s presentation at May 2008 meeting of Mobile Portland
-SlideShare Link</description>
+      <guid>https://joone.github.io/blog/firefox-for-mobile-devices/</guid>
+      <description>I&amp;rsquo;d like to share a little bit old presentation about Mobile Firefox.</description>
     </item>
     
     <item>
       <title>Firefox&#43; Summit</title>
-      <link>/post/firefox-summit/</link>
+      <link>https://joone.github.io/blog/firefox-summit/</link>
       <pubDate>Tue, 19 Aug 2008 06:22:00 -0700</pubDate>
       
-      <guid>/post/firefox-summit/</guid>
-      <description>I attended Firefox+ Summit at Whistler, Canada. It was a great time in my life because I met Mozilla folks who I had known the name only and talk about some issues I have wondered.
-This occasion was held to celebrate Firefox3 release and talk about the future plan of Firefox3.1 and the current issues.
-About 400 Mozilla peoples joined the summit coming from all over the World. They are involved in the various projects such as AMO(Add-ons), QA, Localization, Gecko, JavaScript, Mobile, UX, evangelist, messaging, SVG, MDC, and so on.</description>
+      <guid>https://joone.github.io/blog/firefox-summit/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+I attended Firefox&amp;#43; Summit at Whistler, Canada. It was a great time in my life because I met Mozilla folks who I had known the name only and talk about some issues I have wondered.</description>
     </item>
     
     <item>
       <title>Firefox Seoul Party for celebrating the release of Firefox3</title>
-      <link>/post/firefox-party-seoul/</link>
+      <link>https://joone.github.io/blog/firefox-party-seoul/</link>
       <pubDate>Sat, 31 May 2008 23:31:00 -0700</pubDate>
       
-      <guid>/post/firefox-party-seoul/</guid>
-      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.
-Coincidentally, Mozilla had officially released Firefox3 in this period of time, so the Mozilla Korea Community hosted a Firefox Seoul party to celebrate the release of Firefox3. They also attended the party, so it made the event more exciting for the community.</description>
+      <guid>https://joone.github.io/blog/firefox-party-seoul/</guid>
+      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.</description>
     </item>
     
     <item>
       <title>Latest looks of Fennec (Mobile Firefox)</title>
-      <link>/post/latest-look-of-fennec-mobile-firefox/</link>
+      <link>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</link>
       <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
       
-      <guid>/post/latest-look-of-fennec-mobile-firefox/</guid>
-      <description>The plan of Mobile Firefox was announced in October last year and the Mozilla community is now very busy to develop Mobile Firefox.
-Fennec is the code name of Mobile Firefox, which is a desert fox. You may have seen a fennec in TV animation. The size of fennec is smaller than normal fox and it has big ears. So I think the name of Fennec seems to be suited well for Mobile Firefox.</description>
+      <guid>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</guid>
+      <description>The plan of Mobile Firefox was announced in October last</description>
     </item>
     
     <item>
       <title>My N810 was delivered from the US.</title>
-      <link>/post/my-n810-approached-from-us/</link>
+      <link>https://joone.github.io/blog/my-n810-approached-from-us/</link>
       <pubDate>Thu, 24 Apr 2008 16:31:00 -0700</pubDate>
       
-      <guid>/post/my-n810-approached-from-us/</guid>
-      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall. Anyway, I am very satisfied with N810. It may be my favorite toy.
-N810 uses the Maemo platform that is based on Linux 2.6, GTK+, Matchbox and other open source projects. Scratchbox is used for its development environment that supports a cross-platform development environment.</description>
+      <guid>https://joone.github.io/blog/my-n810-approached-from-us/</guid>
+      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall.</description>
     </item>
     
     <item>
       <title>Camera Interface on Mobile Platform</title>
-      <link>/post/camera-interface-in-maemo-platform/</link>
+      <link>https://joone.github.io/blog/camera-interface-in-maemo-platform/</link>
       <pubDate>Sun, 20 Apr 2008 06:36:00 -0700</pubDate>
       
-      <guid>/post/camera-interface-in-maemo-platform/</guid>
-      <description>Mozilla platform is trying to support device APIs for mobile environment.
-Some people call them native interface
-I already posted a blog on device APIs
-The Mozilla community started to discuss what the device APIs should be supported through the news group and Mozilla wiki.
-Christopher added some information regarding the device APIs in the wiki.
-So you can find on-going issues to support the device APIs. They are not confirmed, so you can suggest your idea &amp;amp; opinion to them.</description>
+      <guid>https://joone.github.io/blog/camera-interface-in-maemo-platform/</guid>
+      <description>Mozilla platform is trying to support device APIs for mobile environment.</description>
     </item>
     
     <item>
       <title>Real Full Browsing in Korea</title>
-      <link>/post/real-full-browsing-in-korea/</link>
+      <link>https://joone.github.io/blog/real-full-browsing-in-korea/</link>
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
-      <guid>/post/real-full-browsing-in-korea/</guid>
-      <description>LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.
-Other telecom operators also have provided mobile full browsing service, but the rate plan is very expensive. For example, SK telecom charges about 3072Won(3$) per 1MB for data transfer.
-The full browser was provided by Infraware that is a Korean company.</description>
+      <guid>https://joone.github.io/blog/real-full-browsing-in-korea/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://www.lg.co.kr/common/inc/imageView.jsp?file_name=/upload/LA/LAA/20080325/viewsum_ms__id45_wiz20080325112410.JPG&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.</description>
     </item>
     
     <item>
       <title>Bangalore is a heaven of SW engineers</title>
-      <link>/post/bangalore-is-heaven-of-sw-developers/</link>
+      <link>https://joone.github.io/blog/bangalore-is-heaven-of-sw-developers/</link>
       <pubDate>Wed, 19 Mar 2008 16:24:00 -0700</pubDate>
       
-      <guid>/post/bangalore-is-heaven-of-sw-developers/</guid>
+      <guid>https://joone.github.io/blog/bangalore-is-heaven-of-sw-developers/</guid>
       <description>I have been to Bangalore, India for a while.
-I spent busy time so I couldn&amp;rsquo;t write blogs for the time.
-As you know, there are so many IT companies in Bangalore. Most of them are from the US, EU. So now, Bangalore is called the silicon valley of India.
-Therefore, excellent SW engineers now have come to here from each state of India and even other countries. They are well educated in good universities of technology and use English well .</description>
+I spent busy time so I couldn&amp;rsquo;t write blogs for the time.</description>
     </item>
     
     <item>
       <title>Open Source in Asia</title>
-      <link>/post/open-source-in-asia/</link>
+      <link>https://joone.github.io/blog/open-source-in-asia/</link>
       <pubDate>Sun, 17 Feb 2008 20:13:00 -0800</pubDate>
       
-      <guid>/post/open-source-in-asia/</guid>
-      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.
-The speaker is Gen Kanai who is working for Mozilla Corporation.
-He talked about Mozilla community &amp;amp; open source activities in Asia such as:
-Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux) The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
+      <guid>https://joone.github.io/blog/open-source-in-asia/</guid>
+      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.</description>
     </item>
     
     <item>
       <title>How to support native interfaces on the Web</title>
-      <link>/post/how-to-support-native-interfaces-on-web/</link>
+      <link>https://joone.github.io/blog/how-to-support-native-interfaces-on-web/</link>
       <pubDate>Sat, 26 Jan 2008 08:17:00 -0800</pubDate>
       
-      <guid>/post/how-to-support-native-interfaces-on-web/</guid>
-      <description>I posted an article about supporting native interfaces in Mobile Firefox. Byt the way, I found information regarding my post from here. This paper explained the native interfaces I talked as sensors on device and introduced how to send their sensed data to servers via the Web.
-The sensor means a device that reads data from the user&amp;rsquo;s physical environment. By the way, I am interested in how to get data from the native interfaces via web browser.</description>
+      <guid>https://joone.github.io/blog/how-to-support-native-interfaces-on-web/</guid>
+      <description>I posted an article about supporting native interfaces in Mobile Firefox.</description>
     </item>
     
     <item>
       <title>Performance test of the microB patches</title>
-      <link>/post/performance-test-of-microb-patches/</link>
+      <link>https://joone.github.io/blog/performance-test-of-microb-patches/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>/post/performance-test-of-microb-patches/</guid>
-      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.)
-- The microB package contains more 200 patches and several patch sets.
-- It is released with Firefox3 alpha6 pre. now.
-Two kinds of test case are used.
-- Tinderbox DHTML Test
-- CSS Rendering
-Target Device : PAX320, RAM 256MB
-And I got the following results on TestGtkEmbed in Mozilla.
-* Tinderbox DHTML Test:
-The microB patched Mozilla is 2.</description>
+      <guid>https://joone.github.io/blog/performance-test-of-microb-patches/</guid>
+      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.</description>
     </item>
     
     <item>
       <title>Teach yourself Mozilla in 5 days</title>
-      <link>/post/teach-yourself-mozilla-in-5-days/</link>
+      <link>https://joone.github.io/blog/teach-yourself-mozilla-in-5-days/</link>
       <pubDate>Sun, 13 Jan 2008 15:14:00 -0800</pubDate>
       
-      <guid>/post/teach-yourself-mozilla-in-5-days/</guid>
-      <description>Mozilla project and Senecac college have worked together on Mozilla related research and development projects. And they are opening some courseworks for Mozilla and open source.
-The results are now posted on the project wiki so you can find various projects and technical reports made by students. Particularly, there is the lab of &amp;ldquo;Real World Mozilla&amp;rdquo; that leads students to learn and practice how to develop on the Mozilla platform from building to testing Firefox.</description>
+      <guid>https://joone.github.io/blog/teach-yourself-mozilla-in-5-days/</guid>
+      <description>Mozilla project and Senecac college have worked together on Mozilla related research and development projects.</description>
     </item>
     
     <item>
       <title>Ideas on supporting native interfaces in Mobile Firefox</title>
-      <link>/post/ideas-on-supporting-native-interfaces/</link>
+      <link>https://joone.github.io/blog/ideas-on-supporting-native-interfaces/</link>
       <pubDate>Mon, 07 Jan 2008 08:00:00 -0800</pubDate>
       
-      <guid>/post/ideas-on-supporting-native-interfaces/</guid>
-      <description>I&amp;rsquo;d like to share my ideas on native interface support in Mobile Firefox.
-These ideas are based on Christian&amp;rsquo;s Mobile Goal.
-http://www.christiansejersen.com/blog/2007/11/20/mobile-goals/
-Goal
-Provide mobile web application environment which can use native interfaces.
-- It can make XUL add-ons &amp;amp; web applications use native interfaces
-through JavaScript
-Types of Native Interfaces
-(Most of mobile platforms support APIs for easy of use for camera, GPS, contact, and etc..)
-There are two types of native interface:</description>
+      <guid>https://joone.github.io/blog/ideas-on-supporting-native-interfaces/</guid>
+      <description>I&amp;rsquo;d like to share my ideas on native interface support in Mobile Firefox.</description>
     </item>
     
     <item>
       <title>libpng patch for Mobile Firefox</title>
-      <link>/post/libpng-patch-for-mozilla-firefox/</link>
+      <link>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</link>
       <pubDate>Sun, 06 Jan 2008 04:42:00 -0800</pubDate>
       
-      <guid>/post/libpng-patch-for-mozilla-firefox/</guid>
-      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.
-http://wiki.mozilla.org/Mobile/Patches
-My colleague tried to apply the png patch to Mozilla and get a good result related to performance improvement.
-As you know, we can build the libpng fixed point routines like the above patch.
-(Use #define PNG_NO_FLOATING_POINT_SUPPORTED in mozilla/modules/libimg/png/mozpngconf.h )
-In this case, he can get 8.6% performance improvement.
-It&amp;rsquo;s great. I think this patch is valuable to use on Mobile Firefox.</description>
+      <guid>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</guid>
+      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.</description>
     </item>
     
     <item>
       <title>Korea Mozilla Community Party</title>
-      <link>/post/korea-mozilla-community-party/</link>
+      <link>https://joone.github.io/blog/korea-mozilla-community-party/</link>
       <pubDate>Thu, 13 Dec 2007 19:56:00 -0800</pubDate>
       
-      <guid>/post/korea-mozilla-community-party/</guid>
-      <description>I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by Channy.
-Channy is the leader of KoMoCo, a contributor for localization of Firefox. Actually, his company, Daum has supported many open source communities including KoMoCo. So, I always thank for Daum and his efforts.
-For more details, I&amp;rsquo;d like to share some blog articles regarding the party.
-KoMoCo Anual Pary Photos in Flickr
-Mozllia Japan Gen Kanai&amp;rsquo;s introduction about KoMoKo anual party John’s Blog</description>
+      <guid>https://joone.github.io/blog/korea-mozilla-community-party/</guid>
+      <description>I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by Channy.</description>
     </item>
     
     <item>
       <title>Firefox3 beta1 &amp; Cairo Graphics</title>
-      <link>/post/firefox3-beta1-cairo-graphics/</link>
+      <link>https://joone.github.io/blog/firefox3-beta1-cairo-graphics/</link>
       <pubDate>Sat, 01 Dec 2007 06:21:00 -0800</pubDate>
       
-      <guid>/post/firefox3-beta1-cairo-graphics/</guid>
-      <description>As expected, Mozilla finally has started the beta test of Firefox3 after finished the alpha8 test. Actually, the official version of Firefox3 should have been released this time. However, the release date is behind the schedule as the alpha test was recently finished. Anyway, we expect that Firefox would be officially released in the first half of next year
-The major feature of Firefox is to use Cairo as the graphic engine for rendering all of things.</description>
+      <guid>https://joone.github.io/blog/firefox3-beta1-cairo-graphics/</guid>
+      <description>As expected, Mozilla finally has started the beta test of Firefox3 after finished the alpha8 test.</description>
     </item>
     
     <item>
       <title>Firefox3&#39;s SVG Demo</title>
-      <link>/post/firefox3s-svg-demo/</link>
+      <link>https://joone.github.io/blog/firefox3s-svg-demo/</link>
       <pubDate>Thu, 04 Oct 2007 16:04:00 -0700</pubDate>
       
-      <guid>/post/firefox3s-svg-demo/</guid>
-      <description>I got a presentation on the future of firefox from the web
-The slide introduced the coming features of firefox3 such as SVG, canvas3D, Offline and XMLHttpRequest++.
-Actually, I am not sure that all features can be added to firefox3 because some features are very experimental. Anyway, I think SVG is very interesting among the new features.
-SVG is a standard technology to create vector graphics on the web and even can be embedded in HTML pages</description>
+      <guid>https://joone.github.io/blog/firefox3s-svg-demo/</guid>
+      <description>I got a presentation on the future of firefox from the web</description>
     </item>
     
     <item>
       <title>2007 South-North Korean Summit</title>
-      <link>/post/2007-south-north-korean-summit/</link>
+      <link>https://joone.github.io/blog/2007-south-north-korean-summit/</link>
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
-      <guid>/post/2007-south-north-korean-summit/</guid>
-      <description>South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.
-This is the second summit between the two Koreas.
-During the summit, Two leaders had several talks about Korean peace, economic investment, and reunification on North Korea.
-I wish that the two Koreas could archive piece and prosperity on the Korean Peninsula.</description>
+      <guid>https://joone.github.io/blog/2007-south-north-korean-summit/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://www.koreatimes.co.kr/upload/news/071003_p01_leaders.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.</description>
     </item>
     
     <item>
       <title>Flickr Launching Party at Seoul</title>
-      <link>/post/flickr-launching-party-at-seoul/</link>
+      <link>https://joone.github.io/blog/flickr-launching-party-at-seoul/</link>
       <pubDate>Wed, 05 Sep 2007 06:26:00 -0700</pubDate>
       
-      <guid>/post/flickr-launching-party-at-seoul/</guid>
-      <description>.flickr-photo { border: solid 2px #000000; }.flickr-yourcomment { }.flickr-frame { text-align: left; padding: 3px; }.flickr-caption { font-size: 0.8em; margin-top: 0px; }
-Flickr Launching Party at Seoul, originally uploaded by joone4u.
-I attended Flickr Launching Party at Seoul.
-Anyone couldn&amp;rsquo;t attend the party, only invited users could attend the party.
-Actually I have used Flickr for 1 year. so I have uploaded many beautiful photos on Flickr.
-Anyway, it was a very enjoyable party that offered games, cocktail show, and quiz.</description>
+      <guid>https://joone.github.io/blog/flickr-launching-party-at-seoul/</guid>
+      <description>.flickr-photo { border: solid 2px #000000; }.flickr-yourcomment { }.flickr-frame { text-align: left; padding: 3px; }.</description>
     </item>
     
     <item>
       <title>Introduction to Mozilla based web browsers</title>
-      <link>/post/introduction-to-mozilla-based-web/</link>
+      <link>https://joone.github.io/blog/introduction-to-mozilla-based-web/</link>
       <pubDate>Fri, 06 Apr 2007 02:56:00 -0700</pubDate>
       
-      <guid>/post/introduction-to-mozilla-based-web/</guid>
-      <description>We are using Firefox browser that has been developed by Mozilla. As you may know, Firefox is based on the Mozilla application framework that provides a good way of supporting cross-platform for running applications.
-However, supporting cross-platform has some weak points. The first weak point is performance, the second is that it can not utilize the native user interface.
-Some web browsers are based on the Mozilla application framework with a native user interface.</description>
+      <guid>https://joone.github.io/blog/introduction-to-mozilla-based-web/</guid>
+      <description>We are using Firefox browser that has been developed by Mozilla.</description>
     </item>
     
     <item>
       <title>The change of Apple Inc.</title>
-      <link>/post/change-of-apple-inc/</link>
+      <link>https://joone.github.io/blog/change-of-apple-inc/</link>
       <pubDate>Thu, 11 Jan 2007 03:20:00 -0800</pubDate>
       
-      <guid>/post/change-of-apple-inc/</guid>
-      <description>Apple had leaded the personal computer market until the beginning of 80s before IBM released the IBM-PC. Apple also created new personal computer, the Macintosh that provides the GUI firstly. It was very innovative.
-However, IBM-PC had become the mainstream of the personal computer. IBM opened the architecture of the computer and many computer manufacturers could make compatible IBM-PCs. Microsoft provided a DOS &amp;amp; Windows as an OS for the PCs.</description>
+      <guid>https://joone.github.io/blog/change-of-apple-inc/</guid>
+      <description>Apple had leaded the personal computer market until the beginning of 80s before IBM released the IBM-PC.</description>
     </item>
     
     <item>
       <title>A proposal</title>
-      <link>/post/unpleasant-proposal/</link>
+      <link>https://joone.github.io/blog/unpleasant-proposal/</link>
       <pubDate>Thu, 07 Dec 2006 22:08:00 -0800</pubDate>
       
-      <guid>/post/unpleasant-proposal/</guid>
-      <description>joone_developer
+      <guid>https://joone.github.io/blog/unpleasant-proposal/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/113/307714434_20f85e11e4_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+joone_developer
 Originally uploaded by joone4u.
 &amp;ldquo;I want you to work for the planning group&amp;rdquo;</description>
     </item>
     
     <item>
       <title>BarCamp Seoul 2006</title>
-      <link>/post/barcamp-seoul-2006/</link>
+      <link>https://joone.github.io/blog/barcamp-seoul-2006/</link>
       <pubDate>Tue, 21 Nov 2006 15:49:00 -0800</pubDate>
       
-      <guid>/post/barcamp-seoul-2006/</guid>
-      <description>Do you know the BarCamp?
-BarCamp is a informal meeting that don&amp;rsquo;t have any subject.
-All attendee can speak anything without formality.
-Speaking only is Ok. A presentation is no problem.
-But, we have 20 minutes of speaking time include Q&amp;amp;A.
-This Barcamp was held in Korea firstly. Some companies support this Barcamp include DAUM, OnNet and TatterTools,
-I delighted to have an opportunity of attending the Barcamp because the number of attendee was limited to 50.</description>
+      <guid>https://joone.github.io/blog/barcamp-seoul-2006/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/105/277336264_329ae71dd9.jpg&amp;#34; alt=&amp;#34;BarCamp Seoul 2006&amp;#34;&amp;gt;
+Do you know the BarCamp?</description>
     </item>
     
     <item>
       <title>Richard Stallman comes to Korea</title>
-      <link>/post/richard-stallman-comes-to-korea/</link>
+      <link>https://joone.github.io/blog/richard-stallman-comes-to-korea/</link>
       <pubDate>Thu, 09 Nov 2006 15:20:00 -0800</pubDate>
       
-      <guid>/post/richard-stallman-comes-to-korea/</guid>
-      <description>Next week he is going to vist Korea to address the new GPL and free software.
-He plans to attend a conference &amp;amp; serveal lecture meeting.
-I think that it&amp;rsquo;s good chance to understand the new GPL and free software from RMS directly. ( He wants to call him RMS)
-For more information, click the following sites.
-Thanks.
-http://kldp.org/node/74749
-http://korea.gnu.org/rms-speech-in-2006.html
-http://ipleft.or.kr/stallman/061102.php
-http://www.powerofcommunity.net</description>
+      <guid>https://joone.github.io/blog/richard-stallman-comes-to-korea/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://kldp.org/files/mail-1.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Next week he is going to vist Korea to address the new GPL and free software.</description>
     </item>
     
     <item>
       <title>Dangerous Nuclear Test...</title>
-      <link>/post/dangerous-nuclear-test/</link>
+      <link>https://joone.github.io/blog/dangerous-nuclear-test/</link>
       <pubDate>Mon, 09 Oct 2006 16:05:00 -0700</pubDate>
       
-      <guid>/post/dangerous-nuclear-test/</guid>
-      <description>North Korea carried out its first nuclear bomb test on Monday (Oct. 9).
-Actually, we had anticipated their first nuclear bomb test at the end of the year.
-But, they committed the test quickly.
-I think that it is a “flagrant and brazen” violation of international opinion.
-Seoul has made every effort to maintain the peace of the Korean peninsula. Gaesong Industrial park and the Mt. Gumgang(Gumgansan) tour are good examples of the effort.</description>
+      <guid>https://joone.github.io/blog/dangerous-nuclear-test/</guid>
+      <description>North Korea carried out its first nuclear bomb test on Monday (Oct.</description>
     </item>
     
     <item>
       <title>Distorting Ancient History</title>
-      <link>/post/distorting-ancient-history_08/</link>
+      <link>https://joone.github.io/blog/distorting-ancient-history_08/</link>
       <pubDate>Thu, 07 Sep 2006 16:26:00 -0700</pubDate>
       
-      <guid>/post/distorting-ancient-history_08/</guid>
-      <description>Goguryeo
+      <guid>https://joone.github.io/blog/distorting-ancient-history_08/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/34/118657181_e8b4c7595c_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Goguryeo
 Originally uploaded by Khitai.
-Seoul warns beijing against distorting ancient History.
-There are 3 countries in east asia such as Korea, China and Japan.
-As you know, China and Japan alway make problems.
-Japan have distorted their history for a long time.
-They have tried to hide their war of aggression
-So Seoul have Urged Tokyo not to distort history in textbooks.
-China also joined the road of distroing history with Japan.</description>
+Seoul warns beijing against distorting ancient History.</description>
     </item>
     
     <item>
       <title>On the top of CheonwangBong in JiriSan</title>
-      <link>/post/on-top-of-cheonwangbong-in-jirisan/</link>
+      <link>https://joone.github.io/blog/on-top-of-cheonwangbong-in-jirisan/</link>
       <pubDate>Tue, 05 Sep 2006 16:22:00 -0700</pubDate>
       
-      <guid>/post/on-top-of-cheonwangbong-in-jirisan/</guid>
-      <description>지리산 천왕봉 정상에서 On the top of CheonwangBong in JiriSan
-Originally uploaded by joone4u.
-I enjoying hiking a mountatin.
-There are so many mountains &amp;amp; national parks in Korea.
-I think that Mt.JiriSan is the most beautiful mountatin in Korea.
-I had hiked Mt.JiriSan serveral times.
-As you may know, there are many tops in Mt.Jirisan
-You can reach many tops when traverse the mountain ridge of Mt.Jirisan. And You can see beautiful sights from the tops like the above photo.</description>
+      <guid>https://joone.github.io/blog/on-top-of-cheonwangbong-in-jirisan/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/82/222661329_c256fc800c_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; 지리산 천왕봉 정</description>
     </item>
     
     <item>
       <title>KLDP Conference</title>
-      <link>/post/kldp-conference/</link>
+      <link>https://joone.github.io/blog/kldp-conference/</link>
       <pubDate>Mon, 04 Sep 2006 04:16:00 -0700</pubDate>
       
-      <guid>/post/kldp-conference/</guid>
-      <description>It was the conference for celebrating 10th anniversary of KLDP. KLDP is the acronym of Korea Linux Documentation Project, but now KLDP is a community group for free/open source softwares. Actually, KLDP started from a personal web site and now have developed to the largest Linux &amp;amp; free/open source software community. As a result, KLDP now provides a lot of Linux documentation based on wiki system, open source project hosting, web boards and blogs for the community.</description>
+      <guid>https://joone.github.io/blog/kldp-conference/</guid>
+      <description>It was the conference for celebrating 10th anniversary of KLDP.</description>
     </item>
     
     <item>
       <title>Web Accessibility in Korea</title>
-      <link>/post/web-accessibility-in-korea/</link>
+      <link>https://joone.github.io/blog/web-accessibility-in-korea/</link>
       <pubDate>Mon, 28 Aug 2006 15:42:00 -0700</pubDate>
       
-      <guid>/post/web-accessibility-in-korea/</guid>
-      <description>The Web is an increasingly important resource in many aspects of life: education, employment, government, commerce, health care, recreation, and more.
-Howerver it is very dangerous if these resources only can be accessible for a specific web browser.
-As you know, Most of people use Internet Explorer as web browser in Korea.
-Internet Explorer supports incompatible features such as ActiveX, Some of JavaScript.
-The problem is that Many web sites support the features include the government web sites in Korea.</description>
+      <guid>https://joone.github.io/blog/web-accessibility-in-korea/</guid>
+      <description>The Web is an increasingly important resource in many aspects of life: education, employment, government, commerce, health care, recreation, and more.</description>
     </item>
     
     <item>
       <title>Jaipur Hawa Mahal</title>
-      <link>/post/jaipur-hawa-mahal/</link>
+      <link>https://joone.github.io/blog/jaipur-hawa-mahal/</link>
       <pubDate>Mon, 14 Aug 2006 09:42:00 -0700</pubDate>
       
-      <guid>/post/jaipur-hawa-mahal/</guid>
-      <description>Jaipur Hawa Mahal
-Originally uploaded by j0rune.
-You may believe or not, I&amp;rsquo;m now in India. This is a business trip that include a weekend so I went to Jaipur on weekends. Jaipur is one of the cities in India. There are many good palaces and castles to see. This is a picture of a palace. The palace was made for women who lived in the palace. Because they could not go outside of the palace, so they could see a market from the window.</description>
+      <guid>https://joone.github.io/blog/jaipur-hawa-mahal/</guid>
+      <description>&amp;lt;img src=&amp;#34;https://static.flickr.com/51/113365863_fd470e91d1_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Jaipur Hawa Mahal
+Originally uploaded by j0rune.</description>
     </item>
     
     <item>
       <title>flood in seoul</title>
-      <link>/post/flood-in-seoul/</link>
+      <link>https://joone.github.io/blog/flood-in-seoul/</link>
       <pubDate>Mon, 17 Jul 2006 16:12:00 -0700</pubDate>
       
-      <guid>/post/flood-in-seoul/</guid>
-      <description>_DSC9586
+      <guid>https://joone.github.io/blog/flood-in-seoul/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/60/190708513_463a0c3bba_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+_DSC9586
 Originally uploaded by titicat.
-It&amp;rsquo;s now the rainy season, but it is raining too much.
-It has rained for 3 days.
-Many peoples was dead or missed, It&amp;rsquo;s so terrible.
-HanGang(river) is flooded by the rain.
-Some roads are disappeared..
-I am looking forward to take the sun..</description>
+It&amp;rsquo;s now the rainy season, but it is raining too much.</description>
     </item>
     
     <item>
       <title>Korea Sinks Togo 2-1</title>
-      <link>/post/korea-sinks-togo-2-1/</link>
+      <link>https://joone.github.io/blog/korea-sinks-togo-2-1/</link>
       <pubDate>Tue, 13 Jun 2006 16:00:00 -0700</pubDate>
       
-      <guid>/post/korea-sinks-togo-2-1/</guid>
-      <description>Korean national football team triumphed againt Togo in their first match at the wordlcup football competition in Germany.
-It is valuable match because it is the first-ever FIFA World Cup win outside of Asia.
-Korea was unstable in the first half of the game. They permited the first goal of Togo. But we got two goals successively in the second half of the game with a spirited fightback.
-It&amp;rsquo;s vey nice match.</description>
+      <guid>https://joone.github.io/blog/korea-sinks-togo-2-1/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://us.news1.yimg.com/us.yimg.com/i/fifa/gen/xp/20060613/t/1429435228.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Korean national football team triumphed againt Togo in their first match at the wordlcup football competition in Germany.</description>
     </item>
     
     <item>
       <title>My new cartoon blog</title>
-      <link>/post/my-new-cartoon-blog/</link>
+      <link>https://joone.github.io/blog/my-new-cartoon-blog/</link>
       <pubDate>Sun, 04 Jun 2006 16:09:00 -0700</pubDate>
       
-      <guid>/post/my-new-cartoon-blog/</guid>
-      <description>http://kldp.org/blog/2725
-I have started to write new cartoon blog on KLDP site.
-It is the first trial about cartoon.
-Actually, I have drawn cartoons on my homepage for a long time. But I did not draw frequently and my home page was unknown. As a result, my cartoons was not popluar and no effective.
-KLDP is an web site about open source, free software and linux.
-Therefore the main theme of my cartoon is about software.</description>
+      <guid>https://joone.github.io/blog/my-new-cartoon-blog/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://kldp.org/files/919366.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+http://kldp.org/blog/2725
+I have started to write new cartoon blog on KLDP site.</description>
     </item>
     
     <item>
       <title>Playstation3</title>
-      <link>/post/playstation3/</link>
+      <link>https://joone.github.io/blog/playstation3/</link>
       <pubDate>Thu, 11 May 2006 07:01:00 -0700</pubDate>
       
-      <guid>/post/playstation3/</guid>
-      <description>PlayStation3 will be released at the end of this year. It seems the last hope of SONY. As you know, SONY has a problem with the profit decline. Actually, SONY adhered to the Trinitron TV that was the most popular analogue TV in 90s. As a result, they were late to join the DTV market: SONY did not invest LCD panel or PDP and so they was not able to make better digital TVs than other competitors.</description>
+      <guid>https://joone.github.io/blog/playstation3/</guid>
+      <description>PlayStation3 will be released at the end of this year. It seems the last hope of SONY.</description>
     </item>
     
     <item>
       <title>Apple&#39;s 30th Anniversary</title>
-      <link>/post/apples-30th-anniversary/</link>
+      <link>https://joone.github.io/blog/apples-30th-anniversary/</link>
       <pubDate>Tue, 04 Apr 2006 06:37:00 -0700</pubDate>
       
-      <guid>/post/apples-30th-anniversary/</guid>
-      <description>It has been 30 years since Apple was founded on 1 April 2006 (1976 - 2006). It was a long history than I expected compared to Microsoft. Apple is a computer manufacturer and MS is a software company. Two companies have helped each other and also have a competitive relationship. Two companies are developing different operating system, but MS is developing software for Mac. It is interesting that the first version of MS Excel was for Mac and Internet Explorer was the official web browser of Mac before releasing Safari.</description>
+      <guid>https://joone.github.io/blog/apples-30th-anniversary/</guid>
+      <description>It has been 30 years since Apple was founded on 1 April 2006 (1976 - 2006).</description>
     </item>
     
     <item>
       <title>Web 2.0</title>
-      <link>/post/web-20/</link>
+      <link>https://joone.github.io/blog/web-20/</link>
       <pubDate>Mon, 27 Mar 2006 06:38:00 -0800</pubDate>
       
-      <guid>/post/web-20/</guid>
-      <description>Web 2.0 is so powerful to dominate our new life on the Internet. del.icio.us is the shared bookmark service that adopts the concept of web 2.0 and Flickr is also a good example of web 2.0.
-They are using the concept of tags. We can attach tag to pictures or bookmarks. Tag is like keyword that presents the meaning of something. Before, I only classify something to one category. Now, We can classify pictures or bookmarks to several category that using tags.</description>
+      <guid>https://joone.github.io/blog/web-20/</guid>
+      <description>Web 2.0 is so powerful to dominate our new life on the Internet.</description>
     </item>
     
     <item>
       <title>Became an iPod user</title>
-      <link>/post/became-ipod-user/</link>
+      <link>https://joone.github.io/blog/became-ipod-user/</link>
       <pubDate>Wed, 08 Feb 2006 01:54:00 -0800</pubDate>
       
-      <guid>/post/became-ipod-user/</guid>
-      <description>At last, I bought a video iPod that is the 5th generation of the iPod family. It is thinner and lighter than I expected. Using an iPod is very easy for me because I already have used iTunes on my Mac. In addition, I have many mp3 files and video files in my iTunes music library. The problem is that I have to resize video files to move to iPod. Fortunately, iTunes can resize the video files, which have a large screen size, to play well on the iPod.</description>
+      <guid>https://joone.github.io/blog/became-ipod-user/</guid>
+      <description>At last, I bought a video iPod that is the 5th generation of the iPod family.</description>
     </item>
     
     <item>
       <title>Flash memory</title>
-      <link>/post/flash-memory/</link>
+      <link>https://joone.github.io/blog/flash-memory/</link>
       <pubDate>Mon, 02 Jan 2006 02:25:00 -0800</pubDate>
       
-      <guid>/post/flash-memory/</guid>
+      <guid>https://joone.github.io/blog/flash-memory/</guid>
       <description>Today’s topic is about flash memory.
-Flash memory is one of memory you are using everyday in your mobile devices.
-Almost memories on your PC lose data when the power is off. However, flash memory can maintain data though the power is off. You are already experienced that your mp3 player never loses music files.
-What is Flash Memory?
-Flash memory is non-volatile, which means that it does not need power to maintain the information stored in the chip.</description>
+Flash memory is one of memory you are using everyday in your mobile devices.</description>
     </item>
     
     <item>
       <title>My PC</title>
-      <link>/post/my-pc/</link>
+      <link>https://joone.github.io/blog/my-pc/</link>
       <pubDate>Wed, 26 Oct 2005 07:46:00 -0700</pubDate>
       
-      <guid>/post/my-pc/</guid>
-      <description>I have three computers. One is a power mac, another is a PC and the other is a notebook.
-The power Mac is very fast and provides good performance because it has two CPU.
-However, PC is very slow. It had been 4 years and 9 month after I bought.
-For a long time, I added new equipments including a DVD-RW, a 1394 port and a USB2 port to my PC.</description>
+      <guid>https://joone.github.io/blog/my-pc/</guid>
+      <description>I have three computers. One is a power mac, another is a PC and the other is a notebook.</description>
     </item>
     
     <item>
       <title>Changes</title>
-      <link>/post/changes/</link>
+      <link>https://joone.github.io/blog/changes/</link>
       <pubDate>Thu, 20 Oct 2005 15:55:00 -0700</pubDate>
       
-      <guid>/post/changes/</guid>
+      <guid>https://joone.github.io/blog/changes/</guid>
       <description>Many things around me was changed these days.
-I got married so I lived with my wife in my new house.
-The office that I work was moved to another city so I come to the office by bus
-In addition, I got a new job that was unusual which I had not worked on before.
-Actually, these changes sometimes make me confuse.
-I am adapting myself to the new circumstances.</description>
+I got married so I lived with my wife in my new house.</description>
     </item>
     
     <item>
       <title>Long time no see!</title>
-      <link>/post/long-time-no-see/</link>
+      <link>https://joone.github.io/blog/long-time-no-see/</link>
       <pubDate>Thu, 11 Aug 2005 07:36:00 -0700</pubDate>
       
-      <guid>/post/long-time-no-see/</guid>
-      <description>I forgot that there was my blog in the blogger.
-There are many blog sites in the internet, so I have serveral blogs such as the bloglines, livejournal, egloos, and my own blog in my web hosting server. Particularly, The egloos is a popular blog service in Korea, especially for developers, because it doesn&amp;rsquo;t need to show any AD and provides some features which other blog service can&amp;rsquo;t follow. For example, your blogs can be printed out a colored book.</description>
+      <guid>https://joone.github.io/blog/long-time-no-see/</guid>
+      <description>I forgot that there was my blog in the blogger.</description>
     </item>
     
     <item>
       <title>Here is my English blog</title>
-      <link>/post/its-my-english-blog/</link>
+      <link>https://joone.github.io/blog/its-my-english-blog/</link>
       <pubDate>Fri, 09 Jul 2004 16:27:00 -0700</pubDate>
       
-      <guid>/post/its-my-english-blog/</guid>
-      <description>I already have a blog. which is only written in Korean so I stated to post the first English blog article here to share my story with my foreign friends. I hope you enjoy my English blog although my English is not good enough.</description>
+      <guid>https://joone.github.io/blog/its-my-english-blog/</guid>
+      <description>I already have a blog. which is only written in Korean so I stated to post the first English blog article here to share my story with my foreign friends.</description>
+    </item>
+    
+    <item>
+      <title>About</title>
+      <link>https://joone.github.io/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/about/</guid>
+      <description>Thank you for visiting my blog. This is a personal blog site hosted by github.</description>
+    </item>
+    
+    <item>
+      <title>Contact</title>
+      <link>https://joone.github.io/contact/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/contact/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Elements</title>
+      <link>https://joone.github.io/elements/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/elements/</guid>
+      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules.</description>
+    </item>
+    
+    <item>
+      <title>Homepage Grid</title>
+      <link>https://joone.github.io/homepage/grid/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/homepage/grid/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Homepage List</title>
+      <link>https://joone.github.io/homepage/list/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/homepage/list/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>No Search Found</title>
+      <link>https://joone.github.io/404/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/404/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Privacy</title>
+      <link>https://joone.github.io/privacy/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/privacy/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
+    </item>
+    
+    <item>
+      <title>Terms And Conditions</title>
+      <link>https://joone.github.io/terms-conditions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://joone.github.io/terms-conditions/</guid>
+      <description>Responsibility of Contributors Lorem ipsum dolor sit amet, consectetur adipiscing elit.</description>
     </item>
     
   </channel>

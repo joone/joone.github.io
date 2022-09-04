@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Firefox3 on posts</title>
-    <link>/tags/firefox3/</link>
-    <description>Recent content in Firefox3 on posts</description>
+    <title>Firefox3 on Joone Blog</title>
+    <link>https://joone.github.io/tags/firefox3/</link>
+    <description>Recent content in Firefox3 on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 31 May 2008 23:31:00 -0700</lastBuildDate><atom:link href="/tags/firefox3/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 31 May 2008 23:31:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/firefox3/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Firefox Seoul Party for celebrating the release of Firefox3</title>
-      <link>/post/firefox-party-seoul/</link>
+      <link>https://joone.github.io/blog/firefox-party-seoul/</link>
       <pubDate>Sat, 31 May 2008 23:31:00 -0700</pubDate>
       
-      <guid>/post/firefox-party-seoul/</guid>
-      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.
-Coincidentally, Mozilla had officially released Firefox3 in this period of time, so the Mozilla Korea Community hosted a Firefox Seoul party to celebrate the release of Firefox3. They also attended the party, so it made the event more exciting for the community.</description>
+      <guid>https://joone.github.io/blog/firefox-party-seoul/</guid>
+      <description>Mitchell Baker, chair of the Mozilla foundation and Gen Kanai, Asia marketing manager, visited Korea to attend the OECD ministerial meeting during June 17th ~ 18th and give talks in the Future of Global Web Technology conference on June 19th.</description>
     </item>
     
     <item>
       <title>Firefox3 beta1 &amp; Cairo Graphics</title>
-      <link>/post/firefox3-beta1-cairo-graphics/</link>
+      <link>https://joone.github.io/blog/firefox3-beta1-cairo-graphics/</link>
       <pubDate>Sat, 01 Dec 2007 06:21:00 -0800</pubDate>
       
-      <guid>/post/firefox3-beta1-cairo-graphics/</guid>
-      <description>As expected, Mozilla finally has started the beta test of Firefox3 after finished the alpha8 test. Actually, the official version of Firefox3 should have been released this time. However, the release date is behind the schedule as the alpha test was recently finished. Anyway, we expect that Firefox would be officially released in the first half of next year
-The major feature of Firefox is to use Cairo as the graphic engine for rendering all of things.</description>
+      <guid>https://joone.github.io/blog/firefox3-beta1-cairo-graphics/</guid>
+      <description>As expected, Mozilla finally has started the beta test of Firefox3 after finished the alpha8 test.</description>
     </item>
     
   </channel>

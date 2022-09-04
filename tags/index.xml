@@ -1,522 +1,522 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on posts</title>
-    <link>/tags/</link>
-    <description>Recent content in Tags on posts</description>
+    <title>Tags on Joone Blog</title>
+    <link>https://joone.github.io/tags/</link>
+    <description>Recent content in Tags on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="/tags/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>MyProject</title>
-      <link>/tags/myproject/</link>
+      <link>https://joone.github.io/tags/myproject/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
       
-      <guid>/tags/myproject/</guid>
+      <guid>https://joone.github.io/tags/myproject/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Rust</title>
-      <link>/tags/rust/</link>
+      <link>https://joone.github.io/tags/rust/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
       
-      <guid>/tags/rust/</guid>
+      <guid>https://joone.github.io/tags/rust/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Contribution</title>
-      <link>/tags/contribution/</link>
+      <link>https://joone.github.io/tags/contribution/</link>
       <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
       
-      <guid>/tags/contribution/</guid>
+      <guid>https://joone.github.io/tags/contribution/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Webkit</title>
-      <link>/tags/webkit/</link>
+      <link>https://joone.github.io/tags/webkit/</link>
       <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
       
-      <guid>/tags/webkit/</guid>
+      <guid>https://joone.github.io/tags/webkit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ChromeOS</title>
-      <link>/tags/chromeos/</link>
+      <link>https://joone.github.io/tags/chromeos/</link>
       <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
       
-      <guid>/tags/chromeos/</guid>
+      <guid>https://joone.github.io/tags/chromeos/</guid>
       <description></description>
     </item>
     
     <item>
       <title>chromium</title>
-      <link>/tags/chromium/</link>
+      <link>https://joone.github.io/tags/chromium/</link>
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>
       
-      <guid>/tags/chromium/</guid>
+      <guid>https://joone.github.io/tags/chromium/</guid>
       <description></description>
     </item>
     
     <item>
       <title>graphics</title>
-      <link>/tags/graphics/</link>
+      <link>https://joone.github.io/tags/graphics/</link>
       <pubDate>Thu, 24 May 2018 16:06:00 -0700</pubDate>
       
-      <guid>/tags/graphics/</guid>
+      <guid>https://joone.github.io/tags/graphics/</guid>
       <description></description>
     </item>
     
     <item>
       <title>BlinkOn</title>
-      <link>/tags/blinkon/</link>
+      <link>https://joone.github.io/tags/blinkon/</link>
       <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
       
-      <guid>/tags/blinkon/</guid>
+      <guid>https://joone.github.io/tags/blinkon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenStep</title>
-      <link>/tags/openstep/</link>
+      <link>https://joone.github.io/tags/openstep/</link>
       <pubDate>Wed, 27 Sep 2017 02:43:00 -0700</pubDate>
       
-      <guid>/tags/openstep/</guid>
+      <guid>https://joone.github.io/tags/openstep/</guid>
       <description></description>
     </item>
     
     <item>
       <title>NextStep</title>
-      <link>/tags/nextstep/</link>
+      <link>https://joone.github.io/tags/nextstep/</link>
       <pubDate>Wed, 20 Sep 2017 11:38:00 -0700</pubDate>
       
-      <guid>/tags/nextstep/</guid>
+      <guid>https://joone.github.io/tags/nextstep/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mozilla</title>
-      <link>/tags/mozilla/</link>
+      <link>https://joone.github.io/tags/mozilla/</link>
       <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
       
-      <guid>/tags/mozilla/</guid>
+      <guid>https://joone.github.io/tags/mozilla/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Servo</title>
-      <link>/tags/servo/</link>
+      <link>https://joone.github.io/tags/servo/</link>
       <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
       
-      <guid>/tags/servo/</guid>
+      <guid>https://joone.github.io/tags/servo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Blink</title>
-      <link>/tags/blink/</link>
+      <link>https://joone.github.io/tags/blink/</link>
       <pubDate>Wed, 01 Mar 2017 13:06:00 -0800</pubDate>
       
-      <guid>/tags/blink/</guid>
+      <guid>https://joone.github.io/tags/blink/</guid>
       <description></description>
     </item>
     
     <item>
       <title>ozone-wayland</title>
-      <link>/tags/ozone-wayland/</link>
+      <link>https://joone.github.io/tags/ozone-wayland/</link>
       <pubDate>Wed, 02 Apr 2014 13:24:00 -0700</pubDate>
       
-      <guid>/tags/ozone-wayland/</guid>
+      <guid>https://joone.github.io/tags/ozone-wayland/</guid>
       <description></description>
     </item>
     
     <item>
       <title>wayland</title>
-      <link>/tags/wayland/</link>
+      <link>https://joone.github.io/tags/wayland/</link>
       <pubDate>Wed, 02 Apr 2014 13:24:00 -0700</pubDate>
       
-      <guid>/tags/wayland/</guid>
+      <guid>https://joone.github.io/tags/wayland/</guid>
       <description></description>
     </item>
     
     <item>
       <title>collabora_planet</title>
-      <link>/tags/collabora_planet/</link>
+      <link>https://joone.github.io/tags/collabora_planet/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>/tags/collabora_planet/</guid>
+      <guid>https://joone.github.io/tags/collabora_planet/</guid>
       <description></description>
     </item>
     
     <item>
       <title>MeeGo</title>
-      <link>/tags/meego/</link>
+      <link>https://joone.github.io/tags/meego/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>/tags/meego/</guid>
+      <guid>https://joone.github.io/tags/meego/</guid>
       <description></description>
     </item>
     
     <item>
       <title>N9</title>
-      <link>/tags/n9/</link>
+      <link>https://joone.github.io/tags/n9/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>/tags/n9/</guid>
+      <guid>https://joone.github.io/tags/n9/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Nokia</title>
-      <link>/tags/nokia/</link>
+      <link>https://joone.github.io/tags/nokia/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>/tags/nokia/</guid>
+      <guid>https://joone.github.io/tags/nokia/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GNOME</title>
-      <link>/tags/gnome/</link>
+      <link>https://joone.github.io/tags/gnome/</link>
       <pubDate>Tue, 21 Feb 2012 18:13:00 -0800</pubDate>
       
-      <guid>/tags/gnome/</guid>
+      <guid>https://joone.github.io/tags/gnome/</guid>
       <description></description>
     </item>
     
     <item>
       <title>webkitgtk&#43;</title>
-      <link>/tags/webkitgtk&#43;/</link>
+      <link>https://joone.github.io/tags/webkitgtk&#43;/</link>
       <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
       
-      <guid>/tags/webkitgtk&#43;/</guid>
+      <guid>https://joone.github.io/tags/webkitgtk&#43;/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hackfest</title>
-      <link>/tags/hackfest/</link>
+      <link>https://joone.github.io/tags/hackfest/</link>
       <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
       
-      <guid>/tags/hackfest/</guid>
+      <guid>https://joone.github.io/tags/hackfest/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Desktop Summit</title>
-      <link>/tags/desktop-summit/</link>
+      <link>https://joone.github.io/tags/desktop-summit/</link>
       <pubDate>Sat, 27 Aug 2011 10:35:00 -0700</pubDate>
       
-      <guid>/tags/desktop-summit/</guid>
+      <guid>https://joone.github.io/tags/desktop-summit/</guid>
       <description></description>
     </item>
     
     <item>
       <title>mobile</title>
-      <link>/tags/mobile/</link>
+      <link>https://joone.github.io/tags/mobile/</link>
       <pubDate>Sat, 21 May 2011 01:04:00 -0700</pubDate>
       
-      <guid>/tags/mobile/</guid>
+      <guid>https://joone.github.io/tags/mobile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Conference</title>
-      <link>/tags/conference/</link>
+      <link>https://joone.github.io/tags/conference/</link>
       <pubDate>Sat, 30 Apr 2011 21:04:00 -0700</pubDate>
       
-      <guid>/tags/conference/</guid>
+      <guid>https://joone.github.io/tags/conference/</guid>
       <description></description>
     </item>
     
     <item>
       <title>firefox</title>
-      <link>/tags/firefox/</link>
+      <link>https://joone.github.io/tags/firefox/</link>
       <pubDate>Fri, 22 Apr 2011 02:57:00 -0700</pubDate>
       
-      <guid>/tags/firefox/</guid>
+      <guid>https://joone.github.io/tags/firefox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Web Browser</title>
-      <link>/tags/web-browser/</link>
+      <link>https://joone.github.io/tags/web-browser/</link>
       <pubDate>Wed, 02 Mar 2011 00:18:00 -0800</pubDate>
       
-      <guid>/tags/web-browser/</guid>
+      <guid>https://joone.github.io/tags/web-browser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hiking</title>
-      <link>/tags/hiking/</link>
+      <link>https://joone.github.io/tags/hiking/</link>
       <pubDate>Sun, 14 Nov 2010 04:59:00 -0800</pubDate>
       
-      <guid>/tags/hiking/</guid>
+      <guid>https://joone.github.io/tags/hiking/</guid>
       <description></description>
     </item>
     
     <item>
       <title>seoul</title>
-      <link>/tags/seoul/</link>
+      <link>https://joone.github.io/tags/seoul/</link>
       <pubDate>Sun, 14 Nov 2010 04:59:00 -0800</pubDate>
       
-      <guid>/tags/seoul/</guid>
+      <guid>https://joone.github.io/tags/seoul/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OpenSource</title>
-      <link>/tags/opensource/</link>
+      <link>https://joone.github.io/tags/opensource/</link>
       <pubDate>Tue, 12 Oct 2010 19:00:00 -0700</pubDate>
       
-      <guid>/tags/opensource/</guid>
+      <guid>https://joone.github.io/tags/opensource/</guid>
       <description></description>
     </item>
     
     <item>
       <title>OSX</title>
-      <link>/tags/osx/</link>
+      <link>https://joone.github.io/tags/osx/</link>
       <pubDate>Sat, 07 Aug 2010 01:03:00 -0700</pubDate>
       
-      <guid>/tags/osx/</guid>
+      <guid>https://joone.github.io/tags/osx/</guid>
       <description></description>
     </item>
     
     <item>
       <title>IME</title>
-      <link>/tags/ime/</link>
+      <link>https://joone.github.io/tags/ime/</link>
       <pubDate>Wed, 04 Aug 2010 06:24:00 -0700</pubDate>
       
-      <guid>/tags/ime/</guid>
+      <guid>https://joone.github.io/tags/ime/</guid>
       <description></description>
     </item>
     
     <item>
       <title>W3C</title>
-      <link>/tags/w3c/</link>
+      <link>https://joone.github.io/tags/w3c/</link>
       <pubDate>Wed, 04 Aug 2010 06:24:00 -0700</pubDate>
       
-      <guid>/tags/w3c/</guid>
+      <guid>https://joone.github.io/tags/w3c/</guid>
       <description></description>
     </item>
     
     <item>
       <title>DOM</title>
-      <link>/tags/dom/</link>
+      <link>https://joone.github.io/tags/dom/</link>
       <pubDate>Mon, 26 Jul 2010 21:33:00 -0700</pubDate>
       
-      <guid>/tags/dom/</guid>
+      <guid>https://joone.github.io/tags/dom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hangul</title>
-      <link>/tags/hangul/</link>
+      <link>https://joone.github.io/tags/hangul/</link>
       <pubDate>Mon, 26 Jul 2010 21:33:00 -0700</pubDate>
       
-      <guid>/tags/hangul/</guid>
+      <guid>https://joone.github.io/tags/hangul/</guid>
       <description></description>
     </item>
     
     <item>
       <title>fennec</title>
-      <link>/tags/fennec/</link>
+      <link>https://joone.github.io/tags/fennec/</link>
       <pubDate>Sun, 11 Oct 2009 08:17:00 -0700</pubDate>
       
-      <guid>/tags/fennec/</guid>
+      <guid>https://joone.github.io/tags/fennec/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Windows Mobile</title>
-      <link>/tags/windows-mobile/</link>
+      <link>https://joone.github.io/tags/windows-mobile/</link>
       <pubDate>Thu, 27 Aug 2009 07:36:00 -0700</pubDate>
       
-      <guid>/tags/windows-mobile/</guid>
+      <guid>https://joone.github.io/tags/windows-mobile/</guid>
       <description></description>
     </item>
     
     <item>
       <title>SAMSUNG</title>
-      <link>/tags/samsung/</link>
+      <link>https://joone.github.io/tags/samsung/</link>
       <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
       
-      <guid>/tags/samsung/</guid>
+      <guid>https://joone.github.io/tags/samsung/</guid>
       <description></description>
     </item>
     
     <item>
       <title>i780</title>
-      <link>/tags/i780/</link>
+      <link>https://joone.github.io/tags/i780/</link>
       <pubDate>Fri, 27 Mar 2009 07:33:00 -0700</pubDate>
       
-      <guid>/tags/i780/</guid>
+      <guid>https://joone.github.io/tags/i780/</guid>
       <description></description>
     </item>
     
     <item>
       <title>maemo fennec</title>
-      <link>/tags/maemo-fennec/</link>
+      <link>https://joone.github.io/tags/maemo-fennec/</link>
       <pubDate>Thu, 19 Feb 2009 22:00:00 -0800</pubDate>
       
-      <guid>/tags/maemo-fennec/</guid>
+      <guid>https://joone.github.io/tags/maemo-fennec/</guid>
       <description></description>
     </item>
     
     <item>
       <title>FOSDEM</title>
-      <link>/tags/fosdem/</link>
+      <link>https://joone.github.io/tags/fosdem/</link>
       <pubDate>Mon, 09 Feb 2009 20:25:00 -0800</pubDate>
       
-      <guid>/tags/fosdem/</guid>
+      <guid>https://joone.github.io/tags/fosdem/</guid>
       <description></description>
     </item>
     
     <item>
       <title>hildon</title>
-      <link>/tags/hildon/</link>
+      <link>https://joone.github.io/tags/hildon/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>/tags/hildon/</guid>
+      <guid>https://joone.github.io/tags/hildon/</guid>
       <description></description>
     </item>
     
     <item>
       <title>maemo</title>
-      <link>/tags/maemo/</link>
+      <link>https://joone.github.io/tags/maemo/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>/tags/maemo/</guid>
+      <guid>https://joone.github.io/tags/maemo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Firefox3</title>
-      <link>/tags/firefox3/</link>
+      <link>https://joone.github.io/tags/firefox3/</link>
       <pubDate>Sat, 31 May 2008 23:31:00 -0700</pubDate>
       
-      <guid>/tags/firefox3/</guid>
+      <guid>https://joone.github.io/tags/firefox3/</guid>
       <description></description>
     </item>
     
     <item>
       <title>N810</title>
-      <link>/tags/n810/</link>
+      <link>https://joone.github.io/tags/n810/</link>
       <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
       
-      <guid>/tags/n810/</guid>
+      <guid>https://joone.github.io/tags/n810/</guid>
       <description></description>
     </item>
     
     <item>
       <title>camera</title>
-      <link>/tags/camera/</link>
+      <link>https://joone.github.io/tags/camera/</link>
       <pubDate>Sun, 20 Apr 2008 06:36:00 -0700</pubDate>
       
-      <guid>/tags/camera/</guid>
+      <guid>https://joone.github.io/tags/camera/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Full Browser</title>
-      <link>/tags/full-browser/</link>
+      <link>https://joone.github.io/tags/full-browser/</link>
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
-      <guid>/tags/full-browser/</guid>
+      <guid>https://joone.github.io/tags/full-browser/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Infraware</title>
-      <link>/tags/infraware/</link>
+      <link>https://joone.github.io/tags/infraware/</link>
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
-      <guid>/tags/infraware/</guid>
+      <guid>https://joone.github.io/tags/infraware/</guid>
       <description></description>
     </item>
     
     <item>
       <title>LG Telelcom</title>
-      <link>/tags/lg-telelcom/</link>
+      <link>https://joone.github.io/tags/lg-telelcom/</link>
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
-      <guid>/tags/lg-telelcom/</guid>
+      <guid>https://joone.github.io/tags/lg-telelcom/</guid>
       <description></description>
     </item>
     
     <item>
       <title>India</title>
-      <link>/tags/india/</link>
+      <link>https://joone.github.io/tags/india/</link>
       <pubDate>Wed, 19 Mar 2008 16:24:00 -0700</pubDate>
       
-      <guid>/tags/india/</guid>
+      <guid>https://joone.github.io/tags/india/</guid>
       <description></description>
     </item>
     
     <item>
       <title>GPS</title>
-      <link>/tags/gps/</link>
+      <link>https://joone.github.io/tags/gps/</link>
       <pubDate>Sat, 26 Jan 2008 08:17:00 -0800</pubDate>
       
-      <guid>/tags/gps/</guid>
+      <guid>https://joone.github.io/tags/gps/</guid>
       <description></description>
     </item>
     
     <item>
       <title>microB</title>
-      <link>/tags/microb/</link>
+      <link>https://joone.github.io/tags/microb/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>/tags/microb/</guid>
+      <guid>https://joone.github.io/tags/microb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>patch</title>
-      <link>/tags/patch/</link>
+      <link>https://joone.github.io/tags/patch/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>/tags/patch/</guid>
+      <guid>https://joone.github.io/tags/patch/</guid>
       <description></description>
     </item>
     
     <item>
       <title>performance</title>
-      <link>/tags/performance/</link>
+      <link>https://joone.github.io/tags/performance/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>/tags/performance/</guid>
+      <guid>https://joone.github.io/tags/performance/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mobile Firefox</title>
-      <link>/tags/mobile-firefox/</link>
+      <link>https://joone.github.io/tags/mobile-firefox/</link>
       <pubDate>Mon, 07 Jan 2008 08:00:00 -0800</pubDate>
       
-      <guid>/tags/mobile-firefox/</guid>
+      <guid>https://joone.github.io/tags/mobile-firefox/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Peace</title>
-      <link>/tags/peace/</link>
+      <link>https://joone.github.io/tags/peace/</link>
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
-      <guid>/tags/peace/</guid>
+      <guid>https://joone.github.io/tags/peace/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Summit</title>
-      <link>/tags/summit/</link>
+      <link>https://joone.github.io/tags/summit/</link>
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
-      <guid>/tags/summit/</guid>
+      <guid>https://joone.github.io/tags/summit/</guid>
       <description></description>
     </item>
     

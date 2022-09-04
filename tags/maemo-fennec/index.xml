@@ -1,22 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>maemo fennec on posts</title>
-    <link>/tags/maemo-fennec/</link>
-    <description>Recent content in maemo fennec on posts</description>
+    <title>maemo fennec on Joone Blog</title>
+    <link>https://joone.github.io/tags/maemo-fennec/</link>
+    <description>Recent content in maemo fennec on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Thu, 19 Feb 2009 22:00:00 -0800</lastBuildDate><atom:link href="/tags/maemo-fennec/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Thu, 19 Feb 2009 22:00:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/maemo-fennec/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Supporting Hildon Menu for Fennec</title>
-      <link>/post/supporting-hildon-menu-for-fennec/</link>
+      <link>https://joone.github.io/blog/supporting-hildon-menu-for-fennec/</link>
       <pubDate>Thu, 19 Feb 2009 22:00:00 -0800</pubDate>
       
-      <guid>/post/supporting-hildon-menu-for-fennec/</guid>
+      <guid>https://joone.github.io/blog/supporting-hildon-menu-for-fennec/</guid>
       <description>I implemented the hildon menu for Fennec on Maemo.
-Actually, the hildon menu feature has not been decided to be added for 1.0 release.
-I&amp;rsquo;m not sure if this patch could be applied to the mainline.
-Mozilla platform already supports the hildon framework so it is easy to add new things for Maemo if you wish.</description>
+Actually, the hildon menu feature has not been decided to be added for 1.</description>
     </item>
     
   </channel>

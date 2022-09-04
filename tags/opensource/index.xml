@@ -1,31 +1,29 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>OpenSource on posts</title>
-    <link>/tags/opensource/</link>
-    <description>Recent content in OpenSource on posts</description>
+    <title>OpenSource on Joone Blog</title>
+    <link>https://joone.github.io/tags/opensource/</link>
+    <description>Recent content in OpenSource on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Tue, 12 Oct 2010 19:00:00 -0700</lastBuildDate><atom:link href="/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Tue, 12 Oct 2010 19:00:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why I participate in open source project</title>
-      <link>/post/why-i-participate-in-open-source/</link>
+      <link>https://joone.github.io/blog/why-i-participate-in-open-source/</link>
       <pubDate>Tue, 12 Oct 2010 19:00:00 -0700</pubDate>
       
-      <guid>/post/why-i-participate-in-open-source/</guid>
-      <description>It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer. Before starting my new career, I had worked for a big electronics company and worked on open source projects such as Mozilla, Gtk+, WebKit project since 2007. The job was stable and salary was also good. However, I decided to quit my job and started to get involved in the projects as a contributor.</description>
+      <guid>https://joone.github.io/blog/why-i-participate-in-open-source/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm5.static.flickr.com/4031/5080322907_35683248ca.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer.</description>
     </item>
     
     <item>
       <title>Open Source in Asia</title>
-      <link>/post/open-source-in-asia/</link>
+      <link>https://joone.github.io/blog/open-source-in-asia/</link>
       <pubDate>Sun, 17 Feb 2008 20:13:00 -0800</pubDate>
       
-      <guid>/post/open-source-in-asia/</guid>
-      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.
-The speaker is Gen Kanai who is working for Mozilla Corporation.
-He talked about Mozilla community &amp;amp; open source activities in Asia such as:
-Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux) The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
+      <guid>https://joone.github.io/blog/open-source-in-asia/</guid>
+      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.</description>
     </item>
     
   </channel>

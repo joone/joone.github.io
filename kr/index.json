@@ -1,0 +1,27 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[{"categories":["Programming"],"contents":"프로젝트가 반복되면 재사용되는 코드가 많아질 수 밖에 없다. 여러가지 툴을 타입스크립트를 작성하다 보니 그 동안 공통적으로 사용하고 있는 기능을 묶어서 프로젝트로 만들어서 github에 공개해봤다.\nhttps://github.com/joone/typescript-template 물론, MS가 만든 비슷한 프로젝트도 있는데, 너무 기능이 많고, 내가 원하는 수준에서 만들었는데, 아마도 필요한 분이 있을것 같다. 일단, 프로젝트는 clone하면 기본적으로 아래 package를 사용할 수 있고, 간단한 웹서비스가 구현되어 있다.\nexpress.js eslint mocha chai prettier typeorm mongodb Docker MongoDB를 사용하는 방법이 두가지 있는데, typeorm와 mongoose를 사용한 것 코드를 별도 branch로 분리해두었다. typeorem이 쓰기 편해도 MongDB에는 mongoose가 코드는 복잡해도 더 쉬운 것 같다. Start your web application:\n$ npm start Run test cases:\n$ npm test $ npm run-script lint Docker image를 만들어 실행하는 부분도 추가했고, prettier도 지원한다. Run prettier to fix styles:\n$ npm run style Build a Docker image and run the container:\n$ sudo ./build_docker.sh $ sudo docker ps $ curl -v http://localhost:3001 향후 계획은 게시판 정도 실행되도록 하는 것이 목표다.\n출처: 주네의 열린 소프트웨어:티스토리\n","date":"September 4, 2022","image":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003cimg loading=\"lazy\" decoding=\"async\" src=\"/images/post/ts_logo_hu21fcd162e45c69487685a9bdacb70f60_20693_650x0_resize_q90_h2_box_3.webp\" alt=\"\" class=\"img-fluid w-100 rounded\" width=\"650\" height=\"\" onerror=\"this.onerror='null';this.src='\\/images\\/post\\/ts_logo_hu21fcd162e45c69487685a9bdacb70f60_20693_650x0_resize_box_3.png'\"\u003e\n \n \n \n\n","permalink":"/kr/blog/typescript_starter/","tags":["TypeScript"],"title":"타입스크립트(Typescript) 스타터 코드"},{"categories":["Rust"],"contents":"오랜 숙원사업(?) 첫삽을 떴습니다. 나만의 오픈소스 프로젝트를 시작해보려고 그동안 여러 시도를 해왔지만, 생각 만큼 진척이 없었습니다. 무엇보다도 부끄럽지 않은 결과를 만들어보고 공개하자는 맘이 앞서다 보니, 뭘 만들어도 막상 공개하려면 부끄러움이 앞서더군요. 하지만 어떤 피드백 없이 혼자 꾸역 꾸역 뭔가 만들어 나가는 것도 보통 의지가 없으면 안됩니다. 리누스 토발즈가 말했는이, 제대로된 구조 보다 일단 동작 가능하게 만들어야 한다. 그리고 자주 업데이트하고 릴리스 하면 된다는 말을 떠올리면 일단 최소한 동작 가능한 수준에서 공개를 했습니다. 처음 Rust와 OpenGL 배우는 분께는 더할 나위없이 좋은 프로젝트입니다. 왜냐하면 코드 아주 간단하거든요. 별로 기능이 없습니다. 저도 역시 배우는 입장이라.. :-) 단, 릴리스 할 때마다 API가 무지 바뀔 수 있습니다. https://github.com/joone/rust-animation\n올해 연말은 이 프로젝트로 따듯하게 지낼 수 있을 것 같네요.\n출처: https://opensoftware.tistory.com/entry/rust-기반-OpenGL-animation-toolkit [주네의 열린 소프트웨어:티스토리]\n","date":"November 24, 2021","image":"\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\u003cimg loading=\"lazy\" decoding=\"async\" src=\"https://github.com/joone/rust-animation/blob/main/examples/easing_functions.gif?raw=true\" alt=\"\" class=\"img-fluid w-100 rounded\" height=\"\" width=\"650\"\u003e\n","permalink":"/kr/blog/rust-animation/","tags":["Rust"],"title":"Rust 기반 OpenGL animation toolkit"}]

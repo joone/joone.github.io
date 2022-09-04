@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Summit on posts</title>
-    <link>/tags/summit/</link>
-    <description>Recent content in Summit on posts</description>
+    <title>Summit on Joone Blog</title>
+    <link>https://joone.github.io/tags/summit/</link>
+    <description>Recent content in Summit on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 03 Oct 2007 16:02:00 -0700</lastBuildDate><atom:link href="/tags/summit/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 03 Oct 2007 16:02:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/summit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>2007 South-North Korean Summit</title>
-      <link>/post/2007-south-north-korean-summit/</link>
+      <link>https://joone.github.io/blog/2007-south-north-korean-summit/</link>
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
-      <guid>/post/2007-south-north-korean-summit/</guid>
-      <description>South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.
-This is the second summit between the two Koreas.
-During the summit, Two leaders had several talks about Korean peace, economic investment, and reunification on North Korea.
-I wish that the two Koreas could archive piece and prosperity on the Korean Peninsula.</description>
+      <guid>https://joone.github.io/blog/2007-south-north-korean-summit/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://www.koreatimes.co.kr/upload/news/071003_p01_leaders.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.</description>
     </item>
     
   </channel>

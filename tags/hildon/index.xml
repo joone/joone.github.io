@@ -1,19 +1,20 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hildon on posts</title>
-    <link>/tags/hildon/</link>
-    <description>Recent content in hildon on posts</description>
+    <title>hildon on Joone Blog</title>
+    <link>https://joone.github.io/tags/hildon/</link>
+    <description>Recent content in hildon on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 11 Jan 2009 20:19:00 -0800</lastBuildDate><atom:link href="/tags/hildon/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 11 Jan 2009 20:19:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/hildon/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hildon related bugzilla issues</title>
-      <link>/post/hiden-related-bugzilla-issues/</link>
+      <link>https://joone.github.io/blog/hiden-related-bugzilla-issues/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>/post/hiden-related-bugzilla-issues/</guid>
-      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
+      <guid>https://joone.github.io/blog/hiden-related-bugzilla-issues/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3348/3188016234_a551140d92.jpg&amp;#34; alt=&amp;#34;Fennec1.0 alpha3 preview&amp;#34;&amp;gt;
+426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
   </channel>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Contribution on posts</title>
-    <link>/tags/contribution/</link>
-    <description>Recent content in Contribution on posts</description>
+    <title>Contribution on Joone Blog</title>
+    <link>https://joone.github.io/tags/contribution/</link>
+    <description>Recent content in Contribution on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 28 Aug 2021 22:12:00 -0700</lastBuildDate><atom:link href="/tags/contribution/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Aug 2021 22:12:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/contribution/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Caret should respect text background color</title>
-      <link>/post/webkit-caret-color-change/</link>
+      <link>https://joone.github.io/blog/webkit-caret-color-change/</link>
       <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
       
-      <guid>/post/webkit-caret-color-change/</guid>
-      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
-The source code has been changed and I almost forgot how to deal with layout test errors.</description>
+      <guid>https://joone.github.io/blog/webkit-caret-color-change/</guid>
+      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it.</description>
     </item>
     
   </channel>

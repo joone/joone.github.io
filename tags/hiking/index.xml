@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>hiking on posts</title>
-    <link>/tags/hiking/</link>
-    <description>Recent content in hiking on posts</description>
+    <title>hiking on Joone Blog</title>
+    <link>https://joone.github.io/tags/hiking/</link>
+    <description>Recent content in hiking on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 14 Nov 2010 04:59:00 -0800</lastBuildDate><atom:link href="/tags/hiking/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 14 Nov 2010 04:59:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/hiking/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>My favorite hiking course in Seoul</title>
-      <link>/post/my-favorite-hiking-course-in-seoul/</link>
+      <link>https://joone.github.io/blog/my-favorite-hiking-course-in-seoul/</link>
       <pubDate>Sun, 14 Nov 2010 04:59:00 -0800</pubDate>
       
-      <guid>/post/my-favorite-hiking-course-in-seoul/</guid>
-      <description>Have you heard about Jeju Olle-gil (제주 올레길)[1] or Jirisan Dulle-gil(지리산 둘레길)? They are famous trails in Korea to hike in the rural areas to enjoy natural things. In particular, due to the success of Jeju Olle-gil, each provincial government is introducing new hiking courses to attract tourists. Actually, anyone can make their own hiking course, but many people don&amp;rsquo;t know. In my case, I have one in Seoul. Therefore, I would like to introduce my hiking course in this blog.</description>
+      <guid>https://joone.github.io/blog/my-favorite-hiking-course-in-seoul/</guid>
+      <description>Have you heard about Jeju Olle-gil (제주 올</description>
     </item>
     
   </channel>

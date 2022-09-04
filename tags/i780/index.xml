@@ -1,23 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>i780 on posts</title>
-    <link>/tags/i780/</link>
-    <description>Recent content in i780 on posts</description>
+    <title>i780 on Joone Blog</title>
+    <link>https://joone.github.io/tags/i780/</link>
+    <description>Recent content in i780 on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Fri, 27 Mar 2009 07:33:00 -0700</lastBuildDate><atom:link href="/tags/i780/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 27 Mar 2009 07:33:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/i780/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Fennec is running on SAMSUNG i780</title>
-      <link>/post/fennec-is-running-on-samsung-i780/</link>
+      <link>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</link>
       <pubDate>Fri, 27 Mar 2009 07:33:00 -0700</pubDate>
       
-      <guid>/post/fennec-is-running-on-samsung-i780/</guid>
-      <description>I was told a very good news from Blassey blog.
-Doug Turner solved the test blocker of Fennec for Windows Mobile.
-I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
-Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
-It is working well, but very slow on i780.</description>
+      <guid>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</guid>
+      <description>I was told a very good news from Blassey blog.</description>
     </item>
     
   </channel>

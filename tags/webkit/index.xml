@@ -1,93 +1,85 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Webkit on posts</title>
-    <link>/tags/webkit/</link>
-    <description>Recent content in Webkit on posts</description>
+    <title>Webkit on Joone Blog</title>
+    <link>https://joone.github.io/tags/webkit/</link>
+    <description>Recent content in Webkit on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 28 Aug 2021 22:12:00 -0700</lastBuildDate><atom:link href="/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Aug 2021 22:12:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/webkit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Caret should respect text background color</title>
-      <link>/post/webkit-caret-color-change/</link>
+      <link>https://joone.github.io/blog/webkit-caret-color-change/</link>
       <pubDate>Sat, 28 Aug 2021 22:12:00 -0700</pubDate>
       
-      <guid>/post/webkit-caret-color-change/</guid>
-      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
-The source code has been changed and I almost forgot how to deal with layout test errors.</description>
+      <guid>https://joone.github.io/blog/webkit-caret-color-change/</guid>
+      <description>History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it.</description>
     </item>
     
     <item>
       <title>Accelerated Composting in WebKitGtk&#43;</title>
-      <link>/post/accelerated-composting-in-webkitgtk/</link>
+      <link>https://joone.github.io/blog/accelerated-composting-in-webkitgtk/</link>
       <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
       
-      <guid>/post/accelerated-composting-in-webkitgtk/</guid>
-      <description>During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port. Finally, I was able to run the same demo in GtkLauncher as follows:
-This is not upstreamed yet, but Imy patches are getting reviewed. Gustavo and Martin are helping me write more good patches. Thanks!
-I think that this hackfest was done well. You can check more news about the WebKitGtk+ hackfest from other blog posts:</description>
+      <guid>https://joone.github.io/blog/accelerated-composting-in-webkitgtk/</guid>
+      <description>During the WebKitGkt&amp;#43; hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port.</description>
     </item>
     
     <item>
       <title>WebKitGtk&#43; Hackfest 2011</title>
-      <link>/post/webkitgtk-hackfest-2011/</link>
+      <link>https://joone.github.io/blog/webkitgtk-hackfest-2011/</link>
       <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
       
-      <guid>/post/webkitgtk-hackfest-2011/</guid>
-      <description>(C) Mario Gustavo and I are attending the WebKitGtk+ hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time. This is an annual event for WebKitGtk+ maintainers to work together at the same place.
-We made a list of work items on the blackboard as usual on the first day. You can find these topics in the wiki. My major work item is to apply Accelerated Compositing implementation of the clutter port to WebKitGtk+.</description>
+      <guid>https://joone.github.io/blog/webkitgtk-hackfest-2011/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm8.staticflickr.com/7032/6430000691_8da7528408.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+(C) Mario Gustavo and I are attending the WebKitGtk&amp;#43; hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time.</description>
     </item>
     
     <item>
       <title>WebKit Mobile Features</title>
-      <link>/post/webkit-mobile-features/</link>
+      <link>https://joone.github.io/blog/webkit-mobile-features/</link>
       <pubDate>Sat, 21 May 2011 01:04:00 -0700</pubDate>
       
-      <guid>/post/webkit-mobile-features/</guid>
-      <description>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk+.
-First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone.</description>
+      <guid>https://joone.github.io/blog/webkit-mobile-features/</guid>
+      <description>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine.</description>
     </item>
     
     <item>
       <title>WebKit Contributors Meeting 2011</title>
-      <link>/post/webkit-contributors-meeting-2011/</link>
+      <link>https://joone.github.io/blog/webkit-contributors-meeting-2011/</link>
       <pubDate>Sat, 30 Apr 2011 21:04:00 -0700</pubDate>
       
-      <guid>/post/webkit-contributors-meeting-2011/</guid>
-      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California. This is the annual meeting for WebKit reviewers and committers. They come together to discuss the current issues of WebKit and hack the code in the meeting. In this post, I am going to introduce you to what we talk about in the WebKit meeting.
-As you know, WebKit is the hottest open source project these days, because most mobile phones use the WebKit engine and additionally Chrome and Safari also are based on WebKit.</description>
+      <guid>https://joone.github.io/blog/webkit-contributors-meeting-2011/</guid>
+      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California.</description>
     </item>
     
     <item>
       <title>WebKitGtk&#43; Hackfest 2010</title>
-      <link>/post/webkitgtk-hackfest-2010/</link>
+      <link>https://joone.github.io/blog/webkitgtk-hackfest-2010/</link>
       <pubDate>Thu, 30 Dec 2010 07:35:00 -0800</pubDate>
       
-      <guid>/post/webkitgtk-hackfest-2010/</guid>
-      <description>(c) 2010 Diegoe
-I attended the WebKitGtk+ Hackfest held in the Igalia Office, located in Coruña, Spain, in this month. It was a great opportunity for me to meet the WebKitGtk+maintainers directly. This hackfest was sponsored by Collabora and Igalia. The Igalia office was very nice; it can be compared to the Google office in terms of the atmosphere. There were free snacks, beverage and game consoles in the office.</description>
+      <guid>https://joone.github.io/blog/webkitgtk-hackfest-2010/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://farm6.static.flickr.com/5050/5235372842_8c4236d7b1.jpg&amp;#34; alt=&amp;#34;WebKitGTK&amp;#43; hackfest, day 0&amp;#34;&amp;gt;
+(c) 2010 Diegoe
+I attended the WebKitGtk&amp;#43; Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
     </item>
     
     <item>
       <title>Feedbacks from the communities on the key events handling in WebKit</title>
-      <link>/post/feedbacks-from-communities-on-handling/</link>
+      <link>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</link>
       <pubDate>Wed, 04 Aug 2010 06:24:00 -0700</pubDate>
       
-      <guid>/post/feedbacks-from-communities-on-handling/</guid>
-      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&amp;rsquo;ve got quick feedbacks from the communities on each issue as follows,
-Issue1) IME Composition events should be handled consistently in all ports of WebKit.
-=&amp;gt; &amp;ldquo;This can&amp;rsquo;t be achieved as it depends on the platform IME system.</description>
+      <guid>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</guid>
+      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.</description>
     </item>
     
     <item>
       <title>IME composition events are handled inconsistently in WebKit</title>
-      <link>/post/composition-events-are-handled_27/</link>
+      <link>https://joone.github.io/blog/composition-events-are-handled_27/</link>
       <pubDate>Mon, 26 Jul 2010 21:33:00 -0700</pubDate>
       
-      <guid>/post/composition-events-are-handled_27/</guid>
-      <description>I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&amp;rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
-According to W3C DOM Level 3 events,
-A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.</description>
+      <guid>https://joone.github.io/blog/composition-events-are-handled_27/</guid>
+      <description>I have been working on Korean Hangul composition issue in WebKitGtk.</description>
     </item>
     
   </channel>

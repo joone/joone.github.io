@@ -1,48 +1,38 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Blink on posts</title>
-    <link>/tags/blink/</link>
-    <description>Recent content in Blink on posts</description>
+    <title>Blink on Joone Blog</title>
+    <link>https://joone.github.io/tags/blink/</link>
+    <description>Recent content in Blink on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 01 Mar 2017 13:06:00 -0800</lastBuildDate><atom:link href="/tags/blink/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 01 Mar 2017 13:06:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/blink/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enable to open multiple file-pickers in Chromium for Linux</title>
-      <link>/post/enable-to-open-multiple-file-pickers-in/</link>
+      <link>https://joone.github.io/blog/enable-to-open-multiple-file-pickers-in/</link>
       <pubDate>Wed, 01 Mar 2017 13:06:00 -0800</pubDate>
       
-      <guid>/post/enable-to-open-multiple-file-pickers-in/</guid>
-      <description>Sometimes, we don&amp;rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
-Enable &amp;ldquo;Ask where to save&amp;rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem.</description>
+      <guid>https://joone.github.io/blog/enable-to-open-multiple-file-pickers-in/</guid>
+      <description>Sometimes, we don&amp;rsquo;t know exact requirements or expect user behaviors while developing or fix something.</description>
     </item>
     
     <item>
       <title>Apple-style-span class was fully removed from Blink</title>
-      <link>/post/apple-style-span-class-was-fully/</link>
+      <link>https://joone.github.io/blog/apple-style-span-class-was-fully/</link>
       <pubDate>Fri, 17 Feb 2017 14:48:00 -0800</pubDate>
       
-      <guid>/post/apple-style-span-class-was-fully/</guid>
+      <guid>https://joone.github.io/blog/apple-style-span-class-was-fully/</guid>
       <description>Finally, Apple-style-span class was fully removed from Blink(commit).
-Apple-style-span has not been produced since 2011: https://webkit.org/blog/1737/apple-style-span-is-gone, but there were still some legacy code to handle Apple-style-span class because old WebKit engines has produced it, but now the usage is quite low(&amp;lt;=0.0001%). So, we decided to remove it from Blink at BlinkOn7. The code was executed whenever the users copy a text or run Editing APIs(document.execCommand) to keep the styles when pasting it.</description>
+Apple-style-span has not been produced since 2011: https://webkit.</description>
     </item>
     
     <item>
       <title>My major contributions to Chromium project</title>
-      <link>/post/my-major-contributions-to-chromium/</link>
+      <link>https://joone.github.io/blog/my-major-contributions-to-chromium/</link>
       <pubDate>Mon, 14 Nov 2016 16:14:00 -0800</pubDate>
       
-      <guid>/post/my-major-contributions-to-chromium/</guid>
-      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
-Blink Editing
-[Issue 226941] Contenteditable issues related to backspace handling https://codereview.chromium.org/2064473002
-https://codereview.chromium.org/2117663002
-[Issue 318925] Copy and paste sometimes removes spaces between words https://codereview.chromium.org/2193033004
-https://codereview.chromium.org/2280513004
-https://codereview.chromium.org/2320533002
-https://codereview.chromium.org/2325553002
-https://codereview.chromium.org/2336043006
-[Issue 310149] ContentEditable: is forced on SPACE between text nodes https://codereview.chromium.org/2175163004 [Issue 335955] Unwanted spans inserted in contentEditable elements https://codereview.chromium.org/2072093002 [issue 571420] chrome hangs on when creating bullet list in contenteditable https://codereview.</description>
+      <guid>https://joone.github.io/blog/my-major-contributions-to-chromium/</guid>
+      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features.</description>
     </item>
     
   </channel>

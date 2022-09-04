@@ -1,30 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Rust on posts</title>
-    <link>/tags/rust/</link>
-    <description>Recent content in Rust on posts</description>
+    <title>Rust on Joone Blog</title>
+    <link>https://joone.github.io/tags/rust/</link>
+    <description>Recent content in Rust on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="/tags/rust/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Dec 2021 17:20:49 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/rust/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>rust-animation project</title>
-      <link>/post/rust-animation/</link>
+      <link>https://joone.github.io/blog/rust-animation/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
       
-      <guid>/post/rust-animation/</guid>
-      <description>I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port. At that time, I implemented my own Actor by extending the existing Actor APIs. It worked well: I managed to run some CSS 3D animation demos in the WebKit Clutter port.
-Unfortunately, the Clutter project lost its way. Now, the project is almost deprecated even though it is still used in GNOME Shell.</description>
+      <guid>https://joone.github.io/blog/rust-animation/</guid>
+      <description>I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port.</description>
     </item>
     
     <item>
       <title>Rust &amp; DRM</title>
-      <link>/post/rust-drm/</link>
+      <link>https://joone.github.io/blog/rust-drm/</link>
       <pubDate>Thu, 24 May 2018 16:06:00 -0700</pubDate>
       
-      <guid>/post/rust-drm/</guid>
-      <description>I was surprised that there are many low-level graphics projects written in Rust and I started looking into one of them: drm-rs. Then, I added an example for handling page-flip event.
-drm-rs is a subproject of Smithay that is a wayland compositor written in Rust. It allows Rust applications to access the Direct Rendering Manger(DRM), a subsystem of the Linux Kernel. So, we could directly paint something into a frame buffer and render it on the display using DRM APIs.</description>
+      <guid>https://joone.github.io/blog/rust-drm/</guid>
+      <description>I was surprised that there are many low-level graphics projects written in Rust and I started looking into one of them: drm-rs.</description>
     </item>
     
   </channel>

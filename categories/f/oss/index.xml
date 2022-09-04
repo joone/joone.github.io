@@ -1,36 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>F/OSS on posts</title>
-    <link>/categories/f/oss/</link>
-    <description>Recent content in F/OSS on posts</description>
+    <title>F/OSS on Joone Blog</title>
+    <link>https://joone.github.io/categories/f/oss/</link>
+    <description>Recent content in F/OSS on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language><atom:link href="/categories/f/oss/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language><atom:link href="https://joone.github.io/categories/f/oss/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>OSCON 2014</title>
-      <link>/post/oscon-2014/</link>
+      <link>https://joone.github.io/blog/oscon-2014/</link>
       <pubDate>Tue, 22 Jul 2014 22:21:00 -0700</pubDate>
       
-      <guid>/post/oscon-2014/</guid>
-      <description>I attended OSCON 2014 held in Portland, Oregon. I think Portland is the Mecca of Open Source because OSCON is held there every year and Intel Open Source Technology center is also in Hillsboro near Portland. In addition, Linus Torvalds is based in Portland.
-I wanted to attend some sessions this year, but I didn&amp;rsquo;t see many topics related to my job. There are more high-level topics above system level. Anyway, it&amp;rsquo;s great to hear voices from web developers as a web engine developer.</description>
+      <guid>https://joone.github.io/blog/oscon-2014/</guid>
+      <description>I attended OSCON 2014 held in Portland, Oregon. I think Portland is the Mecca of Open Source because OSCON is held there every year and Intel Open Source Technology center is also in Hillsboro near Portland.</description>
     </item>
     
     <item>
       <title>Richard Stallman comes to Korea</title>
-      <link>/post/richard-stallman-comes-to-korea/</link>
+      <link>https://joone.github.io/blog/richard-stallman-comes-to-korea/</link>
       <pubDate>Thu, 09 Nov 2006 15:20:00 -0800</pubDate>
       
-      <guid>/post/richard-stallman-comes-to-korea/</guid>
-      <description>Next week he is going to vist Korea to address the new GPL and free software.
-He plans to attend a conference &amp;amp; serveal lecture meeting.
-I think that it&amp;rsquo;s good chance to understand the new GPL and free software from RMS directly. ( He wants to call him RMS)
-For more information, click the following sites.
-Thanks.
-http://kldp.org/node/74749
-http://korea.gnu.org/rms-speech-in-2006.html
-http://ipleft.or.kr/stallman/061102.php
-http://www.powerofcommunity.net</description>
+      <guid>https://joone.github.io/blog/richard-stallman-comes-to-korea/</guid>
+      <description>&amp;lt;img src=&amp;#34;http://kldp.org/files/mail-1.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
+Next week he is going to vist Korea to address the new GPL and free software.</description>
     </item>
     
   </channel>

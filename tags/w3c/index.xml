@@ -1,21 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>W3C on posts</title>
-    <link>/tags/w3c/</link>
-    <description>Recent content in W3C on posts</description>
+    <title>W3C on Joone Blog</title>
+    <link>https://joone.github.io/tags/w3c/</link>
+    <description>Recent content in W3C on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Wed, 04 Aug 2010 06:24:00 -0700</lastBuildDate><atom:link href="/tags/w3c/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Wed, 04 Aug 2010 06:24:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/w3c/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Feedbacks from the communities on the key events handling in WebKit</title>
-      <link>/post/feedbacks-from-communities-on-handling/</link>
+      <link>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</link>
       <pubDate>Wed, 04 Aug 2010 06:24:00 -0700</pubDate>
       
-      <guid>/post/feedbacks-from-communities-on-handling/</guid>
-      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&amp;rsquo;ve got quick feedbacks from the communities on each issue as follows,
-Issue1) IME Composition events should be handled consistently in all ports of WebKit.
-=&amp;gt; &amp;ldquo;This can&amp;rsquo;t be achieved as it depends on the platform IME system.</description>
+      <guid>https://joone.github.io/blog/feedbacks-from-communities-on-handling/</guid>
+      <description>I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.</description>
     </item>
     
   </channel>

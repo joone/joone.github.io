@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Desktop Summit on posts</title>
-    <link>/tags/desktop-summit/</link>
-    <description>Recent content in Desktop Summit on posts</description>
+    <title>Desktop Summit on Joone Blog</title>
+    <link>https://joone.github.io/tags/desktop-summit/</link>
+    <description>Recent content in Desktop Summit on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 27 Aug 2011 10:35:00 -0700</lastBuildDate><atom:link href="/tags/desktop-summit/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 27 Aug 2011 10:35:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/desktop-summit/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Desktop Summit 2011</title>
-      <link>/post/desktop-summit-2011/</link>
+      <link>https://joone.github.io/blog/desktop-summit-2011/</link>
       <pubDate>Sat, 27 Aug 2011 10:35:00 -0700</pubDate>
       
-      <guid>/post/desktop-summit-2011/</guid>
-      <description>It has been a week since I got back home from Cambridge. I had a day trip in London before leaving for Korea, which was very nice because I got the chance to look around the royal places, museums, and parks. In particular, I was so excited to find a TINTIN shop by chance. :-)
-Anyway, Desktop Summit 2011 was great: there were many great talks, workshops, BoFs, and parties as usual.</description>
+      <guid>https://joone.github.io/blog/desktop-summit-2011/</guid>
+      <description>It has been a week since I got back home from Cambridge.</description>
     </item>
     
   </channel>

@@ -1,20 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Conference on posts</title>
-    <link>/tags/conference/</link>
-    <description>Recent content in Conference on posts</description>
+    <title>Conference on Joone Blog</title>
+    <link>https://joone.github.io/tags/conference/</link>
+    <description>Recent content in Conference on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en</language>
-    <lastBuildDate>Sat, 30 Apr 2011 21:04:00 -0700</lastBuildDate><atom:link href="/tags/conference/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sat, 30 Apr 2011 21:04:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>WebKit Contributors Meeting 2011</title>
-      <link>/post/webkit-contributors-meeting-2011/</link>
+      <link>https://joone.github.io/blog/webkit-contributors-meeting-2011/</link>
       <pubDate>Sat, 30 Apr 2011 21:04:00 -0700</pubDate>
       
-      <guid>/post/webkit-contributors-meeting-2011/</guid>
-      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California. This is the annual meeting for WebKit reviewers and committers. They come together to discuss the current issues of WebKit and hack the code in the meeting. In this post, I am going to introduce you to what we talk about in the WebKit meeting.
-As you know, WebKit is the hottest open source project these days, because most mobile phones use the WebKit engine and additionally Chrome and Safari also are based on WebKit.</description>
+      <guid>https://joone.github.io/blog/webkit-contributors-meeting-2011/</guid>
+      <description>I attended the WebKit Contributors meeting which was held by Apple, April 24~25 2011 near Apple Campus in Cupertino, California.</description>
     </item>
     
   </channel>
