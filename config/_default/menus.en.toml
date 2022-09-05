@@ -48,6 +48,11 @@ hasChildren = true
   url = "categories/"
   name = "Category"
 
+[[main]]
+weight = 6
+url = "/kr"
+name = "Korean"
+
 ############################# Footer Menu ########################
 [[footer]]
 weight = 1
