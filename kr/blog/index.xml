@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>만화로 보는 gpl-violations.org 이야기</title>
+      <link>https://joone.github.io/kr/blog/foss_comics_gpl_violations/</link>
+      <pubDate>Wed, 31 Aug 2022 18:19:25 +0600</pubDate>
+      
+      <guid>https://joone.github.io/kr/blog/foss_comics_gpl_violations/</guid>
+      <description>https://joone.net/2022/08/31/46-gpl-violations-org/ 내용을 요약하면, 하</description>
+    </item>
+    
+    <item>
       <title>Rust 기반 OpenGL animation toolkit</title>
       <link>https://joone.github.io/kr/blog/rust-animation/</link>
       <pubDate>Wed, 24 Nov 2021 18:19:25 +0600</pubDate>
