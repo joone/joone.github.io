@@ -1,7 +1,7 @@
 ---
 title: "해커와 화가"
 images:
-  -  "images/post/gpl_welte.png"
+  -  "https://upload.wikimedia.org/wikipedia/en/8/80/Hackers_%26_Painters.jpg?20170704001631"
 date: 2006-07-17T18:19:25+09:00
 author: "Joone Hur"
 tags: ["book"]
@@ -65,3 +65,4 @@ SW개발 프로세스에서 산출물은 참 중요하다. 어떠한 산출물�
 Paul Graham, Hackers & Painters (Big Ideas From The Comptuer Ages), O'REILLY, 2004
 
 출처:  [주네의 열린 소프트웨어](https://opensoftware.tistory.com/entry/해커와-화가?category=362484)
+이미지: [Wikipedia](https://en.wikipedia.org/wiki/File:Hackers_%26_Painters.jpg)
