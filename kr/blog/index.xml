@@ -34,5 +34,14 @@
       <description>오랜 숙원사업(?) 첫</description>
     </item>
     
+    <item>
+      <title>해커와 화가</title>
+      <link>https://joone.github.io/kr/blog/hacker_painter/</link>
+      <pubDate>Mon, 17 Jul 2006 18:19:25 +0900</pubDate>
+      
+      <guid>https://joone.github.io/kr/blog/hacker_painter/</guid>
+      <description>야후 스토어를 만든 폴 그</description>
+    </item>
+    
   </channel>
 </rss>
