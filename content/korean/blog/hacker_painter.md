@@ -1,7 +1,7 @@
 ---
 title: "해커와 화가"
 images:
-  -  "https://upload.wikimedia.org/wikipedia/en/8/80/Hackers_%26_Painters.jpg?20170704001631"
+  -  "https://upload.wikimedia.org/wikipedia/en/8/80/Hackers_%26_Painters.jpg"
 date: 2006-07-17T18:19:25+09:00
 author: "Joone Hur"
 tags: ["book"]
