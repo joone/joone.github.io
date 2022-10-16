@@ -1,7 +1,7 @@
 ---
-title: "타입스크립트(Typescript) 스타터 코드"
+title: "5k tiled dual DP (two-pipe, two-port) display sync issues"
 images:
-  - "images/post/ts_logo.png"
+  - "https://gitlab.freedesktop.org/drm/intel/uploads/b41cac264bdaa37cd259a367410ae001/5l9a7426.jpg"
 date: 2022-10-15T22:49:25+00:00
 author: "Joone Hur"
 tags: ["x-window"]
