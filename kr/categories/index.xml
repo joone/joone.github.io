@@ -6,7 +6,16 @@
     <description>Recent content in Categories on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>euc-kr</language>
-    <lastBuildDate>Sun, 04 Sep 2022 18:19:25 +0600</lastBuildDate><atom:link href="https://joone.github.io/kr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 15 Oct 2022 22:49:25 +0000</lastBuildDate><atom:link href="https://joone.github.io/kr/categories/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>desktop</title>
+      <link>https://joone.github.io/kr/categories/desktop/</link>
+      <pubDate>Sat, 15 Oct 2022 22:49:25 +0000</pubDate>
+      
+      <guid>https://joone.github.io/kr/categories/desktop/</guid>
+      <description></description>
+    </item>
+    
     <item>
       <title>Programming</title>
       <link>https://joone.github.io/kr/categories/programming/</link>
