@@ -101,13 +101,13 @@
 
 
 <meta property="og:title" content="rust-animation project" />
-<meta property="og:description" content="I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port." />
+<meta property="og:description" content="I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://joone.github.io/blog/rust-animation/" />
 
 
 <meta name="twitter:title" content="rust-animation project" />
-<meta name="twitter:description" content="I had used GNOME Clutter project before when I worked on Accelerated Compositing in the WebKit clutter port." />
+<meta name="twitter:description" content="I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port." />
 
 
 
@@ -571,24 +571,16 @@
           
 
           <div class="content">
-            <p>I had used GNOME Clutter project before when <a href="https://blogs.gnome.org/joone/2013/03/22/accelerated-compositing-with-clutter/" target="_blank">I worked on Accelerated Compositing in the WebKit clutter port</a>.
-At that time, I implemented my own Actor by extending the existing Actor APIs. It worked well:
-I managed to run some CSS 3D animation demos in the WebKit Clutter port.</p>
-<p>Unfortunately, the Clutter project lost its way.
-Now, the project is almost deprecated even though it is still used in GNOME Shell.
-Anyway, I had a dream of maintaining a project like Clutter, so personally worked on a C++ implementation of scene graph engine using OpenGL so I also have a Rust implementation.
-One day, I just tried to search similar projects in Rust package site(crates.io) and
-found out somebody took good project name, but the owner didn&rsquo;t start the project.
-That&rsquo;s why I just created <a href="https://crates.io/crates/rust-animation" target="_blank">a Rust crate</a> in crates.io and open <a href="https://github.com/joone/rust-animation" target="_blank">my code in github</a>.
-Of course, it took some time to make my Rust implementation more like API style, but it was much interesting than I thought
-and I really enjoyed Rust programming and publishing my project using Cargo tool.</p>
-<p>After opening the code and creating a crate in Rust crate site,
-I felt more responsibility even if no one uses my project :-), so I continued to update my project.
-In terms of code quality and functionality, the current code is much better than when we first pushed it.
-Here are the major features of rust-animation:</p>
+            <p>I had used the GNOME Clutter project in the past while <a href="https://blogs.gnome.org/joone/2013/03/22/accelerated-compositing-with-clutter/" target="_blank">working on Accelerated Compositing in the WebKit clutter port</a>.
+During that time, I extended the existing Clutter Actor APIs and implemented my own Actor to support CSS 3D transforms, which worked well. I even managed to run some impressive CSS 3D animation demos in the WebKit Clutter port.</p>
+<p>However, the Clutter project has lost its direction and is now almost deprecated, even though it is still used in GNOME Shell.</p>
+<p>Despite this, I had always envisioned maintaining a project similar to Clutter. As a result, I personally worked on a C++ implementation of a scene graph engine using OpenGL and even created a Rust implementation.</p>
+<p>One day, while searching for similar projects on the Rust package site (crates.io), I discovered that someone had taken the name I wanted for my project, but the owner had not yet started the project. As a result, I decided to create <a href="https://crates.io/crates/rust-animation" target="_blank">a Rust crate</a> on crates.io and open <a href="https://github.com/joone/rust-animation" target="_blank">my code in github</a>.</p>
+<p>It took some time to develop my Rust implementation to be more API-style, but the experience was much more interesting than I had anticipated, and I really enjoyed programming in Rust and publishing my project using the Cargo tool.</p>
+<p>Once I had opened my code and created a crate on Rust crate site, I felt a greater sense of responsibility, even if nobody ended up using my project. Consequently, I continued to update my project and, in terms of code quality and functionality, the current code is much better than when it was first released. Here are the major features of rust-animation:</p>
 <h2 id="animation-with-easing-functions">Animation with easing functions</h2>
 <p><img src="https://github.com/joone/rust-animation/blob/main/examples/easing_functions.gif?raw=true" alt="alt easing_funcitions">
-Basically, it renders a rectangle with color or a texture image on the viewport. In addition to this, it supports animations with the following easing functions:</p>
+This library essentially enables the rendering of a rectangle with a specified color or texture image on the viewport. Furthermore, it also offers support for animations, utilizing a range of easing functions, including:</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span>      EasingFunction::EaseIn,
 </span></span><span style="display:flex;"><span>      EasingFunction::EaseInCubic,
 </span></span><span style="display:flex;"><span>      EasingFunction::EaseInOut,
@@ -608,9 +600,9 @@ Basically, it renders a rectangle with color or a texture image on the viewport.
 </span></span><span style="display:flex;"><span>      EasingFunction::Step
 </span></span></code></pre></div><h2 id="flex-ui">Flex UI</h2>
 <p><img src="https://github.com/joone/rust-animation/blob/main/examples/flex_ui.png?raw=true" alt="alt flex_ui">
-Flex UI support is amazing because someone already implemented this for Rust projects. I just added this crate to my project. It is perfectly working well. I was able to implement the above demo in 30 min. o/</p>
+The support for Flex UI is fantastic, as someone has already implemented it for Rust projects. I simply added this crate to my project, and it works perfectly. In fact, I was able to implement the above demo in just 30 minutes. o/</p>
 <h2 id="event-handling">Event handling</h2>
-<p>rust-animation supports EventHandler trait to support event handling in a rust-animation application. Basically, it works like callback functions so the user basically gets event signals from rust-animation.</p>
+<p>rust-animation offers support for the EventHandler trait to enable event handling in rust-animation applications. Essentially, it works like callback functions, allowing users to receive event signals from rust-animation.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ActorEvent</span> {
 </span></span><span style="display:flex;"><span>  name: String,
 </span></span><span style="display:flex;"><span>}
@@ -645,9 +637,9 @@ Flex UI support is amazing because someone already implemented this for Rust pro
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>I’m adding more event handler methods.</p>
-<h2 id="user-defined-layout">User defined layout</h2>
-<p>In addtion to Flex UI, rust-aniation provide a way to implement user&rsquo;s own layout using the ActorLayout trait.</p>
+</span></span></code></pre></div><p>I am currently working on adding additional event handler methods.</p>
+<h2 id="user-defined-layout">User-defined layout</h2>
+<p>In addition to Flex UI, rust-animation offers the ActorLayout trait as a means of implementing custom layouts.</p>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">pub</span> <span style="color:#66d9ef">struct</span> <span style="color:#a6e22e">ActorLayout</span> {
 </span></span><span style="display:flex;"><span>  name: String,
 </span></span><span style="display:flex;"><span>  cur_x: <span style="color:#66d9ef">i32</span>,
@@ -661,8 +653,8 @@ Flex UI support is amazing because someone already implemented this for Rust pro
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span> }
 </span></span><span style="display:flex;"><span>}
-</span></span><span style="display:flex;"><span>
-</span></span><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Layout <span style="color:#66d9ef">for</span> ActorLayout {
+</span></span></code></pre></div><p>When rust-animation requires an update to the layout, it calls layout_sub_actor, which then enables the user to update the locations of the child elements as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-rust" data-lang="rust"><span style="display:flex;"><span><span style="color:#66d9ef">impl</span> Layout <span style="color:#66d9ef">for</span> ActorLayout {
 </span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">fn</span> <span style="color:#a6e22e">layout_sub_actors</span>(<span style="color:#f92672">&amp;</span><span style="color:#66d9ef">mut</span> self, sub_actor_list: <span style="color:#66d9ef">&amp;</span><span style="color:#a6e22e">mut</span> Vec<span style="color:#f92672">&lt;</span>Actor<span style="color:#f92672">&gt;</span>) {
 </span></span><span style="display:flex;"><span>    println!(<span style="color:#e6db74">&#34;layout_sub_layer {}&#34;</span>, self.name);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">let</span> <span style="color:#66d9ef">mut</span> index : <span style="color:#66d9ef">i32</span> <span style="color:#f92672">=</span> <span style="color:#ae81ff">0</span>;
@@ -675,8 +667,7 @@ Flex UI support is amazing because someone already implemented this for Rust pro
 </span></span><span style="display:flex;"><span>    }
 </span></span><span style="display:flex;"><span>  }
 </span></span><span style="display:flex;"><span>}
-</span></span></code></pre></div><p>Whenever, rust-animation needs to update the layout, layout_sub_actor is called from rust-animation, then the user can update child locations like this.</p>
-<p>Currently, the most urgent missing feature is to support text rendering. There are many crates to support text rendering, but I want to use a native Rust implementation so I might use <a href="https://crates.io/crates/rusttype" target="_blank">rusttype</a>.</p>
+</span></span></code></pre></div><p>Currently, the most pressing missing feature is support for text rendering. Although there are various crates available to support text rendering, I would like to opt for a native Rust implementation, such as <a href="https://crates.io/crates/rusttype" target="_blank">rusttype</a>.</p>
 <p>Happy Hacking!</p>
 
           </div>
