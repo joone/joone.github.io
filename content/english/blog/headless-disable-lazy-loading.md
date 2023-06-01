@@ -14,7 +14,7 @@ Recently, [support for disabling lazy loading was added to the new headless Chro
 Since the Google Chrome team announced t[he new headless mode](https://developer.chrome.com/articles/new-headless/), the new headless mode has gradually supported the old headless features. This was one of the missing features. 
 
 I note that "--disable-lazy-loading" is not a runtime flag for the headless modes because it is now added by default.
-But, What does --disable-lazy-loading actually mean?
+But, what does --disable-lazy-loading actually mean?
 
 First, we need to understand what lazy image loading is on the Web.
 Lazy loading is a technique that delays the loading of resources until they are needed. This can improve performance by reducing the amount of data that needs to be loaded initially. 
