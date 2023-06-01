@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>headless on Joone Blog</title>
+    <link>https://joone.github.io/tags/headless/</link>
+    <description>Recent content in headless on Joone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 16:06:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/headless/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The new Headless mode now supports disabling lazy loading</title>
+      <link>https://joone.github.io/blog/headless-disable-lazy-loading/</link>
+      <pubDate>Sun, 07 May 2023 16:06:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/headless-disable-lazy-loading/</guid>
+      <description>Recently, support for disabling lazy loading was added to the new headless Chromium.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -3,7 +3,7 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joone.github.io/blog/</loc>
-    <lastmod>2021-12-05T17:20:49-08:00</lastmod>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="kr"
@@ -15,8 +15,30 @@
                 href="https://joone.github.io/blog/"
                 />
   </url><url>
+    <loc>https://joone.github.io/categories/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/categories/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/categories/"
+                />
+  </url><url>
+    <loc>https://joone.github.io/tags/chromium/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/categories/chromium/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/headless/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
+  </url><url>
     <loc>https://joone.github.io/</loc>
-    <lastmod>2021-12-05T17:20:49-08:00</lastmod>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
     <xhtml:link
                 rel="alternate"
                 hreflang="kr"
@@ -27,6 +49,22 @@
                 hreflang="en"
                 href="https://joone.github.io/"
                 />
+  </url><url>
+    <loc>https://joone.github.io/tags/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/tags/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/tags/"
+                />
+  </url><url>
+    <loc>https://joone.github.io/blog/headless-disable-lazy-loading/</loc>
+    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/myproject/</loc>
     <lastmod>2021-12-05T17:20:49-08:00</lastmod>
@@ -55,19 +93,6 @@
                 rel="alternate"
                 hreflang="en"
                 href="https://joone.github.io/blog/rust-animation/"
-                />
-  </url><url>
-    <loc>https://joone.github.io/tags/</loc>
-    <lastmod>2021-12-05T17:20:49-08:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="https://joone.github.io/kr/tags/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joone.github.io/tags/"
                 />
   </url><url>
     <loc>https://joone.github.io/blog/webkit-caret-color-change/</loc>
@@ -118,19 +143,6 @@
                 href="https://joone.github.io/search/"
                 />
   </url><url>
-    <loc>https://joone.github.io/categories/</loc>
-    <lastmod>2018-08-29T13:48:00-07:00</lastmod>
-    <xhtml:link
-                rel="alternate"
-                hreflang="kr"
-                href="https://joone.github.io/kr/categories/"
-                />
-    <xhtml:link
-                rel="alternate"
-                hreflang="en"
-                href="https://joone.github.io/categories/"
-                />
-  </url><url>
     <loc>https://joone.github.io/categories/chromeos/</loc>
     <lastmod>2018-08-29T13:48:00-07:00</lastmod>
   </url><url>
@@ -142,9 +154,6 @@
   </url><url>
     <loc>https://joone.github.io/blog/linux-container-for-chromeos/</loc>
     <lastmod>2018-07-12T18:25:45-08:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/chromium/</loc>
-    <lastmod>2018-07-12T11:21:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</loc>
     <lastmod>2018-07-12T11:21:00-07:00</lastmod>
@@ -162,9 +171,6 @@
     <lastmod>2018-05-04T22:03:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/blog/blinkon9/</loc>
-    <lastmod>2018-05-04T22:03:00-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/categories/chromium/</loc>
     <lastmod>2018-05-04T22:03:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/openstep/</loc>

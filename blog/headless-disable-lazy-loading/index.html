@@ -5,15 +5,15 @@
 
 <head>
 	<meta charset="utf-8">
-<title>Ozone-Wayland</title>
+<title>The new Headless mode now supports disabling lazy loading</title>
 
 
 
-<base href="https://joone.github.io/blog/ozone-wayland/">
+<base href="https://joone.github.io/blog/headless-disable-lazy-loading/">
 
 
 
-<link rel="canonical" href="https://joone.github.io/blog/ozone-wayland/" itemprop="url" />
+<link rel="canonical" href="https://joone.github.io/blog/headless-disable-lazy-loading/" itemprop="url" />
 
 
 <link rel="manifest" href="/manifest.webmanifest">
@@ -116,14 +116,14 @@
 
 
 
-<meta property="og:title" content="Ozone-Wayland" />
-<meta property="og:description" content="Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1]." />
+<meta property="og:title" content="The new Headless mode now supports disabling lazy loading" />
+<meta property="og:description" content="Recently, support for disabling lazy loading was added to the new headless Chromium." />
 <meta property="og:type" content="website" />
-<meta property="og:url" content="https://joone.github.io/blog/ozone-wayland/" />
+<meta property="og:url" content="https://joone.github.io/blog/headless-disable-lazy-loading/" />
 
 
-<meta name="twitter:title" content="Ozone-Wayland" />
-<meta name="twitter:description" content="Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1]." />
+<meta name="twitter:title" content="The new Headless mode now supports disabling lazy loading" />
+<meta name="twitter:description" content="Recently, support for disabling lazy loading was added to the new headless Chromium." />
 
 
 
@@ -472,7 +472,7 @@
       <div class="col-lg-9 ">
         <div class="pr-lg-4">
           <div class="text-center mb-5">
-            <h2 class="h3 mb-4 post-title">Ozone-Wayland</h2>
+            <h2 class="h3 mb-4 post-title">The new Headless mode now supports disabling lazy loading</h2>
             <ul class="card-meta list-inline">
               <li class="list-inline-item">
                 
@@ -485,7 +485,7 @@
               </li>
               <li class="list-inline-item">|</li>
               <li class="list-inline-item">
-                <span>02 April 2014</span>
+                <span>07 May 2023</span>
               </li>
             </ul>
           </div>
@@ -493,20 +493,27 @@
           
 
           <div class="content">
-            <p>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run <a href="http://crosswalk-project.org/" target="_blank">Crosswalk</a> and Chromium browser natively on Wayland without any X11 dependence[1].</p>
-<p>I have been working on Ozone-Wayland recently. There were two releases since I was involved in the development. <a href="https://github.com/01org/ozone-wayland/tree/Milestone-Easter" target="_blank">In the latest release</a>, I contributed the virtual keyboard support to Ozone-Wayland. You can find how it works in the following video:</p>
-<p>The ozone-wayland team has been focusing on graphics accelerations such as WebGL, Canvas 2D, Accelerated Compositing on Wayland. WebGL and Canvas 2D accelerations can be accelerated by <a href="https://github.com/01org/ozone-wayland/issues/29" target="_blank">off-screen Rendering</a> in GPU process. In the latest release, we started supporting multi-touch and virtual keyboard, which work fine on Tizen IVI as you can the above video.</p>
-<p>What is Ozone?<br>
- <a href="http://www.chromium.org/developers/design-documents/ozone" target="_blank">Ozone</a> is an abstraction layer used by Chromium browsers to separate out the different windowing systems and also abstract surface acceleration for Aura UI framework, input handling, event handling, and other UI-related matters[4]. Ozone-Wayland provides Wayland support for Ozone[2].</p>
-<p>Reference</p>
-<ol>
-<li>Project Homepage: <a href="https://github.com/01org/ozone-wayland" target="_blank">https://github.com/01org/ozone-wayland</a></li>
-<li><a href="https://01.org/ozone-wayland/blogs/kalyankondapally/2014/beta-channel-updated-m35" target="_blank">https://01.org/ozone-wayland/blogs/kalyankondapally/2014/beta-channel-updated-m35</a></li>
-<li><a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTY0Mzc" target="_blank">Ozone-Wayland Release Adds Virtual Keyboard, Touch Support</a>, Mar. 26,  2014 </li>
-<li><a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTQ3OTE" target="_blank">Chromium On Wayland &amp;ldquo;Ozone&amp;rdquo; Continues</a>, Oct. 07, 2013</li>
-<li><a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTUxMTA" target="_blank">Wayland-Based Chromium Browser Released</a>, Nov. 11, 2013</li>
-<li><a href="http://www.phoronix.com/scan.php?page=news_item&amp;px=MTQ2NDY" target="_blank">Chromium Ported To Wayland, Now Working</a>, Sep. 18, 2013</li>
-</ol>
+            <p>Recently, <a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/4510361" target="_blank">support for disabling lazy loading was added to the new headless Chromium</a>.
+Since the Google Chrome team announced t<a href="https://developer.chrome.com/articles/new-headless/" target="_blank">he new headless mode</a>, the new headless mode has gradually supported the old headless features. This was one of the missing features.</p>
+<p>I note that &ldquo;&ndash;disable-lazy-loading&rdquo; is not a runtime flag for the headless modes because it is now added by default.
+But, What does &ndash;disable-lazy-loading actually mean?</p>
+<p>First, we need to understand what lazy image loading is on the Web.
+Lazy loading is a technique that delays the loading of resources until they are needed. This can improve performance by reducing the amount of data that needs to be loaded initially.</p>
+<p>For example, when  a  web page has numerous images, the user may have to scroll down the page to view the images. In such cases, the browser can defer the loading of the unseen images by using loading=lazy attributes for images. See this demo: <a href="https://enviragallery.com/demo/lazy-loading-demo/" target="_blank">https://enviragallery.com/demo/lazy-loading-demo/</a>
+So, why should we disable lazy loading in headless mode?
+In headless mode,  the image lazy loading becomes unnecessary because users want to get a fully loaded page in order to capture a screenshot or generate a pdf.  Without injecting JS code, it is impossible to scroll the page in headless mode.
+This applies not only to image loading but also to any sub-resources like JavaScript, CSS, and iframes as follows:</p>
+<pre tabindex="0"><code>&lt;img src=&#34;image.jpg&#34; alt=&#34;...&#34; loading=&#34;lazy&#34; /&gt;
+&lt;iframe src=&#34;video-player.html&#34; title=&#34;...&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;
+</code></pre><p>This change was applied to the main branch of headess_shell and old headless mode on Jan 18, 2023</p>
+<p>You can find more details about it here:</p>
+<p><a href="https://source.chromium.org/chromium/chromium/src/&#43;/a4e84e7e99130c902d10209bb33903c110e359e7" target="_blank">https://source.chromium.org/chromium/chromium/src/&#43;/a4e84e7e99130c902d10209bb33903c110e359e7</a></p>
+<p>If you wish to disable lazy loading, make sure you are using the latest version of Chromium.</p>
+<p>Here are some additional details about lazy loading:</p>
+<ul>
+<li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading</a></li>
+<li><a href="https://web.dev/i18n/en/browser-level-image-lazy-loading/" target="_blank">https://web.dev/i18n/en/browser-level-image-lazy-loading/</a></li>
+</ul>
 
           </div>
           
@@ -515,11 +522,9 @@
               <div class="col-md-6 text-center text-md-start">
                 <ul class="post-meta-tags list-unstyled list-inline">
                   
-                  <li class="list-inline-item"><a href="https://joone.github.io/tags/ozone-wayland">ozone-wayland</a></li>
-                  
                   <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
                   
-                  <li class="list-inline-item"><a href="https://joone.github.io/tags/wayland">wayland</a></li>
+                  <li class="list-inline-item"><a href="https://joone.github.io/tags/headless">headless</a></li>
                   
                 </ul>
               </div>
@@ -527,7 +532,7 @@
 <ul class="social-links has-bg-color list-unstyled list-inline" style="line-height:0">
   <li class="list-inline-item">
     
-    <a class="resp-sharing-button__link d-block" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjoone.github.io%2fblog%2fozone-wayland%2f" target="_blank"
+    <a class="resp-sharing-button__link d-block" href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fjoone.github.io%2fblog%2fheadless-disable-lazy-loading%2f" target="_blank"
       rel="noopener" aria-label="">
       <div class="resp-sharing-button resp-sharing-button--facebook resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -539,7 +544,7 @@
 
   <li class="list-inline-item">
     
-    <a class="resp-sharing-button__link d-block" href="https://twitter.com/intent/tweet/?text=Ozone-Wayland&amp;url=https%3a%2f%2fjoone.github.io%2fblog%2fozone-wayland%2f"
+    <a class="resp-sharing-button__link d-block" href="https://twitter.com/intent/tweet/?text=The%20new%20Headless%20mode%20now%20supports%20disabling%20lazy%20loading&amp;url=https%3a%2f%2fjoone.github.io%2fblog%2fheadless-disable-lazy-loading%2f"
       target="_blank" rel="noopener" aria-label="">
       <div class="resp-sharing-button resp-sharing-button--twitter resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -551,7 +556,7 @@
 
   <li class="list-inline-item">
     
-    <a class="resp-sharing-button__link d-block" href="mailto:?subject=Ozone-Wayland&amp;body=https%3a%2f%2fjoone.github.io%2fblog%2fozone-wayland%2f" target="_self"
+    <a class="resp-sharing-button__link d-block" href="mailto:?subject=The%20new%20Headless%20mode%20now%20supports%20disabling%20lazy%20loading&amp;body=https%3a%2f%2fjoone.github.io%2fblog%2fheadless-disable-lazy-loading%2f" target="_self"
       rel="noopener" aria-label="">
       <div class="resp-sharing-button resp-sharing-button--email resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -563,7 +568,7 @@
 
   <li class="list-inline-item">
     
-    <a class="resp-sharing-button__link d-block" href="whatsapp://send?text=Ozone-Wayland%20https%3a%2f%2fjoone.github.io%2fblog%2fozone-wayland%2f" target="_blank"
+    <a class="resp-sharing-button__link d-block" href="whatsapp://send?text=The%20new%20Headless%20mode%20now%20supports%20disabling%20lazy%20loading%20https%3a%2f%2fjoone.github.io%2fblog%2fheadless-disable-lazy-loading%2f" target="_blank"
       rel="noopener" aria-label="">
       <div class="resp-sharing-button resp-sharing-button--whatsapp resp-sharing-button--small">
         <div aria-hidden="true" class="resp-sharing-button__icon resp-sharing-button__icon--solid">
@@ -621,25 +626,160 @@
               <div class="col-md-6">
                 <article class="card post-card">
   
+  <div class="post-slider slider-sm rounded mb-4">
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture>
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_545x0_resize_q90_h2_box_3.webp" media="(max-width: 575px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_600x0_resize_q90_h2_box_3.webp" media="(max-width: 767px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_700x0_resize_q90_h2_box_3.webp" media="(max-width: 991px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_1110x0_resize_q90_h2_box_3.webp">
+  <img loading="lazy" decoding="async" class="w-100 h-auto" src="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_1110x0_resize_box_3.png" alt="post-thumb" width="458" height="225">
+</picture>
+ 
+ 
+ 
+
+
+    
+  </div>
+  
 
   <div class="card-body">
     <ul class="card-meta list-inline mb-2">
       <li class="list-inline-item mb-2">
         
         
-        <a href="https://joone.github.io/" class="card-meta-author">
+        <a href="https://joone.github.io/author/joone-hur/" class="card-meta-author">
           
-          <span>Joone Blog</span>
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<img loading="lazy" decoding="async" src="/images/author/author_hu98fb0ee9593e93f4fe552e6e88a936e8_22738_26x26_resize_q90_h2_box_3.webp" alt="Joone" class="img-fluid" width="26" height="26" onerror="this.onerror='null';this.src='\/images\/author\/author_hu98fb0ee9593e93f4fe552e6e88a936e8_22738_26x26_resize_box_3.png'">
+ 
+ 
+ 
+
+
+          
+          <span>Joone</span>
         </a>
         
       </li>
       <li class="list-inline-item mb-2">
-        <span>07 Aug, 2010</span>
+        <span>12 Jul, 2018</span>
       </li>
       <li class="list-inline-item mb-2">
         <ul class="card-meta-tag list-inline">
-          
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/osx">OSX</a></li>
           
           <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
           
@@ -647,11 +787,11 @@
       </li>
     </ul>
     <h3 class="h4 mb-3">
-      <a class="post-title" href="https://joone.github.io/blog/building-chromium-browser-on-your-mac/">Building Chromium browser on your Mac</a>
+      <a class="post-title" href="https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/">Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</a>
     </h3>
-    <p>&amp;lt;img src=&amp;#34;http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0anmRCrOI/AAAAAAAAAQI/BqU1d_Zqg74/s320/200px-Chromium_Logo.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; …</p>
+    <p>Recently, I published a blog article about making Use Of Chrome&amp;amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using …</p>
 
-    <a href="https://joone.github.io/blog/building-chromium-browser-on-your-mac/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
+    <a href="https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
   </div>
 </article>
               </div>
@@ -672,24 +812,25 @@
         
       </li>
       <li class="list-inline-item mb-2">
-        <span>07 May, 2023</span>
+        <span>04 May, 2018</span>
       </li>
       <li class="list-inline-item mb-2">
         <ul class="card-meta-tag list-inline">
           
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
+          <li class="list-inline-item"><a href="https://joone.github.io/tags/blinkon">BlinkOn</a></li>
           
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/headless">headless</a></li>
+          <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
           
         </ul>
       </li>
     </ul>
     <h3 class="h4 mb-3">
-      <a class="post-title" href="https://joone.github.io/blog/headless-disable-lazy-loading/">The new Headless mode now supports disabling lazy loading</a>
+      <a class="post-title" href="https://joone.github.io/blog/blinkon9/">BlinkOn9</a>
     </h3>
-    <p>Recently, support for disabling lazy loading was added to the new headless Chromium. Since the Google Chrome team announced the new headless mode, the …</p>
+    <p>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this …</p>
 
-    <a href="https://joone.github.io/blog/headless-disable-lazy-loading/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
+    <a href="https://joone.github.io/blog/blinkon9/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
   </div>
 </article>
               </div>
