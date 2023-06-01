@@ -5,6 +5,9 @@ categories: ["chromium"]
 draft: false
 aliases: [ "/2023/05/headless-disable-lazy-loading.html" ]
 tags : [chromium, headless]
+images:
+  - "https://github.com/joone/rust-animation/blob/main/examples/headless-chrome.webp?raw=true"
+author: "Joone Hur"
 ---
 
 Recently, [support for disabling lazy loading was added to the new headless Chromium](https://chromium-review.googlesource.com/c/chromium/src/+/4510361). 
