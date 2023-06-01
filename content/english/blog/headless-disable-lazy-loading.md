@@ -6,7 +6,7 @@ draft: false
 aliases: [ "/2023/05/headless-disable-lazy-loading.html" ]
 tags : [chromium, headless]
 images:
-  - "https://github.com/joone/rust-animation/blob/main/examples/headless-chrome.webp?raw=true"
+  - "images/post/headless-chrome.webp"
 author: "Joone Hur"
 ---
 
