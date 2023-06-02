@@ -13,7 +13,7 @@
       <pubDate>Sun, 07 May 2023 16:06:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/headless-disable-lazy-loading/</guid>
-      <description>Recently, support for disabling lazy loading was added to the new headless Chromium.</description>
+      <description>Recently, I added support for disabling lazy loading to the new headless Chromium.</description>
     </item>
     
     <item>

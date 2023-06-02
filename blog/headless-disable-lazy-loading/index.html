@@ -125,13 +125,13 @@
 
 
 <meta property="og:title" content="The new Headless mode now supports disabling lazy loading" />
-<meta property="og:description" content="Recently, support for disabling lazy loading was added to the new headless Chromium." />
+<meta property="og:description" content="Recently, I added support for disabling lazy loading to the new headless Chromium." />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://joone.github.io/blog/headless-disable-lazy-loading/" />
 
 
 <meta name="twitter:title" content="The new Headless mode now supports disabling lazy loading" />
-<meta name="twitter:description" content="Recently, support for disabling lazy loading was added to the new headless Chromium." />
+<meta name="twitter:description" content="Recently, I added support for disabling lazy loading to the new headless Chromium." />
 
 
 
@@ -640,22 +640,20 @@
           
 
           <div class="content">
-            <p>Recently, <a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/4510361" target="_blank">support for disabling lazy loading was added to the new headless Chromium</a>.
+            <p>Recently, <a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/4510361" target="_blank">I added support for disabling lazy loading to the new headless Chromium</a>.
 Since the Google Chrome team announced t<a href="https://developer.chrome.com/articles/new-headless/" target="_blank">he new headless mode</a>, the new headless mode has gradually supported the old headless features. This was one of the missing features.</p>
-<p>I note that &ldquo;&ndash;disable-lazy-loading&rdquo; is not a runtime flag for the headless modes because it is now added by default.
-But, what does &ndash;disable-lazy-loading actually mean?</p>
-<p>First, we need to understand what lazy image loading is on the Web.
+<p>But, what does disabling lazy loading actually mean?</p>
+<p>First, we need to understand what lazy loading is on the Web.
 Lazy loading is a technique that delays the loading of resources until they are needed. This can improve performance by reducing the amount of data that needs to be loaded initially.</p>
-<p>For example, when  a  web page has numerous images, the user may have to scroll down the page to view the images. In such cases, the browser can defer the loading of the unseen images by using loading=lazy attributes for images. See this demo: <a href="https://enviragallery.com/demo/lazy-loading-demo/" target="_blank">https://enviragallery.com/demo/lazy-loading-demo/</a>
+<p>For example, when a webpage has numerous images, users may have to scroll down the page to view the images. In such cases, the browser can defer the loading of the unseen images by using loading=lazy attributes for images. See this demo: <a href="https://enviragallery.com/demo/lazy-loading-demo/" target="_blank">https://enviragallery.com/demo/lazy-loading-demo/</a>
 So, why should we disable lazy loading in headless mode?
-In headless mode,  the image lazy loading becomes unnecessary because users want to get a fully loaded page in order to capture a screenshot or generate a pdf.  Without injecting JS code, it is impossible to scroll the page in headless mode.
-This applies not only to image loading but also to any sub-resources like JavaScript, CSS, and iframes as follows:</p>
+In headless mode,  the image lazy loading becomes unnecessary because users want to get a fully loaded page in order to capture a screenshot or generate a pdf. This applies not only to image loading but also to any sub-resources like JavaScript, CSS, and iframes as follows:</p>
 <pre tabindex="0"><code>&lt;img src=&#34;image.jpg&#34; alt=&#34;...&#34; loading=&#34;lazy&#34; /&gt;
 &lt;iframe src=&#34;video-player.html&#34; title=&#34;...&#34; loading=&#34;lazy&#34;&gt;&lt;/iframe&gt;
 </code></pre><p>This change was applied to the main branch of headess_shell and old headless mode on Jan 18, 2023</p>
 <p>You can find more details about it here:</p>
 <p><a href="https://source.chromium.org/chromium/chromium/src/&#43;/a4e84e7e99130c902d10209bb33903c110e359e7" target="_blank">https://source.chromium.org/chromium/chromium/src/&#43;/a4e84e7e99130c902d10209bb33903c110e359e7</a></p>
-<p>If you wish to disable lazy loading, make sure you are using the latest version of Chromium.</p>
+<p>If you wish to disable lazy loading in the new headless mode, make sure you are using the latest version of Chromium.</p>
 <p>Here are some additional details about lazy loading:</p>
 <ul>
 <li><a href="https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading" target="_blank">https://developer.mozilla.org/en-US/docs/Web/Performance/Lazy_loading</a></li>
