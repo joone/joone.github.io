@@ -177,8 +177,8 @@ async createIncognitoBrowserContext(
   }
 
 ```
-At that time, the changes were not submitted upstream because I was quite busy with my project.
-Eventually, a Google engineer implemented proxy support for each BrowseContext and merged his patch to upstream.
+At that time, I was quite busy with my project, so I did not submit the changes upstream. Eventually, Pavel Feldman, a Google engineer, implemented proxy support for each BrowseContext and merged his patch to upstream.
+
 https://chromium-review.googlesource.com/c/chromium/src/+/2226298
 
 Despite of this proxy support, the createIncognitoBrowserContext function within Puppeteer remained unchanged.
