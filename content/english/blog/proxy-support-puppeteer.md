@@ -5,9 +5,9 @@ author: "Joone Hur"
 categories: ["headless"]
 draft: false
 aliases: [ "/2021/08/proxy-support-puppeteer.html" ]
-tags : [puppeteer]
+tags : [puppeteer,chromium]
 images:
-  - "images/post/puppeteer.png"
+  - "images/post/puppeteer_logo.png"
 ---
 Puppeteer is a popular Node.js library for controlling headless Chrome. 
 It allows developers to automate tasks such as web scraping and testing. 
@@ -16,7 +16,7 @@ This meant that if you wanted to use a proxy with Puppeteer, you had to set it g
 You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.
 
 To address this limitation, I made a change to the Chromium codebase as follows:
-```
+```C++
 diff --git a/content/browser/devtools/protocol/target_handler.cc b/content/browser/devtools/protocol/target_handler.cc
 index 7a30ab12a1a9f..ce66dc10a49cf 100644
 --- a/content/browser/devtools/protocol/target_handler.cc
@@ -154,7 +154,7 @@ index 3228ff45670cb..cb88540a8dbe0 100644
 ```
 The modifications involved passing a proxy server address to HeadlessBrowserContext during the creation of a BrowserContext.  
 Additionally, adjustments were made to the Puppeteer interface, specifically in the Browser::createIncognitoBrowserContext function as follows:
-```
+```JS
 async createIncognitoBrowserContext(
     options: BrowserContextOptions = {}
   ): Promise<BrowserContext> {
@@ -189,7 +189,7 @@ https://github.com/puppeteer/puppeteer/pull/7516
 # How to set a proxy for indivisual browse context
 
 We can now set a diffrent proxy for each indivisual BrowseContext at runtime.
-```
+```JS
 "use strict";
 
 const puppeteer = require("puppeteer");
@@ -207,8 +207,9 @@ const puppeteer = require("puppeteer");
 })();
 
 ```
-Bofore, we was only able to apply a global proxy setting for all all BrowserContexts. 
-```
+
+Bofore, we were only able to apply a global proxy setting for all all BrowserContexts. 
+```JS
   const browser = await puppeteer.launch({
     args: [
       `--proxy-server=proxy-server.your_proxy.server:8001`,
