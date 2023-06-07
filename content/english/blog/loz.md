@@ -98,7 +98,7 @@ Request failed with status code 429:
 API request limit reached
 ```
 
-You should be aware that AI service costs moeny. :-)
+You should be aware that AI services cost money. :-)
 
 FYI, the image is created by [Bing Image Creator](https://www.bing.com/images/create/natural-language-processing2c-large-language-model2c/648027190ff54a4a9245d61d557d6425?id=WMPtPgloEf4Fx%2bV3MldCVA%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay).
 
