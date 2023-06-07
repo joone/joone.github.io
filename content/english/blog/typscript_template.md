@@ -1,13 +1,29 @@
 ---
-title: 'Typescript Starter cod'
+title: 'Typescript Starter'
 date: 2023-02-05T14:55:00.001-07:00
-draft: true
 aliases: [ "/2023/02/typescript_starter.html" ]
+categories: ["Programming"]
 tags : [TypeScript]
+images:
+  - "images/post/ts_logo.png"
 ---
-As the project repeats, there are the amount of reusable code to increase.
-After developing various tools with TypeScript, I put together the commonly used functionality and made it into a project and published it on Github.
 
-Of course, there is a similar project made by MS, but it has too many features. So I made it at the level I wanted, and I think someone may need it.
+If you work on Node.js or TypeScript, you may have your own initial setup for development. I have worked on several Node projects with TypeScript, and I have developed my own project starter or template. I put together the commonly used functionality and made it into a project, which I published on GitHub.
 
-The following packages can be used by default, and a simple web service is also implemented.
+https://github.com/joone/typescript-template
+
+Of course, there is a similar project maintained by Microsoft, but it has too many features. I made my project starter with the level of features that I wanted. I think that it would be useful for other developers who like minimal TypeScript starters.
+
+The following packages are ready to use, and a simple web service is also included.
+
+This repository is a TypeScript template that includes the following features:
+- Express.js
+- ESLint
+- Mocha
+- Chai
+- Prettier
+- TypeORM
+- MongoDB
+- Docker
+
+In addition, it allows for easy debugging and running of your project with Visual Studio Code.
