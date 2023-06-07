@@ -1,9 +1,9 @@
 ---
-title: 'Loz: A Command-Line Interface Tool for ChatGPT'
+title: 'Loz, A Command-Line Interface Tool for ChatGPT'
 date: 2023-06-07T16:06:00.003-07:00
 categories: ["Machine Learning"]
 draft: false
-aliases: [ "/2023/05/loz.html" ]
+aliases: [ "/2023/06/loz.html" ]
 tags : [MyProject, LLM]
 images:
   - "images/post/LLM.jpeg"
@@ -100,5 +100,4 @@ API request limit reached
 
 You should be aware that AI services cost money. :-)
 
-FYI, the image is created by [Bing Image Creator](https://www.bing.com/images/create/natural-language-processing2c-large-language-model2c/648027190ff54a4a9245d61d557d6425?id=WMPtPgloEf4Fx%2bV3MldCVA%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay).
-
+FYI, the image is created by Bing Image Creator.
