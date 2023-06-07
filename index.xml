@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Typescript Starter</title>
+      <link>https://joone.github.io/blog/typscript_template/</link>
+      <pubDate>Sun, 05 Feb 2023 14:55:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/typscript_template/</guid>
+      <description>If you work on Node.js or TypeScript, you may have your own initial setup for development.</description>
+    </item>
+    
+    <item>
       <title>rust-animation project</title>
       <link>https://joone.github.io/blog/rust-animation/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>

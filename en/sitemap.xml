@@ -66,6 +66,35 @@
     <loc>https://joone.github.io/blog/headless-disable-lazy-loading/</loc>
     <lastmod>2023-05-07T16:06:00-07:00</lastmod>
   </url><url>
+    <loc>https://joone.github.io/categories/programming/</loc>
+    <lastmod>2023-02-05T14:55:00-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/categories/programming/"
+                />
+  </url><url>
+    <loc>https://joone.github.io/tags/typescript/</loc>
+    <lastmod>2023-02-05T14:55:00-07:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/tags/typescript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/tags/typescript/"
+                />
+  </url><url>
+    <loc>https://joone.github.io/blog/typscript_template/</loc>
+    <lastmod>2023-02-05T14:55:00-07:00</lastmod>
+  </url><url>
     <loc>https://joone.github.io/tags/myproject/</loc>
     <lastmod>2021-12-05T17:20:49-08:00</lastmod>
   </url><url>

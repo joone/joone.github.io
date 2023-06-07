@@ -65,9 +65,29 @@
   </url><url>
     <loc>https://joone.github.io/kr/categories/programming/</loc>
     <lastmod>2022-09-04T18:19:25+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/categories/programming/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/categories/programming/"
+                />
   </url><url>
     <loc>https://joone.github.io/kr/tags/typescript/</loc>
     <lastmod>2022-09-04T18:19:25+06:00</lastmod>
+    <xhtml:link
+                rel="alternate"
+                hreflang="en"
+                href="https://joone.github.io/tags/typescript/"
+                />
+    <xhtml:link
+                rel="alternate"
+                hreflang="kr"
+                href="https://joone.github.io/kr/tags/typescript/"
+                />
   </url><url>
     <loc>https://joone.github.io/kr/blog/typescript_starter/</loc>
     <lastmod>2022-09-04T18:19:25+06:00</lastmod>

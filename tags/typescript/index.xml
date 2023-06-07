@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>TypeScript on Joone Blog</title>
+    <link>https://joone.github.io/tags/typescript/</link>
+    <description>Recent content in TypeScript on Joone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 05 Feb 2023 14:55:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/typescript/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Typescript Starter</title>
+      <link>https://joone.github.io/blog/typscript_template/</link>
+      <pubDate>Sun, 05 Feb 2023 14:55:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/typscript_template/</guid>
+      <description>If you work on Node.js or TypeScript, you may have your own initial setup for development.</description>
+    </item>
+    
+  </channel>
+</rss>
