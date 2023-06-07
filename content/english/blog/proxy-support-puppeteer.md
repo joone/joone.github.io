@@ -186,7 +186,7 @@ So I recently made a change to Puppeteer that allows developers to set proxy set
 https://github.com/puppeteer/puppeteer/pull/7516
 
 
-# How to set a proxy for indivisual browse context
+### How to set a proxy for indivisual browse context
 
 We can now set a diffrent proxy for each indivisual BrowseContext at runtime.
 ```JS
