@@ -15,8 +15,6 @@ https://github.com/joone/typescript-template
 Of course, there is a similar project maintained by Microsoft, but it has too many features. I made my project starter with the level of features that I wanted. I think that it would be useful for other developers who like minimal TypeScript starters.
 
 The following packages are ready to use, and a simple web service is also included.
-
-This repository is a TypeScript template that includes the following features:
 - Express.js
 - ESLint
 - Mocha
