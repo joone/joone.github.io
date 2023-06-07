@@ -24,7 +24,7 @@ Loz can be used in both interactive and pipe mode.
 
 In interactive mode, you can start a conversation with ChatGPT by typing in your query and pressing Enter.
 ChatGPT will then respond with a relevant message.
-For example, if you type in "What is the weather like today?", ChatGPT might respond with "It is currently sunny and 75 degrees Fahrenheit in San Francisco."
+It's pretty much the same as the web interface of ChatGPT, but the result is a lot more concise.
 
 ### Pipe Mode
 
