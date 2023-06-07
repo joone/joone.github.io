@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Enhancing Puppeteer with Proxy Support</title>
+      <link>https://joone.github.io/blog/proxy-support-puppeteer/</link>
+      <pubDate>Sun, 22 Aug 2021 13:48:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/proxy-support-puppeteer/</guid>
+      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.</description>
+    </item>
+    
+    <item>
       <title>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</title>
       <link>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</link>
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>

@@ -91,6 +91,32 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<meta property="og:image" content="/images/post/puppeteer_logo.png" />
+<meta name="twitter:image" content="/images/post/puppeteer_logo.png" />
+<meta name="twitter:card" content="summary">
+ 
+<meta property="og:image:width" content="290">
+<meta property="og:image:height" content="422">
+ 
+
+<meta property="og:image:type" content="image/.png">
  
 
  
@@ -564,6 +590,47 @@
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<picture>
+  <source srcset="/images/post/puppeteer_logo_huecb04d2dce086a6e8c8ce6fa0a141ff4_14594_545x0_resize_q90_h2_box_3.webp" media="(max-width: 575px)">
+  <source srcset="/images/post/puppeteer_logo_huecb04d2dce086a6e8c8ce6fa0a141ff4_14594_600x0_resize_q90_h2_box_3.webp" media="(max-width: 767px)">
+  <source srcset="/images/post/puppeteer_logo_huecb04d2dce086a6e8c8ce6fa0a141ff4_14594_700x0_resize_q90_h2_box_3.webp" media="(max-width: 991px)">
+  <source srcset="/images/post/puppeteer_logo_huecb04d2dce086a6e8c8ce6fa0a141ff4_14594_1110x0_resize_q90_h2_box_3.webp">
+  <img loading="lazy" decoding="async" class="w-100 h-auto" src="/images/post/puppeteer_logo_huecb04d2dce086a6e8c8ce6fa0a141ff4_14594_1110x0_resize_box_3.png" alt="post-thumb" width="290" height="422">
+</picture>
+ 
+ 
  
 
 
@@ -579,162 +646,162 @@ However, until recently, Puppeteer did not support proxy settings for each Brows
 This meant that if you wanted to use a proxy with Puppeteer, you had to set it globally for all BrowserContexts.
 You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.</p>
 <p>To address this limitation, I made a change to the Chromium codebase as follows:</p>
-<pre tabindex="0"><code>diff --git a/content/browser/devtools/protocol/target_handler.cc b/content/browser/devtools/protocol/target_handler.cc
-index 7a30ab12a1a9f..ce66dc10a49cf 100644
---- a/content/browser/devtools/protocol/target_handler.cc
-+++ b/content/browser/devtools/protocol/target_handler.cc
-@@ -810,14 +810,20 @@ void TargetHandler::DevToolsAgentHostCrashed(DevToolsAgentHost* host,
- // ----------------- More protocol methods -------------------
- 
- protocol::Response TargetHandler::CreateBrowserContext(
-+    Maybe&lt;std::string&gt; proxy_url,
-     std::string* out_context_id) {
-+  std::string proxyURL;
-+  if (proxy_url.isJust()) { 
-+    proxyURL = proxy_url.fromJust();
-+  }
-   if (access_mode_ != AccessMode::kBrowser)
-     return Response::Error(kNotAllowedError);
-   DevToolsManagerDelegate* delegate =
-       DevToolsManager::GetInstance()-&gt;delegate();
-   if (!delegate)
--    return Response::Error(&#34;Browser context management is not supported.&#34;);
--  BrowserContext* context = delegate-&gt;CreateBrowserContext();
-+    return Response::Error(
-+        &#34;Browser context management is not supported.&#34;);
-+  BrowserContext* context = delegate-&gt;CreateBrowserContext(proxyURL);
-   if (!context)
-     return Response::Error(&#34;Failed to create browser context.&#34;);
-   *out_context_id = context-&gt;UniqueId();
-diff --git a/content/browser/devtools/protocol/target_handler.h b/content/browser/devtools/protocol/target_handler.h
-index ea0dd51cfb03c..fbb3625585935 100644
---- a/content/browser/devtools/protocol/target_handler.h
-+++ b/content/browser/devtools/protocol/target_handler.h
-@@ -84,7 +84,8 @@ class TargetHandler : public DevToolsDomainHandler,
-                        bool* out_success) override;
-   Response ExposeDevToolsProtocol(const std::string&amp; target_id,
-                                   Maybe&lt;std::string&gt; binding_name) override;
--  Response CreateBrowserContext(std::string* out_context_id) override;
-+  Response CreateBrowserContext(Maybe&lt;std::string&gt; proxy_url,
-+                                std::string* out_context_id) override;
-   void DisposeBrowserContext(
-       const std::string&amp; context_id,
-       std::unique_ptr&lt;DisposeBrowserContextCallback&gt; callback) override;
-diff --git a/content/public/browser/devtools_manager_delegate.cc b/content/public/browser/devtools_manager_delegate.cc
-index f313b48c869ee..d74ef223a0103 100644
---- a/content/public/browser/devtools_manager_delegate.cc
-+++ b/content/public/browser/devtools_manager_delegate.cc
-@@ -45,7 +45,8 @@ BrowserContext* DevToolsManagerDelegate::GetDefaultBrowserContext() {
-   return nullptr;
- }
- 
--BrowserContext* DevToolsManagerDelegate::CreateBrowserContext() {
-+BrowserContext* DevToolsManagerDelegate::CreateBrowserContext(
-+    const std::string&amp; proxyUrl) {
-   return nullptr;
- }
- 
-diff --git a/content/public/browser/devtools_manager_delegate.h b/content/public/browser/devtools_manager_delegate.h
-index 4b5ba76385c35..2307977c5abfa 100644
---- a/content/public/browser/devtools_manager_delegate.h
-+++ b/content/public/browser/devtools_manager_delegate.h
-@@ -52,7 +52,7 @@ class CONTENT_EXPORT DevToolsManagerDelegate {
-   // Create new browser context. May return null if not supported or not
-   // possible. Delegate must take ownership of the created browser context, and
-   // may destroy it at will.
--  virtual BrowserContext* CreateBrowserContext();
-+  virtual BrowserContext* CreateBrowserContext(const std::string&amp; proxyUrl);
- 
-   // Dispose browser context that was created with |CreateBrowserContext|
-   // method.
-diff --git a/headless/lib/browser/headless_devtools_manager_delegate.cc b/headless/lib/browser/headless_devtools_manager_delegate.cc
-index fa2f1143c2786..5f42bc03707ea 100644
---- a/headless/lib/browser/headless_devtools_manager_delegate.cc
-+++ b/headless/lib/browser/headless_devtools_manager_delegate.cc
-@@ -86,9 +86,17 @@ HeadlessDevToolsManagerDelegate::GetDefaultBrowserContext() {
- }
- 
- content::BrowserContext*
--HeadlessDevToolsManagerDelegate::CreateBrowserContext() {
-+HeadlessDevToolsManagerDelegate::CreateBrowserContext(
-+    const std::string&amp; proxyURL) {
-   auto builder = browser_-&gt;CreateBrowserContextBuilder();
-   builder.SetIncognitoMode(true);
-+
-+  if (!proxyURL.empty()) {
-+    std::unique_ptr&lt;net::ProxyConfig&gt; proxy_config =
-+        std::make_unique&lt;net::ProxyConfig&gt;();
-+    proxy_config-&gt;proxy_rules().ParseFromString(proxyURL);
-+    builder.SetProxyConfig(std::move(proxy_config));
-+  }
-   HeadlessBrowserContext* browser_context = builder.Build();
-   return HeadlessBrowserContextImpl::From(browser_context);
- }
-diff --git a/headless/lib/browser/headless_devtools_manager_delegate.h b/headless/lib/browser/headless_devtools_manager_delegate.h
-index 9a43363d3f023..640d1daf3172d 100644
---- a/headless/lib/browser/headless_devtools_manager_delegate.h
-+++ b/headless/lib/browser/headless_devtools_manager_delegate.h
-@@ -45,7 +45,8 @@ class HeadlessDevToolsManagerDelegate
- 
-   std::vector&lt;content::BrowserContext*&gt; GetBrowserContexts() override;
-   content::BrowserContext* GetDefaultBrowserContext() override;
--  content::BrowserContext* CreateBrowserContext() override;
-+  content::BrowserContext* CreateBrowserContext(
-+      const std::string&amp; proxyURL) override;
-   void DisposeBrowserContext(content::BrowserContext* context,
-                              DisposeCallback callback) override;
- 
-diff --git a/third_party/blink/public/devtools_protocol/browser_protocol-1.3.json b/third_party/blink/public/devtools_protocol/browser_protocol-1.3.json
-index 764c46f5b1893..f71c51d3ebf69 100644
---- a/third_party/blink/public/devtools_protocol/browser_protocol-1.3.json
-+++ b/third_party/blink/public/devtools_protocol/browser_protocol-1.3.json
-@@ -3938,6 +3938,9 @@
-             {
-                 &#34;name&#34;: &#34;createBrowserContext&#34;,
-                 &#34;description&#34;: &#34;Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.&#34;,
-+                &#34;parameters&#34;: [
-+                    { &#34;name&#34;: &#34;proxyUrl&#34;, &#34;type&#34;: &#34;string&#34;, &#34;description&#34;: &#34;The proxy URL including the port.&#34;, &#34;optional&#34;: true }
-+                ],
-                 &#34;returns&#34;: [
-                     { &#34;name&#34;: &#34;browserContextId&#34;, &#34;$ref&#34;: &#34;BrowserContextID&#34;, &#34;description&#34;: &#34;The id of the context created.&#34; }
-                 ],
-diff --git a/third_party/blink/public/devtools_protocol/browser_protocol.pdl b/third_party/blink/public/devtools_protocol/browser_protocol.pdl
-index 3228ff45670cb..cb88540a8dbe0 100644
---- a/third_party/blink/public/devtools_protocol/browser_protocol.pdl
-+++ b/third_party/blink/public/devtools_protocol/browser_protocol.pdl
-@@ -6667,6 +6667,9 @@ domain Target
-   # Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
-   # one.
-   experimental command createBrowserContext
-+    parameters
-+      # The proxy URL.
-+      optional string proxyUrl
-     returns
-       # The id of the context created.
-       Browser.BrowserContextID browserContextId
-</code></pre><p>The modifications involved passing a proxy server address to HeadlessBrowserContext during the creation of a BrowserContext.<br>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.cc b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.cc
+</span></span><span style="display:flex;"><span>index <span style="color:#ae81ff">7</span>a30ab12a1a9f..ce66dc10a49cf <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.cc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.cc
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">810</span>,<span style="color:#ae81ff">14</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">810</span>,<span style="color:#ae81ff">20</span> <span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#66d9ef">void</span> TargetHandler<span style="color:#f92672">::</span>DevToolsAgentHostCrashed(DevToolsAgentHost<span style="color:#f92672">*</span> host,
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">// ----------------- More protocol methods -------------------
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span> 
+</span></span><span style="display:flex;"><span> protocol<span style="color:#f92672">::</span>Response TargetHandler<span style="color:#f92672">::</span>CreateBrowserContext(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    Maybe<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> proxy_url,
+</span></span><span style="display:flex;"><span>     std<span style="color:#f92672">::</span>string<span style="color:#f92672">*</span> out_context_id) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  std<span style="color:#f92672">::</span>string proxyURL;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  <span style="color:#66d9ef">if</span> (proxy_url.isJust()) { 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    proxyURL <span style="color:#f92672">=</span> proxy_url.fromJust();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  }
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> (access_mode_ <span style="color:#f92672">!=</span> AccessMode<span style="color:#f92672">::</span>kBrowser)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> Response<span style="color:#f92672">::</span>Error(kNotAllowedError);
+</span></span><span style="display:flex;"><span>   DevToolsManagerDelegate<span style="color:#f92672">*</span> delegate <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span>       DevToolsManager<span style="color:#f92672">::</span>GetInstance()<span style="color:#f92672">-&gt;</span>delegate();
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>delegate)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>    <span style="color:#66d9ef">return</span> Response<span style="color:#f92672">::</span>Error(<span style="color:#e6db74">&#34;Browser context management is not supported.&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>  BrowserContext<span style="color:#f92672">*</span> context <span style="color:#f92672">=</span> delegate<span style="color:#f92672">-&gt;</span>CreateBrowserContext();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    <span style="color:#66d9ef">return</span> Response<span style="color:#f92672">::</span>Error(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#e6db74">&#34;Browser context management is not supported.&#34;</span>);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  BrowserContext<span style="color:#f92672">*</span> context <span style="color:#f92672">=</span> delegate<span style="color:#f92672">-&gt;</span>CreateBrowserContext(proxyURL);
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>context)
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> Response<span style="color:#f92672">::</span>Error(<span style="color:#e6db74">&#34;Failed to create browser context.&#34;</span>);
+</span></span><span style="display:flex;"><span>   <span style="color:#f92672">*</span>out_context_id <span style="color:#f92672">=</span> context<span style="color:#f92672">-&gt;</span>UniqueId();
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.h b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.h
+</span></span><span style="display:flex;"><span>index ea0dd51cfb03c..fbb3625585935 <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.h
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools<span style="color:#f92672">/</span>protocol<span style="color:#f92672">/</span>target_handler.h
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">84</span>,<span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">84</span>,<span style="color:#ae81ff">8</span> <span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">TargetHandler</span> <span style="color:#f92672">:</span> <span style="color:#66d9ef">public</span> DevToolsDomainHandler,
+</span></span><span style="display:flex;"><span>                        <span style="color:#66d9ef">bool</span><span style="color:#f92672">*</span> out_success) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span>   Response <span style="color:#a6e22e">ExposeDevToolsProtocol</span>(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> target_id,
+</span></span><span style="display:flex;"><span>                                   Maybe<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> binding_name) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>  Response CreateBrowserContext(std<span style="color:#f92672">::</span>string<span style="color:#f92672">*</span> out_context_id) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  Response CreateBrowserContext(Maybe<span style="color:#f92672">&lt;</span>std<span style="color:#f92672">::</span>string<span style="color:#f92672">&gt;</span> proxy_url,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                                std<span style="color:#f92672">::</span>string<span style="color:#f92672">*</span> out_context_id) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DisposeBrowserContext</span>(
+</span></span><span style="display:flex;"><span>       <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> context_id,
+</span></span><span style="display:flex;"><span>       std<span style="color:#f92672">::</span>unique_ptr<span style="color:#f92672">&lt;</span>DisposeBrowserContextCallback<span style="color:#f92672">&gt;</span> callback) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.cc b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span>index f313b48c869ee..d74ef223a0103 <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">8</span> <span style="color:#960050;background-color:#1e0010">@@</span> BrowserContext<span style="color:#f92672">*</span> DevToolsManagerDelegate<span style="color:#f92672">::</span>GetDefaultBrowserContext() {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>BrowserContext<span style="color:#f92672">*</span> DevToolsManagerDelegate<span style="color:#f92672">::</span>CreateBrowserContext() {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>BrowserContext<span style="color:#f92672">*</span> DevToolsManagerDelegate<span style="color:#f92672">::</span>CreateBrowserContext(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> proxyUrl) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.h b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span>index <span style="color:#ae81ff">4</span>b5ba76385c35.<span style="color:#ae81ff">.2307977</span>c5abfa <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>content<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">52</span>,<span style="color:#ae81ff">7</span> <span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CONTENT_EXPORT</span> DevToolsManagerDelegate {
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Create new browser context. May return null if not supported or not
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#75715e">// possible. Delegate must take ownership of the created browser context, and
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#75715e">// may destroy it at will.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">-</span>  <span style="color:#66d9ef">virtual</span> BrowserContext<span style="color:#f92672">*</span> CreateBrowserContext();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  <span style="color:#66d9ef">virtual</span> BrowserContext<span style="color:#f92672">*</span> CreateBrowserContext(<span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> proxyUrl);
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e">// Dispose browser context that was created with |CreateBrowserContext|
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#75715e">// method.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.cc b<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span>index fa2f1143c2786.<span style="color:#ae81ff">.5f</span><span style="color:#ae81ff">42</span>bc03707ea <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.cc
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">86</span>,<span style="color:#ae81ff">9</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">86</span>,<span style="color:#ae81ff">17</span> <span style="color:#960050;background-color:#1e0010">@@</span> HeadlessDevToolsManagerDelegate<span style="color:#f92672">::</span>GetDefaultBrowserContext() {
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span> content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>HeadlessDevToolsManagerDelegate<span style="color:#f92672">::</span>CreateBrowserContext() {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>HeadlessDevToolsManagerDelegate<span style="color:#f92672">::</span>CreateBrowserContext(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> proxyURL) {
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">auto</span> builder <span style="color:#f92672">=</span> browser_<span style="color:#f92672">-&gt;</span>CreateBrowserContextBuilder();
+</span></span><span style="display:flex;"><span>   builder.SetIncognitoMode(true);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>proxyURL.empty()) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    std<span style="color:#f92672">::</span>unique_ptr<span style="color:#f92672">&lt;</span>net<span style="color:#f92672">::</span>ProxyConfig<span style="color:#f92672">&gt;</span> proxy_config <span style="color:#f92672">=</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        std<span style="color:#f92672">::</span>make_unique<span style="color:#f92672">&lt;</span>net<span style="color:#f92672">::</span>ProxyConfig<span style="color:#f92672">&gt;</span>();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    proxy_config<span style="color:#f92672">-&gt;</span>proxy_rules().ParseFromString(proxyURL);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    builder.SetProxyConfig(std<span style="color:#f92672">::</span>move(proxy_config));
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  }
+</span></span><span style="display:flex;"><span>   HeadlessBrowserContext<span style="color:#f92672">*</span> browser_context <span style="color:#f92672">=</span> builder.Build();
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">return</span> HeadlessBrowserContextImpl<span style="color:#f92672">::</span>From(browser_context);
+</span></span><span style="display:flex;"><span> }
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.h b<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span>index <span style="color:#ae81ff">9</span>a43363d3f023.<span style="color:#ae81ff">.640</span>d1daf3172d <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>headless<span style="color:#f92672">/</span>lib<span style="color:#f92672">/</span>browser<span style="color:#f92672">/</span>headless_devtools_manager_delegate.h
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">7</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">45</span>,<span style="color:#ae81ff">8</span> <span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#66d9ef">class</span> <span style="color:#a6e22e">HeadlessDevToolsManagerDelegate</span>
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>   std<span style="color:#f92672">::</span>vector<span style="color:#f92672">&lt;</span>content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*&gt;</span> GetBrowserContexts() <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span>   content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*</span> GetDefaultBrowserContext() <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>  content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*</span> CreateBrowserContext() <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>  content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*</span> CreateBrowserContext(
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>      <span style="color:#66d9ef">const</span> std<span style="color:#f92672">::</span>string<span style="color:#f92672">&amp;</span> proxyURL) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span>   <span style="color:#66d9ef">void</span> <span style="color:#a6e22e">DisposeBrowserContext</span>(content<span style="color:#f92672">::</span>BrowserContext<span style="color:#f92672">*</span> context,
+</span></span><span style="display:flex;"><span>                              DisposeCallback callback) <span style="color:#66d9ef">override</span>;
+</span></span><span style="display:flex;"><span> 
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol<span style="color:#f92672">-</span><span style="color:#ae81ff">1.3</span>.json b<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol<span style="color:#f92672">-</span><span style="color:#ae81ff">1.3</span>.json
+</span></span><span style="display:flex;"><span>index <span style="color:#ae81ff">764</span>c46f5b1893..f71c51d3ebf69 <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol<span style="color:#f92672">-</span><span style="color:#ae81ff">1.3</span>.json
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol<span style="color:#f92672">-</span><span style="color:#ae81ff">1.3</span>.json
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">3938</span>,<span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">3938</span>,<span style="color:#ae81ff">9</span> <span style="color:#960050;background-color:#1e0010">@@</span>
+</span></span><span style="display:flex;"><span>             {
+</span></span><span style="display:flex;"><span>                 <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;createBrowserContext&#34;</span>,
+</span></span><span style="display:flex;"><span>                 <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than one.&#34;</span>,
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                <span style="color:#e6db74">&#34;parameters&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                    { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;proxyUrl&#34;</span>, <span style="color:#e6db74">&#34;type&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;string&#34;</span>, <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The proxy URL including the port.&#34;</span>, <span style="color:#e6db74">&#34;optional&#34;</span><span style="color:#f92672">:</span> true }
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>                ],
+</span></span><span style="display:flex;"><span>                 <span style="color:#e6db74">&#34;returns&#34;</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>                     { <span style="color:#e6db74">&#34;name&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;browserContextId&#34;</span>, <span style="color:#e6db74">&#34;$ref&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;BrowserContextID&#34;</span>, <span style="color:#e6db74">&#34;description&#34;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;The id of the context created.&#34;</span> }
+</span></span><span style="display:flex;"><span>                 ],
+</span></span><span style="display:flex;"><span>diff <span style="color:#f92672">--</span>git a<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol.pdl b<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol.pdl
+</span></span><span style="display:flex;"><span>index <span style="color:#ae81ff">3228ff</span><span style="color:#ae81ff">45670</span>cb..cb88540a8dbe0 <span style="color:#ae81ff">100644</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol.pdl
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>third_party<span style="color:#f92672">/</span>blink<span style="color:#f92672">/</span><span style="color:#66d9ef">public</span><span style="color:#f92672">/</span>devtools_protocol<span style="color:#f92672">/</span>browser_protocol.pdl
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">6667</span>,<span style="color:#ae81ff">6</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">6667</span>,<span style="color:#ae81ff">9</span> <span style="color:#960050;background-color:#1e0010">@@</span> domain Target
+</span></span><span style="display:flex;"><span>   <span style="color:#75715e"># Creates a new empty BrowserContext. Similar to an incognito profile but you can have more than
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   <span style="color:#75715e"># one.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>   experimental command createBrowserContext
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    parameters
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>      <span style="color:#960050;background-color:#1e0010">#</span> The proxy URL.
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>      optional string proxyUrl
+</span></span><span style="display:flex;"><span>     returns
+</span></span><span style="display:flex;"><span>       <span style="color:#75715e"># The id of the context created.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>       Browser.BrowserContextID browserContextId
+</span></span></code></pre></div><p>The modifications involved passing a proxy server address to HeadlessBrowserContext during the creation of a BrowserContext.<br>
 Additionally, adjustments were made to the Puppeteer interface, specifically in the Browser::createIncognitoBrowserContext function as follows:</p>
-<pre tabindex="0"><code>async createIncognitoBrowserContext(
-    options: BrowserContextOptions = {}
-  ): Promise&lt;BrowserContext&gt; {
-    const { proxyServer = &#39;&#39;, proxyBypassList = [] } = options;
-
-    const { browserContextId } = await this._connection.send(
-      &#39;Target.createBrowserContext&#39;,
-      {
-        proxyServer,
-        proxyBypassList: proxyBypassList &amp;&amp; proxyBypassList.join(&#39;,&#39;),
-      }
-    );
-    const context = new BrowserContext(
-      this._connection,
-      this,
-      browserContextId
-    );
-    this._contexts.set(browserContextId, context);
-    return context;
-  }
-</code></pre><p>At that time, the changes were not submitted upstream because I was quite busy with my project.
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#66d9ef">async</span> <span style="color:#a6e22e">createIncognitoBrowserContext</span>(
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">options</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">BrowserContextOptions</span> <span style="color:#f92672">=</span> {}
+</span></span><span style="display:flex;"><span>  )<span style="color:#f92672">:</span> Promise<span style="color:#f92672">&lt;</span><span style="color:#a6e22e">BrowserContext</span><span style="color:#f92672">&gt;</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">proxyServer</span> <span style="color:#f92672">=</span> <span style="color:#e6db74">&#39;&#39;</span>, <span style="color:#a6e22e">proxyBypassList</span> <span style="color:#f92672">=</span> [] } <span style="color:#f92672">=</span> <span style="color:#a6e22e">options</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> { <span style="color:#a6e22e">browserContextId</span> } <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_connection</span>.<span style="color:#a6e22e">send</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#39;Target.createBrowserContext&#39;</span>,
+</span></span><span style="display:flex;"><span>      {
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">proxyServer</span>,
+</span></span><span style="display:flex;"><span>        <span style="color:#a6e22e">proxyBypassList</span><span style="color:#f92672">:</span> <span style="color:#a6e22e">proxyBypassList</span> <span style="color:#f92672">&amp;&amp;</span> <span style="color:#a6e22e">proxyBypassList</span>.<span style="color:#a6e22e">join</span>(<span style="color:#e6db74">&#39;,&#39;</span>),
+</span></span><span style="display:flex;"><span>      }
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">BrowserContext</span>(
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_connection</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#66d9ef">this</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#a6e22e">browserContextId</span>
+</span></span><span style="display:flex;"><span>    );
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_contexts</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">browserContextId</span>, <span style="color:#a6e22e">context</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">context</span>;
+</span></span><span style="display:flex;"><span>  }
+</span></span></code></pre></div><p>At that time, the changes were not submitted upstream because I was quite busy with my project.
 Eventually, a Google engineer implemented proxy support for each BrowseContext and merged his patch to upstream.
 <a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298" target="_blank">https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298</a></p>
 <p>Despite of this proxy support, the createIncognitoBrowserContext function within Puppeteer remained unchanged.
@@ -742,38 +809,38 @@ So I recently made a change to Puppeteer that allows developers to set proxy set
 <a href="https://github.com/puppeteer/puppeteer/pull/7516" target="_blank">https://github.com/puppeteer/puppeteer/pull/7516</a></p>
 <h1 id="how-to-set-a-proxy-for-indivisual-browse-context">How to set a proxy for indivisual browse context</h1>
 <p>We can now set a diffrent proxy for each indivisual BrowseContext at runtime.</p>
-<pre tabindex="0"><code>&#34;use strict&#34;;
-
-const puppeteer = require(&#34;puppeteer&#34;);
-
-(async () =&gt; {
-  const browser = await puppeteer.launch();
-  const context = await browser.createIncognitoBrowserContext(
-    {proxyServer: &#34;http://yourproxy.server&#34;}
-  );
-  const page = await context.newPage();
-  await page.authenticate({ username: &#34;your_id&#34;, password: &#34;your_password&#34; });
-  await page.goto(&#34;https://google.com&#34;);
-  console.log(await page.content());
-  await browser.close();
-})();
-</code></pre><p>Bofore, we was only able to apply a global proxy setting for all all BrowserContexts.</p>
-<pre tabindex="0"><code>  const browser = await puppeteer.launch({
-    args: [
-      `--proxy-server=proxy-server.your_proxy.server:8001`,
-      &#34;--proxy-bypass-list=*&#34;,
-    ],
-  });
-  const page = await browser.newPage();
-  await page.authenticate({
-    username: &#34;your_id&#34;,
-    password: &#34;your_passwd&#34;,
-  });
-
-  await page.goto(&#34;http://www.google.com&#34;);
-  console.log(await page.content());
-  await browser.close();
-</code></pre><p>For more details on the API, see the Puppeteer documentation: <a href="https://pptr.dev/api/puppeteer.browsercontextoptions" target="_blank">https://pptr.dev/api/puppeteer.browsercontextoptions</a></p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span><span style="color:#e6db74">&#34;use strict&#34;</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">puppeteer</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">require</span>(<span style="color:#e6db74">&#34;puppeteer&#34;</span>);
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>(<span style="color:#66d9ef">async</span> () =&gt; {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">browser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">puppeteer</span>.<span style="color:#a6e22e">launch</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">context</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">createIncognitoBrowserContext</span>(
+</span></span><span style="display:flex;"><span>    {<span style="color:#a6e22e">proxyServer</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;http://yourproxy.server&#34;</span>}
+</span></span><span style="display:flex;"><span>  );
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">context</span>.<span style="color:#a6e22e">newPage</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">authenticate</span>({ <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;your_id&#34;</span>, <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;your_password&#34;</span> });
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#e6db74">&#34;https://google.com&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">content</span>());
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">close</span>();
+</span></span><span style="display:flex;"><span>})();
+</span></span></code></pre></div><p>Bofore, we were only able to apply a global proxy setting for all all BrowserContexts.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-JS" data-lang="JS"><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">browser</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">puppeteer</span>.<span style="color:#a6e22e">launch</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">args</span><span style="color:#f92672">:</span> [
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">`--proxy-server=proxy-server.your_proxy.server:8001`</span>,
+</span></span><span style="display:flex;"><span>      <span style="color:#e6db74">&#34;--proxy-bypass-list=*&#34;</span>,
+</span></span><span style="display:flex;"><span>    ],
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">page</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">newPage</span>();
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">authenticate</span>({
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">username</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;your_id&#34;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">password</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#34;your_passwd&#34;</span>,
+</span></span><span style="display:flex;"><span>  });
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#66d9ef">goto</span>(<span style="color:#e6db74">&#34;http://www.google.com&#34;</span>);
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#66d9ef">await</span> <span style="color:#a6e22e">page</span>.<span style="color:#a6e22e">content</span>());
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">browser</span>.<span style="color:#a6e22e">close</span>();
+</span></span></code></pre></div><p>For more details on the API, see the Puppeteer documentation: <a href="https://pptr.dev/api/puppeteer.browsercontextoptions" target="_blank">https://pptr.dev/api/puppeteer.browsercontextoptions</a></p>
 
           </div>
           
@@ -783,6 +850,8 @@ const puppeteer = require(&#34;puppeteer&#34;);
                 <ul class="post-meta-tags list-unstyled list-inline">
                   
                   <li class="list-inline-item"><a href="https://joone.github.io/tags/puppeteer">puppeteer</a></li>
+                  
+                  <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
                   
                 </ul>
               </div>
@@ -1015,11 +1084,11 @@ const puppeteer = require(&#34;puppeteer&#34;);
 
 
 <picture>
-  <source srcset="/images/post/headless-chrome_hu163f7469596d0cd40fbb7021521419b4_18606_545x0_resize_q90_h2_box_2.webp" media="(max-width: 575px)">
-  <source srcset="/images/post/headless-chrome_hu163f7469596d0cd40fbb7021521419b4_18606_600x0_resize_q90_h2_box_2.webp" media="(max-width: 767px)">
-  <source srcset="/images/post/headless-chrome_hu163f7469596d0cd40fbb7021521419b4_18606_700x0_resize_q90_h2_box_2.webp" media="(max-width: 991px)">
-  <source srcset="/images/post/headless-chrome_hu163f7469596d0cd40fbb7021521419b4_18606_1110x0_resize_q90_h2_box_2.webp">
-  <img loading="lazy" decoding="async" class="w-100 h-auto" src="/images/post/headless-chrome_hu163f7469596d0cd40fbb7021521419b4_18606_1110x0_resize_q90_h2_box_2.webp" alt="post-thumb" width="1024" height="655">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_545x0_resize_q90_h2_box_3.webp" media="(max-width: 575px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_600x0_resize_q90_h2_box_3.webp" media="(max-width: 767px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_700x0_resize_q90_h2_box_3.webp" media="(max-width: 991px)">
+  <source srcset="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_1110x0_resize_q90_h2_box_3.webp">
+  <img loading="lazy" decoding="async" class="w-100 h-auto" src="/images/post/chrome_graphics_ozone_arch-458x225_huc10e897e5bf2f6907589761d46b219dd_55810_1110x0_resize_box_3.png" alt="post-thumb" width="458" height="225">
 </picture>
  
  
@@ -1103,24 +1172,22 @@ const puppeteer = require(&#34;puppeteer&#34;);
         
       </li>
       <li class="list-inline-item mb-2">
-        <span>07 May, 2023</span>
+        <span>12 Jul, 2018</span>
       </li>
       <li class="list-inline-item mb-2">
         <ul class="card-meta-tag list-inline">
           
           <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
           
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/headless">headless</a></li>
-          
         </ul>
       </li>
     </ul>
     <h3 class="h4 mb-3">
-      <a class="post-title" href="https://joone.github.io/blog/headless-disable-lazy-loading/">The new Headless mode now supports disabling lazy loading</a>
+      <a class="post-title" href="https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/">Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</a>
     </h3>
-    <p>Recently, I added support for disabling lazy loading to the new headless Chromium. Since the Google Chrome team announced the new headless mode, the …</p>
+    <p>Recently, I published a blog article about making Use Of Chrome&amp;amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using …</p>
 
-    <a href="https://joone.github.io/blog/headless-disable-lazy-loading/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
+    <a href="https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
   </div>
 </article>
               </div>
@@ -1128,129 +1195,38 @@ const puppeteer = require(&#34;puppeteer&#34;);
               <div class="col-md-6">
                 <article class="card post-card">
   
-  <div class="post-slider slider-sm rounded mb-4">
-    
-    
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="https://github.com/joone/rust-animation/blob/main/examples/easing_functions.gif?raw=true" alt="post-thumb" class="w-100 h-auto" height="" width="">
-
-    
-  </div>
-  
 
   <div class="card-body">
     <ul class="card-meta list-inline mb-2">
       <li class="list-inline-item mb-2">
         
         
-        <a href="https://joone.github.io/author/joone-hur/" class="card-meta-author">
+        <a href="https://joone.github.io/" class="card-meta-author">
           
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<img loading="lazy" decoding="async" src="/images/author/author_hu98fb0ee9593e93f4fe552e6e88a936e8_22738_26x26_resize_q90_h2_box_3.webp" alt="Joone" class="img-fluid" width="26" height="26" onerror="this.onerror='null';this.src='\/images\/author\/author_hu98fb0ee9593e93f4fe552e6e88a936e8_22738_26x26_resize_box_3.png'">
- 
- 
- 
-
-
-          
-          <span>Joone</span>
+          <span>Joone Blog</span>
         </a>
         
       </li>
       <li class="list-inline-item mb-2">
-        <span>05 Dec, 2021</span>
+        <span>04 May, 2018</span>
       </li>
       <li class="list-inline-item mb-2">
         <ul class="card-meta-tag list-inline">
           
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/rust">Rust</a></li>
+          <li class="list-inline-item"><a href="https://joone.github.io/tags/blinkon">BlinkOn</a></li>
           
-          <li class="list-inline-item"><a href="https://joone.github.io/tags/myproject">MyProject</a></li>
+          <li class="list-inline-item"><a href="https://joone.github.io/tags/chromium">chromium</a></li>
           
         </ul>
       </li>
     </ul>
     <h3 class="h4 mb-3">
-      <a class="post-title" href="https://joone.github.io/blog/rust-animation/">rust-animation project</a>
+      <a class="post-title" href="https://joone.github.io/blog/blinkon9/">BlinkOn9</a>
     </h3>
-    <p>I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port. During that time, I extended the …</p>
+    <p>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this …</p>
 
-    <a href="https://joone.github.io/blog/rust-animation/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
+    <a href="https://joone.github.io/blog/blinkon9/" aria-label="Read Article">Read Article <i class="fas fa-angle-right"></i></a>
   </div>
 </article>
               </div>
