@@ -1,8 +1,10 @@
 ---
 title: 'Loz, A Command-Line Interface Tool for ChatGPT'
-date: 2023-06-07T16:06:00.003-07:00
+date: 2023-06-07T02:00:14-07:00
+categories: ["MachineLearning"]
 draft: false
-aliases: [ "/2023/06/loz.html" ]
+aliases: [ "/2023/06/loz_cli.html" ]
+tags : [LLM]
 images:
   - "images/post/LLM.jpeg"
 author: "Joone Hur"
@@ -18,13 +20,13 @@ I would like to introduce Loz here. If you want more details on how to install a
 
 Loz can be used in both interactive and pipe mode.
 
-## Interactive Mode
+### Interactive Mode
 
 In interactive mode, you can start a conversation with ChatGPT by typing in your query and pressing Enter.
 ChatGPT will then respond with a relevant message.
 For example, if you type in "What is the weather like today?", ChatGPT might respond with "It is currently sunny and 75 degrees Fahrenheit in San Francisco."
 
-## Pipe Mode
+### Pipe Mode
 
 Loz can also be used in pipe mode to process input from other command-line tools. 
 For example, you could use Loz to count the number of files in a directory,
@@ -77,7 +79,7 @@ $ ls -l | loz "convert the ls output to JSON format: "
 ]
 ```
 
-## Automatically Write a GIT Commit Message
+### Automatically Write a GIT Commit Message
 Loz can also be used to automatically write GIT commit messages. To do this, simply run the following command:
 ```
 $  git add --update
@@ -85,7 +87,7 @@ $  loz commit
 ```
 Note that the author, date, and commit ID lines are stripped from the commit message before sending it to the OpenAI server.
 
-## Find chat history
+### Find chat history
 To access chat histories, look for the .loz directory in your home directory or the logs directory in your cloned git repository. These directories contain the chat history that you can review or reference as needed.
 
 However, it is not free to use the OpenAI API. The results of the OpenAI API are also different from the results of ChatGPT, 
@@ -95,6 +97,6 @@ feel free to use Loz. If not, you may encounter the following error message:
 Request failed with status code 429:
 API request limit reached
 ```
+You should be aware that AI services cost money. 
 
-You should be aware that AI services cost money.
-FYI, the image is created by Bing Image Creator.
+FYI, the image is created by [Bing Image Creator](https://www.bing.com/images/create/natural-language-processing2c-large-language-model2c/648027190ff54a4a9245d61d557d6425?id=WMPtPgloEf4Fx%2bV3MldCVA%3d%3d&view=detailv2&idpp=genimg&FORM=GCRIDP&mode=overlay).
