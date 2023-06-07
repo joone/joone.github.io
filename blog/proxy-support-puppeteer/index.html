@@ -801,9 +801,8 @@ Additionally, adjustments were made to the Puppeteer interface, specifically in 
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">_contexts</span>.<span style="color:#a6e22e">set</span>(<span style="color:#a6e22e">browserContextId</span>, <span style="color:#a6e22e">context</span>);
 </span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> <span style="color:#a6e22e">context</span>;
 </span></span><span style="display:flex;"><span>  }
-</span></span></code></pre></div><p>At that time, the changes were not submitted upstream because I was quite busy with my project.
-Eventually, a Google engineer implemented proxy support for each BrowseContext and merged his patch to upstream.
-<a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298" target="_blank">https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298</a></p>
+</span></span></code></pre></div><p>At that time, I was quite busy with my project, so I did not submit the changes upstream. Eventually, Pavel Feldman, a Google engineer, implemented proxy support for each BrowseContext and merged his patch to upstream.</p>
+<p><a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298" target="_blank">https://chromium-review.googlesource.com/c/chromium/src/&#43;/2226298</a></p>
 <p>Despite of this proxy support, the createIncognitoBrowserContext function within Puppeteer remained unchanged.
 So I recently made a change to Puppeteer that allows developers to set proxy settings for each BrowserContext:
 <a href="https://github.com/puppeteer/puppeteer/pull/7516" target="_blank">https://github.com/puppeteer/puppeteer/pull/7516</a></p>
