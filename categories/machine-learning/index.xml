@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Machine Learning on Joone Blog</title>
+    <link>https://joone.github.io/categories/machine-learning/</link>
+    <description>Recent content in Machine Learning on Joone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sun, 07 May 2023 16:06:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/categories/machine-learning/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loz: A Command-Line Interface Tool for ChatGPT</title>
+      <link>https://joone.github.io/blog/loz/</link>
+      <pubDate>Sun, 07 May 2023 16:06:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/loz/</guid>
+      <description>When I first encountered ChatGPT, I thought it would be a good idea to use it to write GIT messages.</description>
+    </item>
+    
+  </channel>
+</rss>
