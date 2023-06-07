@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Enhancing Puppeteer with Proxy Support</title>
+      <link>https://joone.github.io/blog/proxy-support-puppeteer/</link>
+      <pubDate>Sun, 22 Aug 2021 13:48:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/proxy-support-puppeteer/</guid>
+      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.</description>
+    </item>
+    
+    <item>
       <title>Joone</title>
       <link>https://joone.github.io/author/joone-hur/</link>
       <pubDate>Tue, 02 Feb 2021 10:20:19 +0600</pubDate>

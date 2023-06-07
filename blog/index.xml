@@ -35,6 +35,15 @@
     </item>
     
     <item>
+      <title>Enhancing Puppeteer with Proxy Support</title>
+      <link>https://joone.github.io/blog/proxy-support-puppeteer/</link>
+      <pubDate>Sun, 22 Aug 2021 13:48:00 -0700</pubDate>
+      
+      <guid>https://joone.github.io/blog/proxy-support-puppeteer/</guid>
+      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.</description>
+    </item>
+    
+    <item>
       <title>The WindowService2(?) of CrOS</title>
       <link>https://joone.github.io/blog/chromeos-window-service2/</link>
       <pubDate>Wed, 29 Aug 2018 13:48:00 -0700</pubDate>
