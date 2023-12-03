@@ -6,10 +6,6 @@ aliases: [ "/2010/12/webkitgtk-hackfest-2010.html" ]
 tags : [Webkit, GNOME]
 ---
 
-[![WebKitGTK+ hackfest, day 0](http://farm6.static.flickr.com/5050/5235372842_8c4236d7b1.jpg)](http://www.flickr.com/photos/diegoe/5235372842/ "WebKitGTK+ hackfest, day 0 by diegorm, on Flickr")
-
-(c) 2010 Diegoe
-
 I attended the [WebKitGtk+ Hackfest](http://live.gnome.org/Hackfests/WebKitGTK2010) held in the Igalia Office, located in Coruña, Spain, in this month. It was a great opportunity for me to meet the WebKitGtk+maintainers directly. This hackfest was sponsored by Collabora and Igalia. The Igalia office was very nice; it can be compared to the Google office in terms of the atmosphere. There were free snacks, beverage and game consoles in the office. Moreover, we had buffet lunch everyday. I'd like to give thanks to Collabora and Igalia for sponsoring the hackfest and the GNOME foundation for sponsoring my trip to Coruña.  
   
 
