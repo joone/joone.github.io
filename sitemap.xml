@@ -2,14 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://joone.github.io/tags/aria/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
     <loc>https://joone.github.io/blog/</loc>
-    <lastmod>2023-06-07T02:00:14-07:00</lastmod>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/categories/</loc>
-    <lastmod>2023-06-07T02:00:14-07:00</lastmod>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/chromium/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/firefox/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/</loc>
-    <lastmod>2023-06-07T02:00:14-07:00</lastmod>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/categories/web/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/webkit/</loc>
+    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/llm/</loc>
     <lastmod>2023-06-07T02:00:14-07:00</lastmod>
@@ -22,12 +43,6 @@
   </url><url>
     <loc>https://joone.github.io/tags/myproject/</loc>
     <lastmod>2023-06-07T02:00:14-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/</loc>
-    <lastmod>2023-06-07T02:00:14-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/chromium/</loc>
-    <lastmod>2023-05-07T16:06:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/categories/chromium/</loc>
     <lastmod>2023-05-07T16:06:00-07:00</lastmod>
@@ -84,9 +99,6 @@
     <lastmod>2021-08-28T22:12:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/contribution/</loc>
-    <lastmod>2021-08-28T22:12:00-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/webkit/</loc>
     <lastmod>2021-08-28T22:12:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/blog/proxy-support-puppeteer/</loc>
@@ -256,9 +268,6 @@
   </url><url>
     <loc>https://joone.github.io/blog/webkit-contributors-meeting-2011/</loc>
     <lastmod>2011-04-30T21:04:00-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/firefox/</loc>
-    <lastmod>2011-04-22T02:57:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/blog/firefox4-future-of-web_22/</loc>
     <lastmod>2011-04-22T02:57:00-07:00</lastmod>

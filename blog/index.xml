@@ -6,7 +6,16 @@
     <description>Recent content in Blog on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 07 Jun 2023 02:00:14 -0700</lastBuildDate><atom:link href="https://joone.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
+      <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</link>
+      <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
+      
+      <guid>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</guid>
+      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.</description>
+    </item>
+    
     <item>
       <title>Loz, A Command-Line Interface Tool for ChatGPT</title>
       <link>https://joone.github.io/blog/loz/</link>
@@ -350,9 +359,7 @@ Last Sunday, the 2nd of October, was the most memorable day in my</description>
       <pubDate>Thu, 30 Dec 2010 07:35:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/webkitgtk-hackfest-2010/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm6.static.flickr.com/5050/5235372842_8c4236d7b1.jpg&amp;#34; alt=&amp;#34;WebKitGTK&amp;#43; hackfest, day 0&amp;#34;&amp;gt;
-(c) 2010 Diegoe
-I attended the WebKitGtk&amp;#43; Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
+      <description>I attended the WebKitGtk&amp;#43; Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
     </item>
     
     <item>

@@ -6,7 +6,16 @@
     <description>Recent content in firefox on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 22 Apr 2011 02:57:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/firefox/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
+      <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</link>
+      <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
+      
+      <guid>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</guid>
+      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.</description>
+    </item>
+    
     <item>
       <title>Firefox4 &amp; the future of the Web</title>
       <link>https://joone.github.io/blog/firefox4-future-of-web_22/</link>

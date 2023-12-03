@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Web on Joone Blog</title>
+    <link>https://joone.github.io/categories/web/</link>
+    <description>Recent content in Web on Joone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
+      <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</link>
+      <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
+      
+      <guid>https://joone.github.io/blog/aside_aria_cross_browser_compatibility./</guid>
+      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.</description>
+    </item>
+    
+  </channel>
+</rss>
