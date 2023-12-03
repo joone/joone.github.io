@@ -1,0 +1,17 @@
+h1 {
+  font-family: 'Arial', sans-serif;
+  font-size: 2em; /* Example size */
+  color: #333333; /* Example color */
+}
+
+h2 {
+  font-family: 'Times New Roman', serif;
+  font-size: 1.5em;
+  color: #666666;
+}
+
+h3 {
+  font-family: 'Helvetica', sans-serif;
+  font-size: 1.2em;
+  color: #999999;
+}
