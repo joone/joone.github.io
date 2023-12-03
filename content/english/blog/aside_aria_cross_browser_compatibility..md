@@ -15,7 +15,7 @@ The `<aside>`element is typically used for displaying additional information tha
 
 https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
 
-How is the `<aside>`element handled in the accessibility tree?
+### How is the `<aside>`element handled in the accessibility tree?
 Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver.  For example, the `<aside>`element assumes a complementary role in the Accessibility Tree.
 
 
@@ -41,15 +41,15 @@ https://chromium-review.googlesource.com/c/chromium/src/+/5004497
 Consequently, I abandoned my initial patch and instead refocused on refactoring the GetLandmarkIsNotAllowedAncestorRoles() function in Chromium to enhance clarity.
 
 ### Fix the bug in WebKIt
-I then fixed the related bug in WebKit by enabling `<aside>`elements to be assigned a complementary role when nested within `<aside>`, `<article>`, `<section>`, or `<nav>` elements, ensuring alignment with the specification. Therefore, I hope that this fix will be included in the next release of Safari browser.
+I then fixed the related bug in WebKit by enabling `<aside>`elements to be assigned a generic role when nested within `<aside>`, `<article>`, `<section>`, or `<nav>` elements, ensuring alignment with the specification. Therefore, I hope that this fix will be included in the next release of Safari browser.
 
 https://github.com/WebKit/WebKit/pull/20013
 
 ### Firefox issue
-Additionally, I am currently working on the same problem in the Firefox project.
+Additionally, I am currently working on the same problem in Firefox browser.
 https://phabricator.services.mozilla.com/D193495
 
-It's been quite a while since I last contributed to Firefox, so this task has been somewhat challenging. I had to learn everything from scratch, including downloading the source code, understanding the build process, and submitting  my patch. 
+It's been quite a while since I last contributed to Firefox, so this task has been somewhat challenging. I had to learn everything from scratch, including downloading the source code, understanding the build process, and submitting my patch. 
 
 The Bugzilla UI was changed, so it took some time to get used to the Bugzilla UI. Nevertheless, I‘ve managed through these steps and got the initial review from a reviewer.
 https://phabricator.services.mozilla.com/D193495
