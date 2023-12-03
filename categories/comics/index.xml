@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Comics on Joone Blog</title>
+    <link>https://joone.github.io/categories/comics/</link>
+    <description>Recent content in Comics on Joone Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 31 Aug 2022 18:19:25 +0600</lastBuildDate><atom:link href="https://joone.github.io/categories/comics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>만화로 보는 gpl-violations.org 이야기</title>
+      <link>https://joone.github.io/blog/foss_comics_gpl_violations/</link>
+      <pubDate>Wed, 31 Aug 2022 18:19:25 +0600</pubDate>
+      
+      <guid>https://joone.github.io/blog/foss_comics_gpl_violations/</guid>
+      <description>https://joone.net/2022/08/31/46-gpl-violations-org/ 내용을 요약하면, 하</description>
+    </item>
+    
+  </channel>
+</rss>

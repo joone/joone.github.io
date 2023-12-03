@@ -16,5 +16,14 @@
       <description>If you work on Node.js or TypeScript, you may have your own initial setup for development.</description>
     </item>
     
+    <item>
+      <title>타입스크립트(Typescript) 스타터 코드</title>
+      <link>https://joone.github.io/blog/typescript_starter/</link>
+      <pubDate>Sun, 04 Sep 2022 18:19:25 +0600</pubDate>
+      
+      <guid>https://joone.github.io/blog/typescript_starter/</guid>
+      <description>프로젝트가 반복되면 재</description>
+    </item>
+    
   </channel>
 </rss>

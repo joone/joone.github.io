@@ -53,6 +53,24 @@
     </item>
     
     <item>
+      <title>x-window</title>
+      <link>https://joone.github.io/tags/x-window/</link>
+      <pubDate>Sat, 15 Oct 2022 22:49:25 +0000</pubDate>
+      
+      <guid>https://joone.github.io/tags/x-window/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>GPL</title>
+      <link>https://joone.github.io/tags/gpl/</link>
+      <pubDate>Wed, 31 Aug 2022 18:19:25 +0600</pubDate>
+      
+      <guid>https://joone.github.io/tags/gpl/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>Rust</title>
       <link>https://joone.github.io/tags/rust/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
@@ -553,6 +571,15 @@
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
       <guid>https://joone.github.io/tags/summit/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>book</title>
+      <link>https://joone.github.io/tags/book/</link>
+      <pubDate>Mon, 17 Jul 2006 18:19:25 +0900</pubDate>
+      
+      <guid>https://joone.github.io/tags/book/</guid>
       <description></description>
     </item>
     

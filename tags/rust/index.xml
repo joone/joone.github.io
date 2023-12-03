@@ -17,6 +17,15 @@
     </item>
     
     <item>
+      <title>Rust 기반 OpenGL animation toolkit</title>
+      <link>https://joone.github.io/blog/rust-animation-ko/</link>
+      <pubDate>Wed, 24 Nov 2021 18:19:25 +0600</pubDate>
+      
+      <guid>https://joone.github.io/blog/rust-animation-ko/</guid>
+      <description>오랜 숙원사업(?) 첫</description>
+    </item>
+    
+    <item>
       <title>Rust &amp; DRM</title>
       <link>https://joone.github.io/blog/rust-drm/</link>
       <pubDate>Thu, 24 May 2018 16:06:00 -0700</pubDate>
