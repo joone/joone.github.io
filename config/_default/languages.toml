@@ -5,10 +5,3 @@ languageCode = "en-us"
 contentDir = "content/english"
 weight = 1
 
-
-################ Korea language ##################
-[kr]
-languageName = "Kr"
-languageCode = "euc-kr"
-contentDir = "content/korean"
-weight = 2
