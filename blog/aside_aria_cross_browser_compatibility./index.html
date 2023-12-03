@@ -363,7 +363,7 @@
               
               
               
-              <li class="nav-item ">
+              <li class="nav-item active">
                 <a class="nav-link" 
                   href="/about/">About</a>
               </li>
@@ -636,8 +636,8 @@
             <h3 id="the-aside-element">The <code>&lt;aside&gt;</code> element</h3>
 <p>The <code>&lt;aside&gt;</code>element is typically used for displaying additional information that complements the main content.</p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a></p>
-<p>How is the <code>&lt;aside&gt;</code>element handled in the accessibility tree?
-Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver.  For example, the <code>&lt;aside&gt;</code>element assumes a complementary role in the Accessibility Tree.</p>
+<h3 id="how-is-the-asideelement-handled-in-the-accessibility-tree">How is the <code>&lt;aside&gt;</code>element handled in the accessibility tree?</h3>
+<p>Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver.  For example, the <code>&lt;aside&gt;</code>element assumes a complementary role in the Accessibility Tree.</p>
 <p>However, in certain exceptional cases, the <code>&lt;aside&gt;</code>element does not assume this complementary role. According to the HTML specification(<a href="https://w3c.github.io/html-aam/#el-aside%29" target="_blank">https://w3c.github.io/html-aam/#el-aside)</a>, when nested within sectioning content elements like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, or another <code>&lt;aside&gt;</code>, it should not be treated as complementary. For your information, sectioning content in HTML refers to elements that define the structure of a document and represent independent content blocks or structural units.</p>
 <p><a href="https://html.spec.whatwg.org/multipage/dom.html#sectioning-content-2" target="_blank">https://html.spec.whatwg.org/multipage/dom.html#sectioning-content-2</a></p>
 <h3 id="incorrect-bug-report-in-chromium-project">Incorrect bug report in Chromium project</h3>
@@ -651,12 +651,12 @@ Even the QA engineer was confused and confirmed this as a bug.</p>
 <p><a href="https://chromium-review.googlesource.com/c/chromium/src/&#43;/5004497" target="_blank">https://chromium-review.googlesource.com/c/chromium/src/&#43;/5004497</a></p>
 <p>Consequently, I abandoned my initial patch and instead refocused on refactoring the GetLandmarkIsNotAllowedAncestorRoles() function in Chromium to enhance clarity.</p>
 <h3 id="fix-the-bug-in-webkit">Fix the bug in WebKIt</h3>
-<p>I then fixed the related bug in WebKit by enabling <code>&lt;aside&gt;</code>elements to be assigned a complementary role when nested within <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, or <code>&lt;nav&gt;</code> elements, ensuring alignment with the specification. Therefore, I hope that this fix will be included in the next release of Safari browser.</p>
+<p>I then fixed the related bug in WebKit by enabling <code>&lt;aside&gt;</code>elements to be assigned a generic role when nested within <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, or <code>&lt;nav&gt;</code> elements, ensuring alignment with the specification. Therefore, I hope that this fix will be included in the next release of Safari browser.</p>
 <p><a href="https://github.com/WebKit/WebKit/pull/20013" target="_blank">https://github.com/WebKit/WebKit/pull/20013</a></p>
 <h3 id="firefox-issue">Firefox issue</h3>
-<p>Additionally, I am currently working on the same problem in the Firefox project.
+<p>Additionally, I am currently working on the same problem in Firefox browser.
 <a href="https://phabricator.services.mozilla.com/D193495" target="_blank">https://phabricator.services.mozilla.com/D193495</a></p>
-<p>It&rsquo;s been quite a while since I last contributed to Firefox, so this task has been somewhat challenging. I had to learn everything from scratch, including downloading the source code, understanding the build process, and submitting  my patch.</p>
+<p>It&rsquo;s been quite a while since I last contributed to Firefox, so this task has been somewhat challenging. I had to learn everything from scratch, including downloading the source code, understanding the build process, and submitting my patch.</p>
 <p>The Bugzilla UI was changed, so it took some time to get used to the Bugzilla UI. Nevertheless, I‘ve managed through these steps and got the initial review from a reviewer.
 <a href="https://phabricator.services.mozilla.com/D193495" target="_blank">https://phabricator.services.mozilla.com/D193495</a></p>
 <p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside" target="_blank">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a></p>
