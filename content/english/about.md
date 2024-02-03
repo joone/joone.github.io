@@ -24,6 +24,5 @@ social:
 
 
 ---
-Thank you for visiting my blog. This is a personal blog site hosted by github.io. I publish this blog site using Hugo and Bookworm theme. You can also find Korean articles here, but  Korean and English article do not match 100% so you may need to use Google Translator to translate my article if necessary.
-
-FYI, English is not my native language, so English articles may be a bit awkward. :-)
+Thank you for visiting my blog. This is a personal blog site hosted by github.io. 
+I publish this blog site using Hugo and Bookworm theme.
