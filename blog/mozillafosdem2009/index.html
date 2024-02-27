@@ -17,7 +17,8 @@ FOSDEM 2009 finished last week. Although I didn&rsquo;t attend FODSEM, I got a f
 <meta name="twitter:title" content="Mozilla@FOSDEM2009"/>
 <meta name="twitter:description" content="Photo: Teemu Mäntynen
 FOSDEM 2009 finished last week. Although I didn&rsquo;t attend FODSEM, I got a feel for what was going through through blogs and photos on Flikr."/>
-
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
 	
         <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
 	
@@ -27,8 +28,43 @@ FOSDEM 2009 finished last week. Although I didn&rsquo;t attend FODSEM, I got a f
 
 	
 	
+		<script type="text/javascript"
+		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+		</script>
+	
+		
+		<script type="text/x-mathjax-config">
+		MathJax.Hub.Config({
+			tex2jax: {
+				inlineMath: [['$','$'], ['\\(','\\)']],
+				displayMath: [['$$','$$'], ['\[','\]']],
+				processEscapes: true,
+				processEnvironments: true,
+				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+				TeX: { equationNumbers: { autoNumber: "AMS" },
+						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
+			}
+		});
+		</script>
+	
 
 	
+	
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
+		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
+		
+		
+		<script>
+			document.addEventListener("DOMContentLoaded", function() {
+					renderMathInElement(document.body, {
+							delimiters: [
+									{left: "$$", right: "$$", display: true},
+									{left: "$", right: "$", display: false}
+							]
+					});
+			});
+			</script>
 	
 	
 	
@@ -127,7 +163,9 @@ For your information, <a href="http://www.fosdem.org/2009/media/video">you can f
 	</article>
 </main>
 <footer>
-  <div style="display:flex"></div>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
   <div class="footer-info">
     2024  <a
       href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
@@ -135,6 +173,8 @@ For your information, <a href="http://www.fosdem.org/2009/media/video">you can f
 </footer>
 
 
-</div>
+<script>
+  feather.replace()
+</script></div>
     </body>
 </html>
