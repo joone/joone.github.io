@@ -6,7 +6,16 @@
     <description>Recent content on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Feb 2024 19:44:48 -0800</lastBuildDate><atom:link href="https://joone.github.io/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loz Update: Now with Local LLM Support and Natural Language Linux Commands</title>
+      <link>https://joone.github.io/blog/loz-update/</link>
+      <pubDate>Mon, 26 Feb 2024 19:44:48 -0800</pubDate>
+      
+      <guid>https://joone.github.io/blog/loz-update/</guid>
+      <description>I&amp;rsquo;ve been developing the Loz project in my spare time for nearly a year.</description>
+    </item>
+    
     <item>
       <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
       <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility/</link>
