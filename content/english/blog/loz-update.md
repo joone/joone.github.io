@@ -5,6 +5,7 @@ draft: false
 ---
 
 ![alt Loz Demo](https://github.com/joone/loz/raw/main/examples/loz_demo.gif?raw=true)
+
 I've been developing the Loz project in my spare time for nearly a year. It's now ready for others to use, so I'm excited to share the latest updates.
 
 https://github.com/joone/loz
