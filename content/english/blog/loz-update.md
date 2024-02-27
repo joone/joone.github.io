@@ -23,19 +23,19 @@ The generated JSON varies but is generally understandable, containing command or
 
 Here are some examples of executing Linux commands with Loz:
 
-- Find the largest file in the current directory:
+* Find the largest file in the current directory:
   ```
   loz "find the largest file in the current directory"
   -rw-rw-r-- 1 foo bar 9020257 Jan 31 19:49 ./node_modules/typescript/lib/typescript.js
   ```
 
-- Check if Apache2 is running:
+* Check if Apache2 is running:
   ```
   loz "check if apache2 is running on this system"
   ● apache2.service - The Apache HTTP Server
   ```
 
-- Detect GPUs in the system:
+*  Detect GPUs in the system:
   ```
   loz "Detect GPUs on this system"
   00:02.0 VGA compatible controller: Intel Corporation Device a780 (rev 04)
