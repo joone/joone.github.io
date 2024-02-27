@@ -158,7 +158,7 @@
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</guid>
-      <description>Recently, I published a blog article about making Use Of Chrome&amp;amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop.</description>
+      <description>Recently, I published a blog article about making Use Of Chrome&amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop.</description>
     </item>
     
     <item>
@@ -303,7 +303,7 @@ Apple-style-span has not been produced since 2011: https://webkit.</description>
       <pubDate>Mon, 05 Dec 2011 03:25:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/accelerated-composting-in-webkitgtk/</guid>
-      <description>During the WebKitGkt&amp;#43; hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port.</description>
+      <description>During the WebKitGkt+ hackfest 2011, I applied Accelerated Compositing to WebKitGtk+ using Clutter so it started working like the webkit-clutter port.</description>
     </item>
     
     <item>
@@ -312,8 +312,7 @@ Apple-style-span has not been produced since 2011: https://webkit.</description>
       <pubDate>Wed, 30 Nov 2011 04:29:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/webkitgtk-hackfest-2011/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm8.staticflickr.com/7032/6430000691_8da7528408.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-(C) Mario Gustavo and I are attending the WebKitGtk&amp;#43; hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time.</description>
+      <description>(C) Mario Gustavo and I are attending the WebKitGtk+ hackfest 2011 which is held at the Igalia office in A Coruña, Spain like the last time.</description>
     </item>
     
     <item>
@@ -331,8 +330,7 @@ Apple-style-span has not been produced since 2011: https://webkit.</description>
       <pubDate>Mon, 03 Oct 2011 08:48:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/my-lovely-baby-girl/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm7.static.flickr.com/6131/6207943240_56ce436852.jpg&amp;#34; alt=&amp;#34;My baby girl&amp;#34;&amp;gt;
-Last Sunday, the 2nd of October, was the most memorable day in my</description>
+      <description>Last Sunday, the 2nd of October, was the most memorable day in my</description>
     </item>
     
     <item>
@@ -386,7 +384,7 @@ Last Sunday, the 2nd of October, was the most memorable day in my</description>
       <pubDate>Thu, 30 Dec 2010 07:35:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/webkitgtk-hackfest-2010/</guid>
-      <description>I attended the WebKitGtk&amp;#43; Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
+      <description>I attended the WebKitGtk+ Hackfest held in the Igalia Office, located in Coruña, Spain, in this month.</description>
     </item>
     
     <item>
@@ -404,8 +402,7 @@ Last Sunday, the 2nd of October, was the most memorable day in my</description>
       <pubDate>Tue, 12 Oct 2010 19:00:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/why-i-participate-in-open-source/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm5.static.flickr.com/4031/5080322907_35683248ca.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer.</description>
+      <description>It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer.</description>
     </item>
     
     <item>
@@ -414,8 +411,7 @@ It&amp;rsquo;s already been almost 4 months since I started a new career as an o
       <pubDate>Sat, 07 Aug 2010 01:03:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/building-chromium-browser-on-your-mac/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://4.bp.blogspot.com/_vr2B2ySFJkY/TF0anmRCrOI/AAAAAAAAAQI/BqU1d_Zqg74/s320/200px-Chromium_Logo.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-Copyright © Chromium Project
+      <description>Copyright © Chromium Project
 Building your own browser is the best way to find bugs and fix them.</description>
     </item>
     
@@ -461,8 +457,8 @@ Building your own browser is the best way to find bugs and fix them.</descriptio
       <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/samsung-windows-mobile-sdk-10-releaed/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3642/3500831169_1a68ac0aff.jpg&amp;#34; alt=&amp;#34;SAMSUNG Windows Mobile SDK&amp;#34;&amp;gt;
-Samsung Windows Mobile SDK 1.</description>
+      <description>Samsung Windows Mobile SDK 1.0 was released!
+You can download Samsung Windows Mobile SDK 1.</description>
     </item>
     
     <item>
@@ -509,8 +505,7 @@ FOSDEM 2009 finished last week. Although I didn&amp;rsquo;t attend FODSEM, I got
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/hiden-related-bugzilla-issues/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3348/3188016234_a551140d92.jpg&amp;#34; alt=&amp;#34;Fennec1.0 alpha3 preview&amp;#34;&amp;gt;
-426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
+      <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
@@ -528,8 +523,7 @@ FOSDEM 2009 finished last week. Although I didn&amp;rsquo;t attend FODSEM, I got
       <pubDate>Tue, 19 Aug 2008 06:22:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/firefox-summit/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-I attended Firefox&amp;#43; Summit at Whistler, Canada. It was a great time in my life because I met Mozilla folks who I had known the name only and talk about some issues I have wondered.</description>
+      <description>I attended Firefox+ Summit at Whistler, Canada. It was a great time in my life because I met Mozilla folks who I had known the name only and talk about some issues I have wondered.</description>
     </item>
     
     <item>
@@ -574,8 +568,7 @@ I attended Firefox&amp;#43; Summit at Whistler, Canada. It was a great time in m
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/real-full-browsing-in-korea/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://www.lg.co.kr/common/inc/imageView.jsp?file_name=/upload/LA/LAA/20080325/viewsum_ms__id45_wiz20080325112410.JPG&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.</description>
+      <description>LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.</description>
     </item>
     
     <item>
@@ -675,7 +668,7 @@ I spent busy time so I couldn&amp;rsquo;t write blogs for the time.</description
       <pubDate>Wed, 03 Oct 2007 16:02:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/2007-south-north-korean-summit/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://www.koreatimes.co.kr/upload/news/071003_p01_leaders.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.</description>
+      <description>South Korean president Rho Moo-hyun and North Korean leader Kim Jeong-il had a historical summit meeting at Pyungyang in North Korea.</description>
     </item>
     
     <item>
@@ -711,8 +704,7 @@ I spent busy time so I couldn&amp;rsquo;t write blogs for the time.</description
       <pubDate>Thu, 07 Dec 2006 22:08:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/unpleasant-proposal/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/113/307714434_20f85e11e4_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-joone_developer
+      <description>joone_developer
 Originally uploaded by joone4u.
 &amp;ldquo;I want you to work for the planning group&amp;rdquo;</description>
     </item>
@@ -723,8 +715,8 @@ Originally uploaded by joone4u.
       <pubDate>Tue, 21 Nov 2006 15:49:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/barcamp-seoul-2006/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/105/277336264_329ae71dd9.jpg&amp;#34; alt=&amp;#34;BarCamp Seoul 2006&amp;#34;&amp;gt;
-Do you know the BarCamp?</description>
+      <description>Do you know the BarCamp?
+BarCamp is a informal meeting that don&amp;rsquo;t have any subject.</description>
     </item>
     
     <item>
@@ -733,8 +725,7 @@ Do you know the BarCamp?</description>
       <pubDate>Thu, 09 Nov 2006 15:20:00 -0800</pubDate>
       
       <guid>https://joone.github.io/blog/richard-stallman-comes-to-korea/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://kldp.org/files/mail-1.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-Next week he is going to vist Korea to address the new GPL and free software.</description>
+      <description>Next week he is going to vist Korea to address the new GPL and free software.</description>
     </item>
     
     <item>
@@ -752,8 +743,7 @@ Next week he is going to vist Korea to address the new GPL and free software.</d
       <pubDate>Thu, 07 Sep 2006 16:26:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/distorting-ancient-history_08/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/34/118657181_e8b4c7595c_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-Goguryeo
+      <description>Goguryeo
 Originally uploaded by Khitai.
 Seoul warns beijing against distorting ancient History.</description>
     </item>
@@ -764,7 +754,7 @@ Seoul warns beijing against distorting ancient History.</description>
       <pubDate>Tue, 05 Sep 2006 16:22:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/on-top-of-cheonwangbong-in-jirisan/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/82/222661329_c256fc800c_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt; 지리산 천왕봉 정</description>
+      <description>지리산 천왕봉 정상에서</description>
     </item>
     
     <item>
@@ -791,9 +781,9 @@ Seoul warns beijing against distorting ancient History.</description>
       <pubDate>Mon, 14 Aug 2006 09:42:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/jaipur-hawa-mahal/</guid>
-      <description>&amp;lt;img src=&amp;#34;https://static.flickr.com/51/113365863_fd470e91d1_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-Jaipur Hawa Mahal
-Originally uploaded by j0rune.</description>
+      <description>Jaipur Hawa Mahal
+Originally uploaded by j0rune.
+You may believe or not, I&amp;rsquo;m now in India.</description>
     </item>
     
     <item>
@@ -802,8 +792,7 @@ Originally uploaded by j0rune.</description>
       <pubDate>Mon, 17 Jul 2006 16:12:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/flood-in-seoul/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://static.flickr.com/60/190708513_463a0c3bba_m.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-_DSC9586
+      <description>_DSC9586
 Originally uploaded by titicat.
 It&amp;rsquo;s now the rainy season, but it is raining too much.</description>
     </item>
@@ -823,8 +812,7 @@ It&amp;rsquo;s now the rainy season, but it is raining too much.</description>
       <pubDate>Tue, 13 Jun 2006 16:00:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/korea-sinks-togo-2-1/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://us.news1.yimg.com/us.yimg.com/i/fifa/gen/xp/20060613/t/1429435228.jpg&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-Korean national football team triumphed againt Togo in their first match at the wordlcup football competition in Germany.</description>
+      <description>Korean national football team triumphed againt Togo in their first match at the wordlcup football competition in Germany.</description>
     </item>
     
     <item>
@@ -833,8 +821,7 @@ Korean national football team triumphed againt Togo in their first match at the 
       <pubDate>Sun, 04 Jun 2006 16:09:00 -0700</pubDate>
       
       <guid>https://joone.github.io/blog/my-new-cartoon-blog/</guid>
-      <description>&amp;lt;img src=&amp;#34;http://kldp.org/files/919366.png&amp;#34; alt=&amp;#34;&amp;#34;&amp;gt;
-http://kldp.org/blog/2725
+      <description>http://kldp.org/blog/2725
 I have started to write new cartoon blog on KLDP site.</description>
     </item>
     
@@ -937,15 +924,6 @@ I got married so I lived with my wife in my new house.</description>
       
       <guid>https://joone.github.io/contact/</guid>
       <description></description>
-    </item>
-    
-    <item>
-      <title>Elements</title>
-      <link>https://joone.github.io/elements/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://joone.github.io/elements/</guid>
-      <description>Heading example Here is example of hedings. You can use this heading by following markdownify rules.</description>
     </item>
     
     <item>
