@@ -56,8 +56,8 @@
 		
 
 		<section class="body">
-			<p><img src="https://github.com/joone/loz/raw/main/examples/loz_demo.gif?raw=true" alt="alt Loz Demo">
-I&rsquo;ve been developing the Loz project in my spare time for nearly a year. It&rsquo;s now ready for others to use, so I&rsquo;m excited to share the latest updates.</p>
+			<p><img src="https://github.com/joone/loz/raw/main/examples/loz_demo.gif?raw=true" alt="alt Loz Demo"></p>
+<p>I&rsquo;ve been developing the Loz project in my spare time for nearly a year. It&rsquo;s now ready for others to use, so I&rsquo;m excited to share the latest updates.</p>
 <p><a href="https://github.com/joone/loz">https://github.com/joone/loz</a></p>
 <h2 id="support-for-local-llm">Support for Local LLM</h2>
 <p>Initially, Loz only supported the OpenAI API. A friend inquired about integrating open-source LLMs like Llama2, which isn&rsquo;t straightforward to set up on a user&rsquo;s computer. I discovered a project called <a href="https://github.com/ollama/ollama">Ollama</a> that simplifies the installation of various open-source LLMs with a single command. It supports GPU or CPU and is compatible with Linux, MacOS, and Windows, making it an ideal solution for Loz. I refactored Loz&rsquo;s codebase, introduced an abstract class named LLMService, and added subclasses such as OpenAiAPI and OllamaAPI. Now, users can effortlessly switch between LLMs in interactive mode using <code>config api</code> command.</p>
