@@ -3,6 +3,8 @@ title: "Loz Update: Now with Local LLM Support and Natural Language Linux Comman
 date: 2024-02-26T19:44:48-08:00
 draft: false
 ---
+
+![alt Loz Demo](https://github.com/joone/loz/raw/main/examples/loz_demo.gif?raw=true)
 I've been developing the Loz project in my spare time for nearly a year. It's now ready for others to use, so I'm excited to share the latest updates.
 
 https://github.com/joone/loz
