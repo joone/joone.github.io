@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>LLM on Joone Blog</title>
-    <link>https://joone.github.io/tags/llm/</link>
-    <description>Recent content in LLM on Joone Blog</description>
+    <title>AI on Joone Blog</title>
+    <link>https://joone.github.io/categories/ai/</link>
+    <description>Recent content in AI on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Joone Hur</copyright>
-    <lastBuildDate>Mon, 26 Feb 2024 19:44:48 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/llm/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Feb 2024 19:44:48 -0800</lastBuildDate><atom:link href="https://joone.github.io/categories/ai/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loz Update: Now with Local LLM Support and Natural Language Linux Commands</title>
       <link>https://joone.github.io/posts/loz-update/</link>

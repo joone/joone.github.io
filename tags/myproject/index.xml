@@ -7,7 +7,18 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Joone Hur</copyright>
-    <lastBuildDate>Wed, 07 Jun 2023 02:00:14 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/myproject/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 26 Feb 2024 19:44:48 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/myproject/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Loz Update: Now with Local LLM Support and Natural Language Linux Commands</title>
+      <link>https://joone.github.io/posts/loz-update/</link>
+      <pubDate>Mon, 26 Feb 2024 19:44:48 -0800</pubDate>
+      
+      <guid>https://joone.github.io/posts/loz-update/</guid>
+      <description>I&amp;rsquo;ve been developing the Loz project in my spare time for nearly a year. It&amp;rsquo;s now ready for others to use, so I&amp;rsquo;m excited to share the latest updates.
+https://github.com/joone/loz
+Support for Local LLM Initially, Loz only supported the OpenAI API. A friend inquired about integrating open-source LLMs like Llama2, which isn&amp;rsquo;t straightforward to set up on a user&amp;rsquo;s computer. I discovered a project called Ollama that simplifies the installation of various open-source LLMs with a single command.</description>
+    </item>
+    
     <item>
       <title>Loz, A Command-Line Interface Tool for ChatGPT</title>
       <link>https://joone.github.io/posts/loz/</link>
