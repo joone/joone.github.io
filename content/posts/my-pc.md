@@ -5,12 +5,8 @@ draft: false
 aliases: [ "/2005/10/my-pc.html" ]
 ---
 
-I have three computers. One is a power mac, another is a PC and the other is a notebook.  
-The power Mac is very fast and provides good performance because it has two CPU.  
-However, PC is very slow. It had been 4 years and 9 month after I bought.  
-For a long time, I added new equipments including a DVD-RW, a 1394 port and a USB2 port to my PC.  
-It has been sufficient to use my PC except CPU speed. However, the speed is always critical to use my PC after WindowsXP has been installed.  
-  
-However, I do not have any plan to upgrade my PC because I already bought the power mac G5, but whenever I browse web sites, the Internet Explorer is mandatory to navigate specific sites that requires the transaction. I cannot but turn on my PC.  
-  
-I will use the Mac & my PC simultaneously for some time.
+I have three computers: one is a Power Mac, another is a PC, and the other is a notebook. The Power Mac is very fast and provides good performance because it has two CPUs. However, the PC is very slow. It has been 4 years and 9 months since I bought it. Over time, I added new equipment to my PC, including a DVD-RW, a 1394 port, and a USB2 port. These additions have been sufficient for using my PC, except for the CPU speed, which has always been critical, especially after installing Windows XP.
+
+However, I do not have any plans to upgrade my PC because I already bought the Power Mac G5. But whenever I browse websites, Internet Explorer is mandatory for navigating specific sites that require transactions. Therefore, I have no choice but to turn on my PC.
+
+I will be using the Mac and my PC simultaneously for some time.
