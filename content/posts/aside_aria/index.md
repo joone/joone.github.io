@@ -10,6 +10,8 @@ images:
 author: "Joone Hur"
 ---
 
+ ![aside tag](aside_tag.png "How the aside tag is rendered")
+
 ### The `<aside>` element
 The `<aside>`element is typically used for displaying additional information that complements the main content.
 
