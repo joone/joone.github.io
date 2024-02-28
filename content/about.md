@@ -10,7 +10,7 @@ author = "joone"
 ![My character](/images/author.png)
 
 Thank you for visiting my blog. This is a personal blog site hosted by github.io. 
-I publish this blog site using Hugo and Bookworm theme.
+I publish this blog site using Hugo and Archie theme.
 
 
 
