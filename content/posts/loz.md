@@ -1,7 +1,7 @@
 ---
 title: 'Loz, A Command-Line Interface Tool for ChatGPT'
 date: 2023-06-07T02:00:14-07:00
-categories: ["Machine Learning"]
+categories: ["AI"]
 draft: false
 aliases: [ "/2023/06/loz_cli.html" ]
 tags : [MyProject, LLM]

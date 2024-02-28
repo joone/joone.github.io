@@ -2,6 +2,8 @@
 title: "Loz Update: Now with Local LLM Support and Natural Language Linux Commands"
 date: 2024-02-26T19:44:48-08:00
 draft: false
+categories: ["AI"]
+tags : [MyProject, LLM]
 ---
 
 ![alt Loz Demo](https://github.com/joone/loz/raw/main/examples/loz_demo.gif?raw=true)
