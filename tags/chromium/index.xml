@@ -6,78 +6,103 @@
     <description>Recent content in chromium on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
-      <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility/</link>
+      <link>https://joone.github.io/posts/aside_aria_cross_browser_compatibility/</link>
       <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/aside_aria_cross_browser_compatibility/</guid>
-      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.</description>
+      <guid>https://joone.github.io/posts/aside_aria_cross_browser_compatibility/</guid>
+      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+How is the &amp;lt;aside&amp;gt;element handled in the accessibility tree? Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver. For example, the &amp;lt;aside&amp;gt;element assumes a complementary role in the Accessibility Tree.
+However, in certain exceptional cases, the &amp;lt;aside&amp;gt;element does not assume this complementary role.</description>
     </item>
     
     <item>
       <title>The new Headless mode now supports disabling lazy loading</title>
-      <link>https://joone.github.io/blog/headless-disable-lazy-loading/</link>
+      <link>https://joone.github.io/posts/headless-disable-lazy-loading/</link>
       <pubDate>Sun, 07 May 2023 16:06:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/headless-disable-lazy-loading/</guid>
-      <description>Recently, I added support for disabling lazy loading to the new headless Chromium.</description>
+      <guid>https://joone.github.io/posts/headless-disable-lazy-loading/</guid>
+      <description>Recently, I added support for disabling lazy loading to the new headless Chromium. Since the Google Chrome team announced the new headless mode, the new headless mode has gradually supported the old headless features. This was one of the missing features.
+But, what does disabling lazy loading actually mean?
+First, we need to understand what lazy loading is on the Web. Lazy loading is a technique that delays the loading of resources until they are needed.</description>
     </item>
     
     <item>
       <title>Enhancing Puppeteer with Proxy Support</title>
-      <link>https://joone.github.io/blog/proxy-support-puppeteer/</link>
+      <link>https://joone.github.io/posts/proxy-support-puppeteer/</link>
       <pubDate>Sun, 22 Aug 2021 13:48:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/proxy-support-puppeteer/</guid>
-      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.</description>
+      <guid>https://joone.github.io/posts/proxy-support-puppeteer/</guid>
+      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing. However, until recently, Puppeteer did not support proxy settings for each BrowserContext. This meant that if you wanted to use a proxy with Puppeteer, you had to set it globally for all BrowserContexts. You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.</description>
     </item>
     
     <item>
       <title>Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</title>
-      <link>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</link>
+      <link>https://joone.github.io/posts/making-use-of-chromes-ozone-gbm-intel/</link>
       <pubDate>Thu, 12 Jul 2018 11:21:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/making-use-of-chromes-ozone-gbm-intel/</guid>
-      <description>Recently, I published a blog article about making Use Of Chrome&amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop.</description>
+      <guid>https://joone.github.io/posts/making-use-of-chromes-ozone-gbm-intel/</guid>
+      <description>Recently, I published a blog article about making Use Of Chrome&amp;rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using ChromeOS graphics stack for a regular Linux system. This article was also mentioned in Phoronix.
+Originally, my old colleague started working on this a long time ago, but it has been broken since then. So I have been trying to enable ozone-gbm on a Linux system because this solution would be useful for embedded systems.</description>
     </item>
     
     <item>
       <title>BlinkOn9</title>
-      <link>https://joone.github.io/blog/blinkon9/</link>
+      <link>https://joone.github.io/posts/blinkon9/</link>
       <pubDate>Fri, 04 May 2018 22:03:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/blinkon9/</guid>
-      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.</description>
+      <guid>https://joone.github.io/posts/blinkon9/</guid>
+      <description>I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this conference, I talked about acelerating graphics performance with ozone-gbm on Intel based Linux desktop systems: explained what kind of hardware accelerations have been applied to Intel based Chromebooks and how we can use them on a Linux desktop.
+Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo</description>
     </item>
     
     <item>
       <title>My major contributions to Chromium project</title>
-      <link>https://joone.github.io/blog/my-major-contributions-to-chromium/</link>
+      <link>https://joone.github.io/posts/my-major-contributions-to-chromium/</link>
       <pubDate>Mon, 14 Nov 2016 16:14:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/my-major-contributions-to-chromium/</guid>
-      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features.</description>
+      <guid>https://joone.github.io/posts/my-major-contributions-to-chromium/</guid>
+      <description>I have been working on Chromium project since 2013 and fixed many bugs and implemented some features. Here are my major contributions:
+Blink Editing
+[Issue 226941] Contenteditable issues related to backspace handling https://codereview.chromium.org/2064473002
+https://codereview.chromium.org/2117663002
+[Issue 318925] Copy and paste sometimes removes spaces between words https://codereview.chromium.org/2193033004
+https://codereview.chromium.org/2280513004
+https://codereview.chromium.org/2320533002
+https://codereview.chromium.org/2325553002
+https://codereview.chromium.org/2336043006
+[Issue 310149] ContentEditable: is forced on SPACE between text nodes https://codereview.chromium.org/2175163004 [Issue 335955] Unwanted spans inserted in contentEditable elements https://codereview.chromium.org/2072093002 [issue 571420] chrome hangs on when creating bullet list in contenteditable https://codereview.</description>
     </item>
     
     <item>
       <title>Ozone-Wayland</title>
-      <link>https://joone.github.io/blog/ozone-wayland/</link>
+      <link>https://joone.github.io/posts/ozone-wayland/</link>
       <pubDate>Wed, 02 Apr 2014 13:24:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/ozone-wayland/</guid>
-      <description>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].</description>
+      <guid>https://joone.github.io/posts/ozone-wayland/</guid>
+      <description>Ozone-Wayland is an Ozone implementation of Chromium, which allows to run Crosswalk and Chromium browser natively on Wayland without any X11 dependence[1].
+I have been working on Ozone-Wayland recently. There were two releases since I was involved in the development. In the latest release, I contributed the virtual keyboard support to Ozone-Wayland. You can find how it works in the following video:
+The ozone-wayland team has been focusing on graphics accelerations such as WebGL, Canvas 2D, Accelerated Compositing on Wayland.</description>
     </item>
     
     <item>
       <title>Building Chromium browser on your Mac</title>
-      <link>https://joone.github.io/blog/building-chromium-browser-on-your-mac/</link>
+      <link>https://joone.github.io/posts/building-chromium-browser-on-your-mac/</link>
       <pubDate>Sat, 07 Aug 2010 01:03:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/building-chromium-browser-on-your-mac/</guid>
+      <guid>https://joone.github.io/posts/building-chromium-browser-on-your-mac/</guid>
       <description>Copyright © Chromium Project
-Building your own browser is the best way to find bugs and fix them.</description>
+Building your own browser is the best way to find bugs and fix them. Now, I&amp;rsquo;d like to introduce how to build Chromium on your mac. I think that the latest code seems more stable(?) and provides more features.
+This is a starting point to build Chromium on Mac OS X.
+http://code.google.com/p/chromium/wiki/MacBuildInstructions
+Installing the depot-tools http://dev.chromium.org/developers/how-tos/install-gclient
+$ svn co http://src.chromium.org/svn/trunk/tools/depot_tools
+Add depot_tools to your PATH:</description>
     </item>
     
   </channel>

@@ -6,14 +6,15 @@
     <description>Recent content in Web Browser on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Wed, 02 Mar 2011 00:18:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/web-browser/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The age of the web browser is coming</title>
-      <link>https://joone.github.io/blog/age-of-web-browser-is-coming/</link>
+      <link>https://joone.github.io/posts/age-of-web-browser-is-coming/</link>
       <pubDate>Wed, 02 Mar 2011 00:18:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/age-of-web-browser-is-coming/</guid>
-      <description>When did you start using a PC? In my case, I started to use computers when I was in university.</description>
+      <guid>https://joone.github.io/posts/age-of-web-browser-is-coming/</guid>
+      <description>When did you start using a PC? In my case, I started to use computers when I was in university. At that time, it was very difficult for general users to use a computer, because we had to memorize the commands and the directory path, which an executable file is located in. Even using a mouse was optional to use PCs. However, the computing environment has changed rapidly since Windows and the Web were introduced in the 1990s.</description>
     </item>
     
   </channel>

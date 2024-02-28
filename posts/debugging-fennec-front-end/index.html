@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Debugging Fennec front-end - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
+XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
+To modify them," />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Debugging Fennec front-end" />
+<meta property="og:description" content="Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
+XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
+To modify them," />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/debugging-fennec-front-end/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2009-10-11T08:17:00-07:00" />
+<meta property="article:modified_time" content="2009-10-11T08:17:00-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Debugging Fennec front-end"/>
+<meta name="twitter:description" content="Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
+XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
+To modify them,"/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Debugging Fennec front-end</h1>
+			<div class="meta">Posted on Oct 11, 2009</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.</p>
+<p>XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.</p>
+<p>To modify them,</p>
+<ol>
+<li>Extract the chrome.jar in the current path</li>
+<li>Modify the chrome.manifest as follows</li>
+</ol>
+<blockquote>
+<p>override chrome://global/skin/about.css chrome://browser/skin/about.css<br>
+skin browser classic/1.0 content/..<br>
+content branding content/branding/<br>
+content firstrun content/ contentaccessible=yes<br>
+content browser content/</p>
+</blockquote>
+<p>In order to display variable values or simple JavaScript debug message information in the system console, you can use the dump function. Before using this command, it needs to enable browser dump preferences by typing about:config in the URL bar.</p>
+<blockquote>
+<p>browser.dom.window.dump.enabled=true</p>
+</blockquote>
+<p>This is an example of using dump() in the startup() funciton in browser.js</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span> startup: function() {  
+</span></span><span style="display:flex;"><span>    var self = this;  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    dump(&#34;begin startup\n&#34;);  
+</span></span><span style="display:flex;"><span>  
+</span></span><span style="display:flex;"><span>    let container = document.getElementById(&#34;tile-container&#34;);  
+</span></span><span style="display:flex;"><span>   ...
+</span></span></code></pre></div><p>The dump function works well on Linux system, but it doesn&rsquo;t work in Visual Studio in Windows system in order to debug Fennec for Windows Mobile.<br>
+It works well in Visual Studio, so I could see debug messages in the output box of Visual Studio using the latest build of Fennec.</p>
+<p><strong>References</strong></p>
+<ul>
+<li>
+<p><a href="http://www.getbooksmarts.org/news/2007/03/17/debug-output-logging-in-firefox/%20">http://www.getbooksmarts.org/news/2007/03/17/debug-output-logging-in-firefox/</a></p>
+</li>
+<li>
+<p><a href="https://developer.mozilla.org/en/Debugging_JavaScript">https://developer.mozilla.org/en/Debugging_JavaScript</a></p>
+</li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/fennec">fennec</a></li>
+					
+					<li><a href="/tags/mozilla">Mozilla</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

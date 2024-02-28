@@ -6,23 +6,25 @@
     <description>Recent content in MyProject on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Wed, 07 Jun 2023 02:00:14 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/myproject/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Loz, A Command-Line Interface Tool for ChatGPT</title>
-      <link>https://joone.github.io/blog/loz/</link>
+      <link>https://joone.github.io/posts/loz/</link>
       <pubDate>Wed, 07 Jun 2023 02:00:14 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/loz/</guid>
-      <description>When I first encountered ChatGPT, I thought it would be a good idea to use it to write GIT messages.</description>
+      <guid>https://joone.github.io/posts/loz/</guid>
+      <description>When I first encountered ChatGPT, I thought it would be a good idea to use it to write GIT messages. I often spend a lot of time writing and updating GIT messages to explain my changes in a better and more concise way, but it is not always easy. So, I implemented a small CLI tool called Loz to write GIT messages in a GIT repository. It worked well, and some people started using it and contributing to my project.</description>
     </item>
     
     <item>
       <title>rust-animation project</title>
-      <link>https://joone.github.io/blog/rust-animation/</link>
+      <link>https://joone.github.io/posts/rust-animation/</link>
       <pubDate>Sun, 05 Dec 2021 17:20:49 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/rust-animation/</guid>
-      <description>I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port.</description>
+      <guid>https://joone.github.io/posts/rust-animation/</guid>
+      <description>I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port. During that time, I extended the existing Clutter Actor APIs and implemented my own Actor to support CSS 3D transforms, which worked well. I even managed to run some impressive CSS 3D animation demos in the WebKit Clutter port.
+However, the Clutter project has lost its direction and is now almost deprecated, even though it is still used in GNOME Shell.</description>
     </item>
     
   </channel>

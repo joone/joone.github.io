@@ -6,14 +6,17 @@
     <description>Recent content in headless on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 07 May 2023 16:06:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/headless/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>The new Headless mode now supports disabling lazy loading</title>
-      <link>https://joone.github.io/blog/headless-disable-lazy-loading/</link>
+      <link>https://joone.github.io/posts/headless-disable-lazy-loading/</link>
       <pubDate>Sun, 07 May 2023 16:06:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/headless-disable-lazy-loading/</guid>
-      <description>Recently, I added support for disabling lazy loading to the new headless Chromium.</description>
+      <guid>https://joone.github.io/posts/headless-disable-lazy-loading/</guid>
+      <description>Recently, I added support for disabling lazy loading to the new headless Chromium. Since the Google Chrome team announced the new headless mode, the new headless mode has gradually supported the old headless features. This was one of the missing features.
+But, what does disabling lazy loading actually mean?
+First, we need to understand what lazy loading is on the Web. Lazy loading is a technique that delays the loading of resources until they are needed.</description>
     </item>
     
   </channel>

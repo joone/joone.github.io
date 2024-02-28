@@ -6,15 +6,18 @@
     <description>Recent content in SAMSUNG on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 26 Apr 2009 04:05:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/samsung/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>SAMSUNG Windows Mobile SDK 1.0 Released!</title>
-      <link>https://joone.github.io/blog/samsung-windows-mobile-sdk-10-releaed/</link>
+      <link>https://joone.github.io/posts/samsung-windows-mobile-sdk-10-releaed/</link>
       <pubDate>Sun, 26 Apr 2009 04:05:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/samsung-windows-mobile-sdk-10-releaed/</guid>
+      <guid>https://joone.github.io/posts/samsung-windows-mobile-sdk-10-releaed/</guid>
       <description>Samsung Windows Mobile SDK 1.0 was released!
-You can download Samsung Windows Mobile SDK 1.</description>
+You can download Samsung Windows Mobile SDK 1.0 from SAMSUNG Mobile Innovator web site, but it needs to be registered for downloading. Of course, it&amp;rsquo;s free.
+It consists of API Spec, programming guide, installation guide, header files &amp;amp; library for device APIs, and sample code.
+The APIs is used for providing advanced features unique to Samsung phones. You might already have experience using advanced capabilities featured in the Windows Mobile APIs, like GPS, Bluetooth, or multimedia support.</description>
     </item>
     
   </channel>

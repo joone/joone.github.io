@@ -6,14 +6,20 @@
     <description>Recent content in camera on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 20 Apr 2008 06:36:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/camera/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Camera Interface on Mobile Platform</title>
-      <link>https://joone.github.io/blog/camera-interface-in-maemo-platform/</link>
+      <link>https://joone.github.io/posts/camera-interface-in-maemo-platform/</link>
       <pubDate>Sun, 20 Apr 2008 06:36:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/camera-interface-in-maemo-platform/</guid>
-      <description>Mozilla platform is trying to support device APIs for mobile environment.</description>
+      <guid>https://joone.github.io/posts/camera-interface-in-maemo-platform/</guid>
+      <description>Mozilla platform is trying to support device APIs for mobile environment.
+Some people call them native interface
+I already posted a blog on device APIs
+The Mozilla community started to discuss what the device APIs should be supported through the news group and Mozilla wiki.
+Christopher added some information regarding the device APIs in the wiki.
+So you can find on-going issues to support the device APIs. They are not confirmed, so you can suggest your idea &amp;amp; opinion to them.</description>
     </item>
     
   </channel>

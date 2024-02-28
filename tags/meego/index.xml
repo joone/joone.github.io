@@ -6,14 +6,17 @@
     <description>Recent content in MeeGo on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Mon, 26 Mar 2012 00:22:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/meego/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Using Nokia N9 in Korea</title>
-      <link>https://joone.github.io/blog/its-been-almost-3-months-since-i/</link>
+      <link>https://joone.github.io/posts/its-been-almost-3-months-since-i/</link>
       <pubDate>Mon, 26 Mar 2012 00:22:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/its-been-almost-3-months-since-i/</guid>
-      <description>It’s been almost 3 months since I started using a Nokia N9 as my secondary phone, which is a Linux based smart phone released by Nokia on October 2011.</description>
+      <guid>https://joone.github.io/posts/its-been-almost-3-months-since-i/</guid>
+      <description>It’s been almost 3 months since I started using a Nokia N9 as my secondary phone, which is a Linux based smart phone released by Nokia on October 2011. In this post, I will introduce what Nokia N9 is and how to use it in Korea, because it adopts an open source mobile platform which means that anyone can be involved with the project.
+Nokia N9
+Unfortunately, N9 is the first and last MeeGo phone, but it seems to be close to the Maemo platform, because it uses Qt as the UI framework and the Debian package system.</description>
     </item>
     
   </channel>

@@ -6,14 +6,17 @@
     <description>Recent content in Hangul on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Mon, 26 Jul 2010 21:33:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/hangul/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>IME composition events are handled inconsistently in WebKit</title>
-      <link>https://joone.github.io/blog/composition-events-are-handled_27/</link>
+      <link>https://joone.github.io/posts/composition-events-are-handled_27/</link>
       <pubDate>Mon, 26 Jul 2010 21:33:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/composition-events-are-handled_27/</guid>
-      <description>I have been working on Korean Hangul composition issue in WebKitGtk.</description>
+      <guid>https://joone.github.io/posts/composition-events-are-handled_27/</guid>
+      <description>I have been working on Korean Hangul composition issue in WebKitGtk. By the way, I&amp;rsquo;ve noticed that IME Composition events are handled inconsistently in each WebKit port.
+According to W3C DOM Level 3 events,
+A browser should fire compositionstart, compositionupdate, and compositionend event during a composition. The textEvent event should be dispatched after a compositionend event if the composition has not been canceled. While a composition session is active, keyboard events should not be dispatched to the DOM (i.</description>
     </item>
     
   </channel>

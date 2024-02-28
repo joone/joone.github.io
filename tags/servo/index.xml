@@ -6,14 +6,16 @@
     <description>Recent content in Servo on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Thu, 24 Aug 2017 13:47:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/servo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Working on the Servo project</title>
-      <link>https://joone.github.io/blog/working-on-servo-project/</link>
+      <link>https://joone.github.io/posts/working-on-servo-project/</link>
       <pubDate>Thu, 24 Aug 2017 13:47:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/working-on-servo-project/</guid>
-      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community.</description>
+      <guid>https://joone.github.io/posts/working-on-servo-project/</guid>
+      <description>I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community. During the time, I contributed to Fennec browser by fixing bugs and localization. Anyway, this blog article motivated me work on Mozilla again.
+I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.</description>
     </item>
     
   </channel>

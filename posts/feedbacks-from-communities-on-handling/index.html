@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Feedbacks from the communities on the key events handling in WebKit - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&rsquo;ve got quick feedbacks from the communities on each issue as follows,
+Issue1) IME Composition events should be handled consistently in all ports of WebKit.
+=&gt; &ldquo;This can&rsquo;t be achieved as it depends on the platform IME system." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Feedbacks from the communities on the key events handling in WebKit" />
+<meta property="og:description" content="I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&rsquo;ve got quick feedbacks from the communities on each issue as follows,
+Issue1) IME Composition events should be handled consistently in all ports of WebKit.
+=&gt; &ldquo;This can&rsquo;t be achieved as it depends on the platform IME system." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/feedbacks-from-communities-on-handling/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2010-08-04T06:24:00-07:00" />
+<meta property="article:modified_time" content="2010-08-04T06:24:00-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Feedbacks from the communities on the key events handling in WebKit"/>
+<meta name="twitter:description" content="I posted an email to the WebKit mailing list on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&rsquo;ve got quick feedbacks from the communities on each issue as follows,
+Issue1) IME Composition events should be handled consistently in all ports of WebKit.
+=&gt; &ldquo;This can&rsquo;t be achieved as it depends on the platform IME system."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Feedbacks from the communities on the key events handling in WebKit</h1>
+			<div class="meta">Posted on Aug 4, 2010</div>
+		</div>
+		
+
+		<section class="body">
+			<p><a href="https://lists.webkit.org/pipermail/webkit-dev/2010-July/013684.html">I posted an email to the WebKit mailing list</a> on the issue I mentioned in the previous blog.The email introduced a status of the inconsistent event handling during a IME composition on WebKit. Fortunately, I&rsquo;ve got quick feedbacks from the communities on each issue as follows,</p>
+<p>Issue1) IME Composition events should be handled consistently in all ports of WebKit.<br>
+=&gt; <em>&ldquo;This can&rsquo;t be achieved as it depends on the platform IME system. Therefore, different IMEs making consistent behaviors across multiple platforms is an exercise in futility. However, If we are seeing different behaviour with the same IME on a single platform, that&rsquo;s a bug.&rdquo;</em></p>
+<p>Issue2) The textInput event should be dispatched after a compositionend event.<br>
+=&gt; <em>&quot;</em><a href="http://lists.w3.org/Archives/Public/www-dom/2010AprJun/0048.html"><em>There&rsquo;s a discussion on www-dom at w3.org</em></a> <em>about changing the spec because there seems a issue of handling a textInput event. Currently, before the textInput event is dispatched, DOM has been already mutated during a composition. Therefore, If there is to be a textInput event, first, the composition text is removed. And then, if the textEvent is not cancelled, the browser inserts the composition text again. It seems not efficient.&quot;</em></p>
+<p>Issue3) While a composition session is active, keyboard events should not be dispatched to the DOM.<br>
+=&gt; In relation to keyboard events, <em>WebKit has fired key events during a composition for a long time. Therefore, It can&rsquo;t stop to fire key events in order to avoid site break.</em></p>
+<p>As a result, they agreed that <a href="http://www.w3.org/TR/DOM-Level-3-Events/">the DOM Level 3 event model</a> for input composition does not match the requirements of actual web content as I have worried. Therefore, in order to avoid the confusion among web developers, the DOM Level3 events spec needs to introduce the reason why each browser handles keyboard events in different ways.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/webkit">Webkit</a></li>
+					
+					<li><a href="/tags/w3c">W3C</a></li>
+					
+					<li><a href="/tags/ime">IME</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

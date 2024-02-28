@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Make file-picker modal in Chromium for Linux - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.
+There was already a bug and it seemed easy to fix it, but, it took 2 years to fully fix the problem." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Make file-picker modal in Chromium for Linux" />
+<meta property="og:description" content="When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.
+There was already a bug and it seemed easy to fix it, but, it took 2 years to fully fix the problem." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/make-file-picker-modal-in-chromium-for/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2016-11-29T13:15:00-08:00" />
+<meta property="article:modified_time" content="2016-11-29T13:15:00-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Make file-picker modal in Chromium for Linux"/>
+<meta name="twitter:description" content="When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.
+There was already a bug and it seemed easy to fix it, but, it took 2 years to fully fix the problem."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Make file-picker modal in Chromium for Linux</h1>
+			<div class="meta">Posted on Nov 29, 2016</div>
+		</div>
+		
+
+		<section class="body">
+			<p>When I stared working on Chromium, I found a bug in Chromium for Linux: the file-picker was not modal. So, while opening a file-picker, the users could control the main window. Sometimes, it caused mis-behaviors such as we were able to send an email while attaching a file.<br>
+There was already <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=408481">a bug</a> and it seemed easy to fix it, but, it took 2 years to fully fix the problem.</p>
+<p>The root cause is as follows:</p>
+<p>Chromium for Linux uses GtkFileChooserDialog to open a file-picker, but it is not modal to the X11 host window because GtkFileChooserDialog can be modal only to the parent GtkWindow. So I tried to allow the X11 host window to disable input event handling to make a file-picker modal:  Here is the details:</p>
+<h2 id="opening-a-file-picker">Opening a file-picker</h2>
+<p><img src="https://lh6.googleusercontent.com/deldsoZkd_koKpVHQMkIp6MFYpCIBPHJZlAMTQsPNXOsXwMfVO4_gTNP5R_WHWKmrK2Q2kkLNYZKah3BD1ueHtOnjw7NlDK5R05q3KplTPeYECT-sqPfUm5d0N6k90eWhnmSbMzY" alt=""></p>
+<p>DisableEventListening() disables event listening for the host window using aura::ScopedWindowTargeter, which allows to temporarily replace the event-targeter with ui::NullEventTargeter. It returns a scope handle that is used to call |destroy_callback| when closing the file-picker.</p>
+<p>class ScopedHandle {<br>
+ public:<br>
+   explicit ScopedHandle(const base::Closure&amp; destroy_callback);<br>
+   ~ScopedHandle();<br>
+   void CancelCallback();</p>
+<p> private:<br>
+    base::Closure destroy_callback_;<br>
+    DISALLOW_COPY_AND_ASSIGN(ScopedHandle);<br>
+};</p>
+<p>In addition, we also set another destroy callback(OnFilePickerDestroy) to the GtkFileChooserDialog that can be called when the file-picker is closed.</p>
+<h2 id="close-the-file-picker">Close the file-picker</h2>
+<p><img src="https://lh3.googleusercontent.com/1dcXzpAM5KvIEPZ9AQQalrNa7FOmA5swv6INlICgGfaS19mglnoKmBnI9EVYDpGAxkyVw1Ovhzei3tspqqVP8-6vZOXsm47uh-sXWxrsqSM4aKT1j0dCBWSdzZ6AFaSbv5ue5uJQ" alt=""></p>
+<p>As you can see, OnFilePickerDestroy deletes scoped_handle.</p>
+<p>void OnFilePickerDestroy(views::DesktopWindowTreeHostX11::ScopedHandle*</p>
+<p>   scoped_handle) {</p>
+<p> delete scoped_handle;</p>
+<p>}</p>
+<p>Then, |destroy_callback| of ScopedHandle below is automatically called.</p>
+<p>void DesktopWindowTreeHostX11::EnableEventListening() {</p>
+<p> DCHECK(modal_dialog_xid_);</p>
+<p> modal_dialog_xid_ = 0;</p>
+<p> targeter_for_modal_.reset();</p>
+<p>}</p>
+<p>You can find more details and discussion at <a href="https://docs.google.com/document/d/12CfKVTpaonxxM3sNksq6vY6qb0J2qR3b7h_bLxzYanE/edit#">here</a>.</p>
+<p><a href="https://codereview.chromium.org/1594973009">The first change list was reverted</a> due to the UI freezing problem that happens when the users open a file-picker from a child window of the X11 host window. <a href="https://codereview.chromium.org/1624793002/">The second change list</a> finally fixed this issue(BUG 408481, 579408). I also added a test case for the fix: <a href="https://cs.chromium.org/chromium/src/chrome/browser/ui/libgtkui/select_file_dialog_interactive_uitest.cc?l=74&amp;ct=xref_jump_to_def&amp;gsn=MAYBE_ModalTest">BrowserSelectFileDialogTest.ModalTest</a>.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

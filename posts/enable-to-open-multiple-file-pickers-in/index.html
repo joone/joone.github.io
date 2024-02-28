@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Enable to open multiple file-pickers in Chromium for Linux - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
+Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Enable to open multiple file-pickers in Chromium for Linux" />
+<meta property="og:description" content="Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
+Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/enable-to-open-multiple-file-pickers-in/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-03-01T13:06:00-08:00" />
+<meta property="article:modified_time" content="2017-03-01T13:06:00-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Enable to open multiple file-pickers in Chromium for Linux"/>
+<meta name="twitter:description" content="Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. I fixed the file-picker modal issue in Chromium for Linux last year. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but it happened since M55 when you follow the following steps:
+Enable &ldquo;Ask where to save&rdquo; in settings. Open 2 tabs of e.g.: https://sourceforge.net/projects/azureus/files/latest/download Wait for 2 downloader windows, and close/cancel/etc both Freeze or crash Here is a video to reproduce the problem."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Enable to open multiple file-pickers in Chromium for Linux</h1>
+			<div class="meta">Posted on Mar 1, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Sometimes, we don&rsquo;t know exact requirements or expect user behaviors while developing or fix something. <a href="https://codereview.chromium.org/1624793002/">I fixed the file-picker modal issue in Chromium for Linux last year</a>. At that time, the reviewer and I thought that there would be no case to pop-up multiple file-pickers, but <a href="https://bugs.chromium.org/p/chromium/issues/detail?id=678982">it happened</a>  since M55 when you follow the following steps:</p>
+<ol>
+<li>Enable &ldquo;Ask where to save&rdquo; in settings.</li>
+<li>Open 2 tabs of e.g.: <a href="https://sourceforge.net/projects/azureus/files/latest/download">https://sourceforge.net/projects/azureus/files/latest/download</a></li>
+<li>Wait for 2 downloader windows, and close/cancel/etc both</li>
+<li>Freeze or crash</li>
+</ol>
+<p>Here is a video to reproduce the problem.</p>
+<p>When file-picker is opened, it disables event listening of the main host window. Then, the user closes the file-picker, it enables the event listening. Now, the host widow has a counter to check the number of the open file-pickers and it doesn&rsquo;t disable the event listening if there are any open file-picker. The event listening can be enabled when the last file-picker is closed. Here is <a href="https://codereview.chromium.org/2709283003/">the fix</a>.<br>
+Anyway, you may see the fix in M58(Apr 25th, 2017)</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/blink">Blink</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

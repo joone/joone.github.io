@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>5k tiled dual DP (two-pipe, two-port) display sync issues - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="https://gitlab.freedesktop.org/drm/intel/-/issues/27
+5K 모니터를 우분투 20.04에서 설정하다가 재미있는 xrandr 사용 방법을 알게되었다. 아직까지 리눅스 데스크탑 여전히 일반 사용자가 쓰기 어려운 이유는 하드웨어가 제대로 지원되지 않는 부분이다. 물론 많이 좋아졌지만, Nvida GPU를 제대로 설정하기란 어려운 일이다. 어쩔 수 없이 open source version을 설치하고서나야 겨우 외장 모니터를 사용할 수 있었는데, 5k출력이 잘 안된다. 5k 출력은 두 DP 포트를 이용해서 화면에 절반씩 렌더링하는 구조로 되어 있는 듯 하다. 아마 하나의 DP가 bandwidth가 못받쳐줘서 그런 듯 보인다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="5k tiled dual DP (two-pipe, two-port) display sync issues" />
+<meta property="og:description" content="https://gitlab.freedesktop.org/drm/intel/-/issues/27
+5K 모니터를 우분투 20.04에서 설정하다가 재미있는 xrandr 사용 방법을 알게되었다. 아직까지 리눅스 데스크탑 여전히 일반 사용자가 쓰기 어려운 이유는 하드웨어가 제대로 지원되지 않는 부분이다. 물론 많이 좋아졌지만, Nvida GPU를 제대로 설정하기란 어려운 일이다. 어쩔 수 없이 open source version을 설치하고서나야 겨우 외장 모니터를 사용할 수 있었는데, 5k출력이 잘 안된다. 5k 출력은 두 DP 포트를 이용해서 화면에 절반씩 렌더링하는 구조로 되어 있는 듯 하다. 아마 하나의 DP가 bandwidth가 못받쳐줘서 그런 듯 보인다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/5k_dp/" /><meta property="og:image" content="https://gitlab.freedesktop.org/drm/intel/uploads/b41cac264bdaa37cd259a367410ae001/5l9a7426.jpg" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2022-10-15T22:49:25+00:00" />
+<meta property="article:modified_time" content="2022-10-15T22:49:25+00:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://gitlab.freedesktop.org/drm/intel/uploads/b41cac264bdaa37cd259a367410ae001/5l9a7426.jpg"/>
+
+<meta name="twitter:title" content="5k tiled dual DP (two-pipe, two-port) display sync issues"/>
+<meta name="twitter:description" content="https://gitlab.freedesktop.org/drm/intel/-/issues/27
+5K 모니터를 우분투 20.04에서 설정하다가 재미있는 xrandr 사용 방법을 알게되었다. 아직까지 리눅스 데스크탑 여전히 일반 사용자가 쓰기 어려운 이유는 하드웨어가 제대로 지원되지 않는 부분이다. 물론 많이 좋아졌지만, Nvida GPU를 제대로 설정하기란 어려운 일이다. 어쩔 수 없이 open source version을 설치하고서나야 겨우 외장 모니터를 사용할 수 있었는데, 5k출력이 잘 안된다. 5k 출력은 두 DP 포트를 이용해서 화면에 절반씩 렌더링하는 구조로 되어 있는 듯 하다. 아마 하나의 DP가 bandwidth가 못받쳐줘서 그런 듯 보인다."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">5k tiled dual DP (two-pipe, two-port) display sync issues</h1>
+			<div class="meta">Posted on Oct 15, 2022</div>
+		</div>
+		
+
+		<section class="body">
+			<p><a href="https://gitlab.freedesktop.org/drm/intel/-/issues/27">https://gitlab.freedesktop.org/drm/intel/-/issues/27</a></p>
+<p>5K 모니터를 우분투 20.04에서 설정하다가 재미있는 xrandr 사용 방법을 알게되었다.
+아직까지 리눅스 데스크탑 여전히 일반 사용자가 쓰기 어려운 이유는 하드웨어가 제대로 지원되지 않는 부분이다. 물론 많이 좋아졌지만,  Nvida GPU를 제대로 설정하기란 어려운 일이다.
+어쩔 수 없이 open source version을 설치하고서나야 겨우 외장 모니터를 사용할 수 있었는데, 5k출력이 잘 안된다.
+5k 출력은 두  DP 포트를 이용해서 화면에 절반씩 렌더링하는 구조로 되어 있는 듯 하다. 아마 하나의  DP가  bandwidth가 못받쳐줘서 그런 듯 보인다.</p>
+<p>위 글을 보면 몇년간 사람들이 문제를 해결하기 위해 고군분투한 내용을 볼 수 있다.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>xrandr --output DP-1 --off --output DP-2 --off
+</span></span><span style="display:flex;"><span>xrandr --newmode 2560x2880_MagicMode 483.25 2560 2608 2640 2720 2880 2883 2893 2962 +hsync -vsync
+</span></span><span style="display:flex;"><span>xrandr --addmode DP-1 2560x2880_MagicMode
+</span></span><span style="display:flex;"><span>xrandr --addmode DP-2 2560x2880_MagicMode
+</span></span><span style="display:flex;"><span>xrandr --output DP-1 --mode 2560x2880_MagicMode --output DP-2 --mode 2560x2880_MagicMode
+</span></span><span style="display:flex;"><span>xrandr --output DP-1 --pos 0x0 --output DP-2 --pos 2560x0 --output eDP-1 --auto --pos 5120x720
+</span></span></code></pre></div><p>xrandr은  kernel mode setting을 이용해서  display를 다시  configure할 수 있다. 위와 같이 하면 5k모니터에서 풀 해상도를 즐길 수 있다.
+하지만 내가 가진  hp laptop에서는 잘 안된다. 아마  ubuntu 22.04를 사용하면 되지 않을까 싶다.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/x-window">x-window</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

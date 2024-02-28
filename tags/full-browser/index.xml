@@ -6,14 +6,17 @@
     <description>Recent content in Full Browser on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sat, 05 Apr 2008 16:36:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/full-browser/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Real Full Browsing in Korea</title>
-      <link>https://joone.github.io/blog/real-full-browsing-in-korea/</link>
+      <link>https://joone.github.io/posts/real-full-browsing-in-korea/</link>
       <pubDate>Sat, 05 Apr 2008 16:36:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/real-full-browsing-in-korea/</guid>
-      <description>LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.</description>
+      <guid>https://joone.github.io/posts/real-full-browsing-in-korea/</guid>
+      <description>LG Telelcom, the smallest of three telecom operators in Korea launched mobile full browsing service with an attractive fixed-rate plan that allows unlimited data download within 6 month and 1G bytes after then for 6,000 won ($6) per month.
+Other telecom operators also have provided mobile full browsing service, but the rate plan is very expensive. For example, SK telecom charges about 3072Won(3$) per 1MB for data transfer.
+The full browser was provided by Infraware that is a Korean company.</description>
     </item>
     
   </channel>

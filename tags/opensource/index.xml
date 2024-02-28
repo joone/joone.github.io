@@ -6,23 +6,27 @@
     <description>Recent content in OpenSource on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Tue, 12 Oct 2010 19:00:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/opensource/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Why I participate in open source project</title>
-      <link>https://joone.github.io/blog/why-i-participate-in-open-source/</link>
+      <link>https://joone.github.io/posts/why-i-participate-in-open-source/</link>
       <pubDate>Tue, 12 Oct 2010 19:00:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/why-i-participate-in-open-source/</guid>
-      <description>It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer.</description>
+      <guid>https://joone.github.io/posts/why-i-participate-in-open-source/</guid>
+      <description>It&amp;rsquo;s already been almost 4 months since I started a new career as an open source developer. Before starting my new career, I had worked for a big electronics company and worked on open source projects such as Mozilla, Gtk+, WebKit project since 2007. The job was stable and salary was also good. However, I decided to quit my job and started to get involved in the projects as a contributor.</description>
     </item>
     
     <item>
       <title>Open Source in Asia</title>
-      <link>https://joone.github.io/blog/open-source-in-asia/</link>
+      <link>https://joone.github.io/posts/open-source-in-asia/</link>
       <pubDate>Sun, 17 Feb 2008 20:13:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/open-source-in-asia/</guid>
-      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.</description>
+      <guid>https://joone.github.io/posts/open-source-in-asia/</guid>
+      <description>I&amp;rsquo;d like to introduce a presentation about open source in Asia.
+The speaker is Gen Kanai who is working for Mozilla Corporation.
+He talked about Mozilla community &amp;amp; open source activities in Asia such as:
+Situation of Mozilla Community in Korea, China, Japan, and Taiwan Three barriers to participate in Open Source Projects such as culture, language and education Examples of Open Source Project in ASIA (Ruby, Red flag linux, and Dzongkha Debain Linux) The leader of Korea Mozilla Community, Channy Yun commented the situation of Open Source Activities in Korea.</description>
     </item>
     
   </channel>

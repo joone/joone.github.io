@@ -6,23 +6,39 @@
     <description>Recent content in patch on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Wed, 23 Jan 2008 04:45:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/patch/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Performance test of the microB patches</title>
-      <link>https://joone.github.io/blog/performance-test-of-microb-patches/</link>
+      <link>https://joone.github.io/posts/performance-test-of-microb-patches/</link>
       <pubDate>Wed, 23 Jan 2008 04:45:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/performance-test-of-microb-patches/</guid>
-      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.</description>
+      <guid>https://joone.github.io/posts/performance-test-of-microb-patches/</guid>
+      <description>I have tested the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.)
+- The microB package contains more 200 patches and several patch sets.
+- It is released with Firefox3 alpha6 pre. now.
+Two kinds of test case are used.
+- Tinderbox DHTML Test
+- CSS Rendering
+Target Device : PAX320, RAM 256MB
+And I got the following results on TestGtkEmbed in Mozilla.
+* Tinderbox DHTML Test:
+The microB patched Mozilla is 2.</description>
     </item>
     
     <item>
       <title>libpng patch for Mobile Firefox</title>
-      <link>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</link>
+      <link>https://joone.github.io/posts/libpng-patch-for-mozilla-firefox/</link>
       <pubDate>Sun, 06 Jan 2008 04:42:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/libpng-patch-for-mozilla-firefox/</guid>
-      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.</description>
+      <guid>https://joone.github.io/posts/libpng-patch-for-mozilla-firefox/</guid>
+      <description>There are submitted patches for Mobile Firefox on the Mozilla wiki.
+http://wiki.mozilla.org/Mobile/Patches
+My colleague tried to apply the png patch to Mozilla and get a good result related to performance improvement.
+As you know, we can build the libpng fixed point routines like the above patch.
+(Use #define PNG_NO_FLOATING_POINT_SUPPORTED in mozilla/modules/libimg/png/mozpngconf.h )
+In this case, he can get 8.6% performance improvement.
+It&amp;rsquo;s great. I think this patch is valuable to use on Mobile Firefox.</description>
     </item>
     
   </channel>

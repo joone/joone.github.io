@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="The &lt;aside&gt; element The &lt;aside&gt;element is typically used for displaying additional information that complements the main content.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+How is the &lt;aside&gt;element handled in the accessibility tree? Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver. For example, the &lt;aside&gt;element assumes a complementary role in the Accessibility Tree.
+However, in certain exceptional cases, the &lt;aside&gt;element does not assume this complementary role." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility" />
+<meta property="og:description" content="The &lt;aside&gt; element The &lt;aside&gt;element is typically used for displaying additional information that complements the main content.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+How is the &lt;aside&gt;element handled in the accessibility tree? Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver. For example, the &lt;aside&gt;element assumes a complementary role in the Accessibility Tree.
+However, in certain exceptional cases, the &lt;aside&gt;element does not assume this complementary role." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/aside_aria_cross_browser_compatibility/" /><meta property="og:image" content="https://joone.github.io/images/post/aside_tag.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2023-12-02T23:04:56-08:00" />
+<meta property="article:modified_time" content="2023-12-02T23:04:56-08:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://joone.github.io/images/post/aside_tag.png"/>
+
+<meta name="twitter:title" content="Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility"/>
+<meta name="twitter:description" content="The &lt;aside&gt; element The &lt;aside&gt;element is typically used for displaying additional information that complements the main content.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+How is the &lt;aside&gt;element handled in the accessibility tree? Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver. For example, the &lt;aside&gt;element assumes a complementary role in the Accessibility Tree.
+However, in certain exceptional cases, the &lt;aside&gt;element does not assume this complementary role."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</h1>
+			<div class="meta">Posted on Dec 2, 2023</div>
+		</div>
+		
+
+		<section class="body">
+			<h3 id="the-aside-element">The <code>&lt;aside&gt;</code> element</h3>
+<p>The <code>&lt;aside&gt;</code>element is typically used for displaying additional information that complements the main content.</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a></p>
+<h3 id="how-is-the-asideelement-handled-in-the-accessibility-tree">How is the <code>&lt;aside&gt;</code>element handled in the accessibility tree?</h3>
+<p>Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver.  For example, the <code>&lt;aside&gt;</code>element assumes a complementary role in the Accessibility Tree.</p>
+<p>However, in certain exceptional cases, the <code>&lt;aside&gt;</code>element does not assume this complementary role. According to the HTML specification(<a href="https://w3c.github.io/html-aam/#el-aside)">https://w3c.github.io/html-aam/#el-aside)</a>, when nested within sectioning content elements like <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, <code>&lt;nav&gt;</code>, or another <code>&lt;aside&gt;</code>, it should not be treated as complementary. For your information, sectioning content in HTML refers to elements that define the structure of a document and represent independent content blocks or structural units.</p>
+<p><a href="https://html.spec.whatwg.org/multipage/dom.html#sectioning-content-2">https://html.spec.whatwg.org/multipage/dom.html#sectioning-content-2</a></p>
+<h3 id="incorrect-bug-report-in-chromium-project">Incorrect bug report in Chromium project</h3>
+<p>Initially, there was confusion due to different behaviors in Firefox and Safari compared to Chromium. This led to a misconception about a bug in Chromium.</p>
+<p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1459657">https://bugs.chromium.org/p/chromium/issues/detail?id=1459657</a></p>
+<p>However, further discussions within the W3C community clarified that the behavior in Chromium was expected, and other browsers showed the wrong behavior.</p>
+<p><a href="https://github.com/w3c/html-aam/issues/512">https://github.com/w3c/html-aam/issues/512</a></p>
+<p>This example illustrates the difficulty of correctly implementing web accessibility standards.
+Even the QA engineer was confused and confirmed this as a bug.</p>
+<h3 id="code-refactoring-in-chromium">Code refactoring in Chromium</h3>
+<p><a href="https://chromium-review.googlesource.com/c/chromium/src/+/5004497">https://chromium-review.googlesource.com/c/chromium/src/+/5004497</a></p>
+<p>Consequently, I abandoned my initial patch and instead refocused on refactoring the GetLandmarkIsNotAllowedAncestorRoles() function in Chromium to enhance clarity.</p>
+<h3 id="fix-the-bug-in-webkit">Fix the bug in WebKIt</h3>
+<p>I then fixed the related bug in WebKit by enabling <code>&lt;aside&gt;</code>elements to be assigned a generic role when nested within <code>&lt;aside&gt;</code>, <code>&lt;article&gt;</code>, <code>&lt;section&gt;</code>, or <code>&lt;nav&gt;</code> elements, ensuring alignment with the specification. Therefore, I hope that this fix will be included in the next release of Safari browser.</p>
+<p><a href="https://github.com/WebKit/WebKit/pull/20013">https://github.com/WebKit/WebKit/pull/20013</a></p>
+<h3 id="firefox-issue">Firefox issue</h3>
+<p>Additionally, I am currently working on the same problem in Firefox browser.
+<a href="https://phabricator.services.mozilla.com/D193495">https://phabricator.services.mozilla.com/D193495</a></p>
+<p>It&rsquo;s been quite a while since I last contributed to Firefox, so this task has been somewhat challenging. I had to learn everything from scratch, including downloading the source code, understanding the build process, and submitting my patch.</p>
+<p>The Bugzilla UI was changed, so it took some time to get used to the Bugzilla UI. Nevertheless, I‘ve managed through these steps and got the initial review from a reviewer.
+<a href="https://phabricator.services.mozilla.com/D193495">https://phabricator.services.mozilla.com/D193495</a></p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside">https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside</a></p>
+<h3 id="efforts-in-web-compatibility">Efforts in Web Compatibility</h3>
+<p>Web compatibility is incredibly important, and there&rsquo;s a lot of effort going into reducing the differences between browsers. I&rsquo;m really happy to be able to contribute to this effort with my work.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/webkit">webkit</a></li>
+					
+					<li><a href="/tags/firefox">firefox</a></li>
+					
+					<li><a href="/tags/aria">ARIA</a></li>
+					
+					<li><a href="/tags/chromium">chromium</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

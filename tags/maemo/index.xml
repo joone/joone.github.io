@@ -6,32 +6,35 @@
     <description>Recent content in maemo on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 11 Jan 2009 20:19:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/maemo/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Hildon related bugzilla issues</title>
-      <link>https://joone.github.io/blog/hiden-related-bugzilla-issues/</link>
+      <link>https://joone.github.io/posts/hiden-related-bugzilla-issues/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/hiden-related-bugzilla-issues/</guid>
+      <guid>https://joone.github.io/posts/hiden-related-bugzilla-issues/</guid>
       <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
       <title>Latest looks of Fennec (Mobile Firefox)</title>
-      <link>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</link>
+      <link>https://joone.github.io/posts/latest-look-of-fennec-mobile-firefox/</link>
       <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</guid>
-      <description>The plan of Mobile Firefox was announced in October last</description>
+      <guid>https://joone.github.io/posts/latest-look-of-fennec-mobile-firefox/</guid>
+      <description>The plan of Mobile Firefox was announced in October last year and the Mozilla community is now very busy to develop Mobile Firefox.
+Fennec is the code name of Mobile Firefox, which is a desert fox. You may have seen a fennec in TV animation. The size of fennec is smaller than normal fox and it has big ears. So I think the name of Fennec seems to be suited well for Mobile Firefox.</description>
     </item>
     
     <item>
       <title>My N810 was delivered from the US.</title>
-      <link>https://joone.github.io/blog/my-n810-approached-from-us/</link>
+      <link>https://joone.github.io/posts/my-n810-approached-from-us/</link>
       <pubDate>Thu, 24 Apr 2008 16:31:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/my-n810-approached-from-us/</guid>
-      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall.</description>
+      <guid>https://joone.github.io/posts/my-n810-approached-from-us/</guid>
+      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall. Anyway, I am very satisfied with N810. It may be my favorite toy.
+N810 uses the Maemo platform that is based on Linux 2.6, GTK+, Matchbox and other open source projects. Scratchbox is used for its development environment that supports a cross-platform development environment.</description>
     </item>
     
   </channel>

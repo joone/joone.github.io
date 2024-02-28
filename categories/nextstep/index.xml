@@ -6,14 +6,16 @@
     <description>Recent content in nextstep on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Wed, 20 Sep 2017 11:38:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/categories/nextstep/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Installing OpenStep 4.2 on Parallels</title>
-      <link>https://joone.github.io/blog/running-openstep-42-on-parallels/</link>
+      <link>https://joone.github.io/posts/running-openstep-42-on-parallels/</link>
       <pubDate>Wed, 20 Sep 2017 11:38:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/running-openstep-42-on-parallels/</guid>
-      <description>NextStep is one of the advanced operating systems in 90s. You may understand why it is by watching this video:</description>
+      <guid>https://joone.github.io/posts/running-openstep-42-on-parallels/</guid>
+      <description>NextStep is one of the advanced operating systems in 90s. You may understand why it is by watching this video:
+Every features Steve Jobs introduced in this video was possible in 1992, which is amazing. So I&amp;rsquo;ve dreamed of using NextStep since I was aware of it, but I&amp;rsquo;ve never seen a running demo and just saw a NexTCube. By chance, I found instructions how to install OpenStep 4.2 on Parallels.</description>
     </item>
     
   </channel>

@@ -6,14 +6,24 @@
     <description>Recent content in Mobile Firefox on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Mon, 07 Jan 2008 08:00:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/mobile-firefox/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Ideas on supporting native interfaces in Mobile Firefox</title>
-      <link>https://joone.github.io/blog/ideas-on-supporting-native-interfaces/</link>
+      <link>https://joone.github.io/posts/ideas-on-supporting-native-interfaces/</link>
       <pubDate>Mon, 07 Jan 2008 08:00:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/ideas-on-supporting-native-interfaces/</guid>
-      <description>I&amp;rsquo;d like to share my ideas on native interface support in Mobile Firefox.</description>
+      <guid>https://joone.github.io/posts/ideas-on-supporting-native-interfaces/</guid>
+      <description>I&amp;rsquo;d like to share my ideas on native interface support in Mobile Firefox.
+These ideas are based on Christian&amp;rsquo;s Mobile Goal.
+http://www.christiansejersen.com/blog/2007/11/20/mobile-goals/
+Goal
+Provide mobile web application environment which can use native interfaces.
+- It can make XUL add-ons &amp;amp; web applications use native interfaces
+through JavaScript
+Types of Native Interfaces
+(Most of mobile platforms support APIs for easy of use for camera, GPS, contact, and etc..)
+There are two types of native interface:</description>
     </item>
     
   </channel>

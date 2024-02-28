@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>WebKit Mobile Features - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk&#43;, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk&#43;.
+First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="WebKit Mobile Features" />
+<meta property="og:description" content="Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk&#43;, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk&#43;.
+First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/webkit-mobile-features/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2011-05-21T01:04:00-07:00" />
+<meta property="article:modified_time" content="2011-05-21T01:04:00-07:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="WebKit Mobile Features"/>
+<meta name="twitter:description" content="Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk&#43;, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk&#43;.
+First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">WebKit Mobile Features</h1>
+			<div class="meta">Posted on May 21, 2011</div>
+		</div>
+		
+
+		<section class="body">
+			<p>Recently, I spent some time implementing the viewport meta tags and tiled backing store for WebKitGtk+, which are the mobile features of the WebKit engine. In this post, I’m going to tell you more about the mobile features of the WebKit engine and how to enable each feature when you build WebKitGtk+.</p>
+<p>First of all, the WebKit engine is particularly strong in the mobile area, because it is lighter and faster than other browser engines and has been verified by the success of Safari on the iPhone. Due to this reason, most mobile devices have adopted the WebKit engine to offer their own web browser: Nokia Symbian, Google Android, HP WebOS, and Samsung Bada are all using WebKit based browsers.</p>
+<p>Additionally, WebKit is an open source project. Naturally, <a href="http://trac.webkit.org/browser">all source code is open to the public</a>, but there is no obligation for manufacturers to open their browser code, because the WebKit engine uses the LGPL, so it allows a browser executable file to just link with the WebKit engine dynamically. It means that the browser can be a different file independent from the WebKit library. Because of this reason, the mobile features of Safari on the iPhone need not be open to the public and subsequently it has been hard to access the mobile features. Fortunately, other phone manufacturers have participated in the WebKit project and are developing mobile features within the community. Currently, Nokia, RIM, Samsung, Motorola and Erricson have participated in the WebKit project. In addition, the open source companies <a href="http://collabora.co.uk/">Collabora</a> and Igalia have worked on WebKit for a long time.</p>
+<p>Recently, some mobile features already have been applied to the WebKit engine such as the tiled backing store, touch events, and viewport meta tags. Since these features are a little complicated to understand in terms of the name, I will explain them including the other mobile features supported by WebKit in more details.</p>
+<ul>
+<li>Fast Mobile Scrolling</li>
+<li>Tiled Backing Store</li>
+<li>Viewport Meta Tags</li>
+<li>Frameset Flattening</li>
+<li>Touch Events</li>
+</ul>
+<p>Fast Mobile Scrolling</p>
+<p><a href="http://farm6.static.flickr.com/5182/5597019959_50c470de37.jpg"><img src="http://farm6.static.flickr.com/5182/5597019959_50c470de37.jpg" alt=""></a> </p>
+<p>You can see a fixed background image(Smile Icon) when you even scroll the web page as you can see in the above picture. This can be possible if a web page has elements which have the CSS background-attachment property. In this case, WebKit carries out a slow repaint in order to avoid rendering artifacts. However, scrolling a web page with a fixed background image causes noticeable delays on mobile devices. It means that WebKit tries not to update fixed elements every time to scroll fast because it is hard to display a fixed element while scrolling fast.</p>
+<p><a href="http://farm6.static.flickr.com/5305/5597587400_3768649994.jpg"><img src="http://farm6.static.flickr.com/5305/5597587400_3768649994.jpg" alt=""></a></p>
+<p>In order to avoid this problem, we can make scrolling faster if we ignore the CSS property &ldquo;background-attachment: fixed&rdquo; by enabling the fast mobile scrolling option as you can see in the left picture (i.e. the fixed background can be scrollable on WebKitGtk+ with the fast mobile scrolling build option).</p>
+<p>To enable the fast mobile scrolling:</p>
+<ol>
+<li>Build WebKitGtk+ with the fast mobile scrolling option:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$WebKit/Tools/Scripts/build-webkit --gtk --fast-mobile-scrolling
+</span></span></code></pre></div><p>Tiled Backing Store</p>
+<p>When I tried to use Safari on the iPhone, I was impressed by the fact that the scrolling web pages were very fast. This is possible because Safari caches the content of the web page as bitmaps in memory, and the cached bitmaps we&rsquo;ve seen are just painted on the screen without sending paint calls to WebCore when we scroll a web page. These bitmaps are created and deleted on-demand as the viewport moves over the web page. We call them the “tiled backing store.”</p>
+<p><a href="https://bugs.webkit.org/show_bug.cgi?id=35146">The tiled backing store was applied to QtWebKit  by Nokia engineers</a>. They applied this feature to WebCore, so it can be shared by other ports. In the case of WebKitGtk, <a href="https://bugs.webkit.org/show_bug.cgi?id=45423">Code Aurora engineers submitted an initial patch, I have updated the patch to use only Cairo API by removing GTK+ dependency.</a> This would allow the WinCairo and Efl port to use the updated patch for enabling the tiled backing store.</p>
+<p>To enable the tiled backing store:<br>
+1 ) Build WebKitGtk+ with the tiled backing store option as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ WebKit/Tools/Scripts/build-webkit --gtk --tiled-backing-store
+</span></span></code></pre></div><ol start="2">
+<li>Set the tiled backing store setting to TRUE through WebKitWebSettings as follows:</li>
+</ol>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
+</span></span><span style="display:flex;"><span>g\_object\_set(G\_OBJECT(settings), &#34;enable-tiled-backing-store&#34;, TRUE, NULL);   
+</span></span></code></pre></div><p>Viewport Meta Tags</p>
+<p><a href="http://farm6.static.flickr.com/5292/5460755418_d6d667e6e1_o.png"><img src="http://farm6.static.flickr.com/5292/5460755418_d6d667e6e1_o.png" alt=""></a> <a href="http://farm6.static.flickr.com/5252/5481285644_9a0d39c365_o.png"><img src="http://farm6.static.flickr.com/5252/5481285644_9a0d39c365_o.png" alt=""></a> </p>
+<p>Apple introduced the full browsing feature for the first time when they released the iPhone. Until then, the mobile phone was not usable to browse web pages made for desktop due to the small screen size. To overcome this limitation, Safari on the iPhone zooms web pages out automatically to fit to the screen like in the above picture(left).</p>
+<p>For this, Safari on the iPhone assumes that web pages have 980px width by default. When Safari loads a web page, it scales down the web page by a factor of 0.32 (320/980) to fit to the width of  the screen in the case of iPhone 3G. But, the problem is that all pages are not displayed to fit to 980px width. For example, mobile web pages can be displayed well with 320px or 480px. the Google Search page is displayed on the iPhone like the right picture because the Google search page is required to have the less width compared to 980px.</p>
+<p>To solve this problem, Apple defined the viewport meta tags to allow web browsers to support desktop web page and mobile web page effectively. Actually, this is not a web standard, but most mobile web browsers have adopted this feature and WebKit also supports it.</p>
+<p>Let’s take a look at the viewport meta tag in more detail. The viewport meta tags can be used to set the width, height and initial scale factor of the viewport. Although most web pages don’t have viewport meta tags, mobile browsers which have 320 px screen width can apply initial values to web pages as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;meta name = &#34;viewport&#34; content = &#34;width = 980&#34; initial-scale = &#34;0.32&#34;&gt;
+</span></span></code></pre></div><p>In the case of mobile pages, you need to set the viewport meta tags as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>&lt;meta name=&#34;viewport&#34; content=&#34;user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width&#34; /&gt;
+</span></span></code></pre></div><p>As you can see each property, web pages can not be scaled up/down; even user scaling is turned off. This is because the mobile web pages are actually written for the small screen.</p>
+<p>For more information on the viewport meta tags, refer to <a href="http://developer.apple.com/safari/library/documentation/appleapplications/reference/safarihtmlref/articles/metatags.html">the Safari reference library</a>.</p>
+<p>Frameset Flattening</p>
+<p><a href="http://farm6.static.flickr.com/5263/5597820692_2085d92442.jpg"><img src="http://farm6.static.flickr.com/5263/5597820692_2085d92442.jpg" alt=""></a></p>
+<p>There are some web pages that have their own scrollable area with the scroll bars like the above page. We call this &ldquo;sub frame.&rdquo; On touch devices, the problem is that it is desirable not to have any scrollable sub frame of the web page because the user could confuse with sometimes scrolling sub frames and scrolling the web page itself at other times because it is very hard for the user to understand what “sub frame” is. For this reason, iframes and framesets are hardly usable on touch devices.</p>
+<p><a href="http://farm6.static.flickr.com/5262/5597236979_36bdab6dc0.jpg"><img src="http://farm6.static.flickr.com/5262/5597236979_36bdab6dc0.jpg" alt=""></a></p>
+<p>However, if you enable the frameset flattening features when building Webkit, all the frames can be one scrollable page as you can see the above figure.</p>
+<p>To enable the Fameset flattening:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>WebKitWebSettings \*settings = webkit\_web\_view\_get\_settings(webView);  
+</span></span><span style="display:flex;"><span>g\_object\_set(G\_OBJECT(settings), &#34;enable-frame-flattening&#34;, TRUE, NULL);  
+</span></span></code></pre></div><p>Touch events</p>
+<p>Supporting multi-touch has become popular since iPhone introduced it. Now, all smart phones support multi-touch. Using multi-touch allows the users to use more than two fingers to interact with applications on their smart phone. For example, you can use a piano or guitar applications using your 5 fingers.</p>
+<p>However, using multi-touch is not only possible for native applications, but also for web pages. Since WebKit supports touch events as DOM events, web developers can deal with touch events using JavaScript. There are 4 kinds of touch events: touchstart, touchmove, touchend, and touchcancel. Unfortunately, WebKitGtk+ doesn&rsquo;t support the touch events yet. So if you want to <a href="https://bug-32434-attachments.webkit.org/attachment.cgi?id=44955">test the touch events</a> , running QtWebKit or mobile Safari would be good. For more information on how to use the touch events, refer to <a href="http://developer.apple.com/library/safari/#documentation/UserExperience/Reference/TouchEventClassReference/TouchEvent/TouchEvent.html#//apple_ref/doc/uid/TP40009358">the Safari reference library</a>.</p>
+<p>Finally, I’d like to let you know there are more mobile features I didn’t introduce here, such as intelligent zoom, kinetic scrolling, zooming animation, and etc. WebKit doesn’t support them by itself, but the hosting applications can implement these kind of features, because these features are likely to depend on the platform. However, when these features are added to WebKitGtk+, I will talk about them in more detail.</p>
+<p>References</p>
+<ul>
+<li><a href="http://codeposts.blogspot.com/2010/06/qtwebkit-goes-mobile.html">QtWebKit goes Mobile</a></li>
+<li><a href="https://trac.webkit.org/wiki/Mobile%20Features%20Talk">https://trac.webkit.org/wiki/Mobile%20Features%20Talk</a></li>
+</ul>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/webkit">Webkit</a></li>
+					
+					<li><a href="/tags/mobile">mobile</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

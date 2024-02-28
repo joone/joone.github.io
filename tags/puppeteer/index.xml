@@ -6,14 +6,15 @@
     <description>Recent content in puppeteer on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 22 Aug 2021 13:48:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/puppeteer/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Enhancing Puppeteer with Proxy Support</title>
-      <link>https://joone.github.io/blog/proxy-support-puppeteer/</link>
+      <link>https://joone.github.io/posts/proxy-support-puppeteer/</link>
       <pubDate>Sun, 22 Aug 2021 13:48:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/proxy-support-puppeteer/</guid>
-      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.</description>
+      <guid>https://joone.github.io/posts/proxy-support-puppeteer/</guid>
+      <description>Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing. However, until recently, Puppeteer did not support proxy settings for each BrowserContext. This meant that if you wanted to use a proxy with Puppeteer, you had to set it globally for all BrowserContexts. You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.</description>
     </item>
     
   </channel>

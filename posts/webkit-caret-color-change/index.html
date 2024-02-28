@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Caret should respect text background color - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
+The source code has been changed and I almost forgot how to deal with layout test errors." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Caret should respect text background color" />
+<meta property="og:description" content="History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
+The source code has been changed and I almost forgot how to deal with layout test errors." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/webkit-caret-color-change/" /><meta property="og:image" content="https://trac.webkit.org/export/152612/webkit/trunk/LayoutTests/platform/efl/editing/caret/caret-color-expected.png" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2021-08-28T22:12:00-07:00" />
+<meta property="article:modified_time" content="2021-08-28T22:12:00-07:00" />
+
+<meta name="twitter:card" content="summary_large_image"/>
+<meta name="twitter:image" content="https://trac.webkit.org/export/152612/webkit/trunk/LayoutTests/platform/efl/editing/caret/caret-color-expected.png"/>
+
+<meta name="twitter:title" content="Caret should respect text background color"/>
+<meta name="twitter:description" content="History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
+The source code has been changed and I almost forgot how to deal with layout test errors."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Caret should respect text background color</h1>
+			<div class="meta">Posted on Aug 28, 2021</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="history">History</h2>
+<p><a href="https://trac.webkit.org/changeset/152612/webkit">I fixed a caret color issue in WebKit in 2013</a>, but I found out there was a regression, which made me work this issue again and finally fixed it. o/
+It was a bit hard for me because I had not worked on WebKit since <a href="https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos">Chromium forked from the WebKit project in 2013</a>.</p>
+<p>The source code has been changed and I almost forgot how to deal with layout test errors.
+My WebKit debugging skill is also rusty, but I tried to remind how to work on a patch by reading my own documents and old ccmmits.</p>
+<h2 id="change-the-code">Change the code</h2>
+<p>Here is an overview:</p>
+<p>When I first fixed this issue, I just updated one line of code as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1470</span>,<span style="color:#ae81ff">5</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">1470</span>,<span style="color:#ae81ff">6</span> <span style="color:#960050;background-color:#1e0010">@@</span>
+</span></span><span style="display:flex;"><span>     Color caretColor <span style="color:#f92672">=</span> Color<span style="color:#f92672">::</span>black;
+</span></span><span style="display:flex;"><span>     ColorSpace colorSpace <span style="color:#f92672">=</span> ColorSpaceDeviceRGB;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>    Element<span style="color:#f92672">*</span> element <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>rootEditableElement();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    Element<span style="color:#f92672">*</span> element <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>isElementNode() <span style="color:#f92672">?</span> toElement(node) <span style="color:#f92672">:</span> node<span style="color:#f92672">-&gt;</span>parentElement();
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">if</span> (element <span style="color:#f92672">&amp;&amp;</span> element<span style="color:#f92672">-&gt;</span>renderer()) {
+</span></span><span style="display:flex;"><span>         caretColor <span style="color:#f92672">=</span> element<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style()<span style="color:#f92672">-&gt;</span>visitedDependentColor(CSSPropertyColor);
+</span></span></code></pre></div><p>My patch allowed WebKit to get the caret color from the element containing the text, not the root editable element.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-C++" data-lang="C++"><span style="display:flex;"><span><span style="color:#66d9ef">void</span> CaretBase<span style="color:#f92672">::</span>paintCaret(Node<span style="color:#f92672">*</span> node, GraphicsContext<span style="color:#f92672">*</span> context, <span style="color:#66d9ef">const</span> LayoutPoint<span style="color:#f92672">&amp;</span> paintOffset, <span style="color:#66d9ef">const</span> LayoutRect<span style="color:#f92672">&amp;</span> clipRect) <span style="color:#66d9ef">const</span>
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#if ENABLE(TEXT_CARET)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (m_caretVisibility <span style="color:#f92672">==</span> Hidden)
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    LayoutRect drawingRect <span style="color:#f92672">=</span> localCaretRectWithoutUpdate();
+</span></span><span style="display:flex;"><span>    RenderObject<span style="color:#f92672">*</span> renderer <span style="color:#f92672">=</span> caretRenderer(node);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (renderer <span style="color:#f92672">&amp;&amp;</span> renderer<span style="color:#f92672">-&gt;</span>isBox())
+</span></span><span style="display:flex;"><span>        toRenderBox(renderer)<span style="color:#f92672">-&gt;</span>flipForWritingMode(drawingRect);
+</span></span><span style="display:flex;"><span>    drawingRect.moveBy(roundedIntPoint(paintOffset));
+</span></span><span style="display:flex;"><span>    LayoutRect caret <span style="color:#f92672">=</span> intersection(drawingRect, clipRect);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (caret.isEmpty())
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">return</span>;
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    Color caretColor <span style="color:#f92672">=</span> Color<span style="color:#f92672">::</span>black;
+</span></span><span style="display:flex;"><span>    ColorSpace colorSpace <span style="color:#f92672">=</span> ColorSpaceDeviceRGB;
+</span></span><span style="display:flex;"><span>    Element<span style="color:#f92672">*</span> element <span style="color:#f92672">=</span> node<span style="color:#f92672">-&gt;</span>isElementNode() <span style="color:#f92672">?</span> toElement(node) <span style="color:#f92672">:</span> node<span style="color:#f92672">-&gt;</span>parentElement();
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">if</span> (element <span style="color:#f92672">&amp;&amp;</span> element<span style="color:#f92672">-&gt;</span>renderer()) {
+</span></span><span style="display:flex;"><span>        caretColor <span style="color:#f92672">=</span> element<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style()<span style="color:#f92672">-&gt;</span>visitedDependentColor(CSSPropertyColor);
+</span></span><span style="display:flex;"><span>        colorSpace <span style="color:#f92672">=</span> element<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style()<span style="color:#f92672">-&gt;</span>colorSpace();
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>    context<span style="color:#f92672">-&gt;</span>fillRect(caret, caretColor, colorSpace);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#else
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    UNUSED_PARAM(node);
+</span></span><span style="display:flex;"><span>    UNUSED_PARAM(context);
+</span></span><span style="display:flex;"><span>    UNUSED_PARAM(paintOffset);
+</span></span><span style="display:flex;"><span>    UNUSED_PARAM(clipRect);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>Index: trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span></code></pre></div><p>After 8 years, the mainline code has been changed as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>Color CaretBase<span style="color:#f92672">::</span>computeCaretColor(<span style="color:#66d9ef">const</span> RenderStyle<span style="color:#f92672">&amp;</span> elementStyle, <span style="color:#66d9ef">const</span> Node<span style="color:#f92672">*</span> node)
+</span></span><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// On iOS, we want to fall back to the tintColor, and only override if CSS has explicitly specified a custom color.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#75715e">#if PLATFORM(IOS_FAMILY) &amp;&amp; !PLATFORM(MACCATALYST)
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    UNUSED_PARAM(node);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> elementStyle.caretColor();
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#else
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    RefPtr parentElement <span style="color:#f92672">=</span> node <span style="color:#f92672">?</span> node<span style="color:#f92672">-&gt;</span>parentElement() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">auto</span><span style="color:#f92672">*</span> parentStyle <span style="color:#f92672">=</span> parentElement <span style="color:#f92672">&amp;&amp;</span> parentElement<span style="color:#f92672">-&gt;</span>renderer() <span style="color:#f92672">?</span> <span style="color:#f92672">&amp;</span>parentElement<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// CSS value &#34;auto&#34; is treated as an invalid color.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>elementStyle.caretColor().isValid() <span style="color:#f92672">&amp;&amp;</span> parentStyle) {
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> parentBackgroundColor <span style="color:#f92672">=</span> parentStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> elementBackgroundColor <span style="color:#f92672">=</span> elementStyle.visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">auto</span> disappearsIntoBackground <span style="color:#f92672">=</span> blendSourceOver(parentBackgroundColor, elementBackgroundColor) <span style="color:#f92672">==</span> parentBackgroundColor;
+</span></span><span style="display:flex;"><span>        <span style="color:#66d9ef">if</span> (disappearsIntoBackground)
+</span></span><span style="display:flex;"><span>            <span style="color:#66d9ef">return</span> parentStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</span></span><span style="display:flex;"><span>    }
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span> elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</span></span><span style="display:flex;"><span><span style="color:#75715e">#endif
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>}
+</span></span></code></pre></div><p>CaretBase::computeCaretColor() is separated from CaretBase::patinCaret(). C++ 11 features and smart pointer are used (<a href="https://webkit.org/blog/3172/webkit-and-cxx11/">https://webkit.org/blog/3172/webkit-and-cxx11/</a>)</p>
+<p>Here is my change:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>Index: trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">===================================================================</span>
+</span></span><span style="display:flex;"><span><span style="color:#f92672">---</span> a<span style="color:#f92672">/</span>trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+++</span> b<span style="color:#f92672">/</span>trunk<span style="color:#f92672">/</span>Source<span style="color:#f92672">/</span>WebCore<span style="color:#f92672">/</span>editing<span style="color:#f92672">/</span>FrameSelection.cpp
+</span></span><span style="display:flex;"><span><span style="color:#960050;background-color:#1e0010">@@</span> <span style="color:#f92672">-</span><span style="color:#ae81ff">1791</span>,<span style="color:#ae81ff">13</span> <span style="color:#f92672">+</span><span style="color:#ae81ff">1791</span>,<span style="color:#ae81ff">13</span> <span style="color:#960050;background-color:#1e0010">@@</span>
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> elementStyle.caretColor();
+</span></span><span style="display:flex;"><span> <span style="color:#75715e">#else
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">-</span>    <span style="color:#66d9ef">auto</span><span style="color:#f92672">*</span> rootEditableElement <span style="color:#f92672">=</span> node <span style="color:#f92672">?</span> node<span style="color:#f92672">-&gt;</span>rootEditableElement() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>    <span style="color:#66d9ef">auto</span><span style="color:#f92672">*</span> rootEditableStyle <span style="color:#f92672">=</span> rootEditableElement <span style="color:#f92672">&amp;&amp;</span> rootEditableElement<span style="color:#f92672">-&gt;</span>renderer() <span style="color:#f92672">?</span> <span style="color:#f92672">&amp;</span>rootEditableElement<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    RefPtr parentElement <span style="color:#f92672">=</span> node <span style="color:#f92672">?</span> node<span style="color:#f92672">-&gt;</span>parentElement() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    <span style="color:#66d9ef">auto</span><span style="color:#f92672">*</span> parentStyle <span style="color:#f92672">=</span> parentElement <span style="color:#f92672">&amp;&amp;</span> parentElement<span style="color:#f92672">-&gt;</span>renderer() <span style="color:#f92672">?</span> <span style="color:#f92672">&amp;</span>parentElement<span style="color:#f92672">-&gt;</span>renderer()<span style="color:#f92672">-&gt;</span>style() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span><span style="display:flex;"><span>     <span style="color:#75715e">// CSS value &#34;auto&#34; is treated as an invalid color.
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#f92672">-</span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>elementStyle.caretColor().isValid() <span style="color:#f92672">&amp;&amp;</span> rootEditableStyle) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>        <span style="color:#66d9ef">auto</span> rootEditableBackgroundColor <span style="color:#f92672">=</span> rootEditableStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>    <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span>elementStyle.caretColor().isValid() <span style="color:#f92672">&amp;&amp;</span> parentStyle) {
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#66d9ef">auto</span> parentBackgroundColor <span style="color:#f92672">=</span> parentStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">auto</span> elementBackgroundColor <span style="color:#f92672">=</span> elementStyle.visitedDependentColorWithColorFilter(CSSPropertyBackgroundColor);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>        <span style="color:#66d9ef">auto</span> disappearsIntoBackground <span style="color:#f92672">=</span> blendSourceOver(rootEditableBackgroundColor, elementBackgroundColor) <span style="color:#f92672">==</span> rootEditableBackgroundColor;
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>        <span style="color:#66d9ef">auto</span> disappearsIntoBackground <span style="color:#f92672">=</span> blendSourceOver(parentBackgroundColor, elementBackgroundColor) <span style="color:#f92672">==</span> parentBackgroundColor;
+</span></span><span style="display:flex;"><span>         <span style="color:#66d9ef">if</span> (disappearsIntoBackground)
+</span></span><span style="display:flex;"><span><span style="color:#f92672">-</span>            <span style="color:#66d9ef">return</span> rootEditableStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</span></span><span style="display:flex;"><span><span style="color:#f92672">+</span>            <span style="color:#66d9ef">return</span> parentStyle<span style="color:#f92672">-&gt;</span>visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</span></span><span style="display:flex;"><span>     }
+</span></span><span style="display:flex;"><span>     <span style="color:#66d9ef">return</span> elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
+</span></span></code></pre></div><p>One of the reviewer asked me to use RefPtr(smart pointer) instead of auto so I changed this line as follows:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span><span style="color:#66d9ef">auto</span> parentElement <span style="color:#f92672">=</span> node <span style="color:#f92672">?</span> node<span style="color:#f92672">-&gt;</span>parentElement() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span></code></pre></div><p>=&gt;</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-c++" data-lang="c++"><span style="display:flex;"><span>RefPtr parentElement <span style="color:#f92672">=</span> node <span style="color:#f92672">?</span> node<span style="color:#f92672">-&gt;</span>parentElement() <span style="color:#f92672">:</span> <span style="color:#66d9ef">nullptr</span>;
+</span></span></code></pre></div><p><a href="https://webkit.org/blog/5381/refptr-basics/">RefPtr</a> is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.</p>
+<h2 id="steps-to-contribution-of-your-code">Steps to contribution of your code</h2>
+<p>Below are the steps I followed. You can find more details at <a href="https://webkit.org/contributing-code/">https://webkit.org/contributing-code/</a></p>
+<p>Build WebKit</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$  Tools/Scripts/build-webkit
+</span></span></code></pre></div><p>You don’t need to run every test case. Instead, you can only run the relevant layout tests as follows:</p>
+<p>Layout test</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ Tools/Scripts/run-webkit-tests editing/caret
+</span></span></code></pre></div><p>If you need pixel tests, just pass -p</p>
+<p>You can find the test result in WebKitBuild/Debug/layout-test-results/results.html</p>
+<p>Sometimes, we need to update ChangeLog</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ Tools/Scripts/prepare-ChangeLog --g HEAD
+</span></span></code></pre></div><p>Finally, you can upload your patch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ Tools/Scripts/webkit-patch upload 117493
+</span></span></code></pre></div><p>It would be good to add a message to your updated patch:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
+</span></span></code></pre></div><p>If you don&rsquo;t need a review now, pass &ndash;no-review.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>$ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”  --no-review
+</span></span></code></pre></div><p>When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).</p>
+<p><a href="https://ews-build.webkit.org/#/">https://ews-build.webkit.org/#/</a></p>
+<p>In my case, I had to add the reviewer name because I updated the patch several times after getting +r.</p>
+<p>If you change the layout code, you may see layout test failures:
+<img src="/images/caret_color_diff.png" alt="source diff">
+<img src="/images/caret_color_acutal.png" alt="actual result of caret color layout test "></p>
+<p>If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.</p>
+<p>Then, add them to your patch and run webkit-patch command again. If you already have +R, just add your patch to the commit queue.</p>
+<p>The committer status has been suspended due to my inactivity so I was not able to add my patch to the commit queue.
+However, one of the reviewers helped me land this patch. The next plan is to work on <a href="https://bugs.webkit.org/show_bug.cgi?id=44862">Bug 44862 - Make the caret more visible on any background</a> again.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/webkit">WebKit</a></li>
+					
+					<li><a href="/tags/contribution">Contribution</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

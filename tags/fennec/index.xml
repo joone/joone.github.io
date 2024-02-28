@@ -6,77 +6,97 @@
     <description>Recent content in fennec on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sun, 11 Oct 2009 08:17:00 -0700</lastBuildDate><atom:link href="https://joone.github.io/tags/fennec/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Debugging Fennec front-end</title>
-      <link>https://joone.github.io/blog/debugging-fennec-front-end/</link>
+      <link>https://joone.github.io/posts/debugging-fennec-front-end/</link>
       <pubDate>Sun, 11 Oct 2009 08:17:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/debugging-fennec-front-end/</guid>
-      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform.</description>
+      <guid>https://joone.github.io/posts/debugging-fennec-front-end/</guid>
+      <description>Fennec is a XUL application, like Firefox based on Mozilla Platform. Therefore, it can be debugged and modified with the Firefox debugging tools you are familiar with.
+XUL applications consist of several XUL, JavaScript, and CSS files, which are archived in a Jar file. In the case of Fennec, it has two jar files in fennec/chrome/. en-US.jar which has localization information, chrome.jar which has Fennec front-end code.
+To modify them,</description>
     </item>
     
     <item>
       <title>Fixing a hardware keyboard problem in Mobile Firefox for Windows Mobile </title>
-      <link>https://joone.github.io/blog/how-to-check-hardware-keyboard-on/</link>
+      <link>https://joone.github.io/posts/how-to-check-hardware-keyboard-on/</link>
       <pubDate>Thu, 27 Aug 2009 07:36:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/how-to-check-hardware-keyboard-on/</guid>
-      <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed.</description>
+      <guid>https://joone.github.io/posts/how-to-check-hardware-keyboard-on/</guid>
+      <description>Finally, my patch was applied to the mainline of Mozilla and this cumbersome bug has been fixed. I am so happy to contribute to Mozilla. Here is the detail what the problem was fixed:
+Windows Mobile keeps the status of hardware keyboard in the registry as follows:
+&amp;#34;HKEY\_CURRENT\_USER\\SOFTWARE\\Microsoft\\Shell\\HasKeyboard&amp;#34; A software keyboard can pop-up if a device doesn&amp;rsquo;t have a hardware keyboard. However, in the case that the device has a slide-out keyboard, the value should be changed according to the status of the slide-out keyboard.</description>
     </item>
     
     <item>
       <title>How to make a cab installer of Windows Mobile Fennec build</title>
-      <link>https://joone.github.io/blog/how-to-make-cab-installer-of-windows/</link>
+      <link>https://joone.github.io/posts/how-to-make-cab-installer-of-windows/</link>
       <pubDate>Mon, 13 Apr 2009 06:41:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/how-to-make-cab-installer-of-windows/</guid>
-      <description>When you finish building Fennec for Windows Mobile, you can ask &amp;ldquo;How can I install Fennec on my Windows Mobile handset?</description>
+      <guid>https://joone.github.io/posts/how-to-make-cab-installer-of-windows/</guid>
+      <description>When you finish building Fennec for Windows Mobile, you can ask &amp;ldquo;How can I install Fennec on my Windows Mobile handset?&amp;rdquo;
+&amp;ldquo;Where is the installer?&amp;rdquo;
+Fennec build system creates only a zip file in the path of &amp;ldquo;objdir/mobile/dist&amp;rdquo;.
+You might install Fennec using this zip file. But, it is cumbersome. Fortunately, the Fennnec team has released Fennec for Windows Mobile as a cab install.
+&amp;ldquo;How can they make a cab installer?</description>
     </item>
     
     <item>
       <title>Fennec is running on SAMSUNG i780</title>
-      <link>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</link>
+      <link>https://joone.github.io/posts/fennec-is-running-on-samsung-i780/</link>
       <pubDate>Fri, 27 Mar 2009 07:33:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/fennec-is-running-on-samsung-i780/</guid>
-      <description>I was told a very good news from Blassey blog.</description>
+      <guid>https://joone.github.io/posts/fennec-is-running-on-samsung-i780/</guid>
+      <description>I was told a very good news from Blassey blog.
+Doug Turner solved the test blocker of Fennec for Windows Mobile.
+I was delight to hear the new because I had tried several times to run Fennec on my SAMSUNG i780 (called Mirage in Korea). I had failed to run Fennec.
+Tooday, I tried to build Fennec for Windows Mobile from the trunk of Mozilla.
+It is working well, but very slow on i780.</description>
     </item>
     
     <item>
       <title>Hildon related bugzilla issues</title>
-      <link>https://joone.github.io/blog/hiden-related-bugzilla-issues/</link>
+      <link>https://joone.github.io/posts/hiden-related-bugzilla-issues/</link>
       <pubDate>Sun, 11 Jan 2009 20:19:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/hiden-related-bugzilla-issues/</guid>
+      <guid>https://joone.github.io/posts/hiden-related-bugzilla-issues/</guid>
       <description>426291 Add support for Hildon (Maemo) application menu 426292 Add support for Hildon (Maemo) filepicker 426293 Add support for Hildon (Maemo) banner for alerts 426299 Create a theme for Hildon (Maemo) platform Fennec has some bugs in Hildon integration as you can see the above list, but the Fennec team has not cared about theses bugs, because they seems to focus on implementing the UI features and Windows Mobile port for XULRunner.</description>
     </item>
     
     <item>
       <title>Firefox for Mobile Devices</title>
-      <link>https://joone.github.io/blog/firefox-for-mobile-devices/</link>
+      <link>https://joone.github.io/posts/firefox-for-mobile-devices/</link>
       <pubDate>Fri, 26 Dec 2008 05:55:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/firefox-for-mobile-devices/</guid>
-      <description>I&amp;rsquo;d like to share a little bit old presentation about Mobile Firefox.</description>
+      <guid>https://joone.github.io/posts/firefox-for-mobile-devices/</guid>
+      <description>I&amp;rsquo;d like to share a little bit old presentation about Mobile Firefox.
+From: mobileportland, 2 months ago
+Firefox For Mobile Devices
+view presentation (tags: browsers mozilla portland firefox)
+Dietrich Ayala&amp;rsquo;s presentation at May 2008 meeting of Mobile Portland
+SlideShare Link</description>
     </item>
     
     <item>
       <title>Latest looks of Fennec (Mobile Firefox)</title>
-      <link>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</link>
+      <link>https://joone.github.io/posts/latest-look-of-fennec-mobile-firefox/</link>
       <pubDate>Sun, 18 May 2008 04:22:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/latest-look-of-fennec-mobile-firefox/</guid>
-      <description>The plan of Mobile Firefox was announced in October last</description>
+      <guid>https://joone.github.io/posts/latest-look-of-fennec-mobile-firefox/</guid>
+      <description>The plan of Mobile Firefox was announced in October last year and the Mozilla community is now very busy to develop Mobile Firefox.
+Fennec is the code name of Mobile Firefox, which is a desert fox. You may have seen a fennec in TV animation. The size of fennec is smaller than normal fox and it has big ears. So I think the name of Fennec seems to be suited well for Mobile Firefox.</description>
     </item>
     
     <item>
       <title>My N810 was delivered from the US.</title>
-      <link>https://joone.github.io/blog/my-n810-approached-from-us/</link>
+      <link>https://joone.github.io/posts/my-n810-approached-from-us/</link>
       <pubDate>Thu, 24 Apr 2008 16:31:00 -0700</pubDate>
       
-      <guid>https://joone.github.io/blog/my-n810-approached-from-us/</guid>
-      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall.</description>
+      <guid>https://joone.github.io/posts/my-n810-approached-from-us/</guid>
+      <description>I bought a Nokia N810 from Amazon. Actually, there are not any shopping malls selling N810 in Korea so I had to buy an N810 from the oversea shopping mall. Anyway, I am very satisfied with N810. It may be my favorite toy.
+N810 uses the Maemo platform that is based on Linux 2.6, GTK+, Matchbox and other open source projects. Scratchbox is used for its development environment that supports a cross-platform development environment.</description>
     </item>
     
   </channel>

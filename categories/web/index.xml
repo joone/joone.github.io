@@ -6,14 +6,18 @@
     <description>Recent content in Web on Joone Blog</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
+    <copyright>© Joone Hur</copyright>
     <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
-      <link>https://joone.github.io/blog/aside_aria_cross_browser_compatibility/</link>
+      <link>https://joone.github.io/posts/aside_aria_cross_browser_compatibility/</link>
       <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
       
-      <guid>https://joone.github.io/blog/aside_aria_cross_browser_compatibility/</guid>
-      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.</description>
+      <guid>https://joone.github.io/posts/aside_aria_cross_browser_compatibility/</guid>
+      <description>The &amp;lt;aside&amp;gt; element The &amp;lt;aside&amp;gt;element is typically used for displaying additional information that complements the main content.
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element/aside
+How is the &amp;lt;aside&amp;gt;element handled in the accessibility tree? Each HTML element has a specific role in the accessibility tree, helping users in navigating content via assistive tools like VoiceOver. For example, the &amp;lt;aside&amp;gt;element assumes a complementary role in the Accessibility Tree.
+However, in certain exceptional cases, the &amp;lt;aside&amp;gt;element does not assume this complementary role.</description>
     </item>
     
   </channel>

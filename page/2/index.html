@@ -2,17 +2,17 @@
 <html>
 	<head lang="en">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Joone Blog | Home </title><link rel="icon" type="image/png" href=images/favicon.png /><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Joone Blog | Home </title><meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta name="description" content="" />
 	<meta property="og:image" content=""/>
 	<link rel="alternate" type="application/rss+xml" href="https://joone.github.io/index.xml" title="Joone Blog" />
-	<meta property="og:title" content="Joone Blog" />
+	<meta property="og:title" content="" />
 <meta property="og:description" content="" />
 <meta property="og:type" content="website" />
 <meta property="og:url" content="https://joone.github.io/" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Joone Blog"/>
+<meta name="twitter:title" content=""/>
 <meta name="twitter:description" content=""/>
 <script src="https://joone.github.io/js/feather.min.js"></script>
 	
@@ -25,43 +25,8 @@
 
 	
 	
-		<script type="text/javascript"
-		src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
-		</script>
-	
-		
-		<script type="text/x-mathjax-config">
-		MathJax.Hub.Config({
-			tex2jax: {
-				inlineMath: [['$','$'], ['\\(','\\)']],
-				displayMath: [['$$','$$'], ['\[','\]']],
-				processEscapes: true,
-				processEnvironments: true,
-				skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
-				TeX: { equationNumbers: { autoNumber: "AMS" },
-						 extensions: ["AMSmath.js", "AMSsymbols.js"] }
-			}
-		});
-		</script>
-	
 
 	
-	
-		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.css">
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/katex.min.js"></script>
-		<script defer src="https://cdn.jsdelivr.net/npm/katex@0.15.2/dist/contrib/auto-render.min.js" onload="renderMathInElement(document.body);"></script>
-		
-		
-		<script>
-			document.addEventListener("DOMContentLoaded", function() {
-					renderMathInElement(document.body, {
-							delimiters: [
-									{left: "$$", right: "$$", display: true},
-									{left: "$", right: "$", display: false}
-							]
-					});
-			});
-			</script>
 	
 	
 	
@@ -77,9 +42,11 @@
 		
 		<a href="/">Home</a>
 		
-		<a href="about/">About</a>
+		<a href="/posts">All posts</a>
 		
-		<a href="#">Pages</a>
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
 		
 		
 	</nav>
@@ -87,74 +54,134 @@
 
 			
 			<main class="list">
-				<div class="site-description"><p>May the F/OSS be with you!</p></div>
+				<div class="site-description"><p>Web Browser, Free/Open Source, AI, and etc..</p></div>
 				
 				
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/blog/typescript_starter/">타입스크립트(Typescript) 스타터 코드</a></h1>
-					<time>Sep 4, 2022</time>
-					<br><div class="description">
-	
-	프로젝트가 반복되면 재&hellip;
-	
-</div>
-					<a class="readmore" href="/blog/typescript_starter/">Read more ⟶</a>
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/blog/foss_comics_gpl_violations/">만화로 보는 gpl-violations.org 이야기</a></h1>
-					<time>Aug 31, 2022</time>
-					<br><div class="description">
-	
-	https://joone.net/2022/08/31/46-gpl-violations-org/ 내용을 요약하면, 하&hellip;
-	
-</div>
-					<a class="readmore" href="/blog/foss_comics_gpl_violations/">Read more ⟶</a>
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/blog/rust-animation/">rust-animation project</a></h1>
-					<time>Dec 5, 2021</time>
-					<br><div class="description">
-	
-	I had used the GNOME Clutter project in the past while working on Accelerated Compositing in the WebKit clutter port.&hellip;
-	
-</div>
-					<a class="readmore" href="/blog/rust-animation/">Read more ⟶</a>
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/blog/rust-animation-ko/">Rust 기반 OpenGL animation toolkit</a></h1>
-					<time>Nov 24, 2021</time>
-					<br><div class="description">
-	
-	오랜 숙원사업(?) 첫&hellip;
-	
-</div>
-					<a class="readmore" href="/blog/rust-animation-ko/">Read more ⟶</a>
-				</section>
-				
-				<section class="list-item">
-					<h1 class="title"><a href="/blog/webkit-caret-color-change/">Caret should respect text background color</a></h1>
+					<h1 class="title"><a href="/posts/webkit-caret-color-change/">Caret should respect text background color</a></h1>
 					<time>Aug 28, 2021</time>
 					<br><div class="description">
 	
-	History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it.&hellip;
+	History I fixed a caret color issue in WebKit in 2013, but I found out there was a regression, which made me work this issue again and finally fixed it. o/ It was a bit hard for me because I had not worked on WebKit since Chromium forked from the WebKit project in 2013.
+The source code has been changed and I almost forgot how to deal with layout test errors.&hellip;
 	
 </div>
-					<a class="readmore" href="/blog/webkit-caret-color-change/">Read more ⟶</a>
+					<a class="readmore" href="/posts/webkit-caret-color-change/">Read more ⟶</a>
 				</section>
 				
 				<section class="list-item">
-					<h1 class="title"><a href="/blog/proxy-support-puppeteer/">Enhancing Puppeteer with Proxy Support</a></h1>
+					<h1 class="title"><a href="/posts/proxy-support-puppeteer/">Enhancing Puppeteer with Proxy Support</a></h1>
 					<time>Aug 22, 2021</time>
 					<br><div class="description">
 	
-	Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing.&hellip;
+	Puppeteer is a popular Node.js library for controlling headless Chrome. It allows developers to automate tasks such as web scraping and testing. However, until recently, Puppeteer did not support proxy settings for each BrowserContext. This meant that if you wanted to use a proxy with Puppeteer, you had to set it globally for all BrowserContexts. You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.&hellip;
 	
 </div>
-					<a class="readmore" href="/blog/proxy-support-puppeteer/">Read more ⟶</a>
+					<a class="readmore" href="/posts/proxy-support-puppeteer/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/chromeos-window-service2/">The WindowService2(?) of CrOS</a></h1>
+					<time>Aug 29, 2018</time>
+					<br><div class="description">
+	
+	Recently, WS was replaced with WS2:
+1144255 window-service: removes mus_demo, test_wm, and some unnecessary deps
+Issue 865689 Remove window-service
+I ran mus_demo to test ozone-gbm, but now it&rsquo;s gone. :-( So, I need to figure it out what is the difference between WS1 and WS2.
+What is the Window Service of ChromeOS? Window Service is a kind of Window Compositor like Weston. It is a separate process from the browser process in CrOS.&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/chromeos-window-service2/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/linux-container-for-chromeos/">Linux Container for ChromeOS</a></h1>
+					<time>Jul 12, 2018</time>
+					<br><div class="description">
+	
+	Recently, ChromeOS started to support Linux applications on ChomeOS. Google hasn&rsquo;t allowed ChromeOS to run native applications due to security reasons. Finally, they found a way to support Linux applications through the container technology.
+It is worth to read a discussion on CrOSVM on Hacker News because the original author joined the discussion. Here is the article about the ChromeOS Linux container. https://www.zdnet.com/article/chrome-os-could-be-getting-containers-for-running-linux-vms/
+There is a Youtube video: https://www.youtube.com/watch?v=s9mrR2tqVbQ
+Here is the readme about CrOSVM:&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/linux-container-for-chromeos/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/making-use-of-chromes-ozone-gbm-intel/">Making Use Of Chrome&#39;s Ozone-GBM Intel Graphics Support On The Linux Desktop</a></h1>
+					<time>Jul 12, 2018</time>
+					<br><div class="description">
+	
+	Recently, I published a blog article about making Use Of Chrome&rsquo;s Ozone-GBM Intel Graphics Support On The Linux Desktop. This is about using ChromeOS graphics stack for a regular Linux system. This article was also mentioned in Phoronix.
+Originally, my old colleague started working on this a long time ago, but it has been broken since then. So I have been trying to enable ozone-gbm on a Linux system because this solution would be useful for embedded systems.&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/making-use-of-chromes-ozone-gbm-intel/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/rust-drm/">Rust &amp; DRM</a></h1>
+					<time>May 24, 2018</time>
+					<br><div class="description">
+	
+	I was surprised that there are many low-level graphics projects written in Rust and I started looking into one of them: drm-rs. Then, I added an example for handling page-flip event.
+drm-rs is a subproject of Smithay that is a wayland compositor written in Rust. It allows Rust applications to access the Direct Rendering Manger(DRM), a subsystem of the Linux Kernel. So, we could directly paint something into a frame buffer and render it on the display using DRM APIs.&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/rust-drm/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/blinkon9/">BlinkOn9</a></h1>
+					<time>May 4, 2018</time>
+					<br><div class="description">
+	
+	I attended BlinkOn9 from April 18 to 19, 2019. Here is the official page: bit.ly/blinkon9-info, presentations, and Lightning Talks.
+At this conference, I talked about acelerating graphics performance with ozone-gbm on Intel based Linux desktop systems: explained what kind of hardware accelerations have been applied to Intel based Chromebooks and how we can use them on a Linux desktop.
+Here is a demo video on Youtube: https://www.youtube.com/watch?v=CY7X6vWD_wo&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/blinkon9/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/setting-up-nfs-in-openstep/">Setting up NFS in OpenStep</a></h1>
+					<time>Sep 27, 2017</time>
+					<br><div class="description">
+	
+	If your server or host PC supports NFS, you can set up shared directories for OpenStep. For example, if the shared folder is nfs://192.168.1.19/nfs/ftp, you can add the imported directory in NFSManager.app as follows:
+Run mount command in OpenStep to mount a remote directory as follows:``` $ mount -t 192.168.8.16:/mnt/openstep /coreonion
+* [https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/](https://www.cyberciti.biz/faq/apple-mac-osx-nfs-mount-command-tutorial/) * [http://nextstep.onionmixer.net/wordpress/?p=139](http://nextstep.onionmixer.net/wordpress/?p=139) &hellip;
+	
+</div>
+					<a class="readmore" href="/posts/setting-up-nfs-in-openstep/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/running-openstep-42-on-parallels/">Installing OpenStep 4.2 on Parallels</a></h1>
+					<time>Sep 20, 2017</time>
+					<br><div class="description">
+	
+	NextStep is one of the advanced operating systems in 90s. You may understand why it is by watching this video:
+Every features Steve Jobs introduced in this video was possible in 1992, which is amazing. So I&rsquo;ve dreamed of using NextStep since I was aware of it, but I&rsquo;ve never seen a running demo and just saw a NexTCube. By chance, I found instructions how to install OpenStep 4.2 on Parallels.&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/running-openstep-42-on-parallels/">Read more ⟶</a>
+				</section>
+				
+				<section class="list-item">
+					<h1 class="title"><a href="/posts/working-on-servo-project/">Working on the Servo project</a></h1>
+					<time>Aug 24, 2017</time>
+					<br><div class="description">
+	
+	I began to work on the Servo project. Actually, my first open source project was Mozilla and also I was involved in the Korea Mozilla community. During the time, I contributed to Fennec browser by fixing bugs and localization. Anyway, this blog article motivated me work on Mozilla again.
+I landed a simple patch and am working on adding the ellipse API to Canvas API. I see many missing features so it looks like the blue ocean for me compared to the Chromium project.&hellip;
+	
+</div>
+					<a class="readmore" href="/posts/working-on-servo-project/">Read more ⟶</a>
 				</section>
 				
 				
@@ -176,10 +203,10 @@
 			</main>
 			<footer>
   <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
-    <a class="border"></a><a class="soc" href="https://twitter.com/joone" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
     <a class="border"></a></div>
   <div class="footer-info">
-    2024  <a
+    2024  © Joone Hur |  <a
       href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
   </div>
 </footer>
