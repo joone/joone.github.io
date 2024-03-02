@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Contribution to Llama-recipes project - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I&rsquo;m excited to share my recent involvement in llama-recipes, a project used for fine-tuning Llama2.
+I&rsquo;ve been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized the alpaca-lora project, which enabled fine-tuning Lamma using a consumer&rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Contribution to Llama-recipes project" />
+<meta property="og:description" content="I&rsquo;m excited to share my recent involvement in llama-recipes, a project used for fine-tuning Llama2.
+I&rsquo;ve been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized the alpaca-lora project, which enabled fine-tuning Lamma using a consumer&rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/llama-recipes/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-03-02T00:57:56-08:00" />
+<meta property="article:modified_time" content="2024-03-02T00:57:56-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Contribution to Llama-recipes project"/>
+<meta name="twitter:description" content="I&rsquo;m excited to share my recent involvement in llama-recipes, a project used for fine-tuning Llama2.
+I&rsquo;ve been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized the alpaca-lora project, which enabled fine-tuning Lamma using a consumer&rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Contribution to Llama-recipes project</h1>
+			<div class="meta">Posted on Mar 2, 2024</div>
+		</div>
+		
+
+		<section class="body">
+			<p>I&rsquo;m excited to share my recent involvement in <a href="https://github.com/facebookresearch/llama-recipes">llama-recipes</a>, a project used for fine-tuning Llama2.</p>
+<p>I&rsquo;ve been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized <a href="https://github.com/tloen/alpaca-lora">the alpaca-lora project</a>, which enabled fine-tuning Lamma using a consumer&rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after. In this release, Meta also introduced a new tool on GitHub named Lamma-recipes, prompting me to transition to this new tool for further fine-tuning.</p>
+<p>The llama-recipes tool provides a method to fine-tune the alpaca_dataset, sourced from ChatGPT, effectively allowing the model to mimic ChatGPT&rsquo;s functionality. Here&rsquo;s a brief guide on using llama-recipes for fine-tuning:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cd ~/git/llama-recipes
+</span></span><span style="display:flex;"><span>$ cp ~/Downloads/alpaca_data.json ~/git/llama-recipes/src/llama_recipes/datasets
+</span></span><span style="display:flex;"><span>$ python -m llama_recipes.finetuning  --use_peft --peft_method lora --quantization --batch_size_training<span style="color:#f92672">=</span><span style="color:#ae81ff">2</span> --model_name ../models/Llama-2-7b-hf/ --dataset alpaca_dataset  --output_dir outputs/7b
+</span></span></code></pre></div><p>For inference, if you have a file like <code>chatgpt.txt</code>:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-plaintext" data-lang="plaintext"><span style="display:flex;"><span>Below is an instruction that describes a task, paired with an input that provides further context. Write a response that appropriately completes the request.
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### Instruction:
+</span></span><span style="display:flex;"><span>Classify the following into animals, plants, and minerals
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>### Input:
+</span></span><span style="display:flex;"><span>Oak tree, copper ore, elephant
+</span></span></code></pre></div><p>You can perform inference with the following command:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ cat chatgpt.txt |  python3 examples/inference.py --model_name ../models/Llama-2-7b-hf --peft_model outputs/7b --max_new_tokens <span style="color:#ae81ff">580</span>  --quantization true
+</span></span></code></pre></div><p>Alternatively:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 examples/inference.py --model_name <span style="color:#e6db74">&#39;../models/Llama-2-7b-hf&#39;</span>  --quantization true  --prompt_file chatgpt.txt
+</span></span></code></pre></div><p>To streamline the process, I integrated a Gradio web UI similar to what alpaca-lora provided, making it more user-friendly.</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>$ python3 examples/inference.py --model_name <span style="color:#e6db74">&#39;../models/Llama-2-7b-hf&#39;</span> --peft_model <span style="color:#e6db74">&#39;outputs/7b&#39;</span> --max_new_tokens <span style="color:#ae81ff">580</span>  --quantization true
+</span></span><span style="display:flex;"><span>Running on local URL:  http://0.0.0.0:7860
+</span></span><span style="display:flex;"><span>Running on public URL: https://???????????.gradio.live
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>This share link expires in <span style="color:#ae81ff">72</span> hours. For free permanent hosting and GPU upgrades, run <span style="color:#e6db74">`</span>gradio deploy<span style="color:#e6db74">`</span> from Terminal to deploy to Spaces <span style="color:#f92672">(</span>https://huggingface.co/spaces<span style="color:#f92672">)</span>
+</span></span></code></pre></div><p><img src="gradio.png" alt="Llama2 Web UI" title="Llamma2 Web UI"></p>
+<p>I&rsquo;m pleased to share that my contributions, including the web UI integration and various bug fixes:</p>
+<ul>
+<li><a href="https://github.com/facebookresearch/llama-recipes/pull/367">Pull Request 367</a></li>
+<li><a href="https://github.com/facebookresearch/llama-recipes/pull/384">Pull Request 384</a></li>
+<li><a href="https://github.com/facebookresearch/llama-recipes/pull/354">Pull Request 354</a></li>
+</ul>
+<p>Contributing to open source projects is always fun. This contribution is particularly meaningful to me because it goes beyond my usual domain of web browsers.</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/llama">llama</a></li>
+					
+					<li><a href="/tags/llm">llm</a></li>
+					
+					<li><a href="/tags/contribution">contribution</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2024  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>
