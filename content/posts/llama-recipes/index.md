@@ -55,11 +55,10 @@ This share link expires in 72 hours. For free permanent hosting and GPU upgrades
 ```
 ![Llama2 Web UI](gradio.png "Llamma2 Web UI")
 
+I submitted a pull request to integrate Gradio web interface support into the llama-recipes project, which was successfully merged along with other bug fixes:
 
-I'm pleased to share that my contributions, including the web UI integration and various bug fixes:
-
-* [Pull Request 367](https://github.com/facebookresearch/llama-recipes/pull/367)
-* [Pull Request 384](https://github.com/facebookresearch/llama-recipes/pull/384)
-* [Pull Request 354](https://github.com/facebookresearch/llama-recipes/pull/354)
+* [Add gradio library for user interface in inference.py](https://github.com/facebookresearch/llama-recipes/pull/367)
+* [Add gradio to requirements.txt](https://github.com/facebookresearch/llama-recipes/pull/384)
+* [Add option to enable Llamaguard content safety check in chat_completion](https://github.com/facebookresearch/llama-recipes/pull/354)
 
 Contributing to open source projects is always fun. This contribution is particularly meaningful to me because it goes beyond my usual domain of web browsers.
