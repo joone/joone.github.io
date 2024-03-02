@@ -70,26 +70,18 @@ Support for Local LLM Initially, Loz only supported the OpenAI API. A friend inq
 <p><a href="https://github.com/joone/loz">https://github.com/joone/loz</a></p>
 <h2 id="support-for-local-llm">Support for Local LLM</h2>
 <p>Initially, Loz only supported the OpenAI API. A friend inquired about integrating open-source LLMs like Llama2, which isn&rsquo;t straightforward to set up on a user&rsquo;s computer. I discovered a project called <a href="https://github.com/ollama/ollama">Ollama</a> that simplifies the installation of various open-source LLMs with a single command. It supports GPU or CPU and is compatible with Linux, MacOS, and Windows, making it an ideal solution for Loz. I refactored Loz&rsquo;s codebase, introduced an abstract class named LLMService, and added subclasses such as OpenAiAPI and OllamaAPI. Now, users can effortlessly switch between LLMs in interactive mode using <code>config api</code> command.</p>
-<p>An advantage is the ability to compare outputs across different LLM engines. I&rsquo;ve tested Llama2, codellama, and GPT-3 for generating Git messages. Ollama tends to be unstable with long token sizes, producing verbose and inconsistent outputs. Sometimes, it even includes code diffs in the generated commit messages, indicating that Llama2 needs a finue-tune for this task.</p>
+<p>An advantage is the ability to compare outputs across different LLM engines. I&rsquo;ve tested Llama2, codellama, and GPT-3 for generating Git messages. llama2 tends to be unstable with long token sizes, producing verbose and inconsistent outputs. Sometimes, it even includes code diffs in the generated commit messages, indicating that Llama2 needs a finue-tune for this task.</p>
 <h2 id="execute-linux-commands-using-natural-language">Execute Linux Commands Using Natural Language</h2>
 <p>I&rsquo;ve added functionality to execute Linux commands via natural language. Loz first determines if the prompt is for generating a Linux command. If so, it returns the command(s) in JSON format, facilitating easy access to the command for Loz. If not, the prompt is forwared to OpenAI API and processed as a regular prompt.</p>
 <p>The generated JSON varies but is generally understandable, containing command or commands objects and args object. Loz interprets these objects to construct executable Linux commands. However, there are challenges, such as when the tools referenced by the command are not installed on the local system. While enhancing the detail in prompts can improve the output, the results may still be unpredictable. Therefore, the continuous refinement of Git message and Linux command generation remains an ongoing effort.</p>
 <p>Here are some examples of executing Linux commands with Loz:</p>
-<ul>
-<li>
-<p>Find the largest file in the current directory:</p>
+<h3 id="find-the-largest-file-in-the-current-directory">Find the largest file in the current directory:</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>loz &#34;find the largest file in the current directory&#34;
 </span></span><span style="display:flex;"><span>-rw-rw-r-- 1 foo bar 9020257 Jan 31 19:49 ./node_modules/typescript/lib/typescript.js
-</span></span></code></pre></div></li>
-<li>
-<p>Check if Apache2 is running:</p>
+</span></span></code></pre></div><h3 id="check-if-apache2-is-running">Check if Apache2 is running:</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>loz &#34;check if apache2 is running on this system&#34;
 </span></span><span style="display:flex;"><span>● apache2.service - The Apache HTTP Server
-</span></span></code></pre></div></li>
-<li>
-<p>Detect GPUs in the system:</p>
-</li>
-</ul>
+</span></span></code></pre></div><h3 id="detect-gpus-in-the-system">Detect GPUs in the system:</h3>
 <div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-fallback" data-lang="fallback"><span style="display:flex;"><span>loz &#34;Detect GPUs on this system&#34;
 </span></span><span style="display:flex;"><span>00:02.0 VGA compatible controller: Intel Corporation Device a780 (rev 04)
 </span></span></code></pre></div><h2 id="cli-for-llm">CLI for LLM</h2>
