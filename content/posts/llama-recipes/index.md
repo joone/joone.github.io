@@ -7,10 +7,9 @@ aliases: [ "/2024/03/llama-recipes.html" ]
 tags : [llama, llm, contribution]
 
 ---
+I'm excited to share my recent contribution to the [llama-recipes](https://github.com/facebookresearch/llama-recipes), a project used for fine-tuning Llama2.
 
-I'm excited to share my recent involvement in [llama-recipes](https://github.com/facebookresearch/llama-recipes), a project used for fine-tuning Llama2.
-
-I've been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized [the alpaca-lora project](https://github.com/tloen/alpaca-lora), which enabled fine-tuning Lamma using a consumer's NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after. In this release, Meta also introduced a new tool on GitHub named Lamma-recipes, prompting me to transition to this new tool for further fine-tuning.
+I've been working on fine-tuning [the Lamma model](https://llama.meta.com/) since its open-source release. Initially, I utilized [the alpaca-lora project](https://github.com/tloen/alpaca-lora), which enabled fine-tuning Lamma using a consumer's NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after. In this release, Meta also introduced a new tool on GitHub named Lamma-recipes, prompting me to transition to this new tool for further fine-tuning.
 
 The llama-recipes tool provides a method to fine-tune the alpaca_dataset, sourced from ChatGPT, effectively allowing the model to mimic ChatGPT's functionality. Here's a brief guide on using llama-recipes for fine-tuning:
 
