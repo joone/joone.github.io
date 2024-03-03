@@ -14,8 +14,8 @@
       <pubDate>Sat, 02 Mar 2024 00:57:56 -0800</pubDate>
       
       <guid>https://joone.github.io/posts/llama-recipes/</guid>
-      <description>I&amp;rsquo;m excited to share my recent involvement in llama-recipes, a project used for fine-tuning Llama2.
-I&amp;rsquo;ve been engaged in fine-tuning the Lamma model since its open-source release. Initially, I utilized the alpaca-lora project, which enabled fine-tuning Lamma using a consumer&amp;rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after.</description>
+      <description>I&amp;rsquo;m excited to share my recent contribution to the llama-recipes, a project used for fine-tuning Llama2.
+I&amp;rsquo;ve been working on fine-tuning the Lamma model since its open-source release. Initially, I utilized the alpaca-lora project, which enabled fine-tuning Lamma using a consumer&amp;rsquo;s NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after.</description>
     </item>
     
   </channel>
