@@ -1,23 +1,21 @@
 ---
 title: 'Playstation3'
 date: 2006-05-11T07:01:00.001-07:00
-draft: false
+draft: true
 aliases: [ "/2006/05/playstation3.html" ]
 ---
+PlayStation 3 will be released at the end of this year. It seems to be the last hope for Sony, which is facing a decline in profits. Notably, Sony stuck with the Trinitron TV, the most popular analog TV in the '90s, and consequently was late to enter the DTV market. Sony's lack of investment in LCD panels or PDPs meant they could not produce better digital TVs than their competitors.
 
-PlayStation3 will be released at the end of this year. It seems the last hope of SONY. As you know, SONY has a problem with the profit decline. Actually, SONY adhered to the Trinitron TV that was the most popular analogue TV in 90s. As a result, they were late to join the DTV market: SONY did not invest LCD panel or PDP and so they was not able to make better digital TVs than other competitors.  
-  
-The PS3 will come in two configurations: one version with a 60GB hard drive that will cost $599, and the second with a 20GB hard drive that will come in at $499  
-  
-The PS3, which is based on the Cell processor, will support Blu-ray media. It also includes built-in Bluetooth and Wi-Fi connectivity, as well as Ethernet. Further, it includes Dolby digital surround sound functionality and supports high-definition video up to 1080p.  
-  
-The console also can run up to seven wireless controllers at once, and all PS3s will come with a built-in hard drive, either 60GB or 20GB.  
-  
-Finally, it supports USB, Sony Memory Sticks, Secure Digital (SD) and CompactFlash.  
-  
-What a great gadget it is!  
-  
-However, PS3 would be more expensive than others such as XBOX360, Wii  
-Good quality of graphics does not guarantee the success of the market.  
-  
-Anyway, the competition is always welcome to the users because the price of console could be down. :)
+The PS3 will be available in two configurations: one version with a 60GB hard drive priced at $599, and a second version with a 20GB hard drive at $499.
+
+Based on the Cell processor, the PS3 will support Blu-ray media and include built-in Bluetooth and Wi-Fi connectivity, as well as Ethernet. Additionally, it features Dolby digital surround sound and supports high-definition video up to 1080p.
+
+The console can operate up to seven wireless controllers simultaneously, and all PS3s will be equipped with a built-in hard drive, either 60GB or 20GB.
+
+Furthermore, it supports USB, Sony Memory Sticks, Secure Digital (SD), and CompactFlash.
+
+Indeed, it is a great gadget!
+
+However, the PS3 will be more expensive than others, such as the Xbox 360 and Wii. High-quality graphics do not necessarily guarantee market success.
+
+Nonetheless, competition is always beneficial for users because it could lead to lower console prices. :)
