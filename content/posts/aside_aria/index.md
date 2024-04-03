@@ -30,7 +30,10 @@ Initially, there was confusion due to different behaviors in Firefox and Safari 
 
 https://bugs.chromium.org/p/chromium/issues/detail?id=1459657
 
-However, further discussions within the W3C community clarified that the behavior in Chromium was expected, and other browsers showed the wrong behavior.
+The bug reporter assumed the <aside> element should have a complementary role, as it does in other browsers.
+However, their report didn't account for the exceptional case where a generic role is correct.
+
+Further discussions within the W3C community clarified that the behavior in Chromium was expected, and other browsers showed the wrong behavior.
 
 https://github.com/w3c/html-aam/issues/512
 
