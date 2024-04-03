@@ -81,7 +81,9 @@ However, in certain exceptional cases, the &lt;aside&gt;element does not assume 
 <h3 id="incorrect-bug-report-in-chromium-project">Incorrect bug report in Chromium project</h3>
 <p>Initially, there was confusion due to different behaviors in Firefox and Safari compared to Chromium. This led to a misconception about a bug in Chromium.</p>
 <p><a href="https://bugs.chromium.org/p/chromium/issues/detail?id=1459657">https://bugs.chromium.org/p/chromium/issues/detail?id=1459657</a></p>
-<p>However, further discussions within the W3C community clarified that the behavior in Chromium was expected, and other browsers showed the wrong behavior.</p>
+<p>The bug reporter assumed the <!-- raw HTML omitted --> element should have a complementary role, as it does in other browsers.
+However, their report didn&rsquo;t account for the exceptional case where a generic role is correct.</p>
+<p>Further discussions within the W3C community clarified that the behavior in Chromium was expected, and other browsers showed the wrong behavior.</p>
 <p><a href="https://github.com/w3c/html-aam/issues/512">https://github.com/w3c/html-aam/issues/512</a></p>
 <p>This example illustrates the difficulty of correctly implementing web accessibility standards.
 Even the QA engineer was confused and confirmed this as a bug.</p>
