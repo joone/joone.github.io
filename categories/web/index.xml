@@ -7,7 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Joone Hur</copyright>
-    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 09 Jun 2025 00:22:10 -0800</lastBuildDate><atom:link href="https://joone.github.io/categories/web/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Explainer for Delayed Messages API Published</title>
+      <link>https://joone.github.io/posts/delayed-messages-api/</link>
+      <pubDate>Mon, 09 Jun 2025 00:22:10 -0800</pubDate>
+      
+      <guid>https://joone.github.io/posts/delayed-messages-api/</guid>
+      <description>I&amp;rsquo;m excited to share that the explainer for the Delayed Messages API has been published!
+📄 Explainer on GitHub
+This proposal introduces a new web performance API to help developers monitor postMessage events across windows, iframes, and web workers.
+As you may know, web applications often use postMessage for communication between execution contexts. But these messages can sometimes be delayed—stuck in the queue while the receiver’s event loop is blocked by long-running tasks or overloaded with too many messages.</description>
+    </item>
+    
     <item>
       <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
       <link>https://joone.github.io/posts/aside_aria/</link>

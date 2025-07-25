@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Explainer for Delayed Messages API Published - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="I&rsquo;m excited to share that the explainer for the Delayed Messages API has been published!
+📄 Explainer on GitHub
+This proposal introduces a new web performance API to help developers monitor postMessage events across windows, iframes, and web workers.
+As you may know, web applications often use postMessage for communication between execution contexts. But these messages can sometimes be delayed—stuck in the queue while the receiver’s event loop is blocked by long-running tasks or overloaded with too many messages." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Explainer for Delayed Messages API Published" />
+<meta property="og:description" content="I&rsquo;m excited to share that the explainer for the Delayed Messages API has been published!
+📄 Explainer on GitHub
+This proposal introduces a new web performance API to help developers monitor postMessage events across windows, iframes, and web workers.
+As you may know, web applications often use postMessage for communication between execution contexts. But these messages can sometimes be delayed—stuck in the queue while the receiver’s event loop is blocked by long-running tasks or overloaded with too many messages." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/delayed-messages-api/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2025-06-09T00:22:10-08:00" />
+<meta property="article:modified_time" content="2025-06-09T00:22:10-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Explainer for Delayed Messages API Published"/>
+<meta name="twitter:description" content="I&rsquo;m excited to share that the explainer for the Delayed Messages API has been published!
+📄 Explainer on GitHub
+This proposal introduces a new web performance API to help developers monitor postMessage events across windows, iframes, and web workers.
+As you may know, web applications often use postMessage for communication between execution contexts. But these messages can sometimes be delayed—stuck in the queue while the receiver’s event loop is blocked by long-running tasks or overloaded with too many messages."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Explainer for Delayed Messages API Published</h1>
+			<div class="meta">Posted on Jun 9, 2025</div>
+		</div>
+		
+
+		<section class="body">
+			<p>I&rsquo;m excited to share that the explainer for the <strong>Delayed Messages API</strong> has been published!</p>
+<p>📄 <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/blob/main/DelayedMessages/explainer.md">Explainer on GitHub</a></p>
+<p>This proposal introduces a new <strong>web performance API</strong> to help developers monitor <code>postMessage</code> events across windows, iframes, and web workers.</p>
+<p>As you may know, web applications often use <code>postMessage</code> for communication between execution contexts. But these messages can sometimes be delayed—stuck in the queue while the receiver’s event loop is blocked by long-running tasks or overloaded with too many messages.</p>
+<p>Such delays can make apps feel sluggish and unresponsive. And right now, it’s difficult for developers to pinpoint exactly why these delays happen—whether it’s due to a busy thread, message queue congestion, or the overhead of serialization and deserialization.</p>
+<p>The <strong>Delayed Messages API</strong> aims to solve this by exposing detailed timing metrics for <code>postMessage</code> events—including queue wait time and blocking tasks—so developers can identify performance bottlenecks and make targeted improvements.</p>
+<p>The explainer outlines both the motivation and the initial API design.
+If you have feedback or ideas, please join the discussion here:</p>
+<p>🗣 <a href="https://github.com/MicrosoftEdge/MSEdgeExplainers/labels/DelayedMessages">Issue Tracker – Delayed Messages</a></p>
+<p>If you&rsquo;re interested in web performance more broadly, check out the MDN docs here:</p>
+<p><a href="https://developer.mozilla.org/en-US/docs/Web/Performance">https://developer.mozilla.org/en-US/docs/Web/Performance</a></p>
+<p>Thanks for reading!</p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/w3c">w3c</a></li>
+					
+					<li><a href="/tags/web-performance">web performance</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2025  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

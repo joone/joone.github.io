@@ -3,15 +3,30 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>https://joone.github.io/</loc>
-    <lastmod>2024-03-02T00:57:56-08:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/categories/ai/</loc>
-    <lastmod>2024-03-02T00:57:56-08:00</lastmod>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/posts/</loc>
-    <lastmod>2024-03-02T00:57:56-08:00</lastmod>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/categories/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/posts/delayed-messages-api/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/w3c/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/categories/web/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/tags/web-performance/</loc>
+    <lastmod>2025-06-09T00:22:10-08:00</lastmod>
+  </url><url>
+    <loc>https://joone.github.io/categories/ai/</loc>
     <lastmod>2024-03-02T00:57:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/contribution/</loc>
@@ -24,9 +39,6 @@
     <lastmod>2024-03-02T00:57:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/llm/</loc>
-    <lastmod>2024-03-02T00:57:56-08:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/</loc>
     <lastmod>2024-03-02T00:57:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/posts/loz-update/</loc>
@@ -45,9 +57,6 @@
     <lastmod>2023-12-02T23:04:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/posts/aside_aria/</loc>
-    <lastmod>2023-12-02T23:04:56-08:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/categories/web/</loc>
     <lastmod>2023-12-02T23:04:56-08:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/webkit/</loc>
@@ -312,9 +321,6 @@
     <lastmod>2010-08-04T06:24:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/ime/</loc>
-    <lastmod>2010-08-04T06:24:00-07:00</lastmod>
-  </url><url>
-    <loc>https://joone.github.io/tags/w3c/</loc>
     <lastmod>2010-08-04T06:24:00-07:00</lastmod>
   </url><url>
     <loc>https://joone.github.io/tags/dom/</loc>
