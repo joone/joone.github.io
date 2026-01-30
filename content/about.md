@@ -13,9 +13,9 @@ Hi, I’m Joone. Thanks for visiting my personal blog!
 
 I’m a software engineer and comic artist, currently working at Microsoft as a Chromium engineer. I work on a wide range of browser issues to help make the web a better application platform, with a particular focus on the new Outlook experience.
 
-These days, I’m working on a new Web Performance API—the **Delayed Message Timing API**—which is designed to monitor and analyze message delays.
+These days, I’m working on a new Web Performance API—the **[Delayed Message Timing API](https://github.com/WICG/delayed-message-timing)**—which is designed to monitor and analyze message delays.
 
-On this blog, I share my open-source work and standards-related activities. Feel free to browse around for the latest updates on what I’m working on.
+On this blog, I share my open-source work, mainly on [Chromium](https://chromium-review.googlesource.com/q/owner:joonehur@microsoft.com), as well as my standards-related activities. Feel free to browse around for the latest updates on what I’m working on.
 
 I also run separate blogs for my comics:
 
