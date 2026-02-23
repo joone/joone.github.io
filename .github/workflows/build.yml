@@ -3,6 +3,7 @@ name: CI
 on:
   push:
     branches: [ main ]
+  workflow_dispatch:
 
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
@@ -28,7 +29,7 @@ jobs:
       - name: Build      
         run: |
           cd src
-          hugo
+          hugo --buildFuture
       # Checkout destination repository
       - name: Checkout dest repo
         uses: actions/checkout@v2
@@ -37,12 +38,6 @@ jobs:
           fetch-depth: 0
           ref: gh-pages
             
-      # Commit and push changes
-      - name: Copy website built from src/public
-        working-directory: dest
-        run: |
-          rm -rf *
-          yes | cp -rf ../src/public/* .
       # Commit and push changes
       - name: Copy website built from src/public
         working-directory: dest
