@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>My Contributions to Chrome and Edge M145: Long Animation Frames and Drag-and-Drop Fix - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="최근 릴리스된 Chrome 및 Edge 브라우저 (M145)에 제가 기여한 기능 추가 및 버그 픽스가 포함되었습니다. 페북 친구들 중에 아직까지 프론트엔드 개발을 하시는 분은 거의 없겠지만 🙂 아마 이미 X에서 공유해서 이미 내용을 알고 있는 분들도 있겠지만, 잠깐 내용을 공유해보록 하겠습니다.
+이번 릴리스가 의미가 있는 것이 제가 거의 2년전에 마이크로스프트 아웃룩팀에 조인하고 아마도 처음 제대로 된 결과물이 크롬/에지 브라우저에 포함되는 것 같습니다. 왜 이렇게 오랜 시간이 걸리는지 궁금할 수 있는데, 패치의 난이도에 따라 리뷰가 몇개월씩 걸리고 실제 프로덕션 환경에서 몇달씩 테스트하는 경우가 있어서 작은 버그 수정도 실제 릴리스에 반영되는데는 1년 넘게 걸릴 수도 있습니다." />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="My Contributions to Chrome and Edge M145: Long Animation Frames and Drag-and-Drop Fix" />
+<meta property="og:description" content="최근 릴리스된 Chrome 및 Edge 브라우저 (M145)에 제가 기여한 기능 추가 및 버그 픽스가 포함되었습니다. 페북 친구들 중에 아직까지 프론트엔드 개발을 하시는 분은 거의 없겠지만 🙂 아마 이미 X에서 공유해서 이미 내용을 알고 있는 분들도 있겠지만, 잠깐 내용을 공유해보록 하겠습니다.
+이번 릴리스가 의미가 있는 것이 제가 거의 2년전에 마이크로스프트 아웃룩팀에 조인하고 아마도 처음 제대로 된 결과물이 크롬/에지 브라우저에 포함되는 것 같습니다. 왜 이렇게 오랜 시간이 걸리는지 궁금할 수 있는데, 패치의 난이도에 따라 리뷰가 몇개월씩 걸리고 실제 프로덕션 환경에서 몇달씩 테스트하는 경우가 있어서 작은 버그 수정도 실제 릴리스에 반영되는데는 1년 넘게 걸릴 수도 있습니다." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://joone.github.io/posts/chrome-edge-m145-contributions/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2026-02-23T21:30:00-08:00" />
+<meta property="article:modified_time" content="2026-02-23T21:30:00-08:00" />
+
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="My Contributions to Chrome and Edge M145: Long Animation Frames and Drag-and-Drop Fix"/>
+<meta name="twitter:description" content="최근 릴리스된 Chrome 및 Edge 브라우저 (M145)에 제가 기여한 기능 추가 및 버그 픽스가 포함되었습니다. 페북 친구들 중에 아직까지 프론트엔드 개발을 하시는 분은 거의 없겠지만 🙂 아마 이미 X에서 공유해서 이미 내용을 알고 있는 분들도 있겠지만, 잠깐 내용을 공유해보록 하겠습니다.
+이번 릴리스가 의미가 있는 것이 제가 거의 2년전에 마이크로스프트 아웃룩팀에 조인하고 아마도 처음 제대로 된 결과물이 크롬/에지 브라우저에 포함되는 것 같습니다. 왜 이렇게 오랜 시간이 걸리는지 궁금할 수 있는데, 패치의 난이도에 따라 리뷰가 몇개월씩 걸리고 실제 프로덕션 환경에서 몇달씩 테스트하는 경우가 있어서 작은 버그 수정도 실제 릴리스에 반영되는데는 1년 넘게 걸릴 수도 있습니다."/>
+<script src="https://joone.github.io/js/feather.min.js"></script>
+	
+	
+        <link href="https://joone.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://joone.github.io/css/main.3e054fb5af83be9f620f8f8320cb21992526b8eb67b739f28ae60bb3f1522c10.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://joone.github.io/">Joone Blog</a>
+	</div>
+	<nav>
+		
+		<a href="/">Home</a>
+		
+		<a href="/posts">All posts</a>
+		
+		<a href="/about">About</a>
+		
+		<a href="/tags">Tags</a>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">My Contributions to Chrome and Edge M145: Long Animation Frames and Drag-and-Drop Fix</h1>
+			<div class="meta">Posted on Feb 23, 2026</div>
+		</div>
+		
+
+		<section class="body">
+			<p>최근 릴리스된 Chrome 및 Edge 브라우저 (M145)에 제가 기여한 기능 추가 및 버그 픽스가 포함되었습니다. 페북 친구들 중에 아직까지 프론트엔드 개발을 하시는 분은 거의 없겠지만 🙂 아마 이미 X에서 공유해서 이미 내용을 알고 있는 분들도 있겠지만, 잠깐 내용을 공유해보록 하겠습니다.</p>
+<p>이번 릴리스가 의미가 있는 것이 제가 거의 2년전에 마이크로스프트 아웃룩팀에 조인하고 아마도 처음 제대로 된 결과물이 크롬/에지 브라우저에 포함되는 것 같습니다. 왜 이렇게 오랜 시간이 걸리는지 궁금할 수 있는데, 패치의 난이도에 따라 리뷰가 몇개월씩 걸리고 실제 프로덕션 환경에서 몇달씩 테스트하는 경우가 있어서 작은 버그 수정도 실제 릴리스에 반영되는데는 1년 넘게 걸릴 수도 있습니다.</p>
+<h2 id="long-animation-frame-web-performance-api">Long Animation Frame (Web Performance API)</h2>
+<p>첫번째는 Web Performance API(Long Animation Frame)에 관한 부분입니다. 크로미움 기반 브라우저에서 여러가지 Web Performance API가 있는데, 웹앱이 실행되면서 각종 성능 관련된 지표를 실시간으로 수집합니다. 이 정보는 실제로 성능이 지연된 코드 위치를 알려주는데, 특정 경우(Promise 처리), 이 위치가 누락된 경우가 많아서 실제 웹앱 UI 지연(업데이트, 응답) 관련해서 문제 해결에 어려움을 주었습니다.</p>
+<p>사실 이 부분은 성능상 이유로 구현이 안되었는데, 동작하는 코드에서 실제 느리게 동작하는 자바스크립트 위치를 찾는다는 것은 당연히 브라우저에 동작에 큰 부담을 줍니다. 결국, 성능 최적화를 위해 Blink엔진 GC부터 V8 engine까지 수정하고 2개월 동안 필드 테스트끝에 성능 regression이 없다는 것이 확인되어 이제야 기능이 활성화되었습니다.</p>
+<p>하여간 팀이 원하는 기능이 드디어 릴리스되었고 이 모든 것은 아웃룩 뿐만 아니라 웹 커뮤니티 및 모든 사용자가 누릴 수 있다는 것이 오픈소스에 매력이 아닌가 싶습니다.</p>
+<h2 id="drag-and-drop-버그-수정">Drag-and-Drop 버그 수정</h2>
+<p>두번째는 Drag-and-drop 문제입니다. 웹표준에는 여러가지 Drag type이 정의되어 있는데, text, link, element등이 있습니다. link의 경우 URL을 drag-and-drop할 수 있는데, 표준에는 동시에 여러 URL을 처리하도록 되어 있지만, 크로미엄 계열 브라우저는 여러개를 drag-and-drop하는 경우 모든 URL이 하나로 합쳐지는 아주 오래된 버그가 있었습니다. 이 문제는 다른 drag-and-drop 이슈를 해결하다가 간단해 보여서 사이드로 버그를 수정했는데, 북마크 drag-and-drop과 엮기면서 나중에는 본일 보다 훨씬 더 난이도 커져버린 일이 되고 말았습니다. 이 버그를 수정하면서 오래된 버그가 안고쳐질때는 다 이유가 있다는 것을 새삼 깨닫게 되었습니다.</p>
+<p>관심있는 분은 이 문서를 보세요: <a href="https://docs.google.com/document/d/1zNvn2hQOfMCc9-L9_WtHBFW9BSgOwDzHJGYRjEY6Y3c/edit">Design Doc</a></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			<nav class="nav tags">
+				<ul class="tags">
+					
+					<li><a href="/tags/chromium">chromium</a></li>
+					
+					<li><a href="/tags/web-performance">web performance</a></li>
+					
+					<li><a href="/tags/drag-and-drop">drag-and-drop</a></li>
+					
+					<li><a href="/tags/open-source">open source</a></li>
+					
+				</ul>
+			</nav>
+			
+			
+		</div>
+    
+    <div class="pt-4"></div>
+    <div class="mt-5 border-default border p-4 bg-white rounded">
+      <script src="https://utteranc.es/client.js"
+      repo="joone/joone.github.io"
+      issue-term="pathname"
+      theme="github-light"
+      crossorigin="anonymous"
+      async>
+      </script>
+    </div>
+
+	</article>
+</main>
+<footer>
+  <div style="display:flex"><a class="soc" href="https://github.com/joone" rel="me" title="GitHub"><i data-feather="github"></i></a>
+    <a class="border"></a><a class="soc" href="https://twitter.com/joone/" rel="me" title="Twitter"><i data-feather="twitter"></i></a>
+    <a class="border"></a></div>
+  <div class="footer-info">
+    2026  © Joone Hur |  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+<script>
+  feather.replace()
+</script></div>
+    </body>
+</html>

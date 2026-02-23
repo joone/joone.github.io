@@ -7,7 +7,17 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Joone Hur</copyright>
-    <lastBuildDate>Sat, 02 Dec 2023 23:04:56 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Feb 2026 21:30:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/chromium/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>My Contributions to Chrome and Edge M145: Long Animation Frames and Drag-and-Drop Fix</title>
+      <link>https://joone.github.io/posts/chrome-edge-m145-contributions/</link>
+      <pubDate>Mon, 23 Feb 2026 21:30:00 -0800</pubDate>
+      
+      <guid>https://joone.github.io/posts/chrome-edge-m145-contributions/</guid>
+      <description>최근 릴리스된 Chrome 및 Edge 브라우저 (M145)에 제가 기여한 기능 추가 및 버그 픽스가 포함되었습니다. 페북 친구들 중에 아직까지 프론트엔드 개발을 하시는 분은 거의 없겠지만 🙂 아마 이미 X에서 공유해서 이미 내용을 알고 있는 분들도 있겠지만, 잠깐 내용을 공유해보록 하겠습니다.
+이번 릴리스가 의미가 있는 것이 제가 거의 2년전에 마이크로스프트 아웃룩팀에 조인하고 아마도 처음 제대로 된 결과물이 크롬/에지 브라우저에 포함되는 것 같습니다. 왜 이렇게 오랜 시간이 걸리는지 궁금할 수 있는데, 패치의 난이도에 따라 리뷰가 몇개월씩 걸리고 실제 프로덕션 환경에서 몇달씩 테스트하는 경우가 있어서 작은 버그 수정도 실제 릴리스에 반영되는데는 1년 넘게 걸릴 수도 있습니다.</description>
+    </item>
+    
     <item>
       <title>Understanding the &lt;aside&gt; Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility</title>
       <link>https://joone.github.io/posts/aside_aria/</link>

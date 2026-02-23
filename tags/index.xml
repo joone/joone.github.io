@@ -7,22 +7,49 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>© Joone Hur</copyright>
-    <lastBuildDate>Mon, 09 Jun 2025 00:22:10 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 23 Feb 2026 21:30:00 -0800</lastBuildDate><atom:link href="https://joone.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>w3c</title>
-      <link>https://joone.github.io/tags/w3c/</link>
-      <pubDate>Mon, 09 Jun 2025 00:22:10 -0800</pubDate>
+      <title>chromium</title>
+      <link>https://joone.github.io/tags/chromium/</link>
+      <pubDate>Mon, 23 Feb 2026 21:30:00 -0800</pubDate>
       
-      <guid>https://joone.github.io/tags/w3c/</guid>
+      <guid>https://joone.github.io/tags/chromium/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>drag-and-drop</title>
+      <link>https://joone.github.io/tags/drag-and-drop/</link>
+      <pubDate>Mon, 23 Feb 2026 21:30:00 -0800</pubDate>
+      
+      <guid>https://joone.github.io/tags/drag-and-drop/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>open source</title>
+      <link>https://joone.github.io/tags/open-source/</link>
+      <pubDate>Mon, 23 Feb 2026 21:30:00 -0800</pubDate>
+      
+      <guid>https://joone.github.io/tags/open-source/</guid>
       <description></description>
     </item>
     
     <item>
       <title>web performance</title>
       <link>https://joone.github.io/tags/web-performance/</link>
-      <pubDate>Mon, 09 Jun 2025 00:22:10 -0800</pubDate>
+      <pubDate>Mon, 23 Feb 2026 21:30:00 -0800</pubDate>
       
       <guid>https://joone.github.io/tags/web-performance/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>w3c</title>
+      <link>https://joone.github.io/tags/w3c/</link>
+      <pubDate>Mon, 09 Jun 2025 00:22:10 -0800</pubDate>
+      
+      <guid>https://joone.github.io/tags/w3c/</guid>
       <description></description>
     </item>
     
@@ -68,15 +95,6 @@
       <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
       
       <guid>https://joone.github.io/tags/aria/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>chromium</title>
-      <link>https://joone.github.io/tags/chromium/</link>
-      <pubDate>Sat, 02 Dec 2023 23:04:56 -0800</pubDate>
-      
-      <guid>https://joone.github.io/tags/chromium/</guid>
       <description></description>
     </item>
     
