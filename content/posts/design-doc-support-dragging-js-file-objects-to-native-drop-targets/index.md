@@ -375,7 +375,8 @@ falls back to the URL's last path component — so either field alone yields
 (+ extension); `content_disposition` is **not** required on this path.
 
 **macOS (CL [7689255](https://chromium-review.googlesource.com/c/chromium/src/+/7689255/34)).**
-The Mac path needs `content_disposition` for two distinct reasons:
+Unlike Windows/Linux, macOS **cannot derive the filename from `source_url`** and
+must fall back to `content_disposition`, for two distinct reasons:
 
 1. **Constructed Files have no natural origin URL.** Before `source_url` was
    synthesized, `file_contents_source_url` was empty, so
