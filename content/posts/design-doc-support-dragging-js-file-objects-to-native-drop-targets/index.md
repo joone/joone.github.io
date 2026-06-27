@@ -309,7 +309,7 @@ reconstructs a `SharedBuffer`-backed `File`, exposed as
 
 ### 5.6 Platform delivery matrix
 
-| Aspect | Windows / Linux / ChromeOS | macOS |
+| Aspect | Windows | macOS |
 |---|---|---|
 | Protocol | COM `IDataObject` / `CFSTR_FILECONTENTS` | `NSPasteboard` / `NSFilePromise` |
 | Storage medium | `TYMED_ISTREAM` (in-memory `IStream`) | `NSData` or promised file |
