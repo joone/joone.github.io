@@ -1,4 +1,9 @@
-# Design Doc: Support Dragging JS `File` Objects to Native Drop Targets
+---
+title: "Design Doc: Support Dragging JS File Objects to Native Drop Targets"
+date: 2026-06-10
+description: ""
+tags: "drag-and-drop, Web"
+---
 
 - **Tracking bug:** [Support dragging constructed Files across renderers (41120809)](https://issues.chromium.org/issues/41120809)
 - **Main CL:** [Support dragging JS File objects to native drop targets (7603160)](https://chromium-review.googlesource.com/c/chromium/src/+/7603160)
