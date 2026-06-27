@@ -15,6 +15,9 @@ module.exports = {
   image: "",
   theme: "archie",
 
+  // Serve posts under /posts/<slug>/ (matches the previous Hugo URL structure)
+  postsPath: "posts",
+
   // Comment system (utterances: renders GitHub issues as comments)
   comments: {
     provider: "utterances",
