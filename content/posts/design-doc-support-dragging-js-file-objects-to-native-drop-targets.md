@@ -1,12 +1,11 @@
 ---
-title: 'Design Doc: Support Dragging JS `File` Objects to Native Drop Targets'
+title: 'Design Doc: Support Dragging JS File Objects to Native Drop Targets'
 date: 2026-06-10
 author: "Joone Hur"
 tags: ["drag-and-drop", "Web"]
 categories: ["Chromium"]
 draft: false
 ---
-# Design Doc: Support Dragging JS `File` Objects to Native Drop Targets
 
 | | |
 |---|---|
