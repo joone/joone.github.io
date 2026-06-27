@@ -433,9 +433,3 @@ at drag-start.
 - [Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722)](https://chromium-review.googlesource.com/c/chromium/src/+/7566722)
 - [DND: Allow PDF files when dragging JS-constructed File objects (7610732)](https://chromium-review.googlesource.com/c/chromium/src/+/7610732)
 
-### Internal design notes
-- Multi-process call sequence: `call_sequence_multiprocess.md`
-- MIME validation deep-dive: `mime_validation.md`
-- macOS specifics: `mac_support.md`
-- iframe drop bug analysis: `iframe_drop_bug.md`
-- Code-review history: `code_review.md`
