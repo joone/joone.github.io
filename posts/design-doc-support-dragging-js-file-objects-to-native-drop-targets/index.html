@@ -1,19 +1,19 @@
 <!DOCTYPE html>
 <html><head lang="en">
 	<meta charset="utf-8" />
-	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Design Doc: Support Dragging JS `File` Objects to Native Drop Targets - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="description" content="Design Doc: Support Dragging JS File Objects to Native Drop Targets Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo." />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Design Doc: Support Dragging JS File Objects to Native Drop Targets - Joone Blog</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo." />
 	<meta property="og:image" content=""/>
-	<meta property="og:title" content="Design Doc: Support Dragging JS `File` Objects to Native Drop Targets" />
-<meta property="og:description" content="Design Doc: Support Dragging JS File Objects to Native Drop Targets Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo." />
+	<meta property="og:title" content="Design Doc: Support Dragging JS File Objects to Native Drop Targets" />
+<meta property="og:description" content="Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo." />
 <meta property="og:type" content="article" />
 <meta property="og:url" content="https://joone.github.io/posts/design-doc-support-dragging-js-file-objects-to-native-drop-targets/" /><meta property="article:section" content="posts" />
 <meta property="article:published_time" content="2026-06-10T00:00:00+00:00" />
 <meta property="article:modified_time" content="2026-06-10T00:00:00+00:00" />
 
 <meta name="twitter:card" content="summary"/>
-<meta name="twitter:title" content="Design Doc: Support Dragging JS `File` Objects to Native Drop Targets"/>
-<meta name="twitter:description" content="Design Doc: Support Dragging JS File Objects to Native Drop Targets Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo."/>
+<meta name="twitter:title" content="Design Doc: Support Dragging JS File Objects to Native Drop Targets"/>
+<meta name="twitter:description" content="Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo."/>
 <script src="https://joone.github.io/js/feather.min.js"></script>
 	
 	
@@ -53,14 +53,13 @@
 <main>
 	<article>
 		<div class="title">
-			<h1 class="title">Design Doc: Support Dragging JS `File` Objects to Native Drop Targets</h1>
+			<h1 class="title">Design Doc: Support Dragging JS File Objects to Native Drop Targets</h1>
 			<div class="meta">Posted on Jun 10, 2026</div>
 		</div>
 		
 
 		<section class="body">
-			<h1 id="design-doc-support-dragging-js-file-objects-to-native-drop-targets">Design Doc: Support Dragging JS <code>File</code> Objects to Native Drop Targets</h1>
-<table>
+			<table>
 <thead>
 <tr>
 <th></th>

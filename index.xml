@@ -9,12 +9,12 @@
     <copyright>© Joone Hur</copyright>
     <lastBuildDate>Wed, 10 Jun 2026 00:00:00 +0000</lastBuildDate><atom:link href="https://joone.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Design Doc: Support Dragging JS `File` Objects to Native Drop Targets</title>
+      <title>Design Doc: Support Dragging JS File Objects to Native Drop Targets</title>
       <link>https://joone.github.io/posts/design-doc-support-dragging-js-file-objects-to-native-drop-targets/</link>
       <pubDate>Wed, 10 Jun 2026 00:00:00 +0000</pubDate>
       
       <guid>https://joone.github.io/posts/design-doc-support-dragging-js-file-objects-to-native-drop-targets/</guid>
-      <description>Design Doc: Support Dragging JS File Objects to Native Drop Targets Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo.</description>
+      <description>Tracking bug Support dragging constructed Files across renderers (41120809) Main CL Support dragging JS File objects to native drop targets (7603160) Mac CL mac: Support dragging JS File objects across webviews and apps (7689255) Windows CL Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722) Chrome Status feature/5197936839491584 Runtime flag DragAndDropJSFileObjects (disabled by default). Enable with --enable-blink-features=DragAndDropJSFileObjects 1. Summary Today, when a web app places a JavaScript-constructed File object — new File([bytes], &#39;photo.</description>
     </item>
     
     <item>
