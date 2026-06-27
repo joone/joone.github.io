@@ -1,29 +1,22 @@
----
-title: "Design Doc: Support Dragging JS File Objects to Native Drop Targets"
-date: 2026-06-10
-description: ""
-tags: "drag-and-drop, Web"
----
+# Design Doc: Support Dragging JS `File` Objects to Native Drop Targets
 
-| | |
-|---|---|
-| **Tracking bug** | [Support dragging constructed Files across renderers (41120809)](https://issues.chromium.org/issues/41120809) |
-| **Main CL** | [Support dragging JS File objects to native drop targets (7603160)](https://chromium-review.googlesource.com/c/chromium/src/+/7603160) |
-| **Mac CL** | [mac: Support dragging JS File objects across webviews and apps (7689255)](https://chromium-review.googlesource.com/c/chromium/src/+/7689255/34) |
-| **Windows CL** | [Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722)](https://chromium-review.googlesource.com/c/chromium/src/+/7566722) |
-| **Chrome Status** | [feature/5197936839491584](https://chromestatus.com/feature/5197936839491584) |
-| **Runtime flag** | `DragAndDropJSFileObjects` (disabled by default). Enable with `--enable-blink-features=DragAndDropJSFileObjects` |
+- **Tracking bug:** [Support dragging constructed Files across renderers (41120809)](https://issues.chromium.org/issues/41120809)
+- **Main CL:** [Support dragging JS File objects to native drop targets (7603160)](https://chromium-review.googlesource.com/c/chromium/src/+/7603160)
+- **Windows CL:** [Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722)](https://chromium-review.googlesource.com/c/chromium/src/+/7566722)
+- **Mac CL:** [mac: Support dragging JS File objects across webviews and apps (7689255)](https://chromium-review.googlesource.com/c/chromium/src/+/7689255/34)
+- **Chrome Status:** [feature/5197936839491584](https://chromestatus.com/feature/5197936839491584)
+- **Runtime flag:** `DragAndDropJSFileObjects` (disabled by default). Enable with `--enable-blink-features=DragAndDropJSFileObjects`
 
 ---
 
-## 1. Summary
+## TL;DR
 
 Today, when a web app places a JavaScript-constructed `File` object —
 `new File([bytes], 'photo.jpg')` — into a `dragstart` handler via
 `DataTransfer.items.add()`, the blob bytes are **silently discarded** in
 `DataObject::ToWebDragData()`. The drag carries metadata but no payload, so:
 
-- Dropping onto a **native application** (Explorer, Office, Mail) delivers nothing.
+- Dropping onto a **native application** (e.g. MS Word and OneNote) delivers nothing.
 - Dropping onto an **iframe in the same tab** yields `dataTransfer.files.length == 0`.
 
 Constructing and dragging a `File` is the clean, standards-compliant way for a
@@ -47,20 +40,37 @@ filename as `text/plain`, making the drop useless for native targets.
 This design reads the blob bytes synchronously at drag-start, forwards them
 through the existing drag IPC pipeline as a `BinaryDataItem`, and delivers them
 to the OS via the platform file-contents path (`CFSTR_FILECONTENTS` on
-Windows/Linux/ChromeOS; `NSFilePromise` on macOS).
+Windows, `NSFilePromise` on macOS).
 
 The initial scope is **image MIME types only**, gated by magic-byte validation,
 behind a disabled-by-default runtime flag.
 
 ---
 
-## 2. Motivation
+## 1. Introduction
 
-Many WebView-based applications (e.g. Outlook and Teams) behave like native
-apps but cannot drag user-authored content out to the desktop or other apps.
-Firefox already supports dragging constructed `File` objects out of the browser,
-so this change aligns Chromium with existing cross-browser behavior using the
-**existing** `DataTransfer` API — no new JS surface is introduced.
+Drag-and-drop is one of the oldest and most intuitive interactions in graphical
+user interfaces, dating back to the early desktop environments of Windows and
+Macintosh in the 1990s. Its directness — pick something up and drop it where you
+want it — is exactly why it remains a core part of how users move data between
+applications today.
+
+The web platform has long supported drag-and-drop, but it was designed primarily
+to work *within* a web page. Interactions that cross the boundary between the
+browser and native applications are limited to a few special cases: dragging an
+image out of a page, dragging a URL link out to another application, or
+dropping a file from the OS file manager into the browser. As a result, many
+WebView-based applications that look and feel like native apps fall short of user
+expectations, because drag-and-drop is not fully supported at the browser level.
+
+The goal of this design is to close that gap by supporting a new scenario:
+dragging a JavaScript `File` object out of the browser and dropping it onto a
+native application. This document describes how that is implemented.
+
+For reference, Firefox already supports dragging constructed `File` objects out
+of the browser, so this change aligns Chromium with existing cross-browser
+behavior using the **existing** `DataTransfer` API — no new JS surface is
+introduced.
 
 ### Goals
 
@@ -418,3 +428,9 @@ at drag-start.
 - [Win: Support TYMED_ISTREAM for CFSTR_FILECONTENTS in GetFileContents (7566722)](https://chromium-review.googlesource.com/c/chromium/src/+/7566722)
 - [DND: Allow PDF files when dragging JS-constructed File objects (7610732)](https://chromium-review.googlesource.com/c/chromium/src/+/7610732)
 
+### Internal design notes
+- Multi-process call sequence: `call_sequence_multiprocess.md`
+- MIME validation deep-dive: `mime_validation.md`
+- macOS specifics: `mac_support.md`
+- iframe drop bug analysis: `iframe_drop_bug.md`
+- Code-review history: `code_review.md`
