@@ -15,6 +15,14 @@ module.exports = {
   image: "",
   theme: "archie",
 
+  // Comment system (utterances: renders GitHub issues as comments)
+  comments: {
+    provider: "utterances",
+    repo: "joone/joone.github.io",
+    issueTerm: "pathname",
+    theme: "github-light",
+  },
+
   // Directory overrides (defaults shown)
   content: "./content",
   postsDir: "./content/posts",
