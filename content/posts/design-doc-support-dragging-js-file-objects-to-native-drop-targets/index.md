@@ -112,14 +112,28 @@ string_item.data = file->name();   // ← filename only, no bytes
 
 so native applications received only a text string, not a droppable file.
 
-The drag pipeline crosses three process hops:
+The drag pipeline crosses process boundaries. At drag-start the browser hands the
+drag to the platform's OS drag-and-drop loop — `DoDragDrop()` on Windows,
+`NSDraggingSession` / `NSFilePromise` on macOS, and the equivalent drag session
+on Linux/ChromeOS. Where the user drops then determines the path:
 
 ```
-Renderer (source) ──StartDragging──► Browser ──DoDragDrop / NSFilePromise──► OS
-                                         │
-                              (on drop)  ▼
-                          Browser ──DragTargetDrop──► Renderer (target / iframe)
+Drop on a NATIVE APP (out-of-browser):
+  Renderer (source) ─StartDragging─► Browser ─► OS drag loop ─► native drop target
+                                                 (DoDragDrop / NSFilePromise / …)
+
+Drop on ANOTHER RENDERER (in-browser, e.g. parent frame → iframe):
+  Renderer (source) ─StartDragging─► Browser ─► OS drag loop
+                                          │  (on drop)
+                                          ▼
+                     Browser ─DragTargetDrop─► Renderer (target / iframe)
 ```
+
+The second case is the **in-browser** drag-and-drop scenario: the drop is routed
+back into a renderer (for example, a parent frame dropping onto an iframe in the
+same tab). The first case delivers the file bytes to a native application outside
+the browser. Both share the same source-side path; only the drop destination
+differs.
 
 The platform delivery primitive already exists: `PrepareDragForFileContents()`
 → `OSExchangeDataProvider::SetFileContents()` stores `CFSTR_FILECONTENTS`. It was
@@ -128,6 +142,15 @@ previously only fed by in-page image drags (e.g. dragging an `<img>`).
 ---
 
 ## 4. Architecture Overview
+
+The sequence below traces the **in-page (intra-tab) drag-and-drop** path — a
+constructed `File` dragged from a source frame and dropped onto another renderer
+(e.g. an iframe in the same tab), ending with the bytes exposed as
+`dataTransfer.files`. The source-side steps (`dragstart` → `ToWebDragData()` →
+`StartDragging` → `SetFileContents` → `DoDragDrop()`/`NSFilePromise`) are shared
+with the native-app drop; only the drop destination differs — a native
+application receives the bytes directly from the OS via `CFSTR_FILECONTENTS` /
+`NSFilePromise` instead of routing back through `DragTargetDrop`.
 
 ```mermaid
 sequenceDiagram
@@ -168,20 +191,56 @@ In `ToWebDragData()`, for a `kFileKind` item with **no disk path** (a blob-backe
 constructed `File`), and only when the runtime feature is enabled:
 
 ```cpp
-scoped_refptr<SharedBuffer> buf;
-if (context &&
-    RuntimeEnabledFeatures::DragAndDropJSFileObjectsEnabled(context)) {
-  auto task_runner = context->GetTaskRunner(TaskType::kFileReading);
-  buf = SyncReadBlobDataHandle(file->GetBlobDataHandle(),
-                               std::move(task_runner));
-}
-if (buf && buf->size() > 0 && IsImageDataValid(buf)) {
-  auto& binary_item = item_list[i].emplace<WebDragData::BinaryDataItem>();
-  binary_item.data = buf;
-  binary_item.image_accessible = true;  // see §6.1
-  binary_item.content_disposition =
-      "attachment; filename=\"" + file->name() + "\"";  // see §5.4
-}
+
+WebDragData DataObject::ToWebDragData(ExecutionContext* context) {
+  WebDragData data;
+  std::vector<WebDragData::Item> item_list(length());
+
+  for (wtf_size_t i = 0; i < length(); ++i) {
+    DataObjectItem* original_item = Item(i);
+    WebDragData::Item& item = item_list[i];
+    switch (original_item->Kind()) {
+      case DataObjectItem::kStringKind: {
+       ...
+      case DataObjectItem::kFileKind: 
+        if (original_item->GetSharedBuffer()) {
+          ...
+        }  else if (original_item->IsFilename()) {
+          ...
+          scoped_refptr<SharedBuffer> buf;
+          if (context &&
+              RuntimeEnabledFeatures::DragAndDropJSFileObjectsEnabled(context)) {
+            auto task_runner = context->GetTaskRunner(TaskType::kFileReading);
+            buf = SyncReadBlobDataHandle(file->GetBlobDataHandle(),
+                                        std::move(task_runner));
+          }
+          if (buf && buf->size() > 0 && IsImageDataValid(buf)) {
+            auto& binary_item = item_list[i].emplace<WebDragData::BinaryDataItem>();
+            binary_item.data = buf;
+            binary_item.image_accessible = true;  // see §6.1
+            if (!file->name().empty()) {
+              // (A) Synthesize a source URL whose last path component is the
+              // filename. The in-page drop target recovers the name via
+              // base_url_.LastPathComponent(), and Windows/Linux derive the
+              // dropped file's name from it. See §5.4.
+              binary_item.source_url =
+                  KURL(StrCat({"https://local/",
+                               EncodeWithUrlEscapeSequences(file->name())}));
+              // (B) Also carry the (escaped) name as a Content-Disposition.
+              // Required by the macOS pasteboard path. See §5.4.
+              String escaped_name = file->name();
+              escaped_name = escaped_name.Replace("\\", "\\\\");
+              escaped_name = escaped_name.Replace("\"", "\\\"");
+              binary_item.content_disposition =
+                  "attachment; filename=\"" + escaped_name + "\"";
+            }
+            // (C) Preserve the extension for the image-MIME gate + final name.
+            const String& name = file->name();
+            size_t dot_index = name.rfind('.');
+            if (dot_index != kNotFound && dot_index + 1 < name.length()) {
+              binary_item.filename_extension = name.substr(dot_index + 1);
+            }
+          }
 ```
 
 **`SyncReadBlobDataHandle()`** — synchronous read via
@@ -202,10 +261,38 @@ regardless of filename. This mirrors the Async Clipboard API
 
 `WebDragData::BinaryDataItem` → mojo `DragItemBinary` → `DragDataToDropData()`:
 
+content/browser/renderer_host/data_transfer_util.cc
+
 ```cpp
-drop_data.file_contents = <bytes>;
-drop_data.file_contents_image_accessible = binary_item.image_accessible; // true
-// file_contents_source_url stays empty for constructed Files
+
+DropData DragDataToDropData(const blink::mojom::DragData& drag_data) {
+  ...
+  for (const blink::mojom::DragItemPtr& item : drag_data.items) {
+    switch (item->which()) {
+      ...
+      case blink::mojom::DragItemDataView::Tag::kBinary: {
+        // DropData only supports a single file_contents entry.
+        // Skip additional binary items until multi-file support is added.
+        if (!result.file_contents.empty()) {
+          break;
+        }
+
+        const blink::mojom::DragItemBinaryPtr& binary_item = item->get_binary();
+        base::span<const uint8_t> contents(binary_item->data);
+        result.file_contents.assign(contents.begin(), contents.end());
+        result.file_contents_image_accessible =
+            binary_item->is_image_accessible;
+        result.file_contents_source_url = binary_item->source_url;
+        result.file_contents_filename_extension =
+            binary_item->filename_extension.BaseName().value();
+        if (binary_item->content_disposition) {
+          result.file_contents_content_disposition =
+              *binary_item->content_disposition;
+        }
+        break;
+      }
+  ...
+}
 ```
 
 ### 5.3 Browser: prepare the drag source
@@ -225,27 +312,27 @@ drop_data.file_contents_image_accessible = binary_item.image_accessible; // true
 On Windows, `OSExchangeDataProviderWin::SetFileContents()` stores
 `CFSTR_FILECONTENTS` as `TYMED_ISTREAM` (backed by an in-memory `IStream`).
 
-> **Windows storage medium: `TYMED_ISTREAM` (CL [7566722](https://chromium-review.googlesource.com/c/chromium/src/+/7566722)).**
-> Chromium historically stored `CFSTR_FILECONTENTS` as `TYMED_HGLOBAL`, but the
-> Windows Shell specification recommends `TYMED_ISTREAM` (paired with
-> `CFSTR_FILEDESCRIPTORW`) for interoperability. Native apps such as OneNote,
-> Word and PowerPoint request `CFSTR_FILECONTENTS` with `TYMED_ISTREAM` and fail
-> silently when only `TYMED_HGLOBAL` is offered. Three coordinated changes fix
-> this:
->
-> 1. **Replace `FileContentZeroType()` with `FileContentAtIndexType(0)`.** The
->    former hardcoded `TYMED_HGLOBAL` and is removed; the latter advertises
->    `TYMED_HGLOBAL | TYMED_ISTREAM | TYMED_ISTORAGE`, matching the spec.
-> 2. **Store as `TYMED_ISTREAM` in `SetFileContents()`.** A new helper
->    `CreateStorageForIStream()` wraps the bytes in an `IStream` via
->    `SHCreateMemStream()`. The `DuplicateMedium()` path resets the stream seek
->    position to zero so every `IDataObject::GetData()` caller reads from the
->    start.
-> 3. **Read `TYMED_ISTREAM` in `GetFileContents()` (drop-target side).** When
->    Chromium *receives* `CFSTR_FILECONTENTS`, a `ReadStreamToString()` helper
->    reads the `IStream` into a `std::string`, capped at 256 MB
->    (`kMaxClipboardStreamSize`) to prevent OOM. This lets Chromium accept
->    virtual files from apps that only provide `TYMED_ISTREAM`.
+**Windows storage medium: `TYMED_ISTREAM` (CL [7566722](https://chromium-review.googlesource.com/c/chromium/src/+/7566722)).**
+Chromium historically stored `CFSTR_FILECONTENTS` as `TYMED_HGLOBAL`, but the
+Windows Shell specification recommends `TYMED_ISTREAM` (paired with
+`CFSTR_FILEDESCRIPTORW`) for interoperability. Native apps such as OneNote,
+and Word request `CFSTR_FILECONTENTS` with `TYMED_ISTREAM` and fail
+silently when only `TYMED_HGLOBAL` is offered. Three coordinated changes fix
+this:
+
+1. **Replace `FileContentZeroType()` with `FileContentAtIndexType(0)`.** The
+   former hardcoded `TYMED_HGLOBAL` and is removed; the latter advertises
+    `TYMED_HGLOBAL | TYMED_ISTREAM | TYMED_ISTORAGE`, matching the spec.
+2. **Store as `TYMED_ISTREAM` in `SetFileContents()`.** A new helper
+    `CreateStorageForIStream()` wraps the bytes in an `IStream` via
+    `SHCreateMemStream()`. The `DuplicateMedium()` path resets the stream seek
+    position to zero so every `IDataObject::GetData()` caller reads from the
+    start.
+ 3. **Read `TYMED_ISTREAM` in `GetFileContents()` (drop-target side).** When
+    Chromium *receives* `CFSTR_FILECONTENTS`, a `ReadStreamToString()` helper
+    reads the `IStream` into a `std::string`, capped at 256 MB
+    (`kMaxClipboardStreamSize`) to prevent OOM. This lets Chromium accept
+    virtual files from apps that only provide `TYMED_ISTREAM`.
 
 `OnDragInitiated()` records the security state:
 
@@ -256,39 +343,59 @@ image_accessible_from_frame_ = drop_data.file_contents_image_accessible; // true
 
 ### 5.4 Filename derivation & macOS pasteboard delivery
 
-Constructed `File`s have an **empty** `file_contents_source_url`, so
-`net::GenerateFileName(GURL(), ...)` returns an empty path and downstream
-filename/MIME derivation fails. On macOS this silently skips the entire
-`NSFilePromise` registration block in `web_drag_source_mac.mm`, delivering no
-file.
+The renderer sets three filename-related fields on the binary item (§5.1), and
+each platform consumes them differently:
 
-**Cross-platform fix:** carry the name via a synthetic `Content-Disposition`
-header (set in §5.1):
+| Field | Set by | Value | Consumed by |
+|---|---|---|---|
+| `source_url` | main CL | `https://local/<encoded name>` | in-page drop (`LastPathComponent`) + Windows/Linux filename |
+| `content_disposition` | macOS CL | `attachment; filename="photo.jpg"` | macOS pasteboard / `NSFilePromise` |
+| `filename_extension` | main CL | `jpg` | image-MIME gate + final extension |
 
+`DropData::GetSafeFilenameForImageFileContents()` turns these into a sanitized
+name on every platform:
+
+```cpp
+base::FilePath file_name = net::GenerateFileName(
+    file_contents_source_url,            // "https://local/photo.jpg"
+    file_contents_content_disposition,   // "attachment; filename=photo.jpg"
+    ...);
+return file_name.ReplaceExtension(file_contents_filename_extension);  // "photo.jpg"
 ```
-content_disposition = "attachment; filename=\"photo.jpg\""
-  → net::GenerateFileName(GURL(), content_disposition, ...) = "photo.jpg"
-  → net::GetMimeTypeFromFile("photo.jpg") = "image/jpeg"
-  → NSFilePromise registered ✓
-```
 
-This also improves Windows/Linux: the dropped file is named `photo.jpg` instead
-of an empty/generic name.
+`net::GenerateFileName` prefers the `Content-Disposition` filename and otherwise
+falls back to the URL's last path component — so either field alone yields
+`photo.jpg`.
 
-**macOS pipeline (CL [7689255](https://chromium-review.googlesource.com/c/chromium/src/+/7689255/34)).**
-Dragging a constructed `File` on macOS previously lost the bytes and filename
-metadata across webviews and native targets. The Mac path needs four additional
-pieces:
+**Windows / Linux.** `PrepareDragForFileContents()` calls
+`GetSafeFilenameForImageFileContents()` and hands the result to
+`OSExchangeDataProviderWin::SetFileContents()`, which writes the name into the
+`CFSTR_FILEDESCRIPTORW` file descriptor (`fgd[0].cFileName`) that pairs with the
+`CFSTR_FILECONTENTS` bytes. The name is derived in-process from `source_url`
+(+ extension); `content_disposition` is **not** required on this path.
 
-- **Read bytes from the pasteboard** using `kPasteboardTypeFilePromiseContent`
-  to populate `file_contents`.
-- **Allow binary drag items when `file_contents` is present**, instead of
-  requiring a non-empty source URL (constructed Files have none).
-- **Introduce a Chromium-specific pasteboard type** that carries the
-  `Content-Disposition` string, preserving the filename across the
-  NSPasteboard hop.
-- **Synthesize a `file://` URL from the `Content-Disposition`** so the target
-  renderer can reconstruct the filename when rebuilding the `File` object.
+**macOS (CL [7689255](https://chromium-review.googlesource.com/c/chromium/src/+/7689255/34)).**
+The Mac path needs `content_disposition` for two distinct reasons:
+
+1. **Constructed Files have no natural origin URL.** Before `source_url` was
+   synthesized, `file_contents_source_url` was empty, so
+   `net::GenerateFileName(GURL(), ...)` produced nothing,
+   `GetSafeFilenameForImageFileContents()` returned `std::nullopt`, and the
+   entire filename-gated `NSFilePromise` block in `web_drag_source_mac.mm` was
+   skipped — delivering no file. Carrying the name in `content_disposition`
+   restored a usable filename + MIME type.
+2. **The NSPasteboard hop loses `DropData` fields.** On macOS the drag is
+   serialized onto the OS pasteboard as a set of registered flavors; only those
+   explicitly added in `writableTypesForPasteboard:` survive. `source_url` is an
+   internal `DropData` field and is **never** written as a flavor, so a
+   receiving webview cannot see it. The Mac CL therefore registers a dedicated
+   `kUTTypeChromiumContentDisposition` flavor that carries the filename string
+   across the hop, and synthesizes a `file://` URL from it on the receiving side
+   so the target renderer can rebuild the `File`'s name.
+
+In short: Windows bakes the `source_url`-derived name into the file descriptor
+in-process, whereas macOS must round-trip the name through the pasteboard — which
+is why `content_disposition` was introduced for the Mac path.
 
 ### 5.5 Drop side: deliver to the target
 
