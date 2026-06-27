@@ -1,12 +1,11 @@
 ---
 title: "Contribution to Llama-recipes project"
-date: 2024-03-02T00:57:56-08:00
-categories: ["AI"]
-draft: false
-aliases: [ "/2024/03/llama-recipes.html" ]
-tags : [llama, llm, contribution]
-
+date: 2024-03-02
+description: ""
+image: "gradio.png"
+tags: "llama, llm, contribution"
 ---
+
 I'm excited to share my recent contribution to the [llama-recipes](https://github.com/facebookresearch/llama-recipes), a project used for fine-tuning Llama2.
 
 I've been working on fine-tuning [the Lamma model](https://llama.meta.com/) since its open-source release. Initially, I utilized [the alpaca-lora project](https://github.com/tloen/alpaca-lora), which enabled fine-tuning Lamma using a consumer's NVidia GPU. This was a significant advantage as it allowed me to develop my own version of ChatGpt. However, the LLM industry moves at a rapid pace: Meta released Lamma2 shortly after. In this release, Meta also introduced a new tool on GitHub named Lamma-recipes, prompting me to transition to this new tool for further fine-tuning.
@@ -52,7 +51,7 @@ Running on public URL: https://???????????.gradio.live
 
 This share link expires in 72 hours. For free permanent hosting and GPU upgrades, run `gradio deploy` from Terminal to deploy to Spaces (https://huggingface.co/spaces)
 ```
-![Llama2 Web UI](gradio.png "Llamma2 Web UI")
+![Llama2 Web UI](images/gradio.png "Llamma2 Web UI")
 
 I submitted a pull request to integrate Gradio web interface support into the llama-recipes project, which was successfully merged along with other bug fixes:
 

@@ -1,10 +1,9 @@
-+++
-title = "About"
-description = "About this blog"
-date = "2019-02-28"
-aliases = ["about-us","about-hugo","contact"]
-author = "joone"
-+++
+---
+title: "About"
+date: 2019-02-28
+description: "About this blog"
+tags: ""
+---
 
 ---
 ![My character](/images/author.png)

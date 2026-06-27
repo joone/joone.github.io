@@ -1,16 +1,12 @@
 ---
 title: "Understanding the <aside> Element in Web Accessibility: Standards, Challenges, and Cross-Browser Compatibility"
-date: 2023-12-02T23:04:56-08:00
-categories: ["Web"]
-draft: false
-aliases: [ "/2023/12/aside_aria_cross_browser_compatibility.html" ]
-tags : [webkit, firefox, ARIA, chromium]
-images:
-  - "images/post/aside_tag.png"
-author: "Joone Hur"
+date: 2023-12-02
+description: ""
+image: "aside_tag.png"
+tags: "webkit, firefox, ARIA, chromium"
 ---
 
- ![aside tag](aside_tag.png "How the aside tag is rendered")
+ ![aside tag](images/aside_tag.png "How the aside tag is rendered")
 
 ### The `<aside>` element
 The `<aside>`element is typically used for displaying additional information that complements the main content.
