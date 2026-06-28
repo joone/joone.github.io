@@ -1,6 +1,6 @@
 ---
 title: "Using the Chrome OS Graphics Stack on Intel-based Linux Desktops"
-date: 2019-03-16
+date: 2018-07-12
 description: ""
 tags: "Chromebook, Intel, ChromeOS, GPU, ozone-gbm, Chromium"
 ---
