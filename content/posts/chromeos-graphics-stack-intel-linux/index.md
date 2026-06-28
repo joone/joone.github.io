@@ -7,7 +7,7 @@ tags: "Chromebook, Intel, ChromeOS, GPU, ozone-gbm, Chromium"
 
 Joone Hur, Web Technology Team, Open Source Technology Center
 
-> This article was originally published on [01.org](https://01.org/blogs/joone/2018/using-chrome-os-graphics-stack-intel-based-linux-desktops).
+> This article was originally published on [01.org](https://web.archive.org/web/20190704220613/https://01.org/blogs/joone/2018/using-chrome-os-graphics-stack-intel-based-linux-desktops).
 
 ## Overview
 
