@@ -5,6 +5,8 @@ description: ""
 tags: "CSS, Web Development, Crosswalk, IoT, Round Display"
 ---
 
+![The round CRT display of the PDP-1](images/UQZekv-UucBpiCk2.png "Photo by Matthew Hutchinson (CC BY 2.0), https://commons.wikimedia.org/w/index.php?curid=1587541")
+
 > FYI: this article was originally published on [01.org](https://01.org/chromium/blogs/joone/2016/css-round-display-specifications).
 
 Did you know that the first commercial computer monitor had a round display?
@@ -17,6 +19,12 @@ been integrated into many consumer electronic devices, from appliances to
 wristwatches, that we collectively call Internet of Things (IoT) devices. Some of
 these IoT devices use non-rectangular displays, so it's time for the round display
 to make a comeback.
+
+![Smartwatches with round displays](images/bOlMf5WqeAGj6LKr.png)
+
+![The NEST thermostat round display](images/4JRi6AJCdwn6_D-R.png)
+
+![Audi free form dashboard display](images/MY3PrRpXWbIv88HQ.png)
 
 As you can see, smartwatches are the best examples of round displays. The NEST
 thermostat also uses a round display. In addition, new Audi cars in model year
@@ -56,6 +64,8 @@ property was renamed to `offset-path` to embrace the `polar-angle`,
 
 ## Media Query: Shape Feature
 
+![Weather application demos](images/gEEgsih4W9guh5oS.png "Weather application demos [2][3]")
+
 Additionally, the name of the Media Query feature was changed from `device-radius`
 to `shape`. Its value was also changed from a percentage to the two reserved
 values, `round` and `rect`.
@@ -87,12 +97,18 @@ The `viewport-fit` rule was introduced in the spec as a descriptor of `@viewport
 to fix this problem. It allows us to control the clipped area by setting the size of
 the visual viewport. You can see an example of this here:
 
+![viewport-fit: contain](images/ZkHRDVNZw6gxfqGA.png)
+
+![viewport-fit: cover](images/6839mkoALVGwz58M.png)
+
 ```css
 @viewport { viewport-fit: contain; }
 @viewport { viewport-fit: cover; }
 ```
 
 ## CSS offset-path and offset-distance
+
+![Elements positioned with offset-path and offset-distance](images/0rg0VVpy72F_Yq5Z.png)
 
 ```html
 <body>
@@ -109,11 +125,15 @@ elements using the path and the distance in the path.
 
 ## CSS offset-position and offset-anchor
 
+![offset-position and offset-anchor](images/_rvUtjuUPcY0w-4q.png)
+
 The `offset-position` sets a start point of the path in the containing block. The
 `offset-anchor` property sets an anchor point of the element. We can change the
 position of the element in the containing block in different ways.
 
 ## CSS offset-rotation
+
+![Elements rotated with offset-rotation](images/fcx-_YVY-zDS_chp.png)
 
 ```html
 <style>
@@ -131,6 +151,8 @@ If we use CSS `offset-rotation`, we can rotate elements toward the center or bor
 of the display by specifying the angle.
 
 ## CSS border-boundary
+
+![Borders painted with border-boundary on a round display](images/PxtevNdlYjc4HoP6.png)
 
 When we draw a border around elements in a round display, parts of the border can
 be clipped off. So the spec added the CSS `border-boundary` property to paint the
@@ -226,7 +248,19 @@ $ crosswalk-pkg -p android -c ~/git/crosswalk/src/out/Release/xwalk_app_template
 Here are some demos of Crosswalk for CSS Round Display on Fossil Android Wear based
 on an X86 processor.
 
+![CSS Round Display demo on Android Wear](images/gvsb2T_BVfZR9O6W.png)
+
+![CSS Round Display demo on Android Wear](images/KWy1i_3vORLOnZSj.png)
+
+![CSS Round Display demo on Android Wear](images/grl_RMugLnP08GLb.png)
+
+![CSS Round Display demo on Android Wear](images/QNwndVCemVsUpEW5.png)
+
 ## Browsing the Web on Android Watch
+
+![Browsing the web on an Android watch](images/Rk6PqVCQWn0mw6u2.png)
+
+![Browsing the web on an Android watch](images/iiWIOrOh4m-YIpv-.png)
 
 Android 2.0 was introduced in the last Google I/O developer conference. Android 2.0
 is able to access a network without using an Android smartphone as an intermediary
