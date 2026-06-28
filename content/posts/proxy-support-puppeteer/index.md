@@ -9,7 +9,7 @@ Puppeteer is a popular Node.js library for controlling headless Chrome.
 It allows developers to automate tasks such as web scraping and testing. 
 However, until recently, Puppeteer did not support proxy settings for each BrowserContext. 
 This meant that if you wanted to use a proxy with Puppeteer, you had to set it globally for all BrowserContexts.
-You were not able to set a diffrent proxy for each indivisual BrowseContext at runtime.
+You could not set a different proxy for each individual BrowserContext at runtime.
 
 To address this limitation, I made a change to the Chromium codebase as follows:
 ```C++
@@ -148,8 +148,7 @@ index 3228ff45670cb..cb88540a8dbe0 100644
        Browser.BrowserContextID browserContextId
 
 ```
-The modifications involved passing a proxy server address to HeadlessBrowserContext during the creation of a BrowserContext.  
-Additionally, adjustments were made to the Puppeteer interface, specifically in the Browser::createIncognitoBrowserContext function as follows:
+The modifications involved passing a proxy server address to `HeadlessBrowserContext` during the creation of a `BrowserContext`. Additionally, adjustments were made to the Puppeteer interface, specifically in the `Browser::createIncognitoBrowserContext` function, as follows:
 ```JS
 async createIncognitoBrowserContext(
     options: BrowserContextOptions = {}
@@ -173,18 +172,17 @@ async createIncognitoBrowserContext(
   }
 
 ```
-At that time, I was quite busy with my project, so I did not submit the changes upstream. Eventually, Pavel Feldman, a Google engineer, implemented proxy support for each BrowseContext and merged his patch to upstream.
+At that time, I was quite busy with my project, so I did not submit the changes upstream. Eventually, Pavel Feldman, a Google engineer, implemented proxy support for each BrowserContext and merged his patch upstream.
 
 https://chromium-review.googlesource.com/c/chromium/src/+/2226298
 
-Despite of this proxy support, the createIncognitoBrowserContext function within Puppeteer remained unchanged.
-So I recently made a change to Puppeteer that allows developers to set proxy settings for each BrowserContext:
+Despite this proxy support, the `createIncognitoBrowserContext` function within Puppeteer remained unchanged. So I recently made a change to Puppeteer that allows developers to set proxy settings for each BrowserContext:
 https://github.com/puppeteer/puppeteer/pull/7516
 
 
-### How to set a proxy for indivisual browse context
+## How to set a proxy for an individual browser context
 
-We can now set a diffrent proxy for each indivisual BrowseContext at runtime.
+We can now set a different proxy for each individual BrowserContext at runtime.
 ```JS
 "use strict";
 
@@ -204,7 +202,7 @@ const puppeteer = require("puppeteer");
 
 ```
 
-Bofore, we were only able to apply a global proxy setting for all all BrowserContexts. 
+Before, we were only able to apply a global proxy setting for all BrowserContexts.
 ```JS
   const browser = await puppeteer.launch({
     args: [

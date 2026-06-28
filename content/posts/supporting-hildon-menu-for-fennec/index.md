@@ -5,10 +5,8 @@ description: ""
 tags: "maemo fennec"
 ---
 
-[I implemented the hildon menu for Fennec on Maemo.](https://bugzilla.mozilla.org/show_bug.cgi?id=426292)  
+[I implemented the Hildon menu for Fennec on Maemo.](https://bugzilla.mozilla.org/show_bug.cgi?id=426292)
 
-  
-Actually, the hildon menu feature has not been decided to be added for 1.0 release.  
-I'm not sure if this patch could be applied to the mainline.  
-  
-Mozilla platform already supports the hildon framework so it is easy to add new things for Maemo if you wish.
+Actually, the Hildon menu feature has not yet been decided on for the 1.0 release, so I'm not sure whether this patch will be applied to the mainline.
+
+The Mozilla platform already supports the Hildon framework, so it is easy to add new things for Maemo if you wish.

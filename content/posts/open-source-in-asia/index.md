@@ -5,17 +5,16 @@ description: ""
 tags: "OpenSource, Mozilla"
 ---
 
-I'd like to introduce a presentation about open source in Asia.  
-  
-The speaker is [Gen Kanai](http://blog.mozilla.com/gen) who is working for Mozilla Corporation.  
-He talked about Mozilla community & open source activities in Asia such as:  
+I'd like to introduce a presentation about open source in Asia.
 
-*   Situation of Mozilla Community in Korea, China, Japan, and Taiwan
-*   Three barriers to participate in Open Source Projects such as culture, language and education
-*   Examples of Open Source Project in ASIA (Ruby, [Red flag linux](http://en.wikipedia.org/wiki/Red_Flag_Linux), and [Dzongkha Debain Linux)](http://pcworld.about.com/od/linux/Bhutan-Government-comes-back-f.htm)
+The speaker is [Gen Kanai](http://blog.mozilla.com/gen), who works for the Mozilla Corporation. He talked about the Mozilla community and open source activities in Asia, such as:
 
-[The leader of Korea Mozilla Community,](http://www.mozilla.or.kr/zine/?cat=10) [Channy Yun](http://www.mozilla.or.kr/zine/?cat=10) [commented the situation of Open Source Activities in Korea.](http://www.mozilla.or.kr/zine/?cat=10)  
-  
-You can understand the situation of Open source in Korea from this article.  
-  
-Thanks
+- The situation of the Mozilla community in Korea, China, Japan, and Taiwan
+- Three barriers to participating in open source projects: culture, language, and education
+- Examples of open source projects in Asia (Ruby, [Red Flag Linux](http://en.wikipedia.org/wiki/Red_Flag_Linux), and [Dzongkha Debian Linux](http://pcworld.about.com/od/linux/Bhutan-Government-comes-back-f.htm))
+
+[Channy Yun, the leader of the Korea Mozilla Community, commented on the situation of open source activities in Korea.](http://www.mozilla.or.kr/zine/?cat=10)
+
+You can learn about the state of open source in Korea from this article.
+
+Thanks.

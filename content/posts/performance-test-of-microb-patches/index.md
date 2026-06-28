@@ -5,50 +5,44 @@ description: ""
 tags: "performance, patch, microB"
 ---
 
-I have tested [the microB patches based on Mozilla1.9(Firefox3 alpha6 pre.)  
-](http://browser.garage.maemo.org/docs/patches.html)  
-\- The microB package contains more 200 patches and several patch sets.  
-\- It is released with Firefox3 alpha6 pre. now.  
+I have tested [the microB patches based on Mozilla 1.9 (Firefox 3 alpha6 pre)](http://browser.garage.maemo.org/docs/patches.html).
 
-Two kinds of test case are used.  
-\- [Tinderbox DHTML Test](http://www.mozilla.org/performance/test-cases/dhtml/)  
-\- [CSS Rendering](http://www.howtocreate.co.uk/csstest.html)  
+- The microB package contains more than 200 patches and several patch sets.
+- It is currently released with Firefox 3 alpha6 pre.
 
-Target Device : PAX320, RAM 256MB  
+I used two kinds of test cases:
 
-And I got the following results on TestGtkEmbed in Mozilla.  
+- [Tinderbox DHTML Test](http://www.mozilla.org/performance/test-cases/dhtml/)
+- [CSS Rendering](http://www.howtocreate.co.uk/csstest.html)
 
-\* Tinderbox DHTML Test:  
-The microB patched Mozilla is 2.2 % faster than Mozilla1.9 (Firefox alpah6 pre).  
+Target device: PAX320, RAM 256MB.
 
-\* CSS Rendering:  
-The microB patched Mozlla is 5.6 % slower (?) than Mozilla1.9
+I got the following results on TestGtkEmbed in Mozilla:
 
-I applied the default patch set of microB to Mozilla1.9  
+- **Tinderbox DHTML Test:** the microB-patched Mozilla is 2.2% faster than Mozilla 1.9 (Firefox alpha6 pre).
+- **CSS Rendering:** the microB-patched Mozilla is 5.6% slower (?) than Mozilla 1.9.
 
-I can't understand why the microB patches is slow in the case of CSS Rendering.  
+I applied the default patch set of microB to Mozilla 1.9. I can't understand why the microB patches are slower in the case of CSS Rendering.
 
-The following items are performance related patches in the default patch set.  
+The following items are the performance-related patches in the default patch set:
 
-#Performance improvements  
-perf\_addon/attachment.cgi?id=246204.diff  
-perf\_addon/new\_cached\_scale.gtk2.diff  
-perf\_addon/bug54205.diff  
-perf\_addon/540\_BUG54340\_js\_malloc.diff  
-perf\_addon/545\_BUG54340\_findkeyword\_inline.diff  
-perf\_addon/550\_BUG54340\_optimization\_options.diff  
-perf\_addon/thread\_wait\_block.diff  
-perf\_addon/spidermonkey\_alloc.diff  
-perf\_addon/605\_css\_erros\_parsing\_disable.diff
+```text
+# Performance improvements
+perf_addon/attachment.cgi?id=246204.diff
+perf_addon/new_cached_scale.gtk2.diff
+perf_addon/bug54205.diff
+perf_addon/540_BUG54340_js_malloc.diff
+perf_addon/545_BUG54340_findkeyword_inline.diff
+perf_addon/550_BUG54340_optimization_options.diff
+perf_addon/thread_wait_block.diff
+perf_addon/spidermonkey_alloc.diff
+perf_addon/605_css_erros_parsing_disable.diff
+```
 
-There are also some patches on Cairo.  
+There are also some patches on Cairo. I did not go through what each patch means.
 
-I did not go through what each patch means.  
+Looking forward to your opinions and thoughts about the results.
 
-Looking forward to your opinion & thought about the results.  
+Thanks.
 
-Thanks
-
-  
-
-p.s. [There is the same article on Mozilla newsgroup.](http://groups.google.com/group/mozilla.dev.platforms.mobile/browse_thread/thread/842faccb30e3375e)
+p.s. [There is the same article on the Mozilla newsgroup.](http://groups.google.com/group/mozilla.dev.platforms.mobile/browse_thread/thread/842faccb30e3375e)

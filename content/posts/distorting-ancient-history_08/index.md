@@ -15,6 +15,6 @@ There are three countries in East Asia: Korea, China, and Japan. As you know, Ch
 
 Japan has distorted its history for a long time. It has tried to hide its war of aggression, so Seoul has urged Tokyo not to distort history in its textbooks.
 
-China has also joined Japan on the road of distorting history. China is trying to hide the ancient history of Korea, such as the kingdoms of Goguryeo and Balhae, and to claim it as its own history. I think China and Japan are revealing their aggressive nature.
+China has also joined Japan on the road of distorting history. China is trying to hide the ancient history of Korea, such as the kingdoms of Goguryeo and Balhae, and to claim it as its own history.
 
 As a Korean, I am worried about Asia's future.

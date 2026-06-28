@@ -6,16 +6,17 @@ tags: "WebKit, Contribution"
 ---
 
 ## History
-[I fixed a caret color issue in WebKit in 2013](https://trac.webkit.org/changeset/152612/webkit), but I found out there was a regression, which made me work this issue again and finally fixed it. o/
+
+[I fixed a caret color issue in WebKit in 2013](https://trac.webkit.org/changeset/152612/webkit), but later I found that there was a regression, which led me to work on this issue again and finally fix it. o/
 It was a bit hard for me because I had not worked on WebKit since [Chromium forked from the WebKit project in 2013](https://techcrunch.com/2013/04/03/google-forks-webkit-and-launches-blink-its-own-rendering-engine-that-will-soon-power-chrome-and-chromeos).
 
-The source code has been changed and I almost forgot how to deal with layout test errors.
-My WebKit debugging skill is also rusty, but I tried to remind how to work on a patch by reading my own documents and old ccmmits.
+The source code had changed, and I had almost forgotten how to deal with layout test errors. My WebKit debugging skills were also rusty, but I tried to remind myself how to work on a patch by reading my own notes and old commits.
 
 ## Change the code
-Here is an overview:
 
-When I first fixed this issue, I just updated one line of code as follows:
+Here is an overview.
+
+When I first fixed this issue, I simply updated one line of code as follows:
 ```c++
 +++ b/trunk/Source/WebCore/editing/FrameSelection.cpp
 @@ -1470,5 +1470,6 @@
@@ -28,7 +29,7 @@ When I first fixed this issue, I just updated one line of code as follows:
          caretColor = element->renderer()->style()->visitedDependentColor(CSSPropertyColor);
 ```
 
-My patch allowed WebKit to get the caret color from the element containing the text, not the root editable element.
+My patch made WebKit get the caret color from the element containing the text, rather than the root editable element.
 
 ```C++
 void CaretBase::paintCaret(Node* node, GraphicsContext* context, const LayoutPoint& paintOffset, const LayoutRect& clipRect) const
@@ -67,14 +68,9 @@ void CaretBase::paintCaret(Node* node, GraphicsContext* context, const LayoutPoi
     UNUSED_PARAM(clipRect);
 #endif
 }
-
-Index: trunk/Source/WebCore/editing/FrameSelection.cpp
-===================================================================
---- a/trunk/Source/WebCore/editing/FrameSelection.cpp
 ```
 
-
-After 8 years, the mainline code has been changed as follows:
+After 8 years, the mainline code had changed as follows:
 
 ```c++
 Color CaretBase::computeCaretColor(const RenderStyle& elementStyle, const Node* node)
@@ -100,7 +96,7 @@ Color CaretBase::computeCaretColor(const RenderStyle& elementStyle, const Node* 
 ```
 
 
-CaretBase::computeCaretColor() is separated from CaretBase::patinCaret(). C++ 11 features and smart pointer are used (https://webkit.org/blog/3172/webkit-and-cxx11/)
+`CaretBase::computeCaretColor()` is now separated from `CaretBase::paintCaret()`. C++11 features and smart pointers are used (<https://webkit.org/blog/3172/webkit-and-cxx11/>).
 
 Here is my change:
 ```c++
@@ -129,7 +125,7 @@ Index: trunk/Source/WebCore/editing/FrameSelection.cpp
      }
      return elementStyle.visitedDependentColorWithColorFilter(CSSPropertyCaretColor);
 ```
-One of the reviewer asked me to use RefPtr(smart pointer) instead of auto so I changed this line as follows:
+One of the reviewers asked me to use `RefPtr` (a smart pointer) instead of `auto`, so I changed this line as follows:
 ```c++
 auto parentElement = node ? node->parentElement() : nullptr;
 ```
@@ -138,27 +134,27 @@ auto parentElement = node ? node->parentElement() : nullptr;
 RefPtr parentElement = node ? node->parentElement() : nullptr;
 ```
 
-[RefPtr](https://webkit.org/blog/5381/refptr-basics/) is a class template that implements WebKit’s intrusive reference counting. It has to be used instead of raw pointers when contributors update the source code.
+[RefPtr](https://webkit.org/blog/5381/refptr-basics/) is a class template that implements WebKit’s intrusive reference counting. It should be used instead of raw pointers when contributors update the source code.
 
+## Steps to contribute your code
 
-## Steps to contribution of your code
-Below are the steps I followed. You can find more details at https://webkit.org/contributing-code/
+Below are the steps I followed. You can find more details at <https://webkit.org/contributing-code/>.
 
-Build WebKit
+Build WebKit:
 ```
 $  Tools/Scripts/build-webkit
 ```
-You don’t need to run every test case. Instead, you can only run the relevant layout tests as follows:
+You don’t need to run every test case. Instead, you can run only the relevant layout tests as follows:
 
-Layout test
+Layout test:
 ```
 $ Tools/Scripts/run-webkit-tests editing/caret
 ```
-If you need pixel tests, just pass -p
+If you need pixel tests, just pass `-p`.
 
-You can find the test result in WebKitBuild/Debug/layout-test-results/results.html
+You can find the test result in `WebKitBuild/Debug/layout-test-results/results.html`.
 
-Sometimes, we need to update ChangeLog
+Sometimes, we need to update the `ChangeLog`:
 ```
 $ Tools/Scripts/prepare-ChangeLog --g HEAD
 ```
@@ -166,36 +162,30 @@ Finally, you can upload your patch:
 ```
 $ Tools/Scripts/webkit-patch upload 117493
 ```
-It would be good to add a message to your updated patch:
+It is a good idea to add a message to your updated patch:
 ```
 $ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”
 ```
 
-If you don't need a review now, pass --no-review.
+If you don't need a review right now, pass `--no-review`:
 ```
 $ Tools/Scripts/webkit-patch upload 117493 -m “Updated ChnageLog”  --no-review
 ```
 
-When your patch lands, “Reviewed by NOBODY (OOPS!)” line in ChangeLog is automatically filled with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue(AFAIK).
+When your patch lands, the “Reviewed by NOBODY (OOPS!)” line in the `ChangeLog` is automatically filled in with the name of the reviewer who approves your patch by setting review:+ and pushes it to the commit queue (AFAIK).
 
-https://ews-build.webkit.org/#/
-
+<https://ews-build.webkit.org/#/>
 
 In my case, I had to add the reviewer name because I updated the patch several times after getting +r.
 
-If you change the layout code, you may see layout test failures: 
+If you change the layout code, you may see layout test failures:
 ![source diff](/images/caret_color_diff.png)
-![actual result of caret color layout test ](/images/caret_color_acutal.png)
+![actual result of caret color layout test](/images/caret_color_acutal.png)
 
+If you find any layout test errors, you can easily get the `*-actual.txt` file from the layout test result. Just overwrite `*-expected.txt` with `*-actual.txt`.
 
-If you find any layout test errors, you can easily get *-actual.txt from the layout test result. Just overwrite *-expcted.txt with the *-actual.txt.
+Then add them to your patch and run the `webkit-patch` command again. If you already have +R, just add your patch to the commit queue.
 
-Then, add them to your patch and run webkit-patch command again. If you already have +R, just add your patch to the commit queue.
-
-The committer status has been suspended due to my inactivity so I was not able to add my patch to the commit queue. 
-However, one of the reviewers helped me land this patch. The next plan is to work on [Bug 44862 - Make the caret more visible on any background](https://bugs.webkit.org/show_bug.cgi?id=44862) again. 
-
-
-
+My committer status had been suspended due to inactivity, so I was not able to add my patch to the commit queue. However, one of the reviewers helped me land this patch. My next plan is to work on [Bug 44862 - Make the caret more visible on any background](https://bugs.webkit.org/show_bug.cgi?id=44862) again.
 
 

@@ -2,10 +2,11 @@
 title: "Long time no see!"
 date: 2005-08-11
 description: ""
-tags: ""
+tags: "blog, personal"
 ---
 
-I forgot that there was my blog in the blogger.  
-There are many blog sites in the internet, so I have serveral blogs such as the bloglines, livejournal, egloos, and my own blog in my web hosting server. Particularly, The egloos is a popular blog service in Korea, especially for developers, because it doesn't need to show any AD and provides some features which other blog service can't follow. For example, your blogs can be printed out a colored book. :)  
-  
-Actually, the blogger was not useful before, it seemed like a ftp server because we had to upload articles to the server, but was not able to upload images. Now, the service has been upgraded to support image upload to the server. So, I am considering using the blogger more frequently.
+I forgot that I had a blog on Blogger.
+
+There are many blog sites on the internet, so I have several blogs, such as Bloglines, LiveJournal, Egloos, and my own blog on my web hosting server. In particular, Egloos is a popular blog service in Korea, especially among developers, because it doesn't show any ads and provides features that other blog services can't match. For example, your blog can be printed out as a color book. :)
+
+Actually, Blogger was not useful before; it felt like an FTP server because we had to upload articles to the server but couldn't upload images. Now the service has been upgraded to support image uploads, so I am considering using Blogger more frequently.

@@ -2,7 +2,7 @@
 title: "Playstation3"
 date: 2006-05-11
 description: ""
-tags: ""
+tags: "hardware, personal"
 ---
 
 PlayStation 3 will be released at the end of this year. It seems to be the last hope for Sony, which is facing a decline in profits. Notably, Sony stuck with the Trinitron TV, the most popular analog TV in the '90s, and consequently was late to enter the DTV market. Sony's lack of investment in LCD panels or PDPs meant they could not produce better digital TVs than their competitors.

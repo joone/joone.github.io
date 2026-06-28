@@ -12,7 +12,7 @@ However, the Clutter project has lost its direction and is now almost deprecated
 
 Despite this, I had always envisioned maintaining a project similar to Clutter. As a result, I personally worked on a C++ implementation of a scene graph engine using OpenGL and even created a Rust implementation.
 
-One day, while searching for similar projects on the Rust package site (crates.io), I discovered that someone had taken the name I wanted for my project, but the owner had not yet started the project. As a result, I decided to create [a Rust crate](https://crates.io/crates/rust-animation) on crates.io and open [my code in github](https://github.com/joone/rust-animation).
+One day, while searching for similar projects on the Rust package site (crates.io), I discovered that someone had taken the name I wanted for my project, but the owner had not yet started the project. As a result, I decided to create [a Rust crate](https://crates.io/crates/rust-animation) on crates.io and open-source [my code on GitHub](https://github.com/joone/rust-animation).
 
 It took some time to develop my Rust implementation to be more API-style, but the experience was much more interesting than I had anticipated, and I really enjoyed programming in Rust and publishing my project using the Cargo tool. 
 
@@ -124,7 +124,4 @@ impl Layout for ActorLayout {
 Currently, the most pressing missing feature is support for text rendering. Although there are various crates available to support text rendering, I would like to opt for a native Rust implementation, such as [rusttype](https://crates.io/crates/rusttype).
 
 Happy Hacking!
-
-
-
 

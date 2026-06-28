@@ -5,7 +5,7 @@ description: ""
 tags: "x-window"
 ---
 
-https://gitlab.freedesktop.org/drm/intel/-/issues/27
+<https://gitlab.freedesktop.org/drm/intel/-/issues/27>
 
 5K 모니터를 우분투 20.04에서 설정하다가 재미있는 xrandr 사용 방법을 알게되었다. 
 아직까지 리눅스 데스크탑 여전히 일반 사용자가 쓰기 어려운 이유는 하드웨어가 제대로 지원되지 않는 부분이다. 물론 많이 좋아졌지만,  Nvida GPU를 제대로 설정하기란 어려운 일이다.
