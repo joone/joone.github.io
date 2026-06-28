@@ -5,18 +5,16 @@ description: ""
 tags: "fennec, mobile, firefox"
 ---
 
-I'd like to share a little bit old presentation about Mobile Firefox.  
-  
-From: [mobileportland](http://www.slideshare.net/mobileportland/), 2 months ago  
-  
-[Firefox For Mobile Devices](http://www.slideshare.net/mobileportland/firefox-for-mobile-devices?src=embed "Firefox For Mobile Devices")  
+I'd like to share a slightly old presentation about Mobile Firefox.
 
-  
+From: [mobileportland](http://www.slideshare.net/mobileportland/), 2 months ago
 
-view [presentation](http://www.slideshare.net/mobileportland/firefox-for-mobile-devices?src=embed "View Firefox For Mobile Devices on SlideShare") (tags: [browsers](http://slideshare.net/tag/browsers) [mozilla](http://slideshare.net/tag/mozilla) [portland](http://slideshare.net/tag/portland) [firefox](http://slideshare.net/tag/firefox))
+[Firefox For Mobile Devices](http://www.slideshare.net/mobileportland/firefox-for-mobile-devices?src=embed "Firefox For Mobile Devices")
 
-Dietrich Ayala's presentation at May 2008 meeting of Mobile Portland  
-  
+View the [presentation](http://www.slideshare.net/mobileportland/firefox-for-mobile-devices?src=embed "View Firefox For Mobile Devices on SlideShare") (tags: [browsers](http://slideshare.net/tag/browsers), [mozilla](http://slideshare.net/tag/mozilla), [portland](http://slideshare.net/tag/portland), [firefox](http://slideshare.net/tag/firefox)).
+
+This is Dietrich Ayala's presentation from the May 2008 meeting of Mobile Portland.
+
 [SlideShare Link](http://www.slideshare.net/mobileportland/firefox-for-mobile-devices)
 
 ![](http://counters.gigya.com/wildfire/IMP/CXNID=2000002.0NXC/bHQ9MTIxNzgzMzUyODA1NSZwdD*xMjE3ODMzNTgwMzk4JnA9MTAxOTEmZD*mbj1ibG9nZ2VyJmc9MQ==.gif)

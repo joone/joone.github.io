@@ -2,13 +2,13 @@
 title: "The change of Apple Inc."
 date: 2007-01-11
 description: ""
-tags: ""
+tags: "Apple, personal"
 ---
 
-Apple had leaded the personal computer market until the beginning of 80s before IBM released the IBM-PC. Apple also created new personal computer, the Macintosh that provides the GUI firstly. It was very innovative.  
-However, IBM-PC had become the mainstream of the personal computer. IBM opened the architecture of the computer and many computer manufacturers could make compatible IBM-PCs. Microsoft provided a DOS & Windows as an OS for the PCs. It was not innovative and easy to use, but it was cheaper than the Macintosh.  
-  
-The Macintosh is very popular to designers, students and teachers. But it is insufficient to become a mainstream of personal computer. Apple has still fewer than 10% of the market share of personal computer. Most of PC is now using Microsoft Windows.  
-Now, it is not important issue, because Apple is not just a computer manufacturer any more. Apple changed their business way now to be an electric consumer company like SONY, SAMSUNG. The success of iPod can make Apple changed.  
-  
-I am looking foward to activities of Apple from now on.
+Apple led the personal computer market until the beginning of the 1980s, before IBM released the IBM PC. Apple also created a new kind of personal computer, the Macintosh, which provided a GUI for the first time. It was very innovative.
+
+However, the IBM PC became the mainstream personal computer. IBM opened up the architecture of the computer, so many computer manufacturers could make IBM PC compatibles. Microsoft provided DOS and Windows as the operating systems for these PCs. They were not as innovative or easy to use, but they were cheaper than the Macintosh.
+
+The Macintosh is very popular with designers, students, and teachers, but that was not enough to make it the mainstream personal computer. Apple still has less than 10% of the personal computer market share. Most PCs now run Microsoft Windows. But this is no longer an important issue, because Apple is not just a computer manufacturer anymore. Apple has changed its business to become a consumer electronics company like Sony and Samsung. The success of the iPod is what changed Apple.
+
+I am looking forward to Apple's activities from now on.

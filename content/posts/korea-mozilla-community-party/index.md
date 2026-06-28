@@ -5,13 +5,10 @@ description: ""
 tags: "Mozilla"
 ---
 
-I attended the Korea Mozilla Community Annual Party 2007 last week which was hosted by [Channy](http://channy.creation.net/).  
-Channy is the leader of KoMoCo, a contributor for localization of Firefox. Actually, his company, Daum has supported many open source communities including KoMoCo. So, I always thank for Daum and his efforts.  
-  
-For more details, I'd like to share some blog articles regarding the party.  
+I attended the Korea Mozilla Community Annual Party 2007 last week, which was hosted by [Channy](http://channy.creation.net/). Channy is the leader of KoMoCo and a contributor to the localization of Firefox. Actually, his company, Daum, has supported many open source communities, including KoMoCo. So I am always grateful for Daum and his efforts.
 
-*   [KoMoCo Anual Pary Photos in Flickr  
-    ](http://flickr.com/photos/seokchanyun/sets/72157603472144745/)
-*   [Mozllia Japan Gen Kanai's introduction about KoMoKo anual party](http://flickr.com/photos/seokchanyun/sets/72157603472144745/)
-*   [John’s Blog  
-    ](http://john.jubjubs.net/2007/12/17/firefox-is/)
+For more details, I'd like to share some blog articles about the party.
+
+*   [KoMoCo Annual Party photos on Flickr](http://flickr.com/photos/seokchanyun/sets/72157603472144745/)
+*   [Mozilla Japan's Gen Kanai introduces the KoMoCo annual party](http://flickr.com/photos/seokchanyun/sets/72157603472144745/)
+*   [John's blog](http://john.jubjubs.net/2007/12/17/firefox-is/)

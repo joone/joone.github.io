@@ -16,58 +16,55 @@ webkit-clutter talk
 
 ![](https://lh4.googleusercontent.com/NB0uYBCtahn5nO1-Hu2UL6iYxb5lQp4IYPguFIVMATnMjzDcKOQHzD5LU96XfZZjnd9pjKXS-ju4M8UUzyZBVC73meFWmC6EASh4-bKW_oxDY7yXg4k)![](https://lh5.googleusercontent.com/Einc1etxHtaSP6blBnq1upvFMMbT1BiG8Q9xJtZrUHHJNlDivg6dd9rr8R_58zI2XNqaOEPWXNPthO5qUahQ6GQmVzkwleSRGgr7N3wa6UZIPWQx678)![](https://lh3.googleusercontent.com/E1dmciYZzWukaJvWNVi2jY8bbThDt-12SiVGGZfWeNxuzMPrVWLuS-PiktKGALrHU2hK939joZP7faES3zjXifRvoh0yabZ0KbHkN4F9tB_NbtAVcGo)
 
-[Photo by Adrián](http://www.flickr.com/photos/aperezdc/)  
-  
+[Photo by Adrián](http://www.flickr.com/photos/aperezdc/)
 
-I gave a talk about [webkit-clutter](http://blog.kov.eti.br/?p=139) in place of Kov because he had personal business to attend to. This talk was a part of [the WebKit talk](https://desktopsummit.org/program/sessions/webkit-clutter-port-present-and-future-webkitgtk-status-and-roadmap-webkit2): first, Martin explained the new features of [WebKitGtk+](http://webkitgtk.org/) 1.4.0 and upcoming feature of the next version. Second, Alex introduced the current status of [WebKit2Gtk+](http://blog.kov.eti.br/?p=110) and gave a demo of it, which showed us how to restart a flash plug-in without affecting browsing capability. That explains why we need the multiple process model in web browsing.  Finally. I introduced the webkit-clutter port: why the webkit-clutter port is needed, what we have done, and what features are coming. I will introduce more details about the WebKit talk in the next blog post.  
+I gave a talk about [webkit-clutter](http://blog.kov.eti.br/?p=139) in place of Kov, because he had personal business to attend to. This talk was part of [the WebKit talk](https://desktopsummit.org/program/sessions/webkit-clutter-port-present-and-future-webkitgtk-status-and-roadmap-webkit2). First, Martin explained the new features of [WebKitGtk+](http://webkitgtk.org/) 1.4.0 and the upcoming features of the next version. Second, Alex introduced the current status of [WebKit2Gtk+](http://blog.kov.eti.br/?p=110) and gave a demo of it, which showed us how to restart a Flash plug-in without affecting browsing. That explains why we need the multiple-process model in web browsing. Finally, I introduced the webkit-clutter port: why it is needed, what we have done, and what features are coming. I will share more details about the WebKit talk in the next blog post.
 
 [Blending the web and the desktop](https://desktopsummit.org/program/sessions/blending-web-and-desktop)  
 ![](https://lh5.googleusercontent.com/G0dBILP5LdUp62mwshGO5l_-6L46ZAD99tNvl23YZ19gDUj2YmxY03tsuflO1JVScXAPGT9_wVr3UOZC4mpSoS-hisfHcCPzdrhmORwcXljVBHJ9qW4)
 
-Xan showed a demo of installing and running a web application in GNOME3.  He said “80% of the time people use the web so 80% of GNOME effort should go to the web”, I agree with him, we need to focus on web integration with GNOME more. Anyway, Xan seemed like a web evangelist during his talk.  
+Xan showed a demo of installing and running a web application in GNOME 3. He said, "80% of the time people use the web, so 80% of GNOME's effort should go to the web." I agree with him; we need to focus more on web integration with GNOME. Anyway, Xan seemed like a web evangelist during his talk.
 
-Other interesting talks  
+Other interesting talks:
 
 ![](https://lh3.googleusercontent.com/wExeVwVFPvNyfX5qn-V0bOEnDUOkjZfpLdIICNHIov64w6eLskzWTrOhAxLwOn7RgofgAddL2DdvsLGd2dOzhukv7rrIGZAaOjLW_G1yzb5F7dXrDLE)
 
-*   [GStreamer 1.0](https://desktopsummit.org/program/sessions/gstreamer-10):  [Wim](http://en.wikipedia.org/wiki/Wim_Taymans) introduced the main changes of [GStreamer](http://gstreamer.freedesktop.org/) 1.0 such as managing memory, buffer metadata, and dynamic pipeline. You will be able to get more information from [the GStreamer conference](http://gstreamer.freedesktop.org/conference/) [l in Prague, Czech Republi](http://gstreamer.freedesktop.org/conference/)c
+*   [GStreamer 1.0](https://desktopsummit.org/program/sessions/gstreamer-10): [Wim](http://en.wikipedia.org/wiki/Wim_Taymans) introduced the main changes in [GStreamer](http://gstreamer.freedesktop.org/) 1.0, such as memory management, buffer metadata, and dynamic pipelines. You can get more information from [the GStreamer conference](http://gstreamer.freedesktop.org/conference/) in Prague, Czech Republic.
 
 ![](https://lh5.googleusercontent.com/t-2kH3sx2vvwLWZjjCz2OkxIQI0y4y48pJHXbpsM6aczfOVQsJpMD99GyGRsgbKB2LUV5_RTUfgEe6Kj2s_scIeAKJwxmBs9z420pYoriOpBUO4v2vo)
 
-*   [GTK 4 - the future of your favorite toolkit](https://desktopsummit.org/program/sessions/gtk-4-future-your-favorite-toolkit): Actually, nobody has started working on GTK4+, but the speakers showed a big picture of GTK+4  which will improve in areas of animations, effects, and transformations. For realizing this plan, Clutter will be used as a graphic backend, which allows GTK+ applications to use animation effects easily.
-*   [GNOME Shell version π](https://desktopsummit.org/program/sessions/gnome-shell-version-%CF%80): [Owen Talyor](http://blog.fishsoup.net/) Introduced GNOME Shell 3.2 with some demos such as Google Account Integration, soft keyboard, and more extensions.
-*   [GNOME a continent, starting from Asia](https://desktopsummit.org/program/sessions/gnome-continent-starting-asia):  There was a introduction of how the GNOME Asia summit started, what it has done and what it will do. I wish to attend the next GNOME Asia Summit held in Hong Kong.
-*   [Towards a multitouch gnome-shell](https://desktopsummit.org/program/sessions/towards-multitouch-gnome-shell): Although it will take more time to see if X.org supports multi-touch officially, Carlos showed a demo of the multi-touch gnome shell. This seemed like the first step to touch based devices.
+*   [GTK 4 - the future of your favorite toolkit](https://desktopsummit.org/program/sessions/gtk-4-future-your-favorite-toolkit): Actually, nobody has started working on GTK+ 4 yet, but the speakers showed a big picture of GTK+ 4, which will improve in the areas of animations, effects, and transformations. To realize this plan, Clutter will be used as a graphics backend, which will allow GTK+ applications to use animation effects easily.
+*   [GNOME Shell version π](https://desktopsummit.org/program/sessions/gnome-shell-version-%CF%80): [Owen Taylor](http://blog.fishsoup.net/) introduced GNOME Shell 3.2 with some demos, such as Google Account integration, a soft keyboard, and more extensions.
+*   [GNOME a continent, starting from Asia](https://desktopsummit.org/program/sessions/gnome-continent-starting-asia): There was an introduction of how the GNOME Asia Summit started, what it has done, and what it will do. I hope to attend the next GNOME Asia Summit, held in Hong Kong.
+*   [Towards a multitouch gnome-shell](https://desktopsummit.org/program/sessions/towards-multitouch-gnome-shell): Although it will take more time to see whether X.org supports multi-touch officially, Carlos showed a demo of the multi-touch GNOME Shell. This seemed like the first step toward touch-based devices.
 
 NateOn connection manager for Telepathy
 
 ![](https://lh6.googleusercontent.com/0kwPZvIhVDbmBXjcZz4N3YRz8iMWtfLnGk6Jv7k6V-pRoKtP6tCIB25MXgUuGbz69ILF6iaidbDFijQt08znj-WH28SRtwkg52WjjCs52eR3iE67CFs)
 
-[NateOn is an instant messenger which is very popular in Korea](http://nateonweb.nate.com/download/messenger/linux/). As you can see the above picture, it supports the Linux version, but [the project](http://kldp.net/projects/nateon/) has not been maintained well. The problem is that [NateOn was removed from the Debian archive because it built with KDE3](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=617951).([ChangWoo’s blog article](http://changwoo-hacks.blogspot.com/2011/03/nateon.html)) As a result, Korean users can’t download NateOn from Debian repositories. Although there was a proposal to develop a NateOn connection manager for [Telepathy](http://telepathy.freedesktop.org/wiki/) from [the GNOME Korean community](http://gnome.or.kr/), it was just an idea. Fortunately, I met a Telepathy contributor, Debarshi who is interested in this project. I shared all the information about NateOn with him so that he was able to start developing the connection manager. When it starts to work a bit, I will be able to join the project.  
-  
+[NateOn is an instant messenger that is very popular in Korea](http://nateonweb.nate.com/download/messenger/linux/). As you can see in the picture above, it supports a Linux version, but [the project](http://kldp.net/projects/nateon/) has not been well maintained. The problem is that [NateOn was removed from the Debian archive because it was built with KDE3](http://bugs.debian.org/cgi-bin/bugreport.cgi?bug=617951) ([ChangWoo's blog article](http://changwoo-hacks.blogspot.com/2011/03/nateon.html)). As a result, Korean users can't download NateOn from the Debian repositories. Although there was a proposal from [the GNOME Korean community](http://gnome.or.kr/) to develop a NateOn connection manager for [Telepathy](http://telepathy.freedesktop.org/wiki/), it was just an idea. Fortunately, I met a Telepathy contributor, Debarshi, who is interested in this project. I shared all the information about NateOn with him so that he could start developing the connection manager. Once it starts to work a bit, I will be able to join the project.
+
 Currywurst
 
 ![](https://lh6.googleusercontent.com/zKT1DWo3Ht0r3fyfswRqzCz8AiLXF-gZyHBjOobWFOP2_pX0rIuQ9g_2Kzs08AGz45NN-7pwMgqgwoJ3oiJcl2YuLfoaY9GRAQ47owk92_ETqJdqjRY)
 
-I didn’t have a chance to go to any tourist attractions in Berlin this time, but I had Currywurst which is well-known Berlin food. It was good to have it with a beer.  
-  
+I didn’t have a chance to go to any tourist attractions in Berlin this time, but I did have Currywurst, a well-known Berlin food. It was good to have it with a beer.
+
 Visiting the Cambridge office
 
 ![](https://lh3.googleusercontent.com/RAlWk3geM_jEcKi2SJ778fjGE11PRt88iK7iOafL30Lkmh7cTKI5OAnTIhQuotW192qQ8CNJoPJs7Ohokof0DNP57Xd-2toC_B00UDaAQSQA62ZtVLE)
 
-After the Desktop Summit, I moved to Cambridge for visiting the company HQ office. It was very nice to meet people and work at the office. I had brought along some postcards of UNESCO World Heritage of Korea for a small gift as follows:  
-  
+After the Desktop Summit, I moved to Cambridge to visit the company HQ office. It was very nice to meet people and work at the office. I had brought along some postcards of UNESCO World Heritage Sites of Korea as small gifts, as follows:
 
 ![](https://lh5.googleusercontent.com/-CziKUQLRAs11ZwCX_cBeaBd_b2P2thO6-B-BXN6nIQrXAidoJghgcQnjgidKGfvkeVeBiX-hVYh402Fiw_JyWxUuSsXKusDcUlT1ummPeRCkJ34rOA)
 
-You can see them from the bulletin board when you visit the office.  
-  
+You can see them on the bulletin board when you visit the office.
+
 There are many tourist attractions near the office, so I went to the Cambridge University Botanic Garden and the Fitzwilliam Museum during my stay. It was very nice, so I have shared some photos here.
 
 ![](https://lh3.googleusercontent.com/yVQBBoYpGn6oWta3D3cPzRl2RpPb_Nk6-UMJjGMpE_nVsUuzu6nGxyDnlVoFb_bhOs6shsCm3fqtaJ1YbcETlWGfAcb4AWC1y-gMojAm36jM4eu-nI4)![](https://lh6.googleusercontent.com/iXDPlS-DiqqyR1t6yrC1iu4IjvX-is5yJ6B_5P7Lt-CvgcFRFFnVPgLIDE2CTPWI02c2bG3m03dXJF82zdrp95C2eqpMadOzBk3nzZK_OUMqe6oCb74)  
-On the last evening, we had a team dinner in an Indian restaurant. Although British accent was a bit unfamiliar to me, I enjoyed the talks and the Tandoori chicken. Anyway, I’d like to thank everyone in the office for helping me stay and work well. Thanks!  
+On the last evening, we had a team dinner at an Indian restaurant. Although the British accent was a bit unfamiliar to me, I enjoyed the conversation and the Tandoori chicken. I’d like to thank everyone in the office for helping me stay and work well. Thanks!
 
 ![](http://www.collabora.com/logos/collabora-logo-small.png)
 
-  
-Finally, I'd also like to thank my employer, [Collabora](http://collabora.com/) for sponsoring my trip to Berlin for Desktop Summit 2011. I hope to see everyone at the next Guadec in A Coruña, Spain.
+Finally, I'd also like to thank my employer, [Collabora](http://collabora.com/), for sponsoring my trip to Berlin for Desktop Summit 2011. I hope to see everyone at the next GUADEC in A Coruña, Spain.

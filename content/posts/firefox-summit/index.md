@@ -5,23 +5,16 @@ description: ""
 tags: "firefox"
 ---
 
-[![](http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0)](http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0)  
-  
+[![Firefox+ Summit at Whistler, Canada](http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0)](http://farm4.static.flickr.com/3270/2695795279_e4fae78392.jpg?v=0)
 
-  
-I attended [Firefox\+ Summit](https://wiki.mozilla.org/Summit2008) at Whistler, Canada. It was a great time in my life because I met Mozilla folks who I had known the name only and talk about some issues I have wondered.
+I attended the [Firefox+ Summit](https://wiki.mozilla.org/Summit2008) at Whistler, Canada. It was a great time in my life, because I finally met Mozilla folks whose names I had only known before and talked about some issues I had been wondering about.
 
-  
+This event was held to celebrate the Firefox3 release and to discuss the future plans for Firefox3.1 along with current issues.
 
-This occasion was held to celebrate Firefox3 release and talk about the future plan of Firefox3.1 and the current issues.  
+About 400 Mozilla people from all over the world joined the summit. They are involved in various projects such as AMO (Add-ons), QA, Localization, Gecko, JavaScript, Mobile, UX, evangelism, messaging, SVG, MDC, and so on.
 
-  
+How could all these people come together for Mozilla?
 
-About 400 Mozilla peoples joined the summit coming from all over the World. They are involved in the various projects such as AMO(Add-ons), QA, Localization, Gecko, JavaScript, Mobile, UX, evangelist, messaging, SVG, MDC, and so on.  
-  
-How could all peoples come together for Mozilla?  
-  
-Mozilla is now making an effort to keep the freedom of the Web and Internet, because many companies are trying to change the web in their own unique ways by spreading proprietary technologies. Those approaches look like gorgeous and helpful for the users, but they hurt the Web. Although Mozilla is just a nonprofit corporation, but there are countless contributors and volunteers. So I believe that we can change the Web in a standard and open way although those activities are a little bit slow and require more consensus.
+Mozilla is now making an effort to preserve the freedom of the Web and the Internet, because many companies are trying to change the Web in their own ways by spreading proprietary technologies. Those approaches may look gorgeous and helpful to users, but they hurt the Web. Although Mozilla is just a nonprofit corporation, it has countless contributors and volunteers. So I believe we can change the Web in a standard and open way, even though such efforts are a little slow and require more consensus.
 
-  
 Let's make the Web a better place.
