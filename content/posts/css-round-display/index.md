@@ -2,7 +2,7 @@
 title: "CSS Round Display"
 date: 2019-03-12
 description: ""
-tags: "CSS, Web Development, Crosswalk, IoT, Round Display"
+tags: "CSS, Web Development"
 ---
 
 ![The round CRT display of the PDP-1](images/UQZekv-UucBpiCk2.png "Photo by Matthew Hutchinson (CC BY 2.0), https://commons.wikimedia.org/w/index.php?curid=1587541")
