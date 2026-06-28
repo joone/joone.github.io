@@ -7,7 +7,7 @@ tags: "CSS, Web Development"
 
 ![The round CRT display of the PDP-1](images/UQZekv-UucBpiCk2.png "Photo by Matthew Hutchinson (CC BY 2.0), https://commons.wikimedia.org/w/index.php?curid=1587541")
 
-> FYI: this article was originally published on [01.org](https://01.org/chromium/blogs/joone/2016/css-round-display-specifications).
+> FYI: this article was originally published on [01.org](https://web.archive.org/web/20210616141320/https://01.org/chromium/blogs/joone/2016/css-round-display-specifications).
 
 Did you know that the first commercial computer monitor had a round display?
 Digital Equipment's [PDP-1](http://history-computer.com/ModernComputer/Electronic/PDP-1.html)
