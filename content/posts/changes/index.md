@@ -2,13 +2,13 @@
 title: "Changes"
 date: 2005-10-20
 description: ""
-tags: ""
+tags: "personal"
 ---
 
-Many things around me was changed these days.  
-I got married so I lived with my wife in my new house.  
-The office that I work was moved to another city so I come to the office by bus  
-In addition, I got a new job that was unusual which I had not worked on before.  
-  
-Actually, these changes sometimes make me confuse.  
-I am adapting myself to the new circumstances.
+Many things around me have changed these days. I got married, so I now live with
+my wife in our new house. The office where I work moved to another city, so I
+commute by bus. On top of that, I started a new job — something I had never done
+before.
+
+These changes sometimes leave me a little confused, but I'm adapting myself to
+the new circumstances.

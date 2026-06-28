@@ -2,11 +2,19 @@
 title: "My PC"
 date: 2005-10-26
 description: ""
-tags: ""
+tags: "hardware, Apple, personal"
 ---
 
-I have three computers: one is a Power Mac, another is a PC, and the other is a notebook. The Power Mac is very fast and provides good performance because it has two CPUs. However, the PC is very slow. It has been 4 years and 9 months since I bought it. Over time, I added new equipment to my PC, including a DVD-RW, a 1394 port, and a USB2 port. These additions have been sufficient for using my PC, except for the CPU speed, which has always been critical, especially after installing Windows XP.
+I have three computers: a Power Mac, a PC, and a notebook. The Power Mac is very
+fast and performs well because it has two CPUs. The PC, however, is very slow —
+it has been four years and nine months since I bought it. Over time I added new
+hardware to it, including a DVD-RW drive, a 1394 port, and a USB 2.0 port. These
+additions have been enough for my needs, except for the CPU speed, which has
+always been a bottleneck — especially after I installed Windows XP.
 
-However, I do not have any plans to upgrade my PC because I already bought the Power Mac G5. But whenever I browse websites, Internet Explorer is mandatory for navigating specific sites that require transactions. Therefore, I have no choice but to turn on my PC.
+Even so, I don't plan to upgrade the PC because I already bought the Power Mac
+G5. But whenever I browse the web, Internet Explorer is still mandatory for
+certain Korean sites that require transactions, so I have no choice but to turn
+the PC on.
 
-I will be using the Mac and my PC simultaneously for some time.
+I'll keep using the Mac and the PC side by side for a while.
