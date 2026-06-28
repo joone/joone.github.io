@@ -1,5 +1,5 @@
 ---
-title: "Fixing Drag-and-Drop in Chromium: What Was Broken and What Changed"
+title: "[BlinkOn21] Fixing Drag-and-Drop in Chromium: What Was Broken and What Changed"
 date: 2026-04-20
 description: ""
 tags: "drag-and-drop, chromium, BlinkOn"
@@ -98,6 +98,8 @@ const data = [
 event.dataTransfer.setData('DownloadURL-list', JSON.stringify(data));
 ```
 
+<video src="images/downloadurl-list.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
+
 ### Implementation Details
 
 - **Issue:** [Multi files drag out to filesystem via DownloadURL (40736398)](https://issues.chromium.org/issues/40736398)
@@ -146,6 +148,14 @@ lists support image types only; support for other file types will be added after
 they land. Once merged, this lets users drag a `File` out of Chromium and drop it
 even onto Firefox.
 
+Dragging a JavaScript `File` from Chromium and dropping it onto Firefox:
+
+<video src="images/js-file-firefox.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
+
+Dropping a constructed `File` onto an iframe in the same tab:
+
+<video src="images/js-file-iframe.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
+
 For more details on the design, see my earlier post,
 [Design Doc: Support Dragging JS File Objects to Native Drop Targets](/posts/design-doc-support-dragging-js-file-objects-to-native-drop-targets/).
 
@@ -162,7 +172,7 @@ For more details on the design, see my earlier post,
 
 ## Demos
 
-Demo videos for all three scenarios are available in the
+The demo videos above are also available in the
 [X thread for this talk](https://x.com/joone/status/2048919863134212592).
 
 ## References
