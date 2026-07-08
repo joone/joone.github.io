@@ -18,8 +18,8 @@ This change will ship in Edge/Chrome 152.
 
 ### Chromium → native app on macOS
 
-<video src="multi-url-dnd-cr-to-native-app-mac.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
+<video src="images/multi-url-dnd-cr-to-native-app-mac.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
 
 ### Safari
 
-<video src="multi-url-dnd-safari-.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
+<video src="images/multi-url-dnd-safari-.mp4" controls playsinline muted preload="metadata" style="max-width:100%;height:auto;"></video>
