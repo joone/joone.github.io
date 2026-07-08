@@ -9,7 +9,7 @@ During [the WebKitGTK+ Hackfest 2011](http://live.gnome.org/Hackfests/WebKitGTK2
 I applied accelerated compositing to WebKitGTK+ using
 [Clutter](http://www.clutter-project.org/), so it started working like
 [the webkit-clutter port](http://trac.webkit.org/wiki/clutter). I was finally able
-to run [the same demo](http://blog.kov.eti.br/?p=214) in GtkLauncher.
+to run [the same demo](http://blog.kov.eti.br/2011/11/accelerated-compositing-in-webkit-clutter/) in GtkLauncher.
 
 This work isn't upstreamed yet, but
 [my patches are getting reviewed](https://bugs.webkit.org/show_bug.cgi?id=73319).
