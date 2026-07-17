@@ -28,17 +28,12 @@ The patches listed below resolved this issue.
 - V8: [Add StackFrame::GetSourcePosition API (6060340)](https://chromium-review.googlesource.com/c/v8/v8/+/6060340)
 
 However, the feature remained behind the Blink runtime flag
-(`LongAnimationFrameSourceCharPosition`) for a year because the LoAF API owner had
-concerns about the potential performance impact. To address this, I optimized the
-retrieval of script URLs and source locations from V8:
-
-- [LoAF: Optimize script URL and source location retrieval (387412856)](https://issues.chromium.org/issues/387412856)
+(`LongAnimationFrameSourceCharPosition`) for over a year because the LoAF API owner
+had concerns about the potential performance impact. In particular, V8 performance
+regressions observed in early Finch tests prompted caution and required multiple
+rounds of optimization work.
 
 ## Performance Optimization
-
-The feature remained behind a flag for over a year due to **performance regressions**
-observed in early Finch tests. In particular, V8 performance regressions prompted
-caution and required multiple rounds of optimization work.
 
 ### Implement lazy conversion for SourceLocation::Url()
 
